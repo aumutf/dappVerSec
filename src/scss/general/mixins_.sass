@@ -1,0 +1,46 @@
+
+$laptop-width: 1024px
+$tablet-width: 768px
+$phone-width: 576px
+
+=laptop
+  @media screen and (min-width: $tablet-width)
+    @content
+=tablet
+  @media screen and (min-width: $phone-width)
+    @content
+
+$maxWidth: 1440
+
+
+
+@mixin adaptiv-value-imp($property, $pcSize, $mobSize)
+  $addSize: $pcSize - $mobSize
+  $addMobSize: $addSize + $addSize*0.7
+
+  @media screen and (max-width: 767px)
+    #{$property}: calc(#{$mobSize}px + #{$addSize} * ((100vw - 320px) / #{$maxWidth})) +!important
+
+  @media screen and (min-width: 767px)
+    #{$property}: calc(#{$mobSize}px + #{$addSize} * (100vw / #{$maxWidth})) +!important
+
+
+
+    
+@mixin adaptiv-value($property, $pcSize, $mobSize)
+  $addSize: $pcSize - $mobSize
+  $addSize1: calc(#{$pcSize} - #{$pcSize}/1.4)
+  $addMobSize: calc(#{$addSize} + #{$addSize}*0.7)
+  
+  #{$property}: $pcSize+px
+  
+  @media screen and (max-width: 768px)
+    #{$property}: calc(#{$mobSize}px + #{$addSize} * ((100vw - 320px) / #{$maxWidth}))
+
+  @media screen and (min-width: 768px) and (max-width: $maxWidth+px)
+    #{$property}: calc(#{$pcSize}px/1.4 + #{$addSize1} * ((100vw - 768px) / #{$maxWidth - 768}))
+
+
+
+=placeholder
+  @content

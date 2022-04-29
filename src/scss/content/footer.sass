@@ -1,0 +1,62 @@
+/* FOOTER styles */
+
+.footer
+  box-shadow: 0px -1px 0px $grey
+  &__inner
+    +adaptiv-value("padding-top", 30, 15)
+    +adaptiv-value("padding-bottom", 50, 15)
+    +laptop
+      display: flex
+      justify-content: space-between
+    .col--center
+      flex-grow: 1
+      +adaptiv-value("margin-left", 50, 0)
+      +adaptiv-value("margin-right", 50, 0)
+
+  .logo
+    +adaptiv-value("margin-right", 65, 0)
+    +adaptiv-value("margin-bottom", 14, 10)
+
+  .menu
+    display: grid
+    grid-template-columns: 1fr 1fr
+    +laptop
+      flex-direction: row
+      display: flex
+      justify-content: space-between
+  .menu-item
+    font-size: inherit
+    +adaptiv-value("margin-bottom", 20, 20)
+  .social-menu
+    margin-left: auto
+    align-items: center
+    margin-top: 10px
+    flex-wrap: wrap
+    
+    
+    
+  .social-menu-link
+    display: inline-block
+    +adaptiv-value("min-width", 24, 8)
+    +adaptiv-value("width", 24, 8)
+    +adaptiv-value("min-height", 24, 8)
+    +adaptiv-value("height", 24, 8)
+
+
+  .social-menu li
+    +adaptiv-value("margin-right", 40, 35)
+
+  .copyright
+    display: flex
+    justify-content: center
+    +adaptiv-value("margin-bottom", 35, 22)
+    font-family: $Roboto
+    font-weight: $medium
+    justify-content: flex-start
+    +adaptiv-value("font-size", 13, 12)
+  
+
+.footer__btm
+  display: flex
+
+/* FOOTER styles end*/

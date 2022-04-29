@@ -1,0 +1,169 @@
+
+  /* SLIDERSCROLL styles */
+
+$h_scroll: 80
+$h_scroll_mob: 56
+$w_scrollImg: 165
+$w_scrollImg_mob: 133
+$br_menu: 4px
+
+.li-slider-wrap
+  height: 120px
+
+.slider-scroller
+  width: 100%
+  position: relative
+  overflow: hidden
+  white-space: nowrap
+  z-index: 1
+  +adaptiv-value("height", $h_scroll, $h_scroll_mob)
+  position: absolute
+  left: 0
+  height: 60px
+  min-height: 60px
+
+  &-inner
+    display: flex
+    animation: scroll 32s linear infinite
+    animation-delay: .8s
+    width: 2000px
+    column-gap: 0
+
+    &:hover
+      animation-play-state: paused
+
+
+.slider-scroller--right
+  .slider-scroller-inner
+    animation-direction: reverse
+
+.slider-scroller--left
+  .slider-scroller-inner
+    animation-direction: normal
+
+.slider-scroll
+  display: inline-block
+  position: relative
+  border-radius: 0
+  overflow: hidden
+  cursor: pointer
+  position: static
+  +adaptiv-value("min-width", $w_scrollImg, $w_scrollImg_mob) //230
+  +adaptiv-value("width", $w_scrollImg, $w_scrollImg_mob) //230
+  padding: 10px 16px 4px
+  &:hover
+    .logo-info-btm
+      opacity: 1  
+
+.slider-scroller-img
+  width: 100%
+  height: auto
+  object-fit: cover
+
+.slider-scroll-title
+  position: absolute
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  display: inline-flex
+  align-items: center
+  justify-content: center
+  z-index: 1
+
+@keyframes scroll
+  0%
+    transform: translateX(0)
+  to
+    transform: translateX(-67%)
+
+.swiper-button-prev, .swiper-button-next
+  position: absolute
+  top: 0
+  margin-top: calc(32px / 2)
+  border-radius: 50%
+  background: rgba(0, 0, 0, 0.5)
+
+.str_wrap
+  //background-color: $grey1!important
+  //min-height: 65px!important
+
+  &.str-slider-gallery
+    min-height: calc(56px + 24 * ((100vw - 320px) / 1120)) !important
+    background-color: transparent!important
+
+.str-slider-wrap
+  position: absolute
+  left: 0
+  height: 60px
+  width: 100%
+  z-index: 100
+  background-color: #303030
+
+.categories
+  top: 116px
+  background-color: #3D3B3B
+
+.galleryPage
+  .str-slider-wrap
+    +adaptiv-value("height", $h_scroll, $h_scroll_mob)
+    top: calc(62px + 16px)
+
+.name-wrap
+  display: inline-flex
+  align-items: center
+  .dapp-img-mini
+    margin-right: 7px
+    width: 20px
+    height: 20px
+    min-width: 20px
+    min-height: 20px
+    fill: #FFFFFF
+    background-color: transparent
+    svg
+      width: 100%
+      height: 100%
+
+
+.slider-scroll
+  .logo-name-wrap
+    display: flex
+    align-items: center
+    margin-bottom: 3px
+
+  .logo-name
+    font-size: 14px
+    line-height: 1.5
+    display: flex
+    align-items: center
+    //column-gap: 4px
+    margin-right: 4px
+
+    &::before
+      content: ""
+      display: inline-block
+      width: 18px
+      height: 18px
+      min-width: 18px
+      min-height: 18px
+      margin-right: 4px
+      background:
+        color: transparent
+        image: url("../img/Etherium.svg")
+        repeat: no-repeat
+        size: auto
+        position: center
+        
+  .logo-info
+    display: grid
+    grid-template-columns: 2fr repeat(2, 1fr)
+    font-size: 10px
+    margin-left: 22px
+    column-gap: 5px
+    &-btm
+      font-size: 7px
+      color: $grey2
+      text-transform: uppercase
+      opacity: 0
+
+/* SLIDERSCROLL styles end */

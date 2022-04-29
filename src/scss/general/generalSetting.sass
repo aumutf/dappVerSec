@@ -1,0 +1,57 @@
+
+//!GENERAL SETTINGS
+body
+  font:
+    family: $Inter
+    weight: $regular
+    size: $fs_body+px
+  color: $fontcolor
+  line-height: $lh_body
+  min-width: $contMinWidth
+  margin: 0
+  padding: 0
+  height: 100vh
+  background-color: $bgcolor
+  
+  +adaptiv-value("font-size", $fs_body, $fs_body)
+
+.container
+  max-width: $contMaxWidth !important
+  width: 100%
+  margin: 0 auto
+  +adaptiv-value('padding-left', $contPl, $contPl) 
+  +adaptiv-value('padding-right', $contPr, $contPr)
+
+//LINK
+.link
+  color: $accentColor   
+
+//LOGO  
+.logo
+  +adaptiv-value("width", 108, 108)
+  +adaptiv-value("min-width", 108, 108)
+  +adaptiv-value("height", 40, 40)
+  +adaptiv-value("min-height", 40, 40)
+
+//BUTTONS
+.btn
+  &--filled
+    color: $fontcolor
+    border-radius: $br_btn
+    background: $accentColor
+    
+    +adaptiv-value("padding-left", 28, 3)
+    +adaptiv-value("padding-right", 28, 3)
+    padding-top: 5px
+    padding-bottom: 5px
+
+    &:hover
+      opacity: 0.8!important
+      background-color: $accentColor!important
+      border: 0!important  
+
+//TITLES
+h2
+  &.title
+    +adaptiv-value("font-size", 24, 20)
+    line-height: 1.2      
