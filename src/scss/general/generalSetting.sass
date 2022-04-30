@@ -12,9 +12,9 @@ body
   padding: 0
   height: 100vh
   background-color: $bgcolor
-  
   +adaptiv-value("font-size", $fs_body, $fs_body)
 
+//CONTAINER  
 .container
   max-width: $contMaxWidth !important
   width: 100%
@@ -54,4 +54,8 @@ body
 h2
   &.title
     +adaptiv-value("font-size", 24, 20)
-    line-height: 1.2      
+    line-height: 1.2    
+h3
+  &.title
+    +adaptiv-value("font-size", 17, 17)
+    line-height: 1.2  

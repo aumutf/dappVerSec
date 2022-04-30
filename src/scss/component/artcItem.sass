@@ -1,0 +1,100 @@
+
+/* ARTICLE ITEM styles */
+$artcImgBr: 10px
+
+.artc-item
+   display: flex
+   flex-direction: column
+   max-width: 380px
+   position: relative
+   +adaptiv-value("max-width", 380, 280)
+   .title
+      word-break: break-word
+      font-weight: 500
+     
+   a
+      display: block
+
+
+.artc-item-image
+   overflow: hidden
+   width: 100%
+   display: block
+   position: relative
+   background-color: transparent
+   height: 130px
+   +laptop
+      height: 150px
+
+   &>a, picture
+      width: 100%
+      height: 100%
+   img
+      width: 100%!important
+      height: 100%!important
+      object-fit: cover
+
+   &--br
+      border-radius: $artcImgBr
+      img
+         border-radius: $artcImgBr
+
+
+.artc-item-mid 
+   display: flex
+   flex-direction: column
+   float: unset
+   width: 100%
+   position: relative
+   margin-bottom: 15px   
+
+   .title
+      font-size: 16px
+      line-height: 22px
+      text-transform: none
+      font-weight: 500
+      margin-bottom: 5px
+      margin-top: 10px   
+
+   a
+      display: block 
+
+   .description 
+      color: #777
+      font-size: 14px
+      float: left
+      line-height: 22px   
+   
+   img
+      width: 100%
+
+.artc-item-horizontal 
+   position: relative
+   float: left
+   width: 100%
+   height: auto
+   margin-bottom: 30px
+
+   .title 
+      float: left
+      display: block
+      width: 100%
+      font-size: 22px
+      font-weight: 500
+      line-height: 28px
+      text-transform: none
+      margin-top: 10px
+
+   .description
+      color: #777
+      float: left
+      line-height: 22px
+      font-size: 13px
+
+
+.title
+   &--bgtransp
+      background-color: rgba(32, 32, 32, 0.5)   
+      position: absolute
+      bottom: 0
+      width: 100%

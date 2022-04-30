@@ -57,3 +57,14 @@ ul
     outline: none
     box-shadow: none
     color: inherit
+
+//block grid for articles
+.bl-grid
+  &__top
+    display: grid
+    column-gap: 20px
+    width: 100%
+    position: relative
+    grid-template-columns: 1fr
+    +laptop
+      grid-template-columns: repeat(3, 1fr)       
