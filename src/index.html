@@ -1,19 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 
-@@include('html/head.html',{
+@@include('html/general/head.html',{
 "title":"Главная"
 })
 
 <body>
-   @@include('html/header.html',{})
-   @@include('html/sliderTop.html',{})
+   <div class="body-wrap">
+      @@include('html/general/header.html',{})
+      @@include('html/general/sliderTop.html',{})
 
 
-   @@include('html/component/artc-item.html',{})
+      @@include('html/content/latestDappArt.html',{})
+     <!-- @@include('html/component/artc-item.html',{})-->
 
-   @@include('html/footer.html',{})
-   @@include('html/foot.html',{})
+      @@include('html/general/footer.html',{})
+      @@include('html/general/foot.html',{})
+   </div>
 </body>
 
 </html>

@@ -3,7 +3,7 @@
   &:focus, &:active
     outline: none !important
 
-body
+.body-wrap
   display: flex
   flex-direction: column
 
@@ -38,9 +38,6 @@ ul
     object-fit: contain  
 
 
-
-
-
 //BUTTON 
 .btn
   position: relative
@@ -58,13 +55,4 @@ ul
     box-shadow: none
     color: inherit
 
-//block grid for articles
-.bl-grid
-  &__top
-    display: grid
-    column-gap: 20px
-    width: 100%
-    position: relative
-    grid-template-columns: 1fr
-    +laptop
-      grid-template-columns: repeat(3, 1fr)       
+    

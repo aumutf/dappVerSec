@@ -5,15 +5,26 @@ $artcImgBr: 10px
 .artc-item
    display: flex
    flex-direction: column
-   max-width: 380px
    position: relative
-   +adaptiv-value("max-width", 380, 280)
+   max-width: 100%
+   +laptop
+      +adaptiv-value("max-width", 380, 280)
+
    .title
       word-break: break-word
       font-weight: 500
-     
+      &--bgtransp
+         background-color: rgba(32, 32, 32, 0.5)   
+         position: absolute
+         bottom: 0
+         width: 100%
    a
       display: block
+
+   &--vert
+      .artc-item-image
+         +adaptiv-value("margin-bottom", 18, 18)
+         height: 140px
 
 
 .artc-item-image
@@ -24,7 +35,7 @@ $artcImgBr: 10px
    background-color: transparent
    height: 130px
    +laptop
-      height: 150px
+      +adaptiv-value("height", 150, 150)
 
    &>a, picture
       width: 100%
@@ -40,7 +51,7 @@ $artcImgBr: 10px
          border-radius: $artcImgBr
 
 
-.artc-item-mid 
+/*.artc-item-mid 
    display: flex
    flex-direction: column
    float: unset
@@ -66,9 +77,9 @@ $artcImgBr: 10px
       line-height: 22px   
    
    img
-      width: 100%
+      width: 100%*/
 
-.artc-item-horizontal 
+/*.artc-item-horizontal 
    position: relative
    float: left
    width: 100%
@@ -89,12 +100,7 @@ $artcImgBr: 10px
       color: #777
       float: left
       line-height: 22px
-      font-size: 13px
+      font-size: 13px*/
 
 
-.title
-   &--bgtransp
-      background-color: rgba(32, 32, 32, 0.5)   
-      position: absolute
-      bottom: 0
-      width: 100%
+

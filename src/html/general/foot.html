@@ -24,6 +24,12 @@
       scrollStop: true,
       scrollDelay: 200
    });
+   if (document.documentElement.clientWidth <= 768) {
+      console.log("xdfsdfsdf");
+      $('#artCarousel').carousel({
+         interval: 2000
+      });
+   }
 </script>
 <div class="svg-icon-wrap">
    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
