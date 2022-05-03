@@ -123,3 +123,52 @@ ul
       repeat: no-repeat
       size: auto
       position: center
+
+.df-3
+  display: grid
+  grid-template-columns: repeat(1, 1fr)
+  grid-row-gap: 25px
+  +laptop
+    grid-template-columns: repeat(3, 1fr)
+    grid-column-gap: 20px
+    grid-row-gap: 20px
+
+  .artc-item--vert:not(.artc-item-only-title)
+    grid-row: span 2
+
+
+  .artc-item--vert:nth-child(-n+5)
+    display: grid
+    grid-template-columns: calc(64px + 336 * ((100vw - 320px)/ 1440)) auto
+    +adaptiv-value-imp("grid-column-gap", 40, 7)
+    grid-template-rows: 20px auto
+    @media screen and (max-width: 767px)
+      display: grid
+    
+    +laptop
+      display: flex   
+      align-items: flex-start    
+
+    .title
+      grid-column: 2    
+      align-self: flex-start
+      +laptop
+        grid-column: unset
+
+    .artc-item-image
+      grid-row: span 2 
+      display: block!important
+
+
+    &.artc-item-only-title 
+      .artc-item-image
+        +laptop
+          display: none!important
+
+  .artc-item--vert:not(.artc-item-only-title)
+    display: flex
+    .artc-item-image
+      display: none
+    +laptop
+      .artc-item-image
+        display: block
