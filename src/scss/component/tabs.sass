@@ -6,10 +6,13 @@
    background-color: $accentColor
    color: $fontcolor
 
+.nav-item
+   margin-right: 13px   
+
 .nav-pills
    column-gap: 0
    .nav-link
-      padding: 8px 12px
+      padding: 9px 11px
       color: $fontcolor
       border-radius: $br_btn
       white-space: nowrap
@@ -21,15 +24,17 @@
 
 
 .section-tab__head
-   +adaptiv-value("margin-bottom", 18, 18)
+   +adaptiv-value("margin-bottom", 20, 20)
    position: relative
    display: grid
-   grid-template-columns: 1fr 0.2fr
+   grid-template-columns: .7fr 0.2fr
    row-gap: 20px
    +laptop
       display: flex
       align-items: center
       +adaptiv-value("row-gap", 20, 20)
+      row-gap: unset
+      column-gap: unset      
    h3.title
       margin-top: 0
       +tablet

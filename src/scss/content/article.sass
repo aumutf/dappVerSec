@@ -30,8 +30,12 @@
       +laptop
          display: block
       .artc-item--vert
+         grid-template-rows: 20px auto
+         grid-row-gap: 0
+            
+/*      .artc-item--vert
          display: grid
-         grid-template-columns: calc(64px + 336 * ((100vw - 320px)/ 1440)) auto
+         grid-template-columns: $artcVertGrid
          +adaptiv-value-imp("grid-column-gap", 40, 7)
          grid-template-rows: 20px auto
          +laptop
@@ -44,7 +48,7 @@
             +laptop
                grid-column: unset
          .artc-item-image
-            grid-row: span 2
+            grid-row: span 2*/
 
    .carousel-control-prev, .carousel-control-next
       +laptop

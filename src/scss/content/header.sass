@@ -28,13 +28,13 @@
         +laptop
           display: none
       .burger
-        display: inline-block
-        +laptop
-          display: none
+        display: none
     .search.active
       width: 100%
       margin-right: 0
-      margin-left: 15px
+      margin-left: 0
+      +laptop
+        margin-left: 15px
 
   .search-field
     display: none
@@ -45,6 +45,10 @@
     margin-left: auto
     margin-right: auto
 
+  .btn-left, .btn-close
+    +laptop
+      display: none
+    
   .profile-dropdown
     .dropdown-menu
       // display: flex
@@ -198,7 +202,7 @@
   position: relative
   z-index: 103
   +adaptiv-value("width", 18, 18)
-  +adaptiv-value("width", 18, 18)
+  +adaptiv-value("height", 18, 12)
   +laptop
     display: none
     order: unset
@@ -223,8 +227,8 @@
     background-color: $fontcolor
     left: 0
     width: 100%
-    height: 2px
-    top: 8px
+    height: 3px
+    top: 5px
     transition: all 0.5s ease 0s
     border-radius: 2px
 
@@ -300,9 +304,9 @@
 
 .search-icon
   fill: #ffffff
-  +adaptiv-value("width", 23, 12)
-  +adaptiv-value("min-width", 23, 12)
-  +adaptiv-value("height", 24, 12)
+  +adaptiv-value("width", 18.5, 18.5)
+  +adaptiv-value("min-width", 18.5, 18.5)
+  +adaptiv-value("height", 18.5, 18.5)
 
 .lang-dropdown
   .dropdown-toggle

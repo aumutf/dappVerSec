@@ -39,11 +39,10 @@ body
     color: $fontcolor
     border-radius: $br_btn
     background: $accentColor
-    
-    +adaptiv-value("padding-left", 28, 3)
-    +adaptiv-value("padding-right", 28, 3)
-    padding-top: 5px
-    padding-bottom: 5px
+    padding: 5px 12px
+    +laptop
+      +adaptiv-value("padding-left", 28, 3)
+      +adaptiv-value("padding-right", 28, 3)
 
     &:hover
       opacity: 0.8!important
@@ -68,6 +67,6 @@ h4
 .subtitle
   +adaptiv-value("font-size", 12, 12)
   color: $grey3
-  line-height: 1.2
+  line-height: 1.5
   &>a
     color: inherit

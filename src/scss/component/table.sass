@@ -1,5 +1,11 @@
 .ranktable-wrap
    overflow-x: scroll
+   margin-left: -20px
+   width: 100vw
+   +laptop
+      margin-left: unset
+      width: unset
+
 table.ranktable
    tbody tr
       background: transparent
@@ -24,7 +30,16 @@ table.ranktable
       white-space: nowrap
       line-height: 1.5!important
       &:first-child
-         padding: 8px 35px!important
+         padding: 10px 0px 10px 15px!important
+         min-width: 40px
+         background-color: #3d3b3b
+         position: sticky
+         left: 0
+         z-index: 100
+         +laptop
+            position: static
+            background: transparent
+
       &:last-child
          padding-right: 16px!important
    a
@@ -51,7 +66,7 @@ table.ranktable
          padding: 0!important 
 
    .dapp-img-mini
-      margin-right: 6px
+      margin-right: 2px
       width: 12px
       height: 12px
       min-width: 12px

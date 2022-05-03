@@ -89,7 +89,7 @@ ul
     display: inline-block
     width: 13px
     height: 13px
-    margin-right: 3px
+    margin-right: 6px
     background:
       image: url(../img/icons/flame.svg)
       repeat: no-repeat
@@ -133,25 +133,30 @@ ul
     grid-column-gap: 20px
     grid-row-gap: 20px
 
+  
+
   .artc-item--vert:not(.artc-item-only-title)
     grid-row: span 2
 
 
   .artc-item--vert:nth-child(-n+5)
     display: grid
-    grid-template-columns: calc(64px + 336 * ((100vw - 320px)/ 1440)) auto
-    +adaptiv-value-imp("grid-column-gap", 40, 7)
-    grid-template-rows: 20px auto
+    grid-template-columns: $artcVertGrid
+    +adaptiv-value-imp("grid-column-gap", 40, 10)
+    grid-template-rows: $artVertGridRow
     @media screen and (max-width: 767px)
       display: grid
     
     +laptop
       display: flex   
       align-items: flex-start    
+      row-gap: unset
+      column-gap: unset
 
     .title
       grid-column: 2    
       align-self: flex-start
+
       +laptop
         grid-column: unset
 
@@ -167,8 +172,36 @@ ul
 
   .artc-item--vert:not(.artc-item-only-title)
     display: flex
+    row-gap: unset
     .artc-item-image
       display: none
+      +laptop
+        margin-bottom: 10px
     +laptop
       .artc-item-image
         display: block
+
+  .artc-item--vert 
+    .artc-item-image
+      +laptop
+        height: 150px
+    .title
+      +laptop
+        +adaptiv-value("margin-bottom", 15, 0)
+
+.latestDapp.section
+  +adaptiv-value("margin-top", 64, 28)
+
+
+.btn-left
+  display: inline-block
+  width: 24px
+  height: 24px
+  min-width: 24px
+  min-height: 24px
+  background:
+    color: transparent
+    image: url("../img/icons/chevronLeft.svg")
+    repeat: no-repeat
+    size: auto
+    position: center

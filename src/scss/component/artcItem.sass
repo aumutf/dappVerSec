@@ -7,8 +7,8 @@ $artcImgBr: 10px
    flex-direction: column
    position: relative
    max-width: 100%
-   +laptop
-      +adaptiv-value("max-width", 380, 280)
+   /*+laptop
+      +adaptiv-value("max-width", 380, 280)*/
 
    .title
       word-break: break-word
@@ -18,39 +18,54 @@ $artcImgBr: 10px
          position: absolute
          bottom: 0
          width: 100%
+         line-height: 1.5
    a
       display: block
 
    &--vert
       .artc-item-image
-         height: 100%
-         +adaptiv-value("margin-bottom", 18, 18)
+         min-height: 64px
+         height: 64px
          +laptop
             height: 140px
+            margin-bottom: 18px
+
+      .post-meta
+         margin-top: auto
+         +laptop
+            margin-top: unset
             
    &--vert:not(.artc-item-only-title)
       display: grid
-      grid-template-columns: calc(64px + 336 * ((100vw - 320px)/ 1440)) auto
+      grid-template-columns: $artcVertGrid
       +adaptiv-value-imp("grid-column-gap", 40, 7)
-      grid-template-rows: 20px auto
+      grid-template-rows: $artVertGridRow
+      grid-row-gap: 20px
       +laptop
          display: flex   
          align-items: flex-start
+         row-gap: unset
+         column-gap: unset         
       .title
          grid-column: 2    
          align-self: flex-start
+         margin-bottom: 6px
          +laptop
             grid-column: unset
+            margin-bottom: unset
       .artc-item-image
          grid-row: span 2  
 
    &--row
       display: grid
-      grid-template-columns: minmax(auto, 210px) 1fr
+      grid-template-columns: minmax(auto, 180px) 1fr
       background-color: $grey1
       min-height: 173px
       border-radius: $artcImgBr
       overflow: hidden
+      +laptop
+         grid-template-columns: minmax(auto, 210px) 1fr
+
       img
          width: 100%
          height: 100%
@@ -60,19 +75,28 @@ $artcImgBr: 10px
       border-radius: $artcImgBr 0px 0px $artcImgBr
       overflow: hidden
    &__right
-      padding: 16px
+      padding: 17px 10px
       display: flex
       flex-direction: column
       font-size: 12px
+      +laptop
+         padding: 15px
       .title
          margin-bottom: 7px
          word-break: break-word
       p
          margin-bottom: 16px
          color: $grey3
+         line-height: 1.5
       span.flame-ic
          margin-top: auto
+         margin-bottom: 8px
    &-only-title
+      .title
+         margin-bottom: 5px
+         +laptop
+            margin-bottom: unset
+
       .artc-item-image
          display: none
 

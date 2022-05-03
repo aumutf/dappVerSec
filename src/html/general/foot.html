@@ -5,10 +5,13 @@
    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
 <script src="js/app.min.js"></script>
+<script src="js/header.js"></script>
 <script>
 
 
    window.onload = function () {
+      searchField();
+      menuMob();
 
       $(".str-slider-dapp").liMarquee({
          direction: "left",
@@ -40,12 +43,18 @@
             })
          })
 
+      /*    $("#ranktable").DataTable({
+    
+          });*/
+
       if (document.documentElement.clientWidth <= 768) {
          console.log("xdfsdfsdf");
          $('#artCarousel').carousel({
             interval: 2000
          });
       }
+
+
    }
 </script>
 <div class="svg-icon-wrap">
