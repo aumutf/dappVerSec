@@ -6,29 +6,46 @@
 <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
 <script src="js/app.min.js"></script>
 <script>
-   $('.str-slider-dapp').liMarquee({
-      direction: 'left',
-      circular: true,
-      loop: -1,
-      hoverStop: true,
-      startShow: true,
-      scrollStop: true,
-      scrollDelay: 150
-   });
-   $('.str-slider-cat').liMarquee({
-      direction: 'left',
-      circular: true,
-      loop: -1,
-      startShow: true,
-      hoverStop: true,
-      scrollStop: true,
-      scrollDelay: 200
-   });
-   if (document.documentElement.clientWidth <= 768) {
-      console.log("xdfsdfsdf");
-      $('#artCarousel').carousel({
-         interval: 2000
-      });
+
+
+   window.onload = function () {
+
+      $(".str-slider-dapp").liMarquee({
+         direction: "left",
+         circular: !0,
+         loop: -1,
+         hoverStop: !0,
+         startShow: !0,
+         scrollStop: !0,
+         scrollDelay: 150
+      }),
+         $(".str-slider-cat").liMarquee({
+            direction: "left",
+            circular: !0,
+            loop: -1,
+            startShow: !0,
+            hoverStop: !0,
+            scrollStop: !0,
+            scrollDelay: 200
+         }),
+
+         $(".slider-arrow-left").click(function () {
+            $(".str-slider-gallery").liMarquee("changeOptions", {
+               direction: "left"
+            })
+         }),
+         $(".slider-arrow-right").click(function () {
+            $(".str-slider-gallery").liMarquee("changeOptions", {
+               direction: "right"
+            })
+         })
+
+      if (document.documentElement.clientWidth <= 768) {
+         console.log("xdfsdfsdf");
+         $('#artCarousel').carousel({
+            interval: 2000
+         });
+      }
    }
 </script>
 <div class="svg-icon-wrap">

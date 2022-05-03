@@ -19,8 +19,8 @@ $br_menu: 4px
   +adaptiv-value("height", $h_scroll, $h_scroll_mob)
   position: absolute
   left: 0
-  height: 60px
-  min-height: 60px
+  height: 65px
+  min-height: 65px
 
   &-inner
     display: flex
@@ -84,9 +84,7 @@ $br_menu: 4px
   border-radius: 50%
   background: rgba(0, 0, 0, 0.5)
 
-.str_wrap
-  background-color: $grey1!important
-  min-height: 65px!important
+
 
   &.str-slider-gallery
     min-height: calc(56px + 24 * ((100vw - 320px) / 1120)) !important
@@ -95,14 +93,20 @@ $br_menu: 4px
 .str-slider-wrap
   position: absolute
   left: 0
-  height: 60px
+  height: 65px
   width: 100%
   z-index: 100
-  background-color: #303030
+  /*background-color: #303030*/
+  .str_wrap
+    background-color: #303030
 
 .categories
   top: 116px
-  background-color: #3D3B3B
+  /*background-color: #3D3B3B*/
+  +laptop
+    top: calc(100px + 18.2 * ((100vw - 768px) / 672))   
+  .str_wrap
+    background-color: #3D3B3B
 
 .galleryPage
   .str-slider-wrap
@@ -166,4 +170,8 @@ $br_menu: 4px
       text-transform: uppercase
       opacity: 0
 
+
+.str_wrap
+  min-height: 65px!important
+    
 /* SLIDERSCROLL styles end */
