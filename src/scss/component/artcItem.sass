@@ -23,9 +23,38 @@ $artcImgBr: 10px
 
    &--vert
       .artc-item-image
+         height: 100%
          +adaptiv-value("margin-bottom", 18, 18)
-         height: 140px
-
+         +laptop
+            height: 140px
+   &--row
+      display: grid
+      grid-template-columns: minmax(auto, 210px) 1fr
+      background-color: $grey1
+      min-height: 173px
+      border-radius: $artcImgBr
+      overflow: hidden
+      img
+         width: 100%
+         height: 100%
+         object-fit: cover
+   &__left
+      width: auto
+      border-radius: $artcImgBr 0px 0px $artcImgBr
+      overflow: hidden
+   &__right
+      padding: 16px
+      display: flex
+      flex-direction: column
+      font-size: 12px
+      .title
+         margin-bottom: 7px
+         word-break: break-word
+      p
+         margin-bottom: 16px
+         color: $grey3
+      span.flame-ic
+         margin-top: auto
 
 .artc-item-image
    overflow: hidden
@@ -50,6 +79,7 @@ $artcImgBr: 10px
       img
          border-radius: $artcImgBr
 
+   
 
 /*.artc-item-mid 
    display: flex

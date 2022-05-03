@@ -10,8 +10,11 @@
       justify-content: space-between
     .col--center
       flex-grow: 1
-      +adaptiv-value("margin-left", 50, 0)
-      +adaptiv-value("margin-right", 50, 0)
+      margin-left: 0
+      margin-right: 0
+      +laptop
+        +adaptiv-value("margin-left", 50, 0)
+        +adaptiv-value("margin-right", 50, 0)
 
   .logo
     +adaptiv-value("margin-right", 65, 0)
@@ -37,10 +40,10 @@
     
   .social-menu-link
     display: inline-block
-    +adaptiv-value("min-width", 24, 8)
-    +adaptiv-value("width", 24, 8)
-    +adaptiv-value("min-height", 24, 8)
-    +adaptiv-value("height", 24, 8)
+    +adaptiv-value("min-width", 24, 24)
+    +adaptiv-value("width", 24, 24)
+    +adaptiv-value("min-height", 24, 24)
+    +adaptiv-value("height", 24, 24)
 
 
   .social-menu li

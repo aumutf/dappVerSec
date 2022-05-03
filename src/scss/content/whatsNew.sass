@@ -1,0 +1,8 @@
+.section-whatsNew-articles
+   display: grid
+   grid-template-columns: repeat(1, 1fr)
+   row-gap: 25px
+   +laptop
+      grid-template-columns: repeat(3, 1fr)
+      +adaptiv-value("row-gap", 40, 40)
+      +adaptiv-value("column-gap", 40, 40)

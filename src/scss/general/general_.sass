@@ -55,4 +55,44 @@ ul
     box-shadow: none
     color: inherit
 
+//PERCENTVAL  
+.percentVal
+  display: inline-flex
+  align-items: center
+  column-gap: 2px
+  margin-left: 3px
+  &::after
+    content: ""
+    width: 0
+    height: 0
+    border-style: solid
+    line-height: 0
+  &--up
+    color: $green
+    &::after
+      border-width: 0 3px 5px 3px
+      border-color: transparent transparent $green transparent
+  &--down
+    color: red
+    &::after
+      border-width: 5px 3px 0 3px
+      border-color: red transparent transparent transparent
     
+//FLAME ICON    
+.flame-ic
+  position: relative
+  display: inline-flex
+  align-items: center
+  line-height: 1.5
+  &::before
+    content: ""
+    display: inline-block
+    width: 13px
+    height: 13px
+    margin-right: 3px
+    background:
+      image: url(../img/icons/flame.svg)
+      repeat: no-repeat
+      size: cover
+      position: center    
+
