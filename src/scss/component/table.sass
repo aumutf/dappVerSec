@@ -1,5 +1,7 @@
 .ranktable-wrap
-   overflow-x: scroll
+   overflow-x: auto
+
+.ranktable-wrap, .btn-seemore-wrap   
    margin-left: -20px
    width: 100vw
    +laptop
@@ -32,7 +34,7 @@ table.ranktable
       &:first-child
          padding: 10px 0px 10px 15px!important
          min-width: 40px
-         background-color: #3d3b3b
+         background-color: $grey4
          position: sticky
          left: 0
          z-index: 100
@@ -61,6 +63,9 @@ table.ranktable
          font-weight: $bold
          padding: 9px 10px !important
          border: none
+         &:first-child
+            +laptop
+               background-color: $grey1
    tfoot
       td:last-child
          padding: 0!important 
