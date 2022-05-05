@@ -1,6 +1,6 @@
 
 /* ARTICLE ITEM styles */
-$artcImgBr: 10px
+$artcImgBr: 8px
 
 .artc-item
    display: flex
@@ -59,7 +59,7 @@ $artcImgBr: 10px
    &--row
       display: grid
       grid-template-columns: minmax(auto, 180px) 1fr
-      background-color: $grey1
+      background-color: rgba(43, 43, 43, 0.3)
       min-height: 173px
       border-radius: $artcImgBr
       overflow: hidden
@@ -107,6 +107,7 @@ $artcImgBr: 10px
    position: relative
    background-color: transparent
    height: 130px
+   border-radius: $artcImgBr
    +laptop
       +adaptiv-value("height", 150, 150)
 
@@ -117,6 +118,7 @@ $artcImgBr: 10px
       width: 100%!important
       height: 100%!important
       object-fit: cover
+      border-radius: $artcImgBr
 
    &--br
       border-radius: $artcImgBr

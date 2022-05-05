@@ -4,11 +4,12 @@ $tablet-width: 768px
 $phone-width: 576px
 $maxWidth: 1440
 
+=laptop_big
+  @media screen and (min-width: $laptop-width)
+    @content
+
 =laptop
   @media screen and (min-width: $tablet-width)
-    @content
-=tablet
-  @media screen and (min-width: $phone-width)
     @content
 
 =laptop_down

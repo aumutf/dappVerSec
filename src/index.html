@@ -8,24 +8,16 @@
 <body>
    <div class="body-wrap">
       @@include('html/general/header.html',{})
-      @@include('html/general/sliderTop.html',{})
-
       <div class="bgDapp">
+         @@include('html/general/sliderTop.html',{})
          @@include('html/content/latestDappArt.html',{})
          @@include('html/content/hotNews.html',{})
+         @@include('html/content/todaysTop.html',{})
+         @@include('html/content/socialSignal_dubl.html',{})
+
+         @@include('html/content/whatsNew.html',{})
+         @@include('html/content/socialSignal_dubl.html',{})
       </div>
-
-      @@include('html/content/todaysTop.html',{})
-      <!-- @@include('html/content/socialSignal.html',{}) -->
-      @@include('html/content/socialSignal_dubl.html',{})
-      @@include('html/content/whatsNew.html',{})
-      @@include('html/content/socialSignal_dubl.html',{})
-      
-
-
-      <!-- @@include('html/component/artc-item.html',{})-->
-      <!-- @@include('html/component/tabs.html',{})-->
-
       @@include('html/general/footer.html',{})
       @@include('html/general/foot.html',{})
    </div>

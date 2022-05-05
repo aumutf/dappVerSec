@@ -1,24 +1,32 @@
 
-.nav-pills>li.active>a, .nav-pills>li.active>a:focus, .nav-pills>li.active>a:hover,
-.nav>li>a:focus, .nav>li>a:hover,
-.nav-pills .nav-link.active,
-.nav-pills .show>.nav-link
-   background-color: $accentColor
+.nav-pills>li.active>a, 
+.nav-pills>li.active>a:focus, 
+.nav-pills>li.active>a:hover,
+.nav-pills .nav-link.active
+   border-color: $accentColor
    color: $fontcolor
+   background: transparent
+
+.nav>li>a:focus, .nav>li>a:hover,
+.nav-pills .show>.nav-link
+   color: $fontcolor
+   
 
 .nav-item
    margin-right: 13px   
 
 .nav-pills
    column-gap: 0
+   
    .nav-link
-      padding: 9px 11px
-      color: $fontcolor
-      border-radius: $br_btn
+      border: 1px solid transparent 
+      padding: 7px 11px 8px
+      color: $grey3
+      border-radius: $br_pill
       white-space: nowrap
       +laptop
-         +adaptiv-value("padding-top", 8, 8)
-         +adaptiv-value("padding-bottom", 8, 8)
+         +adaptiv-value("padding-top", 5, 8)
+         +adaptiv-value("padding-bottom", 6, 8)
          +adaptiv-value("padding-left", 12, 8)
          +adaptiv-value("padding-right", 12, 8)
 
@@ -35,12 +43,13 @@
       +adaptiv-value("row-gap", 20, 20)
       row-gap: unset
       column-gap: unset      
-   h3.title
+   h2.title
       margin-top: 0
-      +tablet
-         +adaptiv-value("margin-right", 22, 22)
+      +laptop
+         +adaptiv-value("margin-right", 30, 22)
    &>.link
       margin-left: auto
+      +adaptiv-value("min-width", 60, 60)
    .section__pills
       overflow-x: scroll
       flex-wrap: nowrap
@@ -61,12 +70,4 @@
    +adaptiv-value("min-height", 300, 150)
    &.section-crypto .tab-content
       +adaptiv-value("min-height", 150, 75)
-   .btn-seemore
-      background-color: #303030
-      box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.15)
-      color: #FFFFFF
-      text-transform: uppercase
-      font-size: 14px
-      margin-top: -2px
-      +laptop
-         +adaptiv-value("font-size", 14, 14)
+   
