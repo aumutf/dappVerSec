@@ -7,7 +7,7 @@ $artcImgBr: 8px
    flex-direction: column
    position: relative
    max-width: 100%
-   /*+laptop
+   /*+tablet
       +adaptiv-value("max-width", 380, 280)*/
 
    .title
@@ -26,13 +26,13 @@ $artcImgBr: 8px
       .artc-item-image
          min-height: 64px
          height: 64px
-         +laptop
+         +tablet
             height: 140px
             margin-bottom: 18px
 
       .post-meta
          margin-top: auto
-         +laptop
+         +tablet
             margin-top: unset
             
    &--vert:not(.artc-item-only-title)
@@ -41,7 +41,7 @@ $artcImgBr: 8px
       +adaptiv-value-imp("grid-column-gap", 40, 7)
       grid-template-rows: $artVertGridRow
       grid-row-gap: 20px
-      +laptop
+      +tablet
          display: flex   
          align-items: flex-start
          row-gap: unset
@@ -50,7 +50,7 @@ $artcImgBr: 8px
          grid-column: 2    
          align-self: flex-start
          margin-bottom: 6px
-         +laptop
+         +tablet
             grid-column: unset
             margin-bottom: unset
       .artc-item-image
@@ -63,7 +63,7 @@ $artcImgBr: 8px
       min-height: 173px
       border-radius: $artcImgBr
       overflow: hidden
-      +laptop
+      +tablet
          grid-template-columns: minmax(auto, 210px) 1fr
 
       img
@@ -79,7 +79,7 @@ $artcImgBr: 8px
       display: flex
       flex-direction: column
       font-size: 12px
-      +laptop
+      +tablet
          padding: 15px
       .title
          margin-bottom: 7px
@@ -94,7 +94,7 @@ $artcImgBr: 8px
    &-only-title
       .title
          margin-bottom: 5px
-         +laptop
+         +tablet
             margin-bottom: unset
 
       .artc-item-image
@@ -108,7 +108,7 @@ $artcImgBr: 8px
    background-color: transparent
    height: 130px
    border-radius: $artcImgBr
-   +laptop
+   +tablet
       +adaptiv-value("height", 150, 150)
 
    &>a, picture
@@ -131,7 +131,7 @@ $artcImgBr: 8px
    margin-top: 5px
    column-gap: 5px
    font-size: 12px   
-   +laptop
+   +tablet
       +adaptiv-value("font-size", 12, 12)
       +adaptiv-value("margin-top", 10, 10)
    span

@@ -2,6 +2,10 @@
    display: grid
    grid-template-columns: repeat(1, 1fr)
    row-gap: 25px
+   +tablet
+      grid-template-columns: repeat(2, 1fr)
+      +adaptiv-value("row-gap", 20, 20)
+      +adaptiv-value("column-gap", 20, 20)
    +laptop
       grid-template-columns: repeat(3, 1fr)
       +adaptiv-value("row-gap", 40, 40)

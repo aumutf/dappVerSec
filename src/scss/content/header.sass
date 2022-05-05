@@ -5,7 +5,7 @@
 
   .container
     max-width: 100%!important
-    +laptop
+    +tablet
       padding: 0 50px
 
   &__inner
@@ -19,11 +19,11 @@
     &.searching
       .nav, .logo, .menu--right
         display: none
-        +laptop
+        +tablet
           display: flex
       .btn-left, .btn-close
         display: inline-block
-        +laptop
+        +tablet
           display: none
       .burger
         display: none
@@ -31,12 +31,12 @@
       width: 100%
       margin-right: 0
       margin-left: 0
-      +laptop
+      +tablet
         margin-left: 15px
 
   .search-field
     display: none
-    +laptop
+    +tablet
       display: block
 
   .logo
@@ -44,7 +44,7 @@
     margin-right: auto
 
   .btn-left, .btn-close
-    +laptop
+    +tablet
       display: none
     
   .profile-dropdown
@@ -98,7 +98,7 @@
     +adaptiv-value("margin-left", 105, 12)
     
 
-    +laptop
+    +tablet
       display: flex
       position: relative
       height: auto
@@ -119,18 +119,18 @@
 
   .lang-dropdown
     order: -1
-    +laptop
+    +tablet
       order: 1
     &--mobile
       display: block
-      +laptop
+      +tablet
         display: none
       .dropdown-select.open ul
         left: 0
         z-index: 1001
     &--desktop
       display: none
-      +laptop
+      +tablet
         display: block
     .dropdown-menu
       background-color: var(--bgcolor)
@@ -145,7 +145,7 @@
 
   .nav__menu
     //border-bottom: 1px solid $grey
-    +laptop
+    +tablet
       align-items: center
       border-bottom: 0
 
@@ -168,13 +168,13 @@
 
   .menu--right.menu
     display: none
-    +laptop
+    +tablet
       display: flex
       flex-wrap: unset
 
   .menu--right
     &>.menu-item:not(:last-child)
-      +laptop
+      +tablet
         +adaptiv-value("margin-left", 40, 0)
 
   .btn-left, .btn-close
@@ -184,7 +184,7 @@
     display: flex
     flex-direction: column
     align-items: flex-start
-    +laptop
+    +tablet
       align-items: center
       flex-direction: row
       //flex-wrap: wrap
@@ -209,7 +209,7 @@
   z-index: 103
   +adaptiv-value("width", 18, 18)
   +adaptiv-value("height", 18, 12)
-  +laptop
+  +tablet
     display: none
     order: unset
     margin-left: 0
@@ -266,7 +266,7 @@
   margin-right: 0
   +adaptiv-value("width", 130, 18)
   +adaptiv-value("margin-right", -25, 0)
-  +laptop
+  +tablet
     margin-left: auto
     margin-right: auto
     order: 0

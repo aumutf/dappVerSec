@@ -129,14 +129,14 @@ ul
     color: #FFFFFF
     font-size: inherit
     border-radius: 0px 0px 8px 8px
-    +laptop
+    +tablet
         +adaptiv-value("font-size", 14, 14)    
 
 .df-3
   display: grid
   grid-template-columns: repeat(1, 1fr)
   grid-row-gap: 25px
-  +laptop
+  +tablet
     grid-template-columns: repeat(3, 1fr)
     grid-column-gap: 20px
     grid-row-gap: 20px
@@ -155,7 +155,7 @@ ul
     @media screen and (max-width: 767px)
       display: grid
     
-    +laptop
+    +tablet
       display: flex   
       align-items: flex-start    
       row-gap: unset
@@ -165,7 +165,7 @@ ul
       grid-column: 2    
       align-self: flex-start
 
-      +laptop
+      +tablet
         grid-column: unset
 
     .artc-item-image
@@ -175,7 +175,7 @@ ul
 
     &.artc-item-only-title 
       .artc-item-image
-        +laptop
+        +tablet
           display: none!important
 
   .artc-item--vert:not(.artc-item-only-title)
@@ -183,18 +183,18 @@ ul
     row-gap: unset
     .artc-item-image
       display: none
-      +laptop
+      +tablet
         margin-bottom: 10px
-    +laptop
+    +tablet
       .artc-item-image
         display: block
 
   .artc-item--vert 
     .artc-item-image
-      +laptop
+      +tablet
         height: 150px
     .title
-      +laptop
+      +tablet
         +adaptiv-value("margin-bottom", 15, 0)
 
 .latestDapp.section

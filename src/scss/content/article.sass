@@ -1,7 +1,7 @@
 //block grid for articles
 .bl-grid
    row-gap: 0
-   +laptop
+   +tablet
       display: grid
       +adaptiv-value("row-gap", 20, 20)
 
@@ -13,21 +13,21 @@
       position: relative
       grid-template-columns: 1fr
       display: none
-      +laptop
+      +tablet
          display: grid
          grid-template-columns: repeat(3, 1fr)   
 
 .bl-grid
    .carousel-inner
       display: block
-      +laptop
+      +tablet
          display: grid
          grid-template-columns: repeat(4, 1fr)
          +adaptiv-value("column-gap", 30, 0)
 
          
    .carousel-item
-      +laptop
+      +tablet
          display: block
       .artc-item--vert
          grid-template-rows: 20px auto
@@ -38,18 +38,18 @@
          grid-template-columns: $artcVertGrid
          +adaptiv-value-imp("grid-column-gap", 40, 7)
          grid-template-rows: 20px auto
-         +laptop
+         +tablet
             display: flex   
             align-items: flex-start  
          
          .title
             grid-column: 2    
             align-self: flex-start
-            +laptop
+            +tablet
                grid-column: unset
          .artc-item-image
             grid-row: span 2*/
 
    .carousel-control-prev, .carousel-control-next
-      +laptop
+      +tablet
          display: none
