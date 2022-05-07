@@ -61,12 +61,16 @@ ul
   align-items: center
   column-gap: 2px
   margin-left: 3px
+  position: relative
+  padding-left: 7px
   &::after
     content: ""
     width: 0
     height: 0
     border-style: solid
     line-height: 0
+    position: absolute
+    left: 0
   &--up
     color: $green
     &::after
@@ -227,20 +231,33 @@ ul
 
 
 .bgDapp
-  +adaptiv-value("background-position-y", -55, 0)
-  +adaptiv-value("background-position-x", -122, 0)
-  +adaptiv-value("background-size", 1688, 500)
   background:
+    image: url(../img/dapp_bg_mob.png)
+    repeat-y: repeat
+    repeat-x: no-repeat
+    position-x: 50.5%
+    position-y: 1.2%
+    size: 775px
+
+  +tablet
+    background:
       image: url(../img/dapp_bg1.png)
-      repeat-y: repeat
-      repeat-x: no-repeat
+      size: 1050px
+      position-x: 97%
+      position-y: 8.8%
+
+  +laptop
+    background:
+      position-x: 50%
+      position-y: -3.5%
+      size: 1688px   
   
   +laptop_down
     background:
-        image: url(../img/dapp_bg1.png)
-        repeat-y: repeat
-        repeat-x: no-repeat
-        position: center
+      image: url(../img/dapp_bg1.png)
+      repeat-y: repeat
+      repeat-x: no-repeat
+        
 
 
 
