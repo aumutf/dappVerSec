@@ -1,0 +1,146 @@
+$p_modal: 20px
+.close
+   color: $fontcolor
+   text-shadow: none
+   opacity: 1
+
+.fade.show
+   background: rgba(255, 255, 255, 0.5)
+
+.modal-content
+   background: $bgcolor
+   border-radius: $br_menu
+   border: none
+
+.modal
+   .close
+      position: absolute
+      right: $p_modal
+      top: $p_modal
+      &:hover, &:focus
+         color: $fontcolor
+         opacity: 0.5
+
+.modalLogin
+   .modal-body
+      display: grid
+      grid-template-columns: 1fr
+      padding: 0
+      +tablet
+         grid-template-columns: minmax(auto, 460px) 1fr
+      
+
+   &__left
+      background-color: $bgcolor
+      padding: 42px 32px
+   &__right
+      display: none
+      background-color: $bgcolor
+      +tablet
+         display: block
+         
+
+.contactModal
+   max-width: 100%
+   width: 100%
+   +tablet
+      width: auto
+      max-width: auto
+   .modal-body
+      display: grid
+      padding: 0
+      grid-template-columns: 1fr
+      +tablet
+         grid-template-columns: minmax(auto, 460px) 1fr
+   p.title
+      background-color: $bgcolor
+      
+      font-size: 34px!important
+      +adaptiv-value("padding-top", 56, 16)
+      +adaptiv-value("padding-bottom", 25, 24)
+      +adaptiv-value("padding-left", 32, 16)
+      +adaptiv-value("padding-right", 32, 16)
+      +tablet
+         font-size: 40px!important
+         background-color: $bgcolor
+         
+   .h5.title
+      padding: 0
+      margin-bottom: 15px
+      font-size: 16px!important
+      font-weight: 500!important
+      +tablet
+         font-size: 17px!important
+   &__left
+      background-color: $bgcolor
+      padding-top: 0
+      +adaptiv-value("padding-left", 32, 16)
+      +adaptiv-value("padding-right", 32, 16)
+      +adaptiv-value("padding-bottom", 56, 68)
+      display: flex
+      flex-direction: column
+      +tablet
+         background-color: $bgcolor
+   &__right
+      background-color: $bgcolor
+      padding: 12px 35px 55px 32px
+      grid-row: 2
+      grid-column: 1
+      +tablet
+         padding-top: 96px
+         grid-row: 1/3
+         grid-column: 2
+   &__link
+      display: inline-flex
+      align-items: flex-start
+      column-gap: 16px
+      margin-bottom: 26px
+
+
+   .svg-icon
+      width: 18px
+      height: 18px
+      min-width: 24px
+      min-height: 24px
+      fill: $fontcolor
+
+
+
+@media (min-width: 992px)
+   .modal-lg
+      max-width: 850px
+
+@media (min-width: 992px)
+   .modal-w100
+      max-width: 100%
+      margin: 0 auto
+
+//@media (min-width: 576px)
+.modal-w100
+   max-width: 100%
+   width: 100%
+   margin: 0 auto
+
+.signAlmostModal
+   .block-title
+      margin-bottom: 9px
+   p
+      margin-bottom: 34px
+   .modal-body
+      padding: 37px 280px 32px
+      +adaptiv-value("padding-left", 220, 16)
+      +adaptiv-value("padding-right", 220, 16)
+      +adaptiv-value("padding-top", 37, 60)
+      +adaptiv-value("padding-bottom", 32, 24)
+
+
+.modal-w100
+   .modal-dialog
+      margin: 0
+
+.modal-rel
+   height: 100vh
+   .modal-dialog, .modal-content
+      height: 100%
+   h2.title
+      margin-bottom: 1rem
