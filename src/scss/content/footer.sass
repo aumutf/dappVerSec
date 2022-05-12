@@ -16,6 +16,10 @@
       +tablet
         +adaptiv-value("margin-left", 45, 0)
         +adaptiv-value("margin-right", 45, 0)
+        display: flex
+        justify-content: center
+      +laptop
+        display: block
         margin-bottom: 0
       .menu
         flex-wrap: wrap
@@ -34,11 +38,14 @@
     display: grid
     grid-template-columns: 1fr 1fr
     +tablet
-      flex-direction: row
+      flex-direction: column
       display: flex
       justify-content: space-between
       row-gap: unset
       column-gap: unset
+    +laptop
+      flex-direction: row
+
   .menu-item
     font-size: inherit
     padding-bottom: 7px
