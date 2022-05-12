@@ -1,3 +1,247 @@
+<div class="modal fade auth-modal" id="modal-login" tabindex="-1" role="dialog">
+   <div class="modal-dialog modal-dialog-centered modal-lg modalLogin">
+      <div class="modal-content">
+         <div class="modal-body contentSign">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+               <span aria-hidden="true">×</span>
+            </button>
+
+            <div class="auth-box modalLogin__left">
+               <p class="block-title h2">Добро пожаловать обратно в DappExpert</p>
+               <div class="btn-wrap">
+
+               </div>
+
+               <!-- include message block -->
+               <div id="result-login"></div>
+
+               <!-- form start -->
+               <form id="form-login">
+                  <div class="form-group">
+                     <label>Адрес электронной почты</label>
+                     <input type="email" name="email" class="form-control form-input"
+                        placeholder="Адрес электронной почты" value="" required="">
+                     <span class="error__text">This email is already registered</span>
+                  </div>
+                  <div class="form-group">
+                     <label>Password</label>
+                     <input type="password" name="password" class="form-control form-input" placeholder="Password"
+                        value="" required="">
+                     <span class="hint"></span>
+                  </div>
+                  <!--<div class="form-group">
+                           <label class="custom-checkbox">
+                               <input type="checkbox" name="remember_me" class="checkbox_terms_conditions" value="1">
+                               <span class="checkbox-icon"><i class="icon-check"></i></span>
+                                                               </label>
+                       </div>-->
+                  <button type="submit" class="btn btn--filled">Login</button>
+                  <div class="span-agree">
+                     By joining, you agree to our &nbsp;
+                     <a href="https://test.dapp.expert/ru/terms-conditions" class="link-terms" target="_blank">Условия и
+                        положения</a>
+                  </div>
+                  <!--<div class="form-group text-center m-b-0">
+                           <a href="" class="link-forget">
+                               ?
+                           </a>
+                       </div>-->
+                  <input type="hidden" name="sys_lang_id" value="2">
+               </form><!-- form end -->
+
+            </div>
+            <div class="modalLogin__right"></div>
+         </div>
+
+
+      </div>
+   </div>
+</div>
+<div class="modal fade" id="contactModal" tabindex="-1" role="dialog">
+   <div class="modal-dialog modal-lg contactModal" role="document">
+      <div class="modal-content">
+         <div class="modal-body ">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+               <span aria-hidden="true">&times;</span>
+            </button>
+            <p class="title h2">Contact us</p>
+            <div class="contactModal__left">
+               <!--<div class="contactModal__link email">
+                  <svg class="svg-icon">
+                     <use xlink:href="#email-icon" />
+                  </svg>
+                  <a href="mailto: sales@dappexpert.com">sales@dappexpert.com</a>
+               </div>
+               <div class="contactModal__link phone">
+                  <svg class="svg-icon">
+                     <use xlink:href="#phone-icon" />
+                  </svg>
+                  <a href="tel: +7 789 789 77 88 99">+7 789 789 77 88 99</a>
+               </div>-->
+               <h5 class="title h5">Headquarters</h5>
+               <div class="contactModal__link pin">
+                  <svg class="svg-icon">
+                     <use xlink:href="#pin-icon" />
+                  </svg>
+                  <a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus
+                     venenatis, lectus</a>
+               </div>
+               <h5 class="title h5">Follow Us</h5>
+               <ul class="social-menu">
+
+                  <!--if facebook url exists-->
+                  <li>
+                     <a rel="nofollow" class="social-menu-link facebook" href="https://www.facebook.com/dappexpert"
+                        target="_blank">
+                        <svg class="social-menu__icon">
+                           <use xlink:href="#facebook-icon"></use>
+                        </svg>
+                     </a>
+                  </li>
+
+                  <!--if instagram url exists-->
+                  <li>
+                     <a rel="nofollow" class="social-menu-link instagram" href="https://www.instagram.com/dapp.expert/"
+                        target="_blank">
+                        <svg class="social-menu__icon">
+                           <use xlink:href="#instagram-icon"></use>
+                        </svg>
+                     </a>
+                  </li>
+
+                  <!--if telegram url exists-->
+                  <li>
+                     <a rel="nofollow" class="social-menu-link telegram" href="https://t.me/dappexpert" target="_blank">
+                        <svg class="social-menu__icon">
+                           <use xlink:href="#telegram-icon"></use>
+                        </svg>
+                     </a>
+                  </li>
+                  <!--if twitter url exists-->
+                  <li>
+                     <a rel="nofollow" class="social-menu-link twitter" href="https://twitter.com/Dappexpert"
+                        target="_blank">
+                        <svg class="social-menu__icon">
+                           <use xlink:href="#twitter-icon"></use>
+                        </svg>
+                     </a>
+                  </li>
+                  <!--if youtube url exists-->
+                  <li>
+                     <a rel="nofollow" class="social-menu-link youtube"
+                        href="https://www.youtube.com/channel/UCCxojOWRiZVG0jQZNfEfJTQ" target="_blank">
+                        <svg class="social-menu__icon">
+                           <use xlink:href="#youtube-icon"></use>
+                        </svg>
+                     </a>
+                  </li>
+                  <!--if vk url exists-->
+                  <li>
+                     <a rel="nofollow" class="social-menu-link vcontacte vk" href="https://vk.com/dappexpert"
+                        target="_blank">
+                        <svg class="social-menu__icon">
+                           <use xlink:href="#vcontacte-icon"></use>
+                        </svg>
+                     </a>
+                  </li>
+                  <!--if pinterest url exists-->
+                  <li>
+                     <a rel="nofollow" class="social-menu-link linked" target="_blank"
+                        href="https://www.pinterest.com/dappdotexpert/">
+                        <svg class="social-menu__icon">
+                           <use xlink:href="#pinterest-icon"></use>
+                        </svg>
+                     </a>
+                  </li>
+
+                  <!--if rss active-->
+                  <!--
+                  <li>
+                      <a class="rss" href=""><i class="icon-rss"></i>
+                      </a>
+                  </li>
+              -->
+               </ul>
+               <ul class="social-menu ru">
+                  <!--if facebook ru url exists-->
+                  <li>
+                     <a rel="nofollow" class="social-menu-link facebook  ru"
+                        href="https://www.facebook.com/dapp.expert_russian" target="_blank">
+                        <svg class="social-menu__icon">
+                           <use xlink:href="#facebook-icon"></use>
+                        </svg>
+                     </a>
+                  </li>
+                  <!--if instagram ru url exists-->
+                  <li>
+                     <a rel="nofollow" class="social-menu-link instagram ru"
+                        href="https://www.instagram.com/dapp.expert_russian/" target="_blank">
+                        <svg class="social-menu__icon">
+                           <use xlink:href="#instagram-icon"></use>
+                        </svg>
+                     </a>
+                  </li>
+                  <!--if telegram ru url exists-->
+                  <li>
+                     <a rel="nofollow" class="social-menu-link telegram ru" href="https://t.me/dappexpert_russia"
+                        target="_blank">
+                        <svg class="social-menu__icon">
+                           <use xlink:href="#telegram-icon"></use>
+                        </svg>
+                     </a>
+                  </li>
+                  <!--if medium url exists-->
+                  <li>
+                     <a rel="nofollow" class="social-menu-link medium" href="https://medium.com/@Dapp.Expert"
+                        target="_blank">
+                        <svg class="social-menu__icon">
+                           <use xlink:href="#medium-icon"></use>
+                        </svg>
+                     </a>
+                  </li>
+                  <!--if reddit url exists-->
+                  <li>
+                     <a rel="nofollow" class="social-menu-link reddit" href="https://www.reddit.com/user/Dapp-expert"
+                        target="_blank">
+                        <svg class="social-menu__icon">
+                           <use xlink:href="#reddit-icon"></use>
+                        </svg>
+                     </a>
+                  </li>
+
+                  <!--if linkedin url exists-->
+                  <li>
+                     <a rel="nofollow" class="social-menu-link linked" target="_blank"
+                        href="https://www.linkedin.com/in/dapp-expert-644a76218/">
+                        <svg class="social-menu__icon">
+                           <use xlink:href="#linked-icon"></use>
+                        </svg>
+                     </a>
+                  </li>
+               </ul>
+            </div>
+            <div class="contactModal__right">
+               <form action="">
+                  <div class="form-group">
+                     <label>Name</label>
+                     <input type="text" name="name" class="form-control form-input" placeholder="Name" required />
+                  </div>
+                  <div class="form-group">
+                     <label>Email</label>
+                     <input type="email" name="email" class="form-control form-input" placeholder="Email" required />
+                  </div>
+                  <div class="form-group">
+                     <textarea name="message" class="form-control form-input form-textarea"
+                        placeholder="Message"></textarea>
+                     <span class="hint">The maximum number of characters is 500</span>
+                  </div>
+                  <button type="submit" class="btn btn--filled">Send message</button>
+               </form>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
 <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
@@ -132,6 +376,12 @@
                   transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round"></path>
             </g>
          </g>
+      </symbol>
+   </svg>
+   <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+      <symbol id="pin-icon" viewBox="0 0 18 18">
+         <path fill-rule="evenodd" clip-rule="evenodd"
+            d="M15.5625 7.6111C15.5625 5.425 14.7524 3.74234 13.5025 2.61077C12.2622 1.48787 10.6227 0.937474 9 0.937469C7.37733 0.937465 5.73777 1.48785 4.49748 2.61075C3.24761 3.74232 2.4375 5.42498 2.4375 7.6111C2.4375 10.5102 4.16265 12.9284 5.74494 14.5455L5.78018 14.5815C6.28063 15.0931 6.71742 15.5396 7.1947 15.8455C7.71712 16.1803 8.2727 16.341 9.00018 16.341C9.72766 16.341 10.2832 16.1802 10.8056 15.8454C11.2829 15.5395 11.7197 15.093 12.2201 14.5814L12.2201 14.5814L12.2553 14.5454C13.8375 12.9283 15.5625 10.5101 15.5625 7.6111ZM11.25 7.49998C11.25 8.74262 10.2426 9.74998 9 9.74998C7.75736 9.74998 6.75 8.74262 6.75 7.49998C6.75 6.25734 7.75736 5.24998 9 5.24998C10.2426 5.24998 11.25 6.25734 11.25 7.49998Z" />
       </symbol>
    </svg>
    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">

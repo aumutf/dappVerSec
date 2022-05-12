@@ -1,0 +1,46 @@
+
+
+.form-control
+   background-color: transparent
+   border: 0
+   border-bottom: 1px solid $grey6
+   border-radius: 0
+   padding: 6px 0
+   font-size: $fs_body+px
+   line-height: $lh_body
+   color: $fontcolor
+
+   &:focus
+      color: $fontcolor
+      background-color: transparent
+      border-color: $accentColor
+      outline: 0
+      box-shadow: none
+
+.form-group label
+   font-size: 12px
+   line-height: $lh_body
+
+.error__text
+   display: none
+
+.error
+   label
+      color: $red
+
+   .error__text
+      color: $red
+      display: inline-block
+   .form-control
+      border-bottom-color: $red
+
+form
+   input.error, form-control.error
+      border: 0!important
+      border-bottom: 1px solid $red!important
+      &+span
+         color: $red
+
+.hint 
+   font-size: 10px
+   line-height: 1.2
