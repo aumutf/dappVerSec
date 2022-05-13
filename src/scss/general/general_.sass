@@ -258,3 +258,12 @@ ul
 .form-group
   margin-bottom: 50px
 
+.star
+  +adaptiv-value("width", 20, 20)
+  +adaptiv-value("height", 20, 20)
+  fill: $grey7
+  &--red
+    fill: $red1
+  &:hover
+    fill: $red1
+    filter: drop-shadow(0px 0px 6px rgb(255 255 255 / 0.4))
