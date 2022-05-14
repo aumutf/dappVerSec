@@ -50,21 +50,28 @@
     
   .profile-dropdown
     .dropdown-menu
-      // display: flex
-      // padding: 0
-      // background: transparent
-      // box-shadow: none
-      // border-radius: 0
-      // width: 100%
-      // border-top: 1px solid $grey
-      // padding-top: 20px
+      display: flex
+      padding: 0
+      background: transparent
+      box-shadow: none
+      border-radius: 0
+      width: 100%
+      border-top: 1px solid $grey
+      padding-top: 20px
+      flex-direction: column
+      align-items: flex-start
+      transform: unset!important
+      +tablet
+        transform: inherit
 
       li:last-child
         border-top: none
 
   .a-profile
-    display: flex
-    align-items: center
+    display: none
+    +tablet
+      display: flex
+      align-items: center
 
     &__img
       border-radius: 50%
@@ -145,7 +152,7 @@
         margin-left: 0
 
   .nav__menu
-    //border-bottom: 1px solid $grey
+    border-bottom: 1px solid $grey
     +tablet
       align-items: center
       border-bottom: 0
@@ -188,19 +195,78 @@
     +tablet
       align-items: center
       flex-direction: row
-      //flex-wrap: wrap
-
-    &-item:not(:first-child)
-      +adaptiv-value("margin-left", 40, 0)
-      
-    &-item
-      +adaptiv-value("margin-bottom", 0, 45)
+      flex-wrap: wrap
+  .menu-item
+    &:hover
+      color: $accentColor
+      background-color: transparent
 
   .btn-login
     +adaptiv-value("margin-right", 0, 45)
 
   .dropdown-select
     +adaptiv-value("margin-left",0, 26)
+
+  .menu:not(.menu--right)
+    .menu-item:not(:first-child)
+      +adaptiv-value("margin-left", 40, 0)
+    .menu-item
+      +adaptiv-value("margin-bottom", 0, 45) 
+
+
+  .dropdown-menu
+    display: flex
+    flex-direction: column
+    padding: 20px
+    background: $bgcolor
+    box-shadow: 0 4px 15px rgb(0 0 0/25%)
+    border-radius: 4px
+    color: #fff
+    min-width: 160px
+    border: none
+    font-size: 14px
+
+  .dropdown-menu .menu-item
+    &:hover
+      .menu__icon
+        fill: $accentColor
+
+
+  .dropdown-menu .menu-item>a 
+    display: flex
+    align-items: center
+    padding: 0
+    line-height: inherit
+    color: inherit
+    .menu__icon
+      &:hover
+        fill: $accentColor
+
+
+  .dropdown-menu>li>a 
+    display: block
+    padding: 3px 20px
+    clear: both
+    font-weight: 400
+    line-height: 1.42857143
+    color: #333
+    white-space: nowrap
+
+  .dropdown-menu .menu__icon 
+    width: 24px
+    height: 24px
+    min-width: 24px
+    min-height: 24px
+    display: inline-block
+    fill: #fff
+    margin-right: 10px
+
+  .dropdown-menu.dropdown-menu-right 
+    .menu-item 
+      margin-right: 0
+    .menu-item:not(:last-child)
+      margin-bottom: 20px
+      
 
 .burger
   order: 2

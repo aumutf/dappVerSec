@@ -26,46 +26,54 @@
       </div>
       <ul class="menu menu--right">
         <!--<li class="menu-item"><a href="#">My Account</a></li>-->
-        <!--<li class="menu-item dropdown profile-dropdown ">
-                    <a class="dropdown-toggle a-profile" data-toggle="dropdown" href="#" aria-expanded="false" role="button">
-                        <span class="a-profile__name">Alex Krivov</span>
-                        <div class="a-profile__img">
-                            <img src="assets/img/upload/user.png" alt="Alex Krivov">
-                        </div>
-                    </a>
-                    <ul class="dropdown-menu menu dropdown-menu-right" aria-labelledby="dropdownMenuLink">
-                        <li class="menu-item">
-                            <a href="#">
-                                <svg class="menu__icon panel-icon"><use xlink:href="#panel-icon"/></svg>
-                                Admin Panel
-                            </a>
-                        </li>
-                        <li class="menu-item">
-                            <a href="#">
-                                <svg class="menu__icon profile-icon"><use xlink:href="#profile-icon"/></svg>
-                                My Profile
-                            </a>
-                        </li>
-                        <li class="menu-item">
-                            <a href="#">
-                                <svg class="menu__icon bookmark-icon"><use xlink:href="#bookmark-icon"/></svg>
-                                Bookmarks
-                            </a>
-                        </li>
-                        <li class="menu-item">
-                            <a href="#">
-                                <svg class="menu__icon settings-icon"><use xlink:href="#settings-icon"/></svg>
-                                Settings
-                            </a>
-                        </li>
-                        <li class="menu-item">
-                            <a href="#" class="logout">
-                                <svg class="menu__icon logout-icon"><use xlink:href="#logout-icon"/></svg>
-                                Logout
-                            </a>
-                        </li>
-                    </ul>
-                </li>-->
+        <li class="menu-item dropdown profile-dropdown">
+          <a class="dropdown-toggle a-profile" data-toggle="dropdown" href="#" aria-expanded="false" role="button">
+            <span class="a-profile__name">varient_dmin</span>
+            <div class="a-profile__img">
+              <img src="https://test.dapp.expert/assets/img/user.png" alt="varient_dmin">
+            </div>
+          </a>
+
+          <ul class="dropdown-menu dropdown-menu-right" x-placement="top-end"
+            style="position: absolute; transform: translate3d(-204px, -8px, 0px); top: 0px; left: 0px; will-change: transform;">
+            <!--aria-labelledby="dropdownMenuLink"-->
+            <li class="menu-item">
+              <a href="https://test.dapp.expert/admin/">
+                <svg class="menu__icon panel-icon">
+                  <use xlink:href="#panel-icon"></use>
+                </svg>
+                Admin Panel </a>
+            </li>
+            <li class="menu-item">
+              <a href="https://test.dapp.expert/ja/profile/varient_dmin">
+                <svg class="menu__icon profile-icon">
+                  <use xlink:href="#profile-icon"></use>
+                </svg>
+                Profile </a>
+            </li>
+            <li class="menu-item">
+              <a href="https://test.dapp.expert/ja/profile/varient_dmin/bookmarks">
+                <svg class="menu__icon bookmark-icon">
+                  <use xlink:href="#bookmark-icon"></use>
+                </svg>
+                Bookmarks </a>
+            </li>
+            <li class="menu-item">
+              <a href="https://test.dapp.expert/ja/settings">
+                <svg class="menu__icon settings-icon">
+                  <use xlink:href="#settings-icon"></use>
+                </svg>
+                Settings </a>
+            </li>
+            <li class="menu-item">
+              <a href="https://test.dapp.expert/ja/logout" class="logout">
+                <svg class="menu__icon logout-icon">
+                  <use xlink:href="#logout-icon"></use>
+                </svg>
+                Logout </a>
+            </li>
+          </ul>
+        </li>
         <li class="menu-item dropdown lang-dropdown lang-dropdown--desktop">
           <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button">
             <span class=""> EN </span>
@@ -89,11 +97,12 @@
           </ul>
         </li>
 
-        <li class="menu-item">
+        <!--<li class="menu-item">
           <a href="#">Register</a>
         </li>
         <li class="menu-item">
           <button class="btn btn--filled btn-login" data-toggle="modal" data-target="#modal-login">Login</button>
+        </li>-->
       </ul>
     </div>
   </div>
