@@ -50,23 +50,28 @@
     
   .profile-dropdown
     .dropdown-menu
-      display: flex
-      padding: 0
-      background: transparent
+      background: $bgcolor
       box-shadow: none
       border-radius: 0
       width: 100%
-      border-top: 1px solid $grey
       padding-top: 20px
       flex-direction: column
       align-items: flex-start
-      transform: unset!important
+      border-top: 1px solid $grey
+      padding-left: 0
+      display: flex
       +tablet
-        transform: inherit
+        border-top: none
+        display: none
+        padding-left: 20px
+        
+        
+      &.show
+        display: flex
 
       li:last-child
         border-top: none
-
+ 
   .a-profile
     display: none
     +tablet
@@ -120,6 +125,9 @@
 
     &.mobActive
       display: block
+      padding-top: 20px
+      +tablet
+        padding-top: 0
       .burger
         display: none
       .menu--right
@@ -136,10 +144,11 @@
       .dropdown-select.open ul
         left: 0
         z-index: 1001
-    &--desktop
-      display: none
+    //&--desktop
+      display: block
       +tablet
-        display: block
+        display: none
+
     .dropdown-menu
       background-color: var(--bgcolor)
       color: $fontcolor
@@ -211,20 +220,11 @@
     .menu-item:not(:first-child)
       +adaptiv-value("margin-left", 40, 0)
     .menu-item
-      +adaptiv-value("margin-bottom", 0, 45) 
+      +adaptiv-value("margin-bottom", 0, 20) 
+      +tablet
+        +adaptiv-value("margin-bottom", 0, 45) 
 
 
-  .dropdown-menu
-    display: flex
-    flex-direction: column
-    padding: 20px
-    background: $bgcolor
-    box-shadow: 0 4px 15px rgb(0 0 0/25%)
-    border-radius: 4px
-    color: #fff
-    min-width: 160px
-    border: none
-    font-size: 14px
 
   .dropdown-menu .menu-item
     &:hover
@@ -267,6 +267,19 @@
     .menu-item:not(:last-child)
       margin-bottom: 20px
       
+.dropdown-menu
+  display: flex
+  flex-direction: column
+  padding: 20px
+  background: $bgcolor
+  box-shadow: 0 4px 15px rgb(0 0 0/25%)
+  border-radius: 4px
+  color: #fff
+  min-width: 160px
+  border: none
+  font-size: 14px
+  display: none
+  
 
 .burger
   order: 2
@@ -382,6 +395,11 @@
   +adaptiv-value("height", 18.5, 18.5)
 
 .lang-dropdown
+  padding-bottom: 10px
+  padding-top: 20px
+  +tablet
+    padding-bottom: 0
+    padding-top: 0
   .dropdown-toggle
     &:before,&:after
       display: none
