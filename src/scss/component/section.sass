@@ -1,6 +1,6 @@
 //SECTION
 .section
-   +adaptiv-value("margin-top", 65, 34)
+   +adaptiv-value("margin-top", 30, 34)
 
    .title
       font-weight: $semiBold
@@ -18,3 +18,8 @@
 
    &:last-child
       +adaptiv-value("padding-bottom", 220, 30)
+
+.section:not(:last-child)
+   .section__content
+      border-bottom: 2px solid $accentColor
+      +adaptiv-value("padding-bottom", 30, 34)

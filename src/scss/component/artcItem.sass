@@ -19,6 +19,13 @@ $artcImgBr: 8px
          bottom: 0
          width: 100%
          line-height: 1.5
+         +adaptiv-value("padding-left", 10, 0)
+         opacity: 0
+         transition: opacity .6s ease-out 0s
+
+   &:hover
+      .title--bgtransp
+         opacity: 1
    a
       display: block
 
@@ -28,7 +35,7 @@ $artcImgBr: 8px
          height: 64px
          +tablet
             height: 140px
-            margin-bottom: 18px
+            margin-bottom: 10px
 
       .post-meta
          margin-top: auto
