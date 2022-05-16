@@ -256,10 +256,10 @@
     white-space: nowrap
 
   .dropdown-menu .menu__icon 
-    width: 24px
-    height: 24px
-    min-width: 24px
-    min-height: 24px
+    +adaptiv-value("width", 24, 16)
+    +adaptiv-value("height", 24, 16)
+    +adaptiv-value("min-width", 24, 16)
+    +adaptiv-value("min-height", 24, 16)
     display: inline-block
     fill: #fff
     margin-right: 10px
@@ -269,6 +269,8 @@
       margin-right: 0
     .menu-item:not(:last-child)
       margin-bottom: 20px
+      +tablet
+        +adaptiv-value("margin-bottom", 20, 10)
       
 .dropdown-menu
   display: flex
@@ -278,10 +280,10 @@
   box-shadow: 0 4px 15px rgb(0 0 0/25%)
   border-radius: 4px
   color: #fff
-  min-width: 160px
+  min-width: 130px
   border: none
-  font-size: 14px
   display: none
+  font-size: inherit
   
 
 .burger
