@@ -1,7 +1,30 @@
 .socialSignal
    .bl-grid__top
       display: grid
+      .artc-item--vert
+         display: flex
+         row-gap: unset
+
+         
    .bl-grid__btm
       display: none
       +tablet
          display: block
+
+
+.socialSignal, .latestDapp
+   .bl-grid__top
+      .artc-item-image
+         min-height: 130px
+         height: 130px
+         +tablet
+            +adaptiv-value("min-height", 150, 130)
+            +adaptiv-value("height", 150, 130)
+
+   .bl-grid__btm
+      .artc-item-image
+         +tablet
+            +adaptiv-value("height", 140, 130)
+            width: 100%!important
+
+

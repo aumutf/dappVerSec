@@ -10,3 +10,33 @@
          +tablet
             background-color: rgba(32, 32, 32, 0.5)   
             position: absolute
+
+      .artc-item-image
+         +adaptiv-value("height", 140, 64)
+         +adaptiv-value("width", 140, 64)
+            
+   .artc-item
+      display: grid
+      grid-template-columns: calc(64px + 66 * ((100vw - 320px)/ 1440)) auto 
+      +adaptiv-value-imp("grid-column-gap", 40, 7)
+      grid-template-rows: $artVertGridRow
+      grid-row-gap: 20px
+      +tablet
+         display: flex   
+         align-items: flex-start
+         row-gap: unset
+         column-gap: unset  
+      .title
+         &--bgtransp
+            opacity: 1
+            +tablet
+               opacity: 0
+      &:hover
+         .title--bgtransp
+            +tablet
+               opacity: 1
+      .artc-item-image
+         grid-row: span 2
+
+   
+         
