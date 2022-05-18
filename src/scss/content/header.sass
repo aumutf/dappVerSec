@@ -181,7 +181,11 @@
         width: 100%
         bottom: -4px
         left: 0
-        border-bottom: 2px solid transparent
+        display: none
+        +tablet
+          display: inline-block
+          border-bottom: 2px solid transparent
+          
       &:hover
         &::after
           border-bottom-color: $accentColor
