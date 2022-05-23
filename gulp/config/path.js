@@ -19,6 +19,7 @@ export const path = {
     images: `${srcFolder}/img/**/*.{jpg,jpeg,png,gif,webp}`,
     svg: `${srcFolder}/img/**/*.svg`,
     scss: `${srcFolder}/scss/style.scss`,
+    scssPosts: `${srcFolder}/scss/stylePosts.scss`,
     html: `${srcFolder}/*.html`,
     files: `${srcFolder}/files/**/*.*`
   },
@@ -27,6 +28,7 @@ export const path = {
     assetsjs: `${srcFolder}/assets/**/*.js`,
     js: `${srcFolder}/js/**/*.js`,
     scss: `${srcFolder}/scss/**/*.scss`,
+    scssPosts: `${srcFolder}/scss/**/*.scss`,
     html: `${srcFolder}/**/*.html`,
     images: `${srcFolder}/img/**/*.{jpg,jpeg,png,svg,gif,ico,webp}`,
     files: `${srcFolder}/files/**/*.*`
