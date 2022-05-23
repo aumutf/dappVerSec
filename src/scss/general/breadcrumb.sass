@@ -1,0 +1,27 @@
+.breadcrumb
+  min-height: 20px
+  background-color: transparent
+  color: $fontcolor
+  padding: 0
+
+  +adaptiv-value("margin-bottom", 24, 24)    
+  +adaptiv-value("margin-top", 24, 24)    
+
+  &>li+li:before,
+  .breadcrumb-item+.breadcrumb-item::before
+    content: ">"
+    padding: 0 5px 0 8px
+    +adaptiv-value("font-size", 11, 11)
+    color: $grey3
+  .breadcrumb-item
+    +adaptiv-value("font-size", 12, 12)  
+    a, span
+      +adaptiv-value("font-size", 12, 12)   
+      color: $fontcolor
+    &.active
+      color: $grey3
+      a, span
+        color: $grey3
+
+.page-breadcrumb
+  min-height: auto

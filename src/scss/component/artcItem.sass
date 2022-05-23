@@ -148,16 +148,16 @@ $artcImgBr: 8px
       display: flex
       align-items: center
       color: $grey3
-   &--dots
-      position: relative
-      &::after
-         content: ""
-         width: 3px
-         height: 3px
-         border-radius: 50%
-         background-color: $grey3
-         display: inline-block
-         margin-left: 7px   
+   //&--dots
+      //position: relative
+      //&::after
+         //content: ""
+         //width: 3px
+         //height: 3px
+         //border-radius: 50%
+         //background-color: $grey3
+         //display: inline-block
+         //margin-left: 7px   
 
    .post-comment-pageviews
       display: flex
@@ -175,7 +175,20 @@ $artcImgBr: 8px
             image: url("../img/icons/eye.svg")
             repeat: no-repeat
             size: auto
-            position: center         
+            position: center    
+      &.pageviews-dot
+         &::before
+            background: none    
+            width: 2px
+            height: 2px
+            min-width: 2px
+            min-height: 2px
+            margin-right: 2px 
+            background-color: $grey3
+            border-radius: 50%
+   &--ordered
+      .post-details-meta-date
+         order: -1
 
 /*.artc-item-mid 
    display: flex
