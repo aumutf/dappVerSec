@@ -276,7 +276,10 @@ ul
 .bl-grid-3
   display: grid
   grid-template-columns: repeat(1, 1fr)
-  +adaptiv-value("column-gap", 27, 27)
-  +adaptiv-value("row-gap", 20, 20)
+  row-gap: 20px
   +tablet
-      grid-template-columns: repeat(4, 1fr)      
+    grid-template-columns: repeat(3, 1fr) 
+    column-gap: 11px
+  +laptop
+      grid-template-columns: repeat(4, 1fr) 
+      +adaptiv-value("column-gap", 27, 27)     

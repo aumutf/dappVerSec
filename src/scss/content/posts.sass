@@ -1,6 +1,16 @@
 .posts
    .section__head
       display: none
+   .artc-item--vert
+      display: flex
+      row-gap: unset
+      column-gap: unset
+   .artc-item-image
+      min-height: $artcVertHeightMob
+      height: $artcVertHeightMob
+      +tablet
+         +adaptiv-value("min-height", 150, 130)
+         +adaptiv-value("height", 150, 130)
 
 
    
