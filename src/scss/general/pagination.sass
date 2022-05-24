@@ -1,0 +1,69 @@
+.pagination
+  li a
+    min-width: 30px
+    margin: 0 4px
+    border: none
+    color: $fontcolor
+    height: 31px
+    transition: all .2s ease-in-out 0s
+    width: auto
+    +adaptiv-value("font-size", $fs_body, $fs_body)
+    line-height: $lh_body
+    border-radius: 4px!important
+
+.pagination li a:hover,
+.pagination li a:focus,
+.pagination li a:active,
+.pagination .active a
+  border: none!important
+  background-color: $grey4!important
+  color: #fff!important
+
+.dataTables_length
+  color: $fontcolor!important
+
+.pagination>li>a, .pagination>li>span
+  background-color: transparent
+
+.pagination>.disabled>a,
+.pagination>.disabled>a:focus,
+.pagination>.disabled>a:hover,
+.pagination>.disabled>span,
+.pagination>.disabled>span:focus,
+.pagination>.disabled>span:hover
+  background-color: transparent
+  border-color: transparent
+  color: $grey2
+
+.pagination li.first, .pagination li.last
+  display: none
+
+.dataTables_length.dropdown-select
+  .dropdown-select:not(.form-control)
+    display: inline-block
+    padding: 5px 24px 5px 11px
+    &> span:before, & > span:after
+      right: -18px
+  select
+    border: none
+    option
+      background-color: $bgcolor
+
+.pagination-wrap
+  display: flex
+  justify-content: space-between
+  +adaptiv-value("margin-top", 40, 40)
+  +adaptiv-value("margin-bottom", 40, 40)
+  .dataTables_paginate
+    flex-grow: 1
+    justify-content: center
+    align-items: center
+  .pagination
+    float: unset
+    display: flex
+    justify-content: center
+
+.pagination>li>a
+  display: flex
+  align-items: center
+  justify-content: center
