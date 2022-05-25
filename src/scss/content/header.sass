@@ -6,8 +6,8 @@
   .container
     max-width: 100%!important
     padding: 0
-    +laptop
-      padding: 0 50px
+    //+laptop
+      //padding: 0 50px
 
   &__inner
     +adaptiv-value("padding-left", 20, 20)
@@ -28,6 +28,8 @@
           display: none
       .burger
         display: none
+      .nav
+        margin-left: 10px
     .search.active
       width: 100%
       margin-right: 0
@@ -361,7 +363,7 @@
     order: 0
     
   &.active
-    flex-grow: 1
+    //flex-grow: 1
     +adaptiv-value("margin-left", 28, 24)
     .search-field
       padding-left: 10px
