@@ -3,3 +3,47 @@
       color: $grey
    &.page h1.page__title
       padding-bottom: 12px
+   &-img
+      img
+         width: 100%
+         height: auto
+         +adaptiv-value("min-height", 333, 176)
+         +adaptiv-value("max-height", 333, 176)
+         object-fit: cover
+
+   &__bottom 
+      display: flex
+      justify-content: space-between
+      align-items: center
+   &__img 
+      margin-top: -90px
+      margin-bottom: 23px
+      border-radius: 12px
+      overflow: hidden
+      width: 116px
+      height: 116px
+      min-width: 116px
+      min-height: 116px
+      img
+         width: 100%
+         height: auto
+
+   &__settings
+      width: 32px
+      height: 32px
+      border: 1px solid $fontcolor
+      border-radius: 2px
+      display: flex
+      align-items: center
+      justify-content: center
+      margin-top: -15px
+      background-color: transparent
+      padding: 0
+      &:hover
+         border-color: $accentColor
+         .myProfile__settings-ic
+            fill: $accentColor
+      &-ic
+         width: 20px
+         height: 20px
+         fill: $fontcolor         

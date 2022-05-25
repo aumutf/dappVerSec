@@ -1,13 +1,29 @@
 <div class="page profile">
    <div class="container">
-      <h1 class="title page__title">Alex Krivov</h1>
-      <div class="profile__since">
-         <span class="info">Member since&nbsp;Jan 26, 2021</span>
+
+      <div class="profile__top">
+         <div class="profile-img">
+            <img src="@img/profile.jpg" alt="my profile">
+         </div>
       </div>
+      <div class="profile__bottom">
+         <div>
+            <div class="profile__img">
+               <img src="@img/profileUser.jpg" alt="varient_dmin">
+            </div>
+            <h1 class="title page__title">Alex Krivov</h1>
+            <div class="profile__since">On the project since May 17, 2021</div>
+         </div>
+         <a href="#" type="button" class="btn profile__settings">
+            <svg class="profile__settings-ic">
+               <use xlink:href="#settingsbold-icon"></use>
+            </svg>
+         </a>
+      </div>
+
       <div class="page__content">
          <section class="section section-tab posts">
             <div class="section__head">
-               <!--<h2 class="title">Bookmarks <span>4</span></h2>-->
                <ul class="nav nav-pills section__pills" role="tablist">
                   <li class="nav-item ">
                      <a class="nav-link  active " id="section-profile-tab1" data-toggle="pill"
