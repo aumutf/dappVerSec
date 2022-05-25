@@ -21,6 +21,7 @@ export const path = {
     scss: `${srcFolder}/scss/style.scss`,
     scssPosts: `${srcFolder}/scss/stylePosts.scss`,
     scssSearch: `${srcFolder}/scss/styleSearch.scss`,
+    scssProfile: `${srcFolder}/scss/styleProfile.scss`,
     html: `${srcFolder}/*.html`,
     files: `${srcFolder}/files/**/*.*`
   },
@@ -31,6 +32,7 @@ export const path = {
     scss: `${srcFolder}/scss/**/*.scss`,
     scssPosts: `${srcFolder}/scss/**/*.scss`,
     scssSearch: `${srcFolder}/scss/**/*.scss`,
+    scssProfile: `${srcFolder}/scss/**/*.scss`,
     html: `${srcFolder}/**/*.html`,
     images: `${srcFolder}/img/**/*.{jpg,jpeg,png,svg,gif,ico,webp}`,
     files: `${srcFolder}/files/**/*.*`

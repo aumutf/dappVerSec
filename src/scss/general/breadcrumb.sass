@@ -3,8 +3,11 @@
   background-color: transparent
   color: $fontcolor
   padding: 0
-  +adaptiv-value("margin-top", 18, 35) 
-  +adaptiv-value("margin-bottom", 24, 18)   
+  margin-top: 37px
+  margin-bottom: 14px
+  +tablet
+    +adaptiv-value("margin-top", 18, 35) 
+    +adaptiv-value("margin-bottom", 24, 18)   
 
   &>li+li:before,
   .breadcrumb-item+.breadcrumb-item::before
