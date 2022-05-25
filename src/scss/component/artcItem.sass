@@ -109,6 +109,17 @@ $artcImgBr: 8px
 
       .artc-item-image
          display: none
+   &-bm
+      display: grid
+      grid-template-columns: 1fr $w_bicon
+      width: 100%
+      .title
+         grid-column: 1!important
+      .post-meta
+         grid-column: 1
+      .btn
+         grid-column: 2   
+         grid-row: 1
 
 .artc-item-image
    overflow: hidden
@@ -189,6 +200,7 @@ $artcImgBr: 8px
    &--ordered
       .post-details-meta-date
          order: -1
+
 
 /*.artc-item-mid 
    display: flex

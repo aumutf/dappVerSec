@@ -1,22 +1,46 @@
+$wSetIc: 32px
+
 .profile
    &__since
       color: $grey
    &.page h1.page__title
-      padding-bottom: 12px
+      padding-bottom: 8px
+      grid-column: 1
+      +tablet
+         padding-bottom: 12px
    &-img
+      width: calc(320px + 1120 * ((100vw - 320px)/ 1120))
+      margin-left: -#{$contPlMob}+px
+      +tablet
+         margin-left: -#{$contPlTablet}+px
+      +laptop
+         margin-left: -#{$contPl}+px
+      @media screen and (min-width: $contMaxWidth)
+         margin-left: calc((100vw - #{$contMaxWidth} + #{$contPl}px*2)/ (-2))
+
       img
          width: 100%
          height: auto
-         +adaptiv-value("min-height", 333, 176)
-         +adaptiv-value("max-height", 333, 176)
+         min-height: 176px
+         max-height: 176px
          object-fit: cover
+         +tablet
+            +adaptiv-value("min-height", 333, 176)
+            +adaptiv-value("max-height", 333, 176)
 
    &__bottom 
       display: flex
       justify-content: space-between
       align-items: center
+      margin-bottom: 35px
+      display: grid
+      grid-template-columns: 1fr $wSetIc
+      +tablet
+         +adaptiv-value("margin-bottom", 50, 35)
+
+
    &__img 
-      margin-top: -90px
+      margin-top: -80px
       margin-bottom: 23px
       border-radius: 12px
       overflow: hidden
@@ -24,13 +48,18 @@
       height: 116px
       min-width: 116px
       min-height: 116px
+      +tablet
+         margin-top: -90px
       img
          width: 100%
          height: auto
 
    &__settings
-      width: 32px
-      height: 32px
+      grid-column: 2
+      grid-row: 2
+      justify-self: end
+      width: $wSetIc
+      height: $wSetIc
       border: 1px solid $fontcolor
       border-radius: 2px
       display: flex
@@ -41,9 +70,29 @@
       padding: 0
       &:hover
          border-color: $accentColor
-         .myProfile__settings-ic
+         .profile__settings-ic
             fill: $accentColor
       &-ic
          width: 20px
          height: 20px
          fill: $fontcolor         
+
+   .artc-item--vert
+      display: flex
+      row-gap: unset
+      column-gap: unset
+      .title
+         margin-bottom: 8px
+         +tablet
+            margin-bottom: 6px 
+      .artc-item-image
+         margin-bottom: 15px  
+         min-height: 140px
+         height: 140px
+         +tablet
+            +adaptiv-value("min-height", 140, 140)
+            +adaptiv-value("height", 140, 140)
+
+   .section-tab__head
+      row-gap: unset
+

@@ -60,6 +60,12 @@ ul
     box-shadow: none
     color: inherit
 
+  .btn-icon 
+    width: $w_bicon
+    height: $w_bicon
+    min-width: $w_bicon
+    min-height: $w_bicon
+
 //PERCENTVAL  
 .percentVal
   display: inline-flex
@@ -284,4 +290,12 @@ ul
     column-gap: 11px
   +laptop
       grid-template-columns: repeat(4, 1fr) 
-      +adaptiv-value("column-gap", 27, 27)     
+      +adaptiv-value("column-gap", 27, 27)  
+
+.bookmarkfilled-icon 
+  fill: $fontcolor
+  &.btn-icon
+    width: 13px
+    min-width: 13px
+    height: 16px
+    min-height: 16px

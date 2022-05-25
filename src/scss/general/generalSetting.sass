@@ -19,8 +19,15 @@ body
   max-width: $contMaxWidth !important
   width: 100%
   margin: 0 auto
-  +adaptiv-value('padding-left', $contPl, $contPl) 
-  +adaptiv-value('padding-right', $contPr, $contPr)
+  padding-left: $contPlMob+px
+  padding-right: $contPlMob+px
+  +tablet
+    padding-left: $contPlTablet+px
+    padding-right: $contPlTablet+px
+  +laptop
+    padding-left: $contPl+px
+    padding-right: $contPl+px
+
 
 //LINK
 .link
