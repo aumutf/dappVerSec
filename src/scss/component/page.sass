@@ -1,7 +1,10 @@
 .page
-   &__title
-      +adaptiv-value("font-size", 40, 34) 
-      +adaptiv-value("padding-bottom", 30, 5) 
+   h1.page__title
+      font-size: 34px
+      padding-bottom: 5px
+      +tablet
+         +adaptiv-value("font-size", 40, 34) 
+         +adaptiv-value("padding-bottom", 30, 5) 
 
    &-main
       .page-breadcrumb
