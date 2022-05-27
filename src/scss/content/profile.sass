@@ -3,6 +3,8 @@ $wSetIc: 32px
 .profile
    &__since
       color: $grey
+      grid-row: 3
+      grid-column: 1
    &.page h1.page__title
       padding-bottom: 8px
       grid-column: 1
@@ -97,6 +99,27 @@ $wSetIc: 32px
 
    .section-tab__head
       row-gap: unset
+
+
+   &-empty
+      display: flex
+      flex-direction: column
+      justify-content: center
+      align-items: center
+      row-gap: 30px
+      text-align: center
+      &__ic
+         width: 100px
+         height: 100px
+         min-width: 100px
+         min-height: 100px
+         fill: $fontcolor
+         opacity: 0.3
+
+.followers-wrap
+   .profile-empty
+      grid-column: span 2
+
 
 .followers
    &-wrap
