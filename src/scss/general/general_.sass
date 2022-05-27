@@ -331,4 +331,18 @@ ul
 
 .btn--cross:hover 
   background-color: #363636
+
+.following-btn
+  display: flex
+  align-items: center
+  justify-content: space-between
+  &>span
+    display: none
+    +tablet
+      display: inline-block
+  .btn-icon
+    fill: $fontcolor
+    margin-right: 8px
+    +tablet
+      margin-right: 0
     
