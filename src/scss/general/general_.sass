@@ -66,6 +66,8 @@ ul
     min-width: $w_bicon
     min-height: $w_bicon
 
+  
+
 //PERCENTVAL  
 .percentVal
   display: inline-flex
@@ -299,3 +301,34 @@ ul
     min-width: 13px
     height: 16px
     min-height: 16px
+
+
+
+.btn--transp 
+  border: 1px solid #FFFFFF
+  border-radius: 2px
+  text-align: center
+  color: #FFFFFF
+  fill: #FFFFFF
+  background-color: transparent
+  display: flex
+  align-items: center
+  
+
+.btn--transp:not(.btn--cross).active, .btn--transp:not(.btn--cross):hover, .btn--transp:not(.btn--cross):active, .btn--transp:not(.btn--cross):focus 
+  border-color: #B039AE
+  color: #B039AE
+  fill: #B039AE
+
+.btn--transp:not(.btn--cross).active .svg-icon, .btn--transp:not(.btn--cross):hover .svg-icon, .btn--transp:not(.btn--cross):active .svg-icon, .btn--transp:not(.btn--cross):focus .svg-icon 
+  fill: #B039AE
+
+.btn--transp 
+  .btn-icon
+    margin-right: 0 
+    +laptop
+      margin-right: 10px
+
+.btn--cross:hover 
+  background-color: #363636
+    
