@@ -1,6 +1,6 @@
 
 /* ARTICLE ITEM styles */
-$artcImgBr: 8px
+
 
 .artc-item
    display: flex
@@ -127,10 +127,10 @@ $artcImgBr: 8px
    display: block
    position: relative
    background-color: transparent
-   height: 130px
+   height: $artcItemHMob+px
    border-radius: $artcImgBr
    +tablet
-      +adaptiv-value("height", 150, 150)
+      +adaptiv-value("height", $artcItemH, $artcItemH)
 
    &>a, picture
       width: 100%

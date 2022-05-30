@@ -1,0 +1,19 @@
+.gallery
+   .page__title
+      +adaptiv-value("margin-top", 60, 30)
+   .bl-grid-3
+      display: grid
+      grid-template-columns: 1fr
+      +tablet
+         grid-template-columns: repeat(3, 1fr)
+         gap: 20px
+
+.gallery-item
+   height: $artcItemHMob+px
+   +tablet
+      +adaptiv-value("height", $artcItemH, $artcItemH)
+   img
+      width: 100%!important
+      height: 100%!important
+      object-fit: cover
+      border-radius: $artcImgBr

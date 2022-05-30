@@ -70,6 +70,7 @@ $br_menu: 4px
   align-items: center
   justify-content: center
   z-index: 1
+  +adaptiv-value("font-size", 20, 18)
 
 @keyframes scroll
   0%
@@ -96,9 +97,8 @@ $br_menu: 4px
   height: 65px
   width: 100%
   z-index: 100
-  /*background-color: #303030*/
   .str_wrap
-    background-color: #303030
+    background-color: $grey8
 
 .categories
   top: 116px
@@ -108,12 +108,43 @@ $br_menu: 4px
   +laptop_down
     top: 116px
   .str_wrap
-    background-color: #3D3B3B
+    background-color: $grey9
 
-.galleryPage
-  .str-slider-wrap
+.gallery-slider    
+  margin-top: 16px
+  &.str-slider-wrap
     +adaptiv-value("height", $h_scroll, $h_scroll_mob)
-    top: calc(62px + 16px)
+    position: relative
+
+  .str_wrap
+    +adaptiv-value-imp("min-height", $h_scroll, $h_scroll_mob)
+    background-color: $bgcolor
+
+  .slider-scroll
+    +adaptiv-value("min-height", $h_scroll, $h_scroll_mob)
+    +adaptiv-value("height", $h_scroll, $h_scroll_mob)
+    +adaptiv-value-imp("min-height", $h_scroll, $h_scroll_mob)
+    +adaptiv-value("margin-right", 16, 16)
+    position: relative
+    padding: 0
+    border-radius: 4px
+    overflow: hidden
+    &::after
+      content: ""
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+      background-color: rgba(0,0,0,0.5)
+      z-index: 0
+      transition: all 0.3s ease-in-out
+    &:hover
+      &::after
+        background-color: $accentColor
+    
+  .slider-scroller-img
+    height: 100%
 
 .name-wrap
   display: inline-flex
@@ -175,5 +206,96 @@ $br_menu: 4px
 
 .str_wrap
   min-height: 65px!important
+
+
+
+.mfp-container a.mfp-arrow
+  width: 32px
+  min-width: 32px
+  height: 32px
+  min-height: 32px
+  border-radius: 50%
+  background-color: black
+  display: inline-flex
+  align-items: center
+  justify-content: center
+  border: 0
+  outline: 0
+  padding: 0
+  box-shadow: none
+  top: calc(50% - 16px)
+  &::before
+    display: none
+  &::after
+    content: ''
+    display: block
+    width: 18px
+    height: 18px
+    position: static
+    margin-top: unset!important
+    margin-left: unset!important
+    border: none!important
+    background:
+      color: transparent
+      repeat: no-repeat
+      size: auto
+      position: center
+      image: url("../img/icons/arrowRight.svg")
+
+button.mfp-arrow, .swiper-button-prev, .swiper-button-next, .btn-arrow-left, .slider-arrow
+  overflow: visible
+  cursor: pointer
+  width: 32px
+  min-width: 32px
+  height: 32px
+  min-height: 32px
+  border-radius: 50%
+  background-color: black
+  display: inline-flex
+  align-items: center
+  justify-content: center
+  border: 0
+  outline: 0
+  padding: 0
+  z-index: 1046
+  box-shadow: none
+  touch-action: manipulation
+  opacity: 1
+  position: absolute
+  +adaptiv-value("top", 25, 12)
+  margin: 0
+
+  &::before
+    display: none
+  &::after
+    content: ''
+    display: block
+    width: 18px
+    height: 18px
+    position: static
+    margin-top: unset!important
+    margin-left: unset!important
+    border: none!important
+    background:
+      color: transparent
+      repeat: no-repeat
+      size: auto
+      position: center
+      image: url("../img/icons/arrowRight.svg")
+
+.mfp-container button.slider-arrow
+  top: calc(50% - 16px)
+
+.mfp-arrow-left, .swiper-button-prev, .slider-arrow-left
+  left: 40px!important
+  &::after
+    transform: scaleX(-1)
+
+.mfp-arrow-right, .swiper-button-next, .slider-arrow-right
+  right: 40px!important
+
+.btn-arrow-left
+  background-color: transparent
+
     
 /* SLIDERSCROLL styles end */
