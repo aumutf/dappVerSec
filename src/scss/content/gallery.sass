@@ -23,44 +23,211 @@
       object-fit: cover
       border-radius: $artcImgBr
 
-.mfp-wrap
-   .mfp-bottom-bar
+.mfp-container a.mfp-arrow
+   width: 32px
+   min-width: 32px
+   height: 32px
+   min-height: 32px
+   border-radius: 50%
+   background-color: $black1
+   display: inline-flex
+   align-items: center
+   justify-content: center
+   border: 0
+   outline: 0
+   padding: 0
+   box-shadow: none
+   top: calc(50% - 16px)
+   &::before
+      display: none
+   &::after
+      content: ''
+      display: block
+      width: 18px
+      height: 18px
+      position: static
+      margin-top: unset!important
+      margin-left: unset!important
+      border: none!important
+
+
+button.mfp-arrow, .swiper-button-prev, .swiper-button-next, .btn-arrow-left, .slider-arrow
+   overflow: visible
+   cursor: pointer
+   width: 32px
+   min-width: 32px
+   height: 32px
+   min-height: 32px
+   border-radius: 50%
+   background-color: $black1
+   display: inline-flex
+   align-items: center
+   justify-content: center
+   border: 0
+   outline: 0
+   padding: 0
+   z-index: 1046
+   box-shadow: none
+   touch-action: manipulation
+   opacity: 1
    position: absolute
-   top: -10px
+   +adaptiv-value("top", 25, 12)
+   margin: 0
 
-   .mfp-title
-      font-size: 24px
-      font-size: calc(20px + 4 * ((100vw - 320px)/ 1120))
-      line-height: 1.2
-      color: #fff
-      word-wrap: break-word
-      padding-left: 55px
+   &::before
+      display: none
+   &::after
+      content: ''
+      display: block
+      width: 18px
+      height: 18px
+      position: static
+      margin-top: unset!important
+      margin-left: unset!important
+      border: none!important
+      background:
+         color: transparent
+         repeat: no-repeat
+         size: auto
+         position: center
+         image: url("../img/arrowRight.svg")
 
+.mfp-container button.slider-arrow
+   top: calc(50% - 16px)
+
+.mfp-arrow-left, .swiper-button-prev, .slider-arrow-left
+   left: 40px!important
+   &::after
+      transform: scaleX(-1)
+
+.mfp-arrow-right, .swiper-button-next, .slider-arrow-right
+   right: 40px!important
+
+.btn-arrow-left
+   background-color: transparent      
+
+$pt_imgGal: 93px
+$w_mfp_ic: 40px
+
+.mfp-wrap
+   img.mfp-img
+      padding: 0
+      height: 100%
+      object-fit: cover
+   .mfp-image-holder
+      .mfp-close
+         //margin-top: $pt_imgGal
+         margin-top: 20px
+         opacity: 1
+         height: 10px
+         font-size: 35px
+         padding-right: 30px
+      .mfp-figure
+         height: 100%
+      .mfp-content
+         height: 50%
+         //max-width: 90%
+         //min-height: 80%
+         //width: 90%
+         +tablet
+            height: 78%
+   .mfp-bottom-bar
+      position: absolute
+      top: -10px
+      height: 100%
+      +tablet
+         height: auto
    .mfp-counter
       display: none
+   .mfp-title
+      +adaptiv-value("font-size", 24, 20)
+      line-height: 1.2
+      color: $fontcolor
+      word-wrap: break-word
+      padding-left: 55px
+      height: 100%
+      width: 100%
+      +tablet
+         width: auto
+         height: auto
+      &::before
+         position: absolute
+         left: 0
+         top: -5px
+         content: ""
+         display: inline-block
+         width: $w_mfp_ic
+         height: $w_mfp_ic
+         min-width: $w_mfp_ic
+         min-height: $w_mfp_ic
+         border-radius: $br_menu
+         background:
+            image: url("../img/upload/gallery_slider_ic.jpg")
+            repeat: no-repeat
+            size: cover
+            position: center
+   .btn-wrap
+      display: flex
+      //column-gap: 20px
+      z-index: 1047
+      opacity: 0
+      transition: opacity 0.2s ease-in
+      position: absolute
+      left: 0
+      bottom: -20%
+      width: 100%
+      margin-left: 0
+      margin-top: 0
+      justify-content: center
+      +tablet
+         position: relative
+         margin-top: 40px
+         margin-left: -35px
 
-.mfp-content:hover .btn-wrap
-   opacity: 1
 
-.mfp-wrap .btn-wrap
-   display: flex
-   margin-top: 40px
-   margin-left: -35px
-   z-index: 1047
-   position: relative
+      .btn
+         margin-right: 20px
+         padding: 6px
+         +tablet
+            padding: 6px 28px
+         &:last-child
+            margin-right: 0
+      .btn span
+         display: none!important
+         +tablet
+            display: inline-block!important
+
+   .mfp-figure
+      figure
+         height: 100%
+
+
+.mfp-zoom-out-cur .mfp-wrap .mfp-image-holder .mfp-close
+   cursor: pointer
+
+.mfp-content::before
+   content: ""
+   position: absolute
+   width: 100%
+   height: 30%
+   display: inline-block
+   background: linear-gradient(180deg, #000000 -7.83%, rgba(0, 0, 0, 0.583738) 55.59%, rgba(0, 0, 0, 0.271627) 80.86%, rgba(0, 0, 0, 0) 100%)
    opacity: 0
-   transition: opacity .2s ease-in
+   z-index: 1
+   transition: opacity 0.2s ease-in
 
-   .btn
-      margin-right: 20px
-      padding: 6px 28px
-      font-size: 14px
-.mfp-title
-   .menu-item
-      margin-bottom: 20px
-      margin-right: 0
-      font-size: 14px
+.mfp-content:hover
+   &::before
+      opacity: 1
+   .btn-wrap
+      opacity: 1  
 
+.menu-item
+   margin-bottom: 20px
+   margin-right: 0
+   font-size: 14px
+
+.mfp-bottom-bar   
    .dropdown-menu
       .menu-item > a
          display: flex
@@ -76,4 +243,4 @@
          min-height: 24px
          display: inline-block
          fill: #fff
-         margin-right: 10px      
+         margin-right: 10px
