@@ -22,3 +22,58 @@
       height: 100%!important
       object-fit: cover
       border-radius: $artcImgBr
+
+.mfp-wrap
+   .mfp-bottom-bar
+   position: absolute
+   top: -10px
+
+   .mfp-title
+      font-size: 24px
+      font-size: calc(20px + 4 * ((100vw - 320px)/ 1120))
+      line-height: 1.2
+      color: #fff
+      word-wrap: break-word
+      padding-left: 55px
+
+   .mfp-counter
+      display: none
+
+.mfp-content:hover .btn-wrap
+   opacity: 1
+
+.mfp-wrap .btn-wrap
+   display: flex
+   margin-top: 40px
+   margin-left: -35px
+   z-index: 1047
+   position: relative
+   opacity: 0
+   transition: opacity .2s ease-in
+
+   .btn
+      margin-right: 20px
+      padding: 6px 28px
+      font-size: 14px
+.mfp-title
+   .menu-item
+      margin-bottom: 20px
+      margin-right: 0
+      font-size: 14px
+
+   .dropdown-menu
+      .menu-item > a
+         display: flex
+         align-items: center
+         padding: 0
+         line-height: inherit
+         color: inherit
+
+      .menu__icon
+         width: 24px
+         height: 24px
+         min-width: 24px
+         min-height: 24px
+         display: inline-block
+         fill: #fff
+         margin-right: 10px      
