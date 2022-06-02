@@ -25,6 +25,8 @@ export const path = {
     scssProfile: `${srcFolder}/scss/styleProfile.scss`,
     scssGallery: `${srcFolder}/scss/styleGallery.scss`,
     scssTags: `${srcFolder}/scss/styleTags.scss`,
+    scssBlockchain: `${srcFolder}/scss/styleBlockchain.scss`,
+    scssBlockchainCat: `${srcFolder}/scss/styleBlockchainCat.scss`,
     html: `${srcFolder}/*.html`,
     files: `${srcFolder}/files/**/*.*`
   },
@@ -38,6 +40,8 @@ export const path = {
     scssGallery: `${srcFolder}/scss/**/*.scss`,
     scssProfile: `${srcFolder}/scss/**/*.scss`,
     scssTags: `${srcFolder}/scss/**/*.scss`,
+    scssBlockchain: `${srcFolder}/scss/**/*.scss`,
+    scssBlockchainCat: `${srcFolder}/scss/**/*.scss`,
     html: `${srcFolder}/**/*.html`,
     images: `${srcFolder}/img/**/*.{jpg,jpeg,png,svg,gif,ico,webp}`,
     sprite: `${srcFolder}/img/icon/*.svg`,
