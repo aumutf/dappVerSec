@@ -90,7 +90,7 @@ button.mfp-arrow, .swiper-button-prev, .swiper-button-next, .btn-arrow-left, .sl
          repeat: no-repeat
          size: auto
          position: center
-         image: url("../img/arrowRight.svg")
+         image: url("../img/icons/arrowRight.svg")
 
 .mfp-container button.slider-arrow
    top: calc(50% - 16px)
@@ -191,10 +191,19 @@ $w_mfp_ic: 40px
       .btn
          margin-right: 20px
          padding: 6px
+         +adaptiv-value("font-size", 14, 14)
+         
          +tablet
-            padding: 6px 28px
+            padding-top: 6px
+            padding-bottom: 6px
+            +adaptiv-value("padding-left", 28, 28)
+            +adaptiv-value("padding-right", 28, 28)
          &:last-child
             margin-right: 0
+      .btn .btn-icon
+         margin-right: 0
+         +tablet
+            margin-right: 10px !important
       .btn span
          display: none!important
          +tablet
@@ -228,7 +237,8 @@ $w_mfp_ic: 40px
 .menu-item
    margin-bottom: 20px
    margin-right: 0
-   font-size: 14px
+   +adaptiv-value("font-size", 14, 14)
+   
 
 .mfp-bottom-bar   
    .dropdown-menu
