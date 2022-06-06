@@ -149,6 +149,11 @@ table.ranktable
       img
          object-fit: cover
 
+      &--round
+         border-radius: 50%
+         & img
+               margin-right: 0         
+
    .usersVal
       display: grid
       grid-template-columns: 50px 70px
@@ -177,6 +182,17 @@ table.ranktable
    .percentVal
       margin-left: 7px
       margin-right: 7px   
+      
+   .shortname 
+      color: $grey6
+      text-transform: uppercase
+      margin-left: 25px
+      +adaptiv-value("margin-left", 15, 15)
+   th
+      .star
+         &:hover
+               fill: $grey7
+               filter: none      
 
 div.dataTables_wrapper>div.row>div, div.dataTables_length, div.dataTables_filter, div.dataTables_info, div.dataTables_paginate
    text-align: left   
@@ -229,3 +245,37 @@ div.dataTables_wrapper>div.row>div, div.dataTables_length, div.dataTables_filter
 .t-graph
    text-align: center
    justify-content: center    
+
+.cell-star
+   +adaptiv-value("width", 20, 20)
+.cell-star, .cell-count
+   padding-left: 7.5px!important
+   padding-right: 7.5px!important
+.cell-star, .cell-count, .cell-name
+   background-color: $bgcolor !important
+   position: sticky
+   left: 0
+   z-index: 100
+   +tablet
+         position: static
+         background: transparent
+
+
+.rectBr
+   display: flex
+   align-items: center
+   justify-content: center
+   border-radius: 3px
+   color: $fontcolor
+   &--green 
+      background-color: $green1
+   &--grey
+      background-color: $grey10
+.rectBr5
+   border-radius: 5px
+   padding: 0 11px
+.rectBr3
+   border-radius: 3px
+   min-width: 20px
+   min-height: 20px
+   margin-left: 5px
