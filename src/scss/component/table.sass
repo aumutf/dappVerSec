@@ -1,4 +1,6 @@
 $wImgWrap: 45
+$wImgWrapM: 35
+
 .ranktable-wrap
    overflow-x: auto
    scrollbar-width: none
@@ -72,9 +74,10 @@ table.ranktable
          +adaptiv-value("font-size", 12, 12)
          line-height: 1.21
          font-weight: $bold
-         padding: 14px 10px 13px!important
+         padding: 4px 10px 4px!important //14px 10px 13px!important
          border: none
          text-align: center
+         height: 45px
          &:first-child
             +tablet
                background-color: transparent
@@ -152,7 +155,14 @@ table.ranktable
       &--round
          border-radius: 50%
          & img
-               margin-right: 0         
+               margin-right: 0    
+      &--m
+         +adaptiv-value("width", $wImgWrapM, $wImgWrapM)
+         +adaptiv-value("min-width", $wImgWrapM, $wImgWrapM)
+         +adaptiv-value("max-width", $wImgWrapM, $wImgWrapM)
+         +adaptiv-value("height", $wImgWrapM, $wImgWrapM)
+         +adaptiv-value("min-height", $wImgWrapM, $wImgWrapM)
+         +adaptiv-value("max-height", $wImgWrapM, $wImgWrapM)               
 
    .usersVal
       display: grid
@@ -188,11 +198,21 @@ table.ranktable
       text-transform: uppercase
       margin-left: 25px
       +adaptiv-value("margin-left", 15, 15)
+      &--light
+         color: $fontcolor
+
    th
       .star
          &:hover
                fill: $grey7
                filter: none      
+
+   .logo-row
+      .dapp-img-mini-wrap
+         box-shadow: -5px 5px 8px rgba(0, 0, 0, 0.5)
+         margin-right: 0
+      &>a
+         margin-left: -8px               
 
 div.dataTables_wrapper>div.row>div, div.dataTables_length, div.dataTables_filter, div.dataTables_info, div.dataTables_paginate
    text-align: left   
@@ -261,21 +281,9 @@ div.dataTables_wrapper>div.row>div, div.dataTables_length, div.dataTables_filter
          background: transparent
 
 
-.rectBr
-   display: flex
-   align-items: center
-   justify-content: center
-   border-radius: 3px
-   color: $fontcolor
-   &--green 
-      background-color: $green1
-   &--grey
-      background-color: $grey10
-.rectBr5
-   border-radius: 5px
-   padding: 0 11px
-.rectBr3
-   border-radius: 3px
-   min-width: 20px
-   min-height: 20px
-   margin-left: 5px
+   
+.exchScore
+   padding: 0 13px
+
+      
+
