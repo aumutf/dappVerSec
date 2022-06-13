@@ -69,7 +69,7 @@ ul
   
 
 //PERCENTVAL  
-.percentVal
+.percentVal 
   display: inline-flex
   align-items: center
   column-gap: 2px
@@ -94,7 +94,10 @@ ul
     &::after
       border-width: 5px 3px 0 3px
       border-color: red transparent transparent transparent
-    
+  &--sml
+    &::after
+      display: none
+
 //FLAME ICON    
 .flame-ic
   position: relative
@@ -233,6 +236,7 @@ ul
   font-size: inherit
   min-width: 20px
   height: 20px
+  padding: 0 5px
   display: inline-flex
   justify-content: center
   align-items: center
