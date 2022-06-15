@@ -299,6 +299,19 @@ ul
       grid-template-columns: repeat(4, 1fr) 
       +adaptiv-value("column-gap", 27, 27)  
 
+
+.bl-grid-3.bl-grid-txt
+  +tablet
+    grid-template-columns: repeat(3,  minmax(150px, 100%))
+  +laptop
+    grid-template-columns: repeat(4, minmax(150px, 100%)) 
+  
+  .artc-item-image
+    height: 140px
+    min-height: 140px
+
+
+
 .bookmarkfilled-icon 
   fill: $fontcolor
   &.btn-icon

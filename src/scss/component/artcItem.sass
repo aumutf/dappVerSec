@@ -121,6 +121,88 @@
          grid-column: 2   
          grid-row: 1
 
+   &--blur
+      .artc-item-image
+         picture:first-child
+            width: 100%!important
+            height: 100%!important
+            position: absolute
+            left: 0
+            right: 0
+            top: 0
+            bottom: 0
+            object-fit: cover
+            filter: blur(5px)
+      .artc-item-image a
+         position: relative
+         display: flex
+         justify-content: space-between
+         align-items: center
+         width: auto
+         padding: 15px 15px 15px 20px
+         +adaptiv-value("padding-top", 15, 15)
+         +adaptiv-value("padding-right", 15, 15)
+         +adaptiv-value("padding-bottom", 15, 15)
+         +adaptiv-value("padding-left", 20, 20)
+
+         z-index: 3
+
+         &::before
+            content: ""
+            display: inline-block
+            width: 100%!important
+            height: 100%!important
+            position: absolute
+            left: 0
+            right: 0
+            top: 0
+            bottom: 0
+            object-fit: cover
+            filter: blur(5px)    
+            z-index: 0 
+         &::after
+            content: ""
+            display: inline-block
+            width: 100%!important
+            height: 100%!important
+            position: absolute
+            left: 0
+            right: 0
+            top: 0
+            bottom: 0    
+            background: #4c0082
+            opacity: .8
+            filter: unset
+            z-index: 1
+
+
+
+      .bg-image--span 
+         background: #4c0082
+         opacity: .8
+         filter: unset
+
+      .bg-image_title 
+         position: relative
+         display: inline-block
+         flex-grow: 1
+         +adaptiv-value("margin-left", 20, 20)
+         text-transform: uppercase
+         +adaptiv-value("font-size", 17, 17)
+         line-height: 1
+         font-weight: 700
+         z-index: 3
+
+      .artc-item-image picture img:not(.bg-image)
+         width: 110px!important
+         border-radius: 10px
+         position: relative
+         object-fit: contain
+         z-index: 2
+         +tablet
+            +adaptiv-value-imp("width", 110, 110)
+
+      
 .artc-item-image
    overflow: hidden
    width: 100%
