@@ -192,6 +192,7 @@
          line-height: 1
          font-weight: 700
          z-index: 3
+         word-break: break-word
 
       .artc-item-image picture img:not(.bg-image)
          width: 110px!important
@@ -202,6 +203,8 @@
          +tablet
             +adaptiv-value-imp("width", 110, 110)
 
+   &.artc-item--blur
+      max-width: 280px
       
 .artc-item-image
    overflow: hidden
@@ -227,6 +230,8 @@
       border-radius: $artcImgBr
       img
          border-radius: $artcImgBr
+   picture:nth-child(2)
+      width: fit-content
 
 .post-meta
    display: flex
