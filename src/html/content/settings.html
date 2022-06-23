@@ -1,23 +1,26 @@
 <div class="page ">
    <div class="container">
+      <div class="page-breadcrumb">
+         <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+               <a href="#">Home</a>
+            </li>
+            <li class="breadcrumb-item active">
+               <span>marketplace</span>
+            </li>
+         </ol>
+      </div>
+      <h1 class="title page__title">Settings</h1>
+      <div class="page__content">
+         <section class="section section-tab posts">
+            <div class="section__head section-tab__head">
 
-      <h1 class="title page__title">settings</h1>
-      <div class="content myProfileSettings">
-         <div class="container">
-            <div class="content__inner">
-               <div class="page-breadcrumb">
-                  <ol class="breadcrumb">
-                     <li class="breadcrumb-item"><a href="https://dapp.expert/ru/">Главная</a></li>
-                     <li class="breadcrumb-item"><a href="https://dapp.expert/ru/settings">Settings</a></li>
-                     <!--<li class="breadcrumb-item active" aria-current="page"></li>-->
-                  </ol>
-               </div>
-               <h2 class="title">Settings</h2>
 
                <ul class="nav nav-pills myProfile__pills" id="pills-tab" role="tablist">
-                  <li class="nav-item active">
-                     <a class="nav-link" id="pills-personal-info-tab" data-toggle="pill" href="#pills-personal-info"
-                        role="tab" aria-controls="pills-personal-info" aria-selected="true">Personal Info</a>
+                  <li class="nav-item">
+                     <a class="nav-link active" id="pills-personal-info-tab" data-toggle="pill"
+                        href="#pills-personal-info" role="tab" aria-controls="pills-personal-info"
+                        aria-selected="true">Personal Info</a>
                   </li>
                   <li class="nav-item">
                      <a class="nav-link" id="pills-connections-tab" data-toggle="pill" href="#pills-connections"
@@ -36,268 +39,8 @@
                         role="tab" aria-controls="pills-delete_account" aria-selected="false">Delete Account</a>
                   </li>
                </ul>
-               <!-- include message block -->
-
-               <!--print error messages-->
-
-               <!--print custom error message-->
-
-               <div class="tab-content" id="pills-tabContent">
-                  <div class="tab-pane fade active in" id="pills-personal-info" role="tabpanel"
-                     aria-labelledby="pills-personal-info-tab">
-                     <div class="profile-tab-content">
-                        <h3 class="title">Update Profile</h3>
-                        <form action="https://dapp.expert/update-profile-post" id="form_validate"
-                           enctype="multipart/form-data" method="post" accept-charset="utf-8" novalidate="novalidate">
-                           <input type="hidden" name="600fe618b1d55_csrf_token"
-                              value="4b68c5e57009c33efa61ade1ec89f3be">
-                           <div class="d-flex">
-                              <div class="form-group">
-                                 <p>
-                                    <img src="https://dapp.expert/assets/img/user.png" alt="varient_dmin"
-                                       class="form-avatar">
-                                 </p>
-                                 <p>
-                                    <a
-                                       class="btn btn-md btn-success btn-file-upload btn-profile-file-upload btn--filled">
-                                       Select Image <input type="file" name="file" size="40"
-                                          accept=".png, .jpg, .jpeg, .gif"
-                                          onchange="$('#upload-file-info').html($(this).val().replace(/.*[\/\\]/, ''));">
-                                    </a>
-                                    <span class="badge badge-info badge-profile-file-upload"
-                                       id="upload-file-info"></span>
-                                 </p>
-                              </div>
-
-                              <div class="form-group">
-                                 <p>
-                                    <img src="https://dapp.expert/uploads/profile/banner_1_617a7a2d62e69.png"
-                                       alt="varient_dmin" class="form-avatar">
-                                 </p>
-                                 <p>
-                                    <a
-                                       class="btn btn-md btn-success btn-file-upload btn-profile-file-upload btn--filled">
-                                       Select Image <input type="file" name="banner" size="40"
-                                          accept=".png, .jpg, .jpeg, .gif"
-                                          onchange="$('#upload-banner-info').html($(this).val().replace(/.*[\/\\]/, ''));">
-                                    </a>
-                                    <span class="badge badge-info badge-profile-file-upload"
-                                       id="upload-banner-info"></span>
-                                 </p>
-                              </div>
-                           </div>
-
-                           <div class="form-group">
-                              <label>Username</label>
-                              <input type="text" name="username" class="form-control form-input" value="varient_dmin"
-                                 placeholder="Username" required="">
-                              <span class="hint">Your name appears on your Profile page, as your byline, and in your
-                                 responses. It is a required field.</span>
-                           </div>
-                           <div class="form-group">
-                              <label>Email</label>
-                              &nbsp;
-                              <small class="text-success">(Confirmed)</small>
-
-                              <input type="email" name="email" class="form-control form-input" value="msbota@gmail.com"
-                                 placeholder="" required="">
-
-                           </div>
-                           <div class="form-group">
-                              <input type="hidden" name="slug" class="form-control form-input" value="varient_dmin"
-                                 placeholder="Slug" required="">
-                              <label>About Me</label>
-                              <textarea name="about_me" class="form-control form-textarea"
-                                 placeholder="About Me"></textarea>
-                              <span class="hint">Your bio appears on your Profile and next to your stories. Max 160
-                                 characters.</span>
-                           </div>
-
-                           <button type="submit" name="submit" value="update" class="btn btn--filled">Save
-                              Changes</button>
-                           <input type="hidden" name="sys_lang_id" value="2">
-                        </form>
-                     </div>
-                  </div>
-                  <div class="tab-pane fade" id="pills-connections" role="tabpanel"
-                     aria-labelledby="pills-connections-tab">
-                     <div class="profile-tab-content profile-tab-content-connections">
-                        <h3 class="title page-title">Connections</h3>
-
-                        <div class="connections-wrap">
-                           <div class="connections-item">
-                              <div>
-                                 <h5 class="title">Connect to Google</h5>
-                                 <p>We will never send emails on your behalf to other users. And we will never send you
-                                    spam</p>
-                              </div>
-                              <div>
-                                 <a class="google btn-follow" href="#" target="_blank">
-                                    <svg class="svg-icon">
-                                       <use xlink:href="#google-icon"></use>
-                                    </svg>
-                                    <span>Connect to Google</span>
-                                 </a>
-                              </div>
-                           </div>
-                           <div class="connections-item">
-                              <div>
-                                 <h5 class="title">Connect to Facebook</h5>
-                                 <p>We will never post to Facebook or message your friends without your permission.</p>
-                              </div>
-                              <div>
-                                 <a class="facebook btn-follow" href="#" target="_blank">
-                                    <svg class="svg-icon">
-                                       <use xlink:href="#facebook-icon"></use>
-                                    </svg>
-                                    <span>Connect to Facebook</span>
-                                 </a>
-                              </div>
-                           </div>
-
-                           <div class="connections-item">
-                              <div>
-                                 <h5 class="title">Connect to Twitter</h5>
-                                 <p>We will never post to Twitter or message your followers without your permission.</p>
-                              </div>
-                              <div>
-                                 <a class="twitter btn-follow" href="#" target="_blank">
-                                    <svg class="svg-icon">
-                                       <use xlink:href="#twitter-icon"></use>
-                                    </svg>
-                                    <span>Connect to Twitter</span>
-                                 </a>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-
-                  </div>
-                  <div class="tab-pane fade" id="pills-preferences" role="tabpanel"
-                     aria-labelledby="pills-preferences-tab">
-                     <div class="profile-tab-content profile-tab-content-connections">
-                        <h3 class="title page-title">Preferences</h3>
-
-                        <form action="https://dapp.expert/preferences-post" method="post" accept-charset="utf-8">
-                           <input type="hidden" name="600fe618b1d55_csrf_token"
-                              value="4b68c5e57009c33efa61ade1ec89f3be">
-
-                           <div class="form-group">
-                              <div class="row">
-                                 <div class="col-sm-12">
-                                    <label>Show Email on Profile Page</label>
-                                 </div>
-                                 <div class="col-md-4 col-sm-4 col-option">
-                                    <label class="custom-checkbox custom-radio checkbox--filled">
-                                       <input type="radio" name="show_email_on_profile" value="1" checked=""
-                                          required="">
-                                       <span class="checkbox-icon"><i class="icon-check"></i></span>
-                                       <span>Yes</span>
-                                    </label>
-                                 </div>
-                                 <div class="col-md-4 col-sm-4 col-option">
-                                    <label class="custom-checkbox custom-radio checkbox--filled">
-                                       <input type="radio" name="show_email_on_profile" value="0" required="">
-                                       <span class="checkbox-icon"><i class="icon-check"></i></span>
-                                       <span>No</span>
-                                    </label>
-                                 </div>
-                              </div>
-                           </div>
-
-                           <div class="form-group">
-                              <div class="row">
-                                 <div class="col-sm-12">
-                                    <label>RSS Feeds</label>
-                                 </div>
-                                 <div class="col-md-4 col-sm-4 col-option">
-                                    <label class="custom-checkbox custom-radio checkbox--filled">
-                                       <input type="radio" name="show_rss_feeds" value="1" checked="" required="">
-                                       <span class="checkbox-icon"><i class="icon-check"></i></span>
-                                       <span>Enable</span>
-                                    </label>
-                                 </div>
-                                 <div class="col-md-4 col-sm-4 col-option">
-                                    <label class="custom-checkbox custom-radio checkbox--filled">
-                                       <input type="radio" name="show_rss_feeds" value="0" required="">
-                                       <span class="checkbox-icon"><i class="icon-check"></i></span>
-                                       <span>Disable</span>
-                                    </label>
-                                 </div>
-                              </div>
-                           </div>
-
-                           <button type="submit" name="submit" value="update" class="btn btn--filled">Save
-                              Changes</button>
-                           <input type="hidden" name="sys_lang_id" value="2">
-                        </form>
-                     </div>
-
-                  </div>
-                  <div class="tab-pane fade" id="pills-security" role="tabpanel"
-                     aria-labelledby="pills-security-info-tab">
-                     <div class="profile-tab-content">
-                        <h3 class="title page-title">Change Password</h3>
-                        <p>To change the password, enter the old password, then enter the new password and confirm the
-                           new password</p>
-                        <form action="https://dapp.expert/change-password-post" id="form_validate" method="post"
-                           accept-charset="utf-8">
-                           <input type="hidden" name="600fe618b1d55_csrf_token"
-                              value="4b68c5e57009c33efa61ade1ec89f3be">
-                           <div class="form-group">
-                              <label>Old Password</label>
-                              <input type="password" name="old_password" class="form-control form-input" value=""
-                                 placeholder="Old Password" required="">
-                           </div>
-                           <input type="hidden" name="old_password_exists" value="1">
-                           <div class="form-group">
-                              <label>Password</label>
-                              <input type="password" name="password" class="form-control form-input" value=""
-                                 placeholder="Password" required="">
-                           </div>
-                           <div class="form-group">
-                              <label>Confirm Password</label>
-                              <input type="password" name="password_confirm" class="form-control form-input" value=""
-                                 placeholder="Confirm Password" required="">
-                           </div>
-
-                           <button type="submit" class="btn btn-md btn--filled">Change Password</button>
-                           <input type="hidden" name="sys_lang_id" value="2">
-                        </form>
-                     </div>
-                  </div>
-                  <div class="tab-pane fade" id="pills-delete_account" role="tabpanel"
-                     aria-labelledby="pills-delete_account-tab">
-                     <div class="profile-tab-content">
-                        <h3 class="title page-title">Delete Account</h3>
-                        <form action="https://dapp.expert/delete-account-post" id="form_validate" class="validate_terms"
-                           method="post" accept-charset="utf-8">
-                           <input type="hidden" name="600fe618b1d55_csrf_token"
-                              value="4b68c5e57009c33efa61ade1ec89f3be">
-                           <div class="form-group">
-                              <label>Password</label>
-                              <input type="password" name="password" class="form-control form-input" value=""
-                                 placeholder="Password" required="">
-                           </div>
-                           <div class="form-group">
-                              <label class="custom-checkbox">
-                                 <input type="checkbox" name="confirm" class="checkbox_terms_conditions" required="">
-                                 <span class="checkbox-icon"><i class="icon-check"></i></span>
-                                 Deleting your account is permanent and will remove all content including comments,
-                                 avatars and profile settings. Are you sure you want to delete your account?
-                              </label>
-                           </div>
-                           <button type="submit" class="btn btn--filled">Delete Account</button>
-                           <input type="hidden" name="sys_lang_id" value="2">
-                        </form>
-                     </div>
-                  </div>
-
-               </div>
-
-
             </div>
-         </div>
+         </section>
       </div>
    </div>
 </div>
