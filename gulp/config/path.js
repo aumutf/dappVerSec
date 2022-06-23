@@ -28,6 +28,8 @@ export const path = {
     scssBlockchain: `${srcFolder}/scss/styleBlockchain.scss`,
     scssBlockchainCat: `${srcFolder}/scss/styleBlockchainCat.scss`,
     scssTables: `${srcFolder}/scss/styleTables.scss`,
+    scssPrivacyPolicy: `${srcFolder}/scss/stylePrivacyPolicy.scss`,
+    scssTermsConditions: `${srcFolder}/scss/styleTermsConditions.scss`,
     html: `${srcFolder}/*.html`,
     files: `${srcFolder}/files/**/*.*`
   },
@@ -44,6 +46,8 @@ export const path = {
     scssBlockchain: `${srcFolder}/scss/**/*.scss`,
     scssBlockchainCat: `${srcFolder}/scss/**/*.scss`,
     scssTables: `${srcFolder}/scss/**/*.scss`,
+    scssPrivacyPolicy: `${srcFolder}/scss/**/*.scss`,
+    scssTermsConditions: `${srcFolder}/scss/**/*.scss`,
     html: `${srcFolder}/**/*.html`,
     images: `${srcFolder}/img/**/*.{jpg,jpeg,png,svg,gif,ico,webp}`,
     sprite: `${srcFolder}/img/icon/*.svg`,
