@@ -1,0 +1,60 @@
+.blockchain
+   .page__title
+      margin-top: 30px
+      +tablet
+         +adaptiv-value("margin-top", 40, 30)
+
+.category-item 
+   display: block
+   border-radius: 4px
+   position: relative
+   overflow: hidden
+   min-height: $artcVerPosttHeightMob
+   height: $artcVerPosttHeightMob
+   +tablet
+      +adaptiv-value("min-height", 140, 167)
+      +adaptiv-value("height", 140, 167)
+   
+
+.category-item::before 
+   content: ""
+   position: absolute
+   width: 100%
+   height: 100%
+   display: inline-block
+   transition: background-color .5s ease-in-out
+   z-index: 1
+   background-color: transparent
+
+.category-item:hover::before 
+   background-color: rgba(0,0,0,.5)
+
+.category-img
+   width: 100%
+   height: 100%
+
+.category-logo 
+   fill: #fff
+   width: 100%
+   height: 100%
+   filter: url(#shadow)
+   display: flex
+   align-items: center
+   justify-content: center
+
+.category-logo svg 
+   width: 100%
+   height: 100%
+
+.category-info 
+   position: absolute
+   bottom: 0
+   z-index: 2
+   background: rgba(32,32,32,.5)
+   width: 100%
+   padding: 15px
+   +tablet
+      +adaptiv-value("padding", 16, 4)
+
+
+

@@ -23,6 +23,7 @@ import { scssTags } from "./gulp/tasks/scssTags.js";
 import { scssSettings } from "./gulp/tasks/scssSettings.js";
 import { scssBlockchain } from "./gulp/tasks/scssBlockchain.js";
 import { scssBlockchainCat } from "./gulp/tasks/scssBlockchainCat.js";
+import { scssBlockchainList } from "./gulp/tasks/scssBlockchainList.js";
 import { scssTables } from "./gulp/tasks/scssTables.js";
 import { scssPrivacyPolicy } from "./gulp/tasks/scssPrivacyPolicy.js";
 import { scssTermsConditions } from "./gulp/tasks/scssTermsConditions.js";
@@ -46,6 +47,7 @@ function watcher() {
   gulp.watch(path.watch.scssSettings, scssSettings)
   gulp.watch(path.watch.scssBlockchain, scssBlockchain)
   gulp.watch(path.watch.scssBlockchainCat, scssBlockchainCat)
+  gulp.watch(path.watch.scssBlockchainList, scssBlockchainList)
   gulp.watch(path.watch.scssTables, scssTables)
   gulp.watch(path.watch.scssPrivacyPolicy, scssPrivacyPolicy)
   gulp.watch(path.watch.scssTermsConditions, scssTermsConditions)
@@ -61,7 +63,7 @@ const fonts = gulp.series(otfToTtf, ttfToWoff, fontsStyle);
 const assets = gulp.series(copyJs, copyCss);
 // Основные задачи
 
-const mainTasks = gulp.series(fonts, gulp.parallel(copy, html, scss, scssPosts, scssTables, scssSearch, scssGallery, scssProfile, scssTags, scssBlockchain, scssBlockchainCat, scssPrivacyPolicy, scssTermsConditions, scssRegister, scssSettings, js, images, svgSpriteTask, assets));
+const mainTasks = gulp.series(fonts, gulp.parallel(copy, html, scss, scssPosts, scssTables, scssSearch, scssGallery, scssProfile, scssTags, scssBlockchain, scssBlockchainCat, scssBlockchainList, scssPrivacyPolicy, scssTermsConditions, scssRegister, scssSettings, js, images, svgSpriteTask, assets));
 
 
 // Построение сценариев выполнения задач
