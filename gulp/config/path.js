@@ -30,6 +30,7 @@ export const path = {
     scssTables: `${srcFolder}/scss/styleTables.scss`,
     scssPrivacyPolicy: `${srcFolder}/scss/stylePrivacyPolicy.scss`,
     scssTermsConditions: `${srcFolder}/scss/styleTermsConditions.scss`,
+    scssRegister: `${srcFolder}/scss/styleRegister.scss`,
     html: `${srcFolder}/*.html`,
     files: `${srcFolder}/files/**/*.*`
   },
@@ -48,6 +49,7 @@ export const path = {
     scssTables: `${srcFolder}/scss/**/*.scss`,
     scssPrivacyPolicy: `${srcFolder}/scss/**/*.scss`,
     scssTermsConditions: `${srcFolder}/scss/**/*.scss`,
+    scssRegister: `${srcFolder}/scss/**/*.scss`,
     html: `${srcFolder}/**/*.html`,
     images: `${srcFolder}/img/**/*.{jpg,jpeg,png,svg,gif,ico,webp}`,
     sprite: `${srcFolder}/img/icon/*.svg`,

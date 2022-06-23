@@ -1,0 +1,33 @@
+@import "fonts.scss";
+@import "general/mixins_.sass";
+@import "general/variables.sass";
+@import "general/general_.sass";
+@import "general/generalSetting.sass";
+//@import "general/sliderScroll.sass";
+@import "general/modal.sass";
+@import "general/formControl.sass";
+//@import "general/breadcrumb.sass";
+//@import "general/pagination.sass";
+
+@import "content/header.sass";     
+
+@import "component/section.sass";     
+//@import "component/tabs.sass";      
+//@import "component/artcItem.sass";     
+//@import "component/table.sass";    
+@import "component/page.sass"; 
+  
+@import "content/register.sass";  
+ 
+//@import "content/article.sass";  
+//@import "content/socialSignal.sass";  
+//@import "content/hotNews.sass";  
+//@import "content/whatsNew.sass";  
+//@import "content/latestDapp.sass";  
+//@import "content/cryptocurrency_table.sass";  
+//@import "content/posts.sass";   
+//@import "content/search.sass";    
+         
+            
+@import "component/social_.sass";                          
+@import "content/footer.sass";                              
