@@ -1,5 +1,4 @@
-.pagination
-  li a
+.pagination li a, .paginate_button
     min-width: 30px
     margin: 0
     margin-right: 6px
@@ -12,13 +11,26 @@
     line-height: $lh_body
     border-radius: 4px!important
 
-.pagination li a:hover,
-.pagination li a:focus,
-.pagination li a:active,
+    display: inline-flex
+    align-items: center
+    justify-content: center
+
+    &:hover, &:focus, &:active
+      border: none!important
+      background-color: $grey4!important
+      color: #fff!important
+
+.paginate_button
+  &.first, &.last
+    display: none
+
+
 .pagination .active a
   border: none!important
   background-color: $grey4!important
   color: #fff!important
+
+
 
 .dataTables_length
   color: $fontcolor!important
@@ -47,6 +59,8 @@
       right: -18px
   select
     border: none
+    color: $fontcolor!important
+
     option
       background-color: $bgcolor
 
@@ -68,3 +82,8 @@
   display: flex
   align-items: center
   justify-content: center
+
+.paginate_button 
+  +adaptiv-value("font-size", $fs_body, $fs_body)
+
+
