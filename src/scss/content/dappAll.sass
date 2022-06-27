@@ -123,7 +123,10 @@ $field_br: 4px
          margin-right: 16px
 
    .menu-item
-      +adaptiv-value("margin-bottom", 20, 20)    
+      +adaptiv-value("margin-bottom", 20, 20)  
+      &.active
+         &>a
+            color: $accentColor  
    .btn-secondary.dropdown-toggle
       width: 100%
    .dropdown-menu
