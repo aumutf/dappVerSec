@@ -1,0 +1,110 @@
+.dapp
+   &__top
+      display: flex
+      margin-bottom: 40px
+      flex-direction: column
+      +tablet
+         flex-direction: row
+
+   &-search
+      display: flex
+
+      &__in
+         display: flex
+         flex-direction: column
+         flex-grow: 1
+         margin-right: 0
+         +tablet
+            margin-right: 16px
+
+      &-wrap
+         flex-grow: 1
+         margin-top: 16px
+         margin-left: 0
+         +tablet
+            +adaptiv-value("margin-left", 65, 10)
+
+      &__top
+         display: flex
+         margin-bottom: 18px
+
+         margin-bottom: 24px
+         margin-right: 54px
+         +tablet
+            margin-bottom: 24px
+            margin-right: 0
+         
+            
+      &__btm
+         display: flex
+         flex-direction: column
+         +phone
+            flex-direction: row
+         &>div
+            flex-grow: 1
+
+      .dropdown-select--lg:not(:last-child)
+         margin-right: 16px
+
+      .search-label 
+         flex-grow: 1
+         background-color: $grey1
+         border-radius: 4px
+         padding-left: 10px
+         padding-right: 7px
+         display: flex
+         align-items: center
+         justify-content: space-between
+         margin: 0
+      .search-field
+         background: transparent
+
+   .btn-search-filter
+      position: absolute
+      right: 0
+      +tablet
+         position: static
+
+      &>span
+         display: none
+         +tablet
+            display: block
+
+
+   .search-wrap
+      flex-grow: 1
+      +tablet
+         flex-grow: unset
+         
+
+.btn-search-filter
+   border-color: $grey6
+   padding: 7px 13px
+   display: flex
+   column-gap: 0px
+   align-items: center
+   justify-content: center
+   text-transform: unset
+   border-radius: 4px
+   align-self: flex-start
+   .svg-icon
+      margin-right: 4px
+      width: 24px
+      height: 24px
+      min-width: 24px
+      min-height: 24px
+      fill: #c4c4c4
+
+.dapp-search__btm
+   .dropdown-wrap:not(:last-child)
+      +phone
+         margin-right: 16px
+
+   .menu-item
+      +adaptiv-value("margin-bottom", 20, 20)    
+   .btn-secondary.dropdown-toggle
+      width: 100%
+   .dropdown-menu
+      width: 100%
+      min-width: 100%
+

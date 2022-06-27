@@ -1,0 +1,82 @@
+
+.dropdown-menu
+   display: flex
+   flex-direction: column
+   padding: 20px
+   background: $bgcolor
+   box-shadow: 0 4px 15px rgb(0 0 0/25%)
+   border-radius: 4px
+   color: $fontcolor
+   min-width: 160px
+   border: none
+   display: none
+   font-size: inherit
+
+   .menu-item>a 
+      display: flex
+      align-items: center
+      padding: 0
+      line-height: inherit
+      color: $fontcolor
+   .menu-item
+      &:hover
+         &>a
+            color: $accentColor
+
+.dropdown-menu>li>a 
+   display: block
+   padding: 3px 20px
+   clear: both
+   font-weight: 400
+   line-height: 1.42857143
+   color: #333
+   white-space: nowrap   
+
+.dropdown-wrap
+   display: flex
+   flex-direction: column
+
+.dropdown-label
+   font-weight: $bold
+   margin-bottom: 3px
+   
+.btn-secondary.dropdown-toggle
+   background-color: $grey6
+   border-width: 0
+   padding: 11px 35px 8px 12px
+   text-align: left
+
+.btn-secondary:not(:disabled):not(.disabled):active, .show>.btn-secondary.dropdown-toggle
+   background-color: $grey6
+
+.btn-secondary:not(:disabled):not(.disabled):active:focus, .show>.btn-secondary.dropdown-toggle:focus
+   box-shadow: none   
+
+.dropdown-toggle.arrow
+   &:before, &:after
+      content:  ''
+      display:  block
+      position:  absolute
+      width:  8px
+      height:  2px
+      border-radius:  1px
+      top:  50%
+      right: 12px
+      margin-top: 0px
+      background:  var(--arrow)
+      transition:  all 0.3s ease   
+      background: $grey
+      border: none
+   &:before
+      margin-right: 5px
+      transform: scale(1.3, 1.2) rotate(50deg)
+   &:after
+      transform: scale(1.3, 1.2) rotate(-50deg)      
+
+.dropdown.show
+   .dropdown-toggle.arrow 
+      &:before
+         margin-right: 5px
+         transform: scale(1.3, -1.2) rotate(50deg)
+      &:after
+         transform: scale(1.3, -1.2) rotate(-50deg)  

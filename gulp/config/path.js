@@ -33,6 +33,7 @@ export const path = {
     scssPrivacyPolicy: `${srcFolder}/scss/stylePrivacyPolicy.scss`,
     scssTermsConditions: `${srcFolder}/scss/styleTermsConditions.scss`,
     scssRegister: `${srcFolder}/scss/styleRegister.scss`,
+    scssDappsAll: `${srcFolder}/scss/styleDappsAll.scss`,
     html: `${srcFolder}/*.html`,
     files: `${srcFolder}/files/**/*.*`
   },
@@ -54,6 +55,7 @@ export const path = {
     scssPrivacyPolicy: `${srcFolder}/scss/**/*.scss`,
     scssTermsConditions: `${srcFolder}/scss/**/*.scss`,
     scssRegister: `${srcFolder}/scss/**/*.scss`,
+    scssDappsAll: `${srcFolder}/scss/**/*.scss`,
     html: `${srcFolder}/**/*.html`,
     images: `${srcFolder}/img/**/*.{jpg,jpeg,png,svg,gif,ico,webp}`,
     sprite: `${srcFolder}/img/icon/*.svg`,
