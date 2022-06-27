@@ -1,3 +1,5 @@
+$field_br: 4px
+
 .dapp
    &__top
       display: flex
@@ -26,10 +28,8 @@
 
       &__top
          display: flex
-         margin-bottom: 18px
-
          margin-bottom: 24px
-         margin-right: 54px
+         +adaptiv-value("margin-right", 54, 70)
          +tablet
             margin-bottom: 24px
             margin-right: 0
@@ -49,7 +49,7 @@
       .search-label 
          flex-grow: 1
          background-color: $grey1
-         border-radius: 4px
+         border-radius: $field_br
          padding-left: 10px
          padding-right: 7px
          display: flex
@@ -61,7 +61,7 @@
 
    .btn-search-filter
       position: absolute
-      right: 0
+      right: #{$contPlMob}+px
       +tablet
          position: static
 
@@ -75,24 +75,30 @@
       flex-grow: 1
       +tablet
          flex-grow: unset
-         
+
+   .search-field
+      +adaptiv-value("padding-top", 11, 11)
+      +adaptiv-value("padding-bottom", 12, 12)
 
 .btn-search-filter
    border-color: $grey6
-   padding: 7px 13px
+   +adaptiv-value("padding-top", 7, 7)
+   +adaptiv-value("padding-right", 13, 13)
+   +adaptiv-value("padding-bottom", 7, 7)
+   +adaptiv-value("padding-left", 13, 13)
    display: flex
    column-gap: 0px
    align-items: center
    justify-content: center
    text-transform: unset
-   border-radius: 4px
+   border-radius: $field_br
    align-self: flex-start
    .svg-icon
       margin-right: 4px
-      width: 24px
-      height: 24px
-      min-width: 24px
-      min-height: 24px
+      +adaptiv-value("width", 24, 24)
+      +adaptiv-value("height", 24, 24)
+      +adaptiv-value("min-width", 24, 24)
+      +adaptiv-value("min-height", 24, 24)
       fill: #c4c4c4
 
 .dapp-search__btm
@@ -107,4 +113,6 @@
    .dropdown-menu
       width: 100%
       min-width: 100%
+      +adaptiv-value("max-height", 382, 382) 
+      overflow-y: scroll
 

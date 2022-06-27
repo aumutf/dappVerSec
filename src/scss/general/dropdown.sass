@@ -2,7 +2,6 @@
 .dropdown-menu
    display: flex
    flex-direction: column
-   padding: 20px
    background: $bgcolor
    box-shadow: 0 4px 15px rgb(0 0 0/25%)
    border-radius: 4px
@@ -11,7 +10,7 @@
    border: none
    display: none
    font-size: inherit
-
+   +adaptiv-value("padding", 20, 20)
    .menu-item>a 
       display: flex
       align-items: center
@@ -43,8 +42,15 @@
 .btn-secondary.dropdown-toggle
    background-color: $grey6
    border-width: 0
-   padding: 11px 35px 8px 12px
    text-align: left
+
+   +adaptiv-value("padding-top", 11, 11)
+   +adaptiv-value("padding-right", 35, 35)
+   +adaptiv-value("padding-bottom", 8, 8)
+   +adaptiv-value("padding-left", 12, 12)
+
+
+
 
 .btn-secondary:not(:disabled):not(.disabled):active, .show>.btn-secondary.dropdown-toggle
    background-color: $grey6
