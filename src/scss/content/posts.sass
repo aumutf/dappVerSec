@@ -15,5 +15,41 @@
          +adaptiv-value("min-height", 140, 167)
          +adaptiv-value("height", 140, 167)
 
+.gallery-post-item
+   position: relative
+
+.gallery-post-buttons
+   .btn
+      position: absolute
+      border-radius: 50%
+      background-color: rgba(255,255,255,.7)
+      top: 110%
+      width: 32px
+      min-width: 32px
+      height: 32px
+      min-height: 32px
+      margin-top: -16px
+      opacity: 1
+      color: transparent
+      +tablet
+         top: 30%
+
+   .pull-right
+      right: 0
+      +tablet
+         right: 16px
+   .pull-left
+      left: 0
+      +tablet
+         left: 16px
+
+   .icon-arrow-right
+      font-size: 25px
+      margin-left: -33px
+      margin-top: -2px
+      display: inline-block
+      color: #fff
+
+
 
    
