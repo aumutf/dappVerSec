@@ -162,13 +162,17 @@ ul
 
   .artc-item--vert:not(.artc-item-only-title)
     grid-row: span 2
+    order: -1
+    +tablet
+      order: unset
 
 
-  .artc-item--vert:nth-child(-n+5)
+  .artc-item--vert1:nth-child(-n+5)
     display: grid
     grid-template-columns: $artcVertGrid
     +adaptiv-value-imp("grid-column-gap", 40, 10)
     grid-template-rows: $artVertGridRow
+
     @media screen and (max-width: 767px)
       display: grid
     
@@ -195,7 +199,7 @@ ul
         +tablet
           display: none!important
 
-  .artc-item--vert:not(.artc-item-only-title)
+  .artc-item--vert1:not(.artc-item-only-title)
     display: flex
     row-gap: unset
     .artc-item-image
