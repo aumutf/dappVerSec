@@ -6,7 +6,7 @@
                <a href="#">Home</a>
             </li>
             <li class="breadcrumb-item active">
-               <span>marketplace</span>
+               <span>Settings</span>
             </li>
          </ol>
       </div>
@@ -14,8 +14,6 @@
       <div class="page__content">
          <section class="section section-tab posts">
             <div class="section__head section-tab__head">
-
-
                <ul class="nav nav-pills myProfile__pills" id="pills-tab" role="tablist">
                   <li class="nav-item">
                      <a class="nav-link active" id="pills-personal-info-tab" data-toggle="pill"
@@ -39,6 +37,97 @@
                         role="tab" aria-controls="pills-delete_account" aria-selected="false">Delete Account</a>
                   </li>
                </ul>
+            </div>
+            <div class="section__content">
+
+               <div class="tab-content">
+
+                  <div class="tab-pane active" id="pills-personal-info" role="tabpanel">
+                     <div class="section-tab__content profile-tab-content">
+                        <h2 class="title section-tab__title">Update Profile</h2>
+                        <form action="https://test.dapp.expert/update-profile-post" id="form_validate"
+                           enctype="multipart/form-data" method="post" accept-charset="utf-8" novalidate="novalidate">
+                           <input type="hidden" name="600fe618b1d55_csrf_token"
+                              value="9705e18e66db220cee2de6460635b9e0">
+                           <div class="d-flex">
+                              <div class="form-group">
+                                 <p>
+                                    <img src="https://test.dapp.expert/assets/img/user.png"
+                                       alt="Logo avatar varient_dmin" class="form-avatar">
+                                 </p>
+                                 <p>
+                                    <a
+                                       class="btn btn-md btn-success btn-file-upload btn-profile-file-upload btn--filled">
+                                       Select Image <input type="file" name="file" size="40"
+                                          accept=".png, .jpg, .jpeg, .gif"
+                                          onchange="$('#upload-file-info').html($(this).val().replace(/.*[\/\\]/, ''));">
+                                    </a>
+                                    <span class="badge badge-info badge-profile-file-upload"
+                                       id="upload-file-info"></span>
+                                 </p>
+                              </div>
+
+                              <div class="form-group">
+                                 <p>
+                                    <img src="https://test.dapp.expert/uploads/profile/banner_1_62b341e02c38f.png"
+                                       alt="varient_dmin background photo profile " class="form-avatar">
+                                 </p>
+                                 <p>
+                                    <a
+                                       class="btn btn-md btn-success btn-file-upload btn-profile-file-upload btn--filled">
+                                       Select Image <input type="file" name="banner" size="40"
+                                          accept=".png, .jpg, .jpeg, .gif"
+                                          onchange="$('#upload-banner-info').html($(this).val().replace(/.*[\/\\]/, ''));">
+                                    </a>
+                                    <span class="badge badge-info badge-profile-file-upload"
+                                       id="upload-banner-info"></span>
+                                 </p>
+                              </div>
+                           </div>
+
+                           <div class="form-group">
+                              <label>Username</label>
+                              <input type="text" name="username" class="form-control form-input" value="varient_dmin"
+                                 placeholder="Username" required="">
+                              <span class="hint">Your name appears on your Profile page, as your byline, and in your
+                                 responses. It is a required field.</span>
+                           </div>
+                           <div class="form-group">
+                              <label>Email</label>
+                              &nbsp;
+                              <small class="text-success">(Confirmed)</small>
+
+                              <input type="email" name="email" class="form-control form-input" value="msbota@gmail.com"
+                                 placeholder="" required="">
+
+                           </div>
+                           <div class="form-group">
+                              <input type="hidden" name="slug" class="form-control form-input" value="varient_dmin"
+                                 placeholder="Slug" required="">
+                              <label>About Me</label>
+                              <textarea name="about_me" class="form-control form-textarea"
+                                 placeholder="About Me"></textarea>
+                              <span class="hint">Your bio appears on your Profile and next to your stories. Max 160
+                                 characters.</span>
+                           </div>
+
+                           <button type="submit" name="submit" value="update" class="btn btn--filled">Save
+                              Changes</button>
+                           <input type="hidden" name="sys_lang_id" value="1">
+                        </form>
+
+                     </div>
+                  </div>
+
+                  <div class="tab-pane" id="pills-connections">
+                     <div class="section-tab__content ">
+                        <h2 class="title section-tab__title">xx</h2>
+
+
+                     </div>
+                  </div>
+
+               </div>
             </div>
          </section>
       </div>
