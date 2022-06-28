@@ -1,0 +1,61 @@
+.myProfileSettings
+   h2.title
+      margin-bottom: 30px
+
+   .profile-tab-content
+      width: 386px
+      +adaptiv-value("width", 386, 343, 2)
+      +phone-down
+         width: 100%
+      h3.title
+         margin-bottom: 30px
+      &-connections
+         +adaptiv-value("width", 758, 343, 2)
+         +tablet-down
+            width: 100%
+
+   .form-control
+      margin-bottom: 3px
+   .form-group
+      margin-bottom: 30px
+      label
+         margin-bottom: 6px
+
+   .svg-icon
+      fill: $fc_body
+
+.connections
+   &-wrap
+      display: flex
+      flex-direction: column
+   &-item
+      display: flex
+      justify-content: space-between
+      +adaptiv-value("padding-top", 30, 25, 2)
+      +adaptiv-value("padding-bottom", 30, 25, 2)
+      border-top: 1px solid $grey1
+      border-bottom: 1px solid $grey1
+      +phone-down
+         flex-direction: column
+      &>div
+         margin-right: 80px
+         &:last-child
+            margin-right: 0
+         +phone-down
+            margin-bottom: 25px
+      .title
+      margin-bottom: 20px
+
+
+
+.hint
+   font-size: 10px
+   line-height: 1.2
+
+.form-avatar
+   border-radius: 3px
+   +adaptiv-value("width", 180, 120, 2)
+   +adaptiv-value("min-width", 180, 120, 2)
+   +adaptiv-value("min-height", 180, 120, 2)
+   margin-bottom: 10px
+   object-fit: cover
