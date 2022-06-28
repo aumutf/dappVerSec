@@ -10,7 +10,10 @@
    border: none
    display: none
    font-size: inherit
-   +adaptiv-value("padding", 20, 20)
+   +adaptiv-value("padding-top", 10, 10)
+   +adaptiv-value("padding-right", 20, 20)
+   +adaptiv-value("padding-bottom", 10, 10)
+   +adaptiv-value("padding-left", 20, 20)
    .menu-item>a 
       display: flex
       align-items: center
@@ -21,6 +24,9 @@
       &:hover
          &>a
             color: $accentColor
+   .menu-item
+      +adaptiv-value("padding-top", 10, 10)  
+      +adaptiv-value("padding-bottom", 10, 10)  
 
 .dropdown-menu>li>a 
    display: block
