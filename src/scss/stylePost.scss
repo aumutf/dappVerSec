@@ -6,7 +6,7 @@
 @import "general/modal.sass";
 @import "general/formControl.sass";
 @import "general/breadcrumb.sass";
-@import "general/reaction.sass";     
+ 
 //@import "general/pagination.sass";   
 @import "general/sliderScroll.sass";
  
@@ -19,6 +19,8 @@
 @import "content/article.sass";  
 @import "content/postItem.sass";   
 @import "content/posts.sass";
+
+@import "general/reaction.sass";    
                            
 @import "component/social_.sass";                          
 @import "content/footer.sass";          
