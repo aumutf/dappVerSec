@@ -1,4 +1,4 @@
-<div class="page ">
+<div class="page myProfileSettings">
    <div class="container">
       <div class="page-breadcrumb">
          <ol class="breadcrumb">
@@ -14,7 +14,7 @@
       <div class="page__content">
          <section class="section section-tab posts">
             <div class="section__head section-tab__head">
-               <ul class="nav nav-pills myProfile__pills" id="pills-tab" role="tablist">
+               <ul class="nav nav-pills myProfile__pills section__pills" id="pills-tab" role="tablist">
                   <li class="nav-item">
                      <a class="nav-link active" id="pills-personal-info-tab" data-toggle="pill"
                         href="#pills-personal-info" role="tab" aria-controls="pills-personal-info"
@@ -49,7 +49,7 @@
                            enctype="multipart/form-data" method="post" accept-charset="utf-8" novalidate="novalidate">
                            <input type="hidden" name="600fe618b1d55_csrf_token"
                               value="9705e18e66db220cee2de6460635b9e0">
-                           <div class="d-flex">
+                           <div class="d-flex justify-content-between">
                               <div class="form-group">
                                  <p>
                                     <img src="https://test.dapp.expert/assets/img/user.png"
@@ -115,15 +115,174 @@
                               Changes</button>
                            <input type="hidden" name="sys_lang_id" value="1">
                         </form>
-
                      </div>
                   </div>
 
                   <div class="tab-pane" id="pills-connections">
-                     <div class="section-tab__content ">
-                        <h2 class="title section-tab__title">xx</h2>
+                     <div class="section-tab__content profile-tab-content-connections">
+                        <h2 class="title section-tab__title">Connections</h2>
+                        <div class="connections-wrap">
+                           <div class="connections-item">
+                              <div>
+                                 <h5 class="title">Connect to Google</h5>
+                                 <p>We will never send emails on your behalf to other users. And we will never send you
+                                    spam</p>
+                              </div>
+                              <div>
+                                 <a class="google btn-follow" href="#" target="_blank">
+                                    <svg class="svg-icon">
+                                       <use xlink:href="#google-icon"></use>
+                                    </svg>
+                                    <span>Connect to Google</span>
+                                 </a>
+                              </div>
+                           </div>
+                           <div class="connections-item">
+                              <div>
+                                 <h5 class="title">Connect to Facebook</h5>
+                                 <p>We will never post to Facebook or message your friends without your permission.</p>
+                              </div>
+                              <div>
+                                 <a class="facebook btn-follow" href="#" target="_blank">
+                                    <svg class="svg-icon">
+                                       <use xlink:href="#facebook-icon"></use>
+                                    </svg>
+                                    <span>Connect to Facebook</span>
+                                 </a>
+                              </div>
+                           </div>
 
+                           <div class="connections-item">
+                              <div>
+                                 <h5 class="title">Connect to Twitter</h5>
+                                 <p>We will never post to Twitter or message your followers without your permission.</p>
+                              </div>
+                              <div>
+                                 <a class="twitter btn-follow" href="#" target="_blank">
+                                    <svg class="svg-icon">
+                                       <use xlink:href="#twitter-icon"></use>
+                                    </svg>
+                                    <span>Connect to Twitter</span>
+                                 </a>
+                              </div>
+                           </div>
+                        </div>
 
+                     </div>
+                  </div>
+
+                  <div class="tab-pane" id="pills-preferences">
+                     <div class="section-tab__content profile-tab-content-connections">
+                        <h2 class="title section-tab__title">Preferences</h2>
+                        <form action="https://test.dapp.expert/preferences-post" method="post" accept-charset="utf-8">
+                           <input type="hidden" name="600fe618b1d55_csrf_token"
+                              value="9705e18e66db220cee2de6460635b9e0">
+
+                           <div class="form-group">
+                              <div class="row">
+                                 <div class="col-sm-12">
+                                    <label>Show Email on Profile Page</label>
+                                 </div>
+                                 <div class="col-md-4 col-sm-4 col-option">
+                                    <label class="custom-checkbox custom-radio checkbox--filled">
+                                       <input type="radio" name="show_email_on_profile" value="1" checked=""
+                                          required="">
+                                       <span class="checkbox-icon"><i class="icon-check"></i></span>
+                                       <span>Yes</span>
+                                    </label>
+                                 </div>
+                                 <div class="col-md-4 col-sm-4 col-option">
+                                    <label class="custom-checkbox custom-radio checkbox--filled">
+                                       <input type="radio" name="show_email_on_profile" value="0" required="">
+                                       <span class="checkbox-icon"><i class="icon-check"></i></span>
+                                       <span>No</span>
+                                    </label>
+                                 </div>
+                              </div>
+                           </div>
+
+                           <div class="form-group">
+                              <div class="row">
+                                 <div class="col-sm-12">
+                                    <label>RSS Feeds</label>
+                                 </div>
+                                 <div class="col-md-4 col-sm-4 col-option">
+                                    <label class="custom-checkbox custom-radio checkbox--filled">
+                                       <input type="radio" name="show_rss_feeds" value="1" checked="" required="">
+                                       <span class="checkbox-icon"><i class="icon-check"></i></span>
+                                       <span>Enable</span>
+                                    </label>
+                                 </div>
+                                 <div class="col-md-4 col-sm-4 col-option">
+                                    <label class="custom-checkbox custom-radio checkbox--filled">
+                                       <input type="radio" name="show_rss_feeds" value="0" required="">
+                                       <span class="checkbox-icon"><i class="icon-check"></i></span>
+                                       <span>Disable</span>
+                                    </label>
+                                 </div>
+                              </div>
+                           </div>
+
+                           <button type="submit" name="submit" value="update" class="btn btn--filled">Save
+                              Changes</button>
+                           <input type="hidden" name="sys_lang_id" value="1">
+                        </form>
+                     </div>
+                  </div>
+                  <div class="tab-pane" id="pills-security">
+                     <div class="section-tab__content profile-tab-content-connections">
+                        <h2 class="title section-tab__title">Change Password</h2>
+                        <p>To change the password, enter the old password, then enter the new password and confirm the
+                           new password</p>
+                        <form action="https://test.dapp.expert/change-password-post" id="form_validate" method="post"
+                           accept-charset="utf-8">
+                           <input type="hidden" name="600fe618b1d55_csrf_token"
+                              value="9705e18e66db220cee2de6460635b9e0">
+                           <div class="form-group">
+                              <label>Old Password</label>
+                              <input type="password" name="old_password" class="form-control form-input" value=""
+                                 placeholder="Old Password" required="">
+                           </div>
+                           <input type="hidden" name="old_password_exists" value="1">
+                           <div class="form-group">
+                              <label>Password</label>
+                              <input type="password" name="password" class="form-control form-input" value=""
+                                 placeholder="Password" required="">
+                           </div>
+                           <div class="form-group">
+                              <label>Confirm Password</label>
+                              <input type="password" name="password_confirm" class="form-control form-input" value=""
+                                 placeholder="Confirm Password" required="">
+                           </div>
+
+                           <button type="submit" class="btn btn-md btn--filled">Change Password</button>
+                           <input type="hidden" name="sys_lang_id" value="1">
+                        </form>
+                     </div>
+                  </div>
+                  <div class="tab-pane" id="pills-delete_account">
+                     <div class="section-tab__content profile-tab-content-connections">
+                        <h2 class="title section-tab__title">Delete Account</h2>
+                        <form action="https://test.dapp.expert/delete-account-post" id="form_validate"
+                           class="validate_terms" method="post" accept-charset="utf-8">
+                           <input type="hidden" name="600fe618b1d55_csrf_token"
+                              value="9705e18e66db220cee2de6460635b9e0">
+                           <div class="form-group">
+                              <label>Password</label>
+                              <input type="password" name="password" class="form-control form-input" value=""
+                                 placeholder="Password" required="">
+                           </div>
+                           <div class="form-group">
+                              <label class="custom-checkbox">
+                                 <input type="checkbox" name="confirm" class="checkbox_terms_conditions" required="">
+                                 <span class="checkbox-icon"><i class="icon-check"></i></span>
+                                 Deleting your account is permanent and will remove all content including comments,
+                                 avatars and profile settings. Are you sure you want to delete your account?
+                              </label>
+                           </div>
+                           <button type="submit" class="btn btn--filled">Delete Account</button>
+                           <input type="hidden" name="sys_lang_id" value="1">
+                        </form>
                      </div>
                   </div>
 
