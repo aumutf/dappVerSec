@@ -80,9 +80,9 @@
     width: 74px
     border-radius: 32px
     font-size: 17px
-    color: $black
+    color: black
     &:hover
-      color: $black
+      color: black
     .reaction
       &:hover
         background-color: transparent
@@ -97,15 +97,15 @@
   display: none
 
 .reaction-btn-wrap
-  display: flex
-
-  +tablet-down
-    display: grid
-    grid-template-columns: repeat(2, 1fr)
-    gap: 20px
+  
+  display: grid
+  grid-template-columns: repeat(2, 1fr)
+  gap: 20px
+  +tablet
+    display: flex
   .btn-reaction
-    +adaptiv-value("margin-right", 20, 5)
-    +tablet-down
-      margin-right: 0
+    margin-right: 0
+    +tablet
+      +adaptiv-value("margin-right", 20, 5)
     &:last-child
       margin-right: 0
