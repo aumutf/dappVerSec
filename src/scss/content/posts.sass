@@ -140,3 +140,124 @@
 
 .slider-nav.post-detail-slider-nav
    margin-top: 10px
+
+
+
+.comment-list
+   &>li
+      display: flex
+      width: 100%
+      //column-gap: 15px
+      padding: 25px 0
+      border-top: 1px solid $grey1
+      //border-bottom: 1px solid $grey1
+
+   .username
+      +adaptiv-value("font-size", 17, 16)
+      line-height: 1.2
+
+   .comment-date
+      font-size: $fs_body
+      color: $grey3
+
+   .comment
+      margin-bottom: 10px
+      font-size: $fs_body
+   .left
+      margin-right: 15px
+      &>a
+         display: inline-block
+         overflow: hidden
+         border-radius: 50%
+         +adaptiv-value("width", 40, 32)
+         +adaptiv-value("height", 40, 32)
+         +adaptiv-value("min-width", 40, 32)
+         +adaptiv-value("min-height", 40, 32)
+         img
+            +adaptiv-value("width", 40, 32)
+            +adaptiv-value("height", 40, 32)
+            +adaptiv-value("min-width", 40, 32)
+            +adaptiv-value("min-height", 40, 32)
+            display: inline-block
+            border-radius: 50%
+   .right
+      flex-grow: 1
+      &__top
+         display: flex
+         align-items: center
+         justify-content: space-between
+         +adaptiv-value("min-height", 40, 32)
+         &--left
+            display: flex
+            column-gap: 15px
+            flex-direction: column
+            +tablet
+               flex-direction: row
+
+   .comment-meta
+      display: flex
+      align-items: center
+      //column-gap: 30px
+      &>a
+         display: flex
+         align-items: center
+         //column-gap: 10px
+         font-size: $fs_body
+         color: $grey3
+         margin-right: 30px
+         &:last-child
+            margin-right: 0
+         .svg-icon
+            margin-right: 10px
+
+   .row-sub-comment
+      .comment-list > li
+         border: none
+         position: relative
+         &::before, &::after
+            content: ""
+            display: inline-block
+            height: 1px
+            position: absolute
+            left: calc(-15px - calc(32px + (40 - 32) * ((100vw - 320px) / (1140 - 320))))
+            +adaptiv-value("width", 40, 32)
+            width: calc(100% + 15px + calc(32px + (40 - 32) * ((100vw - 320px) / (1140 - 320))))
+         &::before
+            border-top: 1px solid $grey1
+            top: 0
+            //&::after
+            border-bottom: 1px solid $grey1
+            bottom: 0
+
+   ol:not(.breadcrumb)
+      +adaptiv-value("margin-left", 30, 25)
+      li::marker
+         color: $violetta1
+
+
+.btn-delete-comment
+   color: $grey3!important
+
+.userphoto
+   display: inline-block
+   overflow: hidden
+   border-radius: 50%
+   +adaptiv-value("width", 40, 32)
+   +adaptiv-value("height", 40, 32)
+   +adaptiv-value("min-width", 40, 32)
+   +adaptiv-value("min-height", 40, 32)
+   img
+      +adaptiv-value("width", 40, 32)
+      +adaptiv-value("height", 40, 32)
+      +adaptiv-value("min-width", 40, 32)
+      +adaptiv-value("min-height", 40, 32)
+      display: inline-block
+      border-radius: 50%
+
+img.userphoto
+   +adaptiv-value("width", 40, 32)
+   +adaptiv-value("height", 40, 32)
+   +adaptiv-value("min-width", 40, 32)
+   +adaptiv-value("min-height", 40, 32)
+   display: inline-block
+   border-radius: 50%
