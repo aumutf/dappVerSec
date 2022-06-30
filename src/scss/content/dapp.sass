@@ -1,0 +1,437 @@
+$w_dappeImg: 111px
+
+.dappe-info
+   display: grid
+   grid-template-rows: auto
+   row-gap: 10px
+   +adaptiv-value("column-gap", 32, 21)
+   +adaptiv-value("margin-bottom", 32, 39)
+   grid-template-columns: minmax(auto, 111px) 1fr
+   +tablet
+      grid-template-columns:  minmax(auto, $w_dappeImg) 1fr 1fr
+   &__img
+
+      width: $w_dappeImg
+      height: $w_dappeImg
+      min-width: $w_dappeImg
+      min-height: $w_dappeImg
+      margin: 0
+      border-radius: 12px
+      overflow: hidden
+      grid-column: 1
+      grid-row: 1/4
+      +tablet
+         grid-column: 1
+         grid-row: 1/4
+   &__name
+      font-size: 20px
+      align-items: center
+      display: flex    
+      line-height: 1.2
+      margin-bottom: 3px
+      font-weight: $medium
+      +tablet
+         font-size: 24px
+         display: grid
+         grid-column: 2
+         grid-row: 1
+   &__lang
+      grid-row: 2
+      grid-column: 2
+      text-transform: capitalize
+      .dappe-info-list
+         margin-left: 0
+         a
+            color: $fontcolor
+   &-wrap
+      //column-gap: 16px
+      margin-bottom: 20px
+      display: flex
+      color: rgba(255,255,255,0.5)
+      grid-column: 1/3
+      grid-row: 4      
+      +tablet
+         grid-column: 2
+         grid-row: 2
+      &-left
+         display: flex
+         margin-right: 0
+         flex: 1
+         +tablet
+            margin-right: 58px
+      &-right
+         display: flex
+         flex: 1
+            
+   .tag-list
+      grid-column: 2
+      grid-row: 2
+      +tablet
+         grid-column: 2/4
+         grid-row: 4
+
+   .social-menu
+      grid-column: 2/3
+      grid-row: 3
+      margin-left: 0
+      +tablet
+         grid-column: 3
+         grid-row: 1
+         +adaptiv-value("margin-left", -50, -55)
+      
+   .social-menu li
+      margin-right: 34px
+      +tablet
+         +adaptiv-value("margin-right", 34, 10)
+   .img-container
+      position: absolute
+      top: 0
+      bottom: 0
+      left: 0
+      right: 0
+      margin: auto
+      overflow: hidden
+
+   .social-btns
+      grid-column: 1/3
+      +tablet
+         grid-column: 1
+         grid-row: 5
+         
+.btn.btn-shspan
+   padding-left: unset
+   padding-right: unset
+   justify-content: center
+   width: 100%
+   +tablet
+      width: unset
+      padding: 6px 28px
+
+
+.dappe-info-row
+   display: flex
+
+.dappe-info-col
+   display: flex
+   flex-direction: column
+   min-width: 66px
+   +tablet
+      min-width: unset
+   &>span
+      margin-bottom: 6px
+      display: flex
+      align-items: center
+   &>span:not(.dappe-info-name)
+      &::before
+         content: ""
+         display: inline-block
+         width: 6px
+         height: 6px
+         min-width: 6px
+         min-height: 6px
+         background-color: #ffffff
+         border-radius: 2px
+         margin-right: 5px
+         +tablet
+            display: none
+
+   .img-container
+      position: relative
+      height: 100%
+
+
+.aboutDapp
+   h3.title, h4.title
+      margin-bottom: 20px
+
+   .btn-wrap
+      margin-bottom: 20px
+      display: grid
+      grid-template-columns: 1fr 1fr 1fr
+      column-gap: 10px      
+      +tablet
+         display: flex
+         margin-bottom: 20px
+      .btn
+         margin-right: 0
+         +tablet
+            margin-right: 10px
+         &:last-child
+            margin-right: 0
+   .post-author-meta
+      margin-bottom: 64px
+   .aboutDapp-statistics
+      margin-bottom: 32px
+   .section-related-posts
+      margin-bottom: 106px
+      .title
+         margin-bottom: 0px
+      .img-container
+         position: absolute
+
+   .aboutDapp-statistics
+      display: grid
+      grid-template-columns: 1fr
+      grid-gap: 16px
+      +tablet
+         grid-gap: 20px
+         grid-template-columns: 1fr 1fr
+
+      &__item
+         background: $grey1
+         border-radius: $br_btn
+         padding: 13px 16px
+         display: flex
+         flex-direction: column
+         row-gap: 10px
+
+   .stat
+      font-size: $fs_body+px
+      line-height: 1.2
+      &__item
+         display: flex
+      &-title
+         font-weight: 700
+         display: inline-flex
+         align-items: center
+         &::before
+            margin-right: 8px
+      &-right
+         color: $grey3
+         margin-left: 16px
+
+   .users-ic
+      position: relative
+      &::before
+         content: ""
+         display: inline-block
+         width: 20px
+         height: 20px
+         background:
+            image: url("../img/icons/usersFilled.svg")
+            repeat: no-repeat
+            size: cover
+            position: center
+
+
+.signal-ic
+   position: relative
+   &::before
+      content: ""
+      display: inline-block
+      width: 20px
+      height: 20px
+      background:
+         image: url("../img/icons/flame.svg")
+         repeat: no-repeat
+         size: cover
+         position: center
+
+.volume-ic
+   position: relative
+   &::before
+      content: ""
+      display: inline-block
+      width: 20px
+      height: 20px
+      background:
+         image: url("../img/icons/wallet.svg")
+         repeat: no-repeat
+         size: cover
+         position: center
+
+
+.transactions-ic
+   position: relative
+   &::before
+      content: ""
+      display: inline-block
+      width: 20px
+      height: 20px
+      background:
+         image: url("../img/icons/arrowSwap.svg")
+         repeat: no-repeat
+         size: cover
+         position: center
+
+.form-group-row
+   display: flex
+   flex-direction: column
+   margin-bottom: 0
+   +tablet
+      flex-direction: row
+      margin-bottom: unset
+   .form-control
+      margin-right: 30px
+      margin-bottom: 16px
+      +tablet
+         margin-bottom: unset
+      &:last-child
+         margin-right: 0
+
+.section .section-head,
+.section-mid-title,
+.comment-section .nav-tabs
+   border: none
+
+
+.section .section-content
+   display: grid
+   grid-template-columns: 1fr
+   column-gap: 20px
+   row-gap: 36px
+   margin: 0
+   float: unset
+   +tablet
+      grid-template-columns: 1fr 1fr 1fr
+
+.section .section-head
+   width: 100%
+   display: flex
+   position: unset
+   float: none
+   justify-content: space-between
+   align-items: center
+   margin-bottom: 16px
+   .title
+      margin-bottom: 0
+      background-color: $bgcolor
+      padding: 0
+      height: auto
+
+.post-item
+   &-mid
+      display: flex
+      flex-direction: column
+      //row-gap: 7px
+      float: unset
+      h5.title
+         margin-bottom: 0
+         margin-top: 0
+   &-image
+      width: 100%
+      height: 240px!important
+      display: block
+      position: relative
+      background-color: transparent
+      margin-bottom: 7px
+      +tablet
+         height: 263px!important
+
+
+.dappe-info-name
+   color: $fontcolor
+   margin-right: 0
+   font-weight: $medium
+   display: flex
+   align-items: center
+   margin-left: 11px
+   margin-bottom: 6px
+
+  
+   &>span:not(.dappe-info-name-text)
+      width: 12px
+      min-width: 12px
+      height: 12px
+      min-height: 12px
+      margin-right: 7px
+      display: flex
+      align-items: center
+      fill: #FFFFFF
+   &>span:not(.dappe-info-name):first-child
+      display: none
+      +tablet
+         display: block
+
+
+.email-link
+   color: $fontcolor
+   text-decoration: underline
+
+.btn-seemore-post
+   background-color: #444444
+   border-radius: 8px
+   color: #ffffff
+   font-size: 16px!important
+   line-height: 1.2
+   padding: 10px 30px
+   text-align: center
+   text-transform: lowercase
+   font-family: "Montserrat-Regular", Arial, sans-serif !important
+   height: auto
+   width: auto
+   +tablet
+      width: auto
+      margin-left: unset
+      left: unset
+
+
+.excerpt .btn-seemore-post
+   margin-bottom: 30px
+
+.dapp-img-mini-wrap
+   width: 24px
+   height: 24px
+   min-width: 24px
+   min-height: 24px
+   max-width: 24px
+   max-height: 24px
+   overflow: hidden
+   display: inline-flex
+   align-items: center
+   border-radius: 50%
+   background-color: #888888
+   margin-right: 8px
+
+
+.modal-link
+   border-top: 1px solid $grey8
+   margin-bottom: 4px
+   font-size: 12px
+   font-weight: 600
+   line-height: 18px
+   padding: 8px 16px
+   display: flex
+   align-items: center
+
+
+.more-icon
+   fill: transparent
+
+
+.modal-more-mobile
+   cursor: pointer
+   justify-content: center
+   margin-left: 6px
+   margin-top: -2px
+   display: none!important
+   display: flex!important
+   +tablet
+      display: none!important
+   .svg-icon
+      width: 20px
+      min-width: 20px
+
+.dappe-info-col > span:not(.dappe-info-name)
+   max-width: 85px
+   overflow: hidden
+   text-overflow: ellipsis
+   white-space: nowrap
+
+.post-content .post-text table 
+   border-color: #303030!important
+   width: 100%!important
+
+.post-content .post-text table tr
+   border-bottom: 1px solid #464646!important
+
+.su-table table td 
+   background-color: #3d3b3b!important
+
+.su-table-responsive table td, .su-table-responsive table th 
+   word-break: initial!important
+
+.su-table table td 
+   padding: 0.5em 1em!important
+   border: 1px solid #ccc!important
+

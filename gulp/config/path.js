@@ -35,6 +35,7 @@ export const path = {
     scssTermsConditions: `${srcFolder}/scss/styleTermsConditions.scss`,
     scssRegister: `${srcFolder}/scss/styleRegister.scss`,
     scssDappsAll: `${srcFolder}/scss/styleDappsAll.scss`,
+    scssDapp: `${srcFolder}/scss/styleDapp.scss`,
     html: `${srcFolder}/*.html`,
     files: `${srcFolder}/files/**/*.*`
   },
@@ -58,6 +59,7 @@ export const path = {
     scssTermsConditions: `${srcFolder}/scss/**/*.scss`,
     scssRegister: `${srcFolder}/scss/**/*.scss`,
     scssDappsAll: `${srcFolder}/scss/**/*.scss`,
+    scssDapp: `${srcFolder}/scss/**/*.scss`,
     html: `${srcFolder}/**/*.html`,
     images: `${srcFolder}/img/**/*.{jpg,jpeg,png,svg,gif,ico,webp}`,
     sprite: `${srcFolder}/img/icon/*.svg`,
