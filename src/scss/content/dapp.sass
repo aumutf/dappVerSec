@@ -260,7 +260,7 @@ $w_dappeImg: 111px
    margin-bottom: 0
    +tablet
       flex-direction: row
-      margin-bottom: unset
+      margin-bottom: 20px
    .form-control
       margin-right: 30px
       margin-bottom: 16px
@@ -434,4 +434,19 @@ $w_dappeImg: 111px
 .su-table table td 
    padding: 0.5em 1em!important
    border: 1px solid #ccc!important
+
+.section-related-posts .bl-grid-3
+   +tablet
+      grid-template-columns: repeat(3,1fr)
+
+   .artc-item--vert
+      display: flex
+      row-gap: unset
+   .artc-item-image 
+      min-height: 130px
+      height: 130px
+
+.btn-edit-dapp
+   margin-bottom: 10px
+
 
