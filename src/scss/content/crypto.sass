@@ -8,13 +8,23 @@
 
 .category-name 
    display: grid
-   grid-template-columns: repeat(2, 1fr)
    grid-template-rows: minmax(111px, auto) auto
+   grid-column: span 2
+   +tablet
+      grid-template-columns: repeat(2, 1fr)
+      grid-column: unset
+      
+      
 
-
-.category- 
-   grid-column: 2
-   grid-row: span 2
+.category-add-info 
+   grid-row: 3
+   grid-column: span 2
+   +tablet
+      grid-row: unset
+      grid-column: unset
+ 
+.category-tags
+   margin-top: 20px
 
 .category-wrap .dappe-info__img 
    margin-right: calc(15px + 30 * ((100vw - 320px) / 1120))
@@ -68,8 +78,7 @@
    gap: 15px
    flex-wrap: wrap
 
-.tag-list--dark > li 
-   background: #252525
+
 
 .tag-list > li 
    background: rgba(255, 255, 255, 0.25)
@@ -80,6 +89,9 @@
    margin: 0
    float: unset
 
+.tag-list--dark > li 
+   background: #252525
+   
 .tag-list a
    display: flex
 
@@ -166,6 +178,94 @@ div.sliderSection
    flex-wrap: wrap
    display: flex
    align-items: center
+
+.price-val
+   font-size: 60px
+   +adaptiv-value("font-size", 60, 45)  
+   +adaptiv-value("margin-right", 30, 5)  
+
+.category-price .stats-perc 
+   margin-left: auto
+
+.percentVal--grey 
+   color: grey
+
+.slider-text 
+   color: #ffffff
+   font-size: 12px
+   font-weight: 400
+   line-height: 18px
+
+.slider-val 
+   color: #fff
+   font-size: 12px
+   font-weight: 600
+   line-height: 22px
+
+.category-price 
+   grid-column: span 2
+   grid-row: 2
+   margin-bottom: 30px
+   +tablet 
+      grid-column: 2
+      grid-row: span 2
+
+.dropdown:hover .dropdown-menu
+   display: block
+
+.dropdown-menu>li>a:focus, .dropdown-menu>li>a:hover
+   color: #262626
+   text-decoration: none
+   background-color: #f5f5f5
+
+.dropdown-menu>li>a 
+   display: block
+   padding: 3px 20px
+   clear: both
+   font-weight: 400
+   line-height: 1.42857143
+   color: $fontcolor
+   white-space: nowrap
+
+.contracts li 
+   list-style: none
+   display: flex
+   align-items: center
+   gap: 8px
+   margin-bottom: 8px
+   justify-content: space-between
+   font-size: 12px
+
+.contracts li div 
+   display: flex
+   gap: 8px
+   align-items: flex-start
+   justify-content: flex-start
+   margin-right: 20px
+
+.contracts li .icon 
+   display: inline-block
+   width: 15px
+   height: 20px
+
+.contracts li .icon svg 
+   fill: #fff
+
+.contr-info span:first-child
+   font-size: 10px
+
+.contr-info
+   flex-direction: column
+
+.tag-list .dropdown-toggle::after
+   display: none
+
+.tab-content
+   min-height: 300px
+   min-height: calc(150px + 150 * ((100vw - 320px) / 1120))
+
+
+
 
 
 
