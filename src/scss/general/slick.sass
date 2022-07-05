@@ -33,7 +33,7 @@
 
 
 
-.slick-prev::after, .slick-next::after 
+.slick-prev::after, c.slick-next::after 
    content: ""
    display: block
    width: 24px
@@ -48,6 +48,9 @@
    background-position: center
    background-image: url("../img/icons/arrowRight.svg")
 
+.slick-prev, .slick-prev
+   &::before
+      display: none
 
 .slick-prev 
    left: 15px !important
@@ -61,6 +64,8 @@
 .slick-dots li 
    background-color: #C4C4C4
    border-radius: 50%
+   width: 10px
+   height: 10px
 
 .slick-dots li.slick-active 
    background-color: #B039AE
@@ -68,6 +73,8 @@
 .slick-dots font
    display: none
 
+.slick-dots li button:before
+   font-size: 0
 
 .slick-arrow 
    width: 32px
