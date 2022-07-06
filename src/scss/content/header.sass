@@ -198,9 +198,11 @@
       flex-wrap: unset
 
   .menu--right
-    &>.menu-item
+    .menu-item
+      margin-bottom: 20px
       +tablet
         +adaptiv-value("margin-left", 40, 0)
+        margin-bottom: 0
 
   .btn-left, .btn-close
     display: none
@@ -405,11 +407,6 @@
   +adaptiv-value("height", 18.5, 18.5)
 
 .lang-dropdown
-  padding-bottom: 20px
-  padding-top: 20px
-  +tablet
-    padding-bottom: 0
-    padding-top: 0
   .dropdown-toggle
     &:before,&:after
       display: none
