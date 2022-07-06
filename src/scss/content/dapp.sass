@@ -58,6 +58,7 @@ $w_dappeImg: 111px
          grid-template-columns: repeat(2, 1fr)
          row-gap: 6px
          margin-right: 0
+         line-height: 1.8
          +tablet
             margin-right: 58px
 
@@ -324,24 +325,23 @@ $w_dappeImg: 111px
    margin-right: 0
    font-weight: $medium
    display: flex
-   align-items: start
+   align-items: center: 
    margin-left: 11px
-   line-height: 1.8
+   
 
   
-   &>span:not(.dappe-info-name-text)
-      width: 12px
-      min-width: 12px
-      height: 12px
-      min-height: 12px
-      margin-right: 7px
-      display: flex
-      align-items: center
-      fill: #FFFFFF
-   &>span:not(.dappe-info-name):first-child
-      display: none
-      +tablet
-         display: block
+.dappe-info-name-ic
+   width: 12px
+   min-width: 12px
+   height: 12px
+   min-height: 12px
+   margin-right: 7px
+   display: flex
+   align-items: center
+   fill: #FFFFFF
+   display: none
+   +tablet
+      display: block
 
 
 .email-link
@@ -395,8 +395,7 @@ $w_dappeImg: 111px
    align-items: center
 
 
-.more-icon
-   fill: transparent
+
 
 
 .modal-more-mobile
@@ -409,8 +408,11 @@ $w_dappeImg: 111px
    +tablet
       display: none!important
    .svg-icon
-      width: 20px
-      min-width: 20px
+      width: 18px
+      min-width: 18px
+      height: 24px
+      min-height: 18px
+      fill: transparent
 
 .dappe-info-col > span:not(.dappe-info-name)
    max-width: 85px
