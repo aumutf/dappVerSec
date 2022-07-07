@@ -4,7 +4,6 @@ $wImgWrapM: 35
 .ranktable-wrap
    overflow-x: auto
    scrollbar-width: none
-   counter-reset: num
    &::-webkit-scrollbar
       display: none
 
@@ -280,12 +279,6 @@ div.dataTables_wrapper>div.row>div, div.dataTables_length, div.dataTables_filter
    +tablet
       position: static
       background-color: transparent !important
-
-.cell-count
-   .pill-br
-      &::before   
-         counter-increment: num
-         content: counter(num)
       
 .exchScore
    padding: 0 13px

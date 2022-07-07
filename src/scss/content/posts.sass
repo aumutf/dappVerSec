@@ -158,6 +158,11 @@
       +adaptiv-value("margin-left", 30, 25)
       li::marker
          color: $accentColor
+.post
+   ol:not(.breadcrumb)
+      +adaptiv-value("margin-left", 30, 25)
+      li::marker
+         color: $accentColor
 
 
 .btn-delete-comment
@@ -217,6 +222,17 @@ img.userphoto
 
 .post-text table tr
    border-bottom: 1px solid #464646!important
+
+.post-text a 
+   color: $accentColor !important
+
+.post .post-text ul li, .post .section-related-posts ul li
+   display: flex
+   align-items: center
+   column-gap: 5px
+   margin-left: 5px
+   margin-bottom: 15px
+   color: $accentColor
 
 .post-comment .comment-icon
    margin-right: 15px
