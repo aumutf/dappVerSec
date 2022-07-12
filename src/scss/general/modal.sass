@@ -102,8 +102,9 @@ $p_modal: 20px
    &__link
       display: inline-flex
       align-items: flex-start
-      column-gap: 16px
-      margin-bottom: 26px
+      +adaptiv-value("column-gap", 16, 16)
+      +adaptiv-value("margin-bottom", 26, 26)
+      line-height: 1.7
 
 
    .svg-icon
@@ -111,9 +112,14 @@ $p_modal: 20px
       height: 18px
       min-width: 24px
       min-height: 24px
+      +adaptiv-value("width", 18, 18)
+      +adaptiv-value("height", 18, 18)
+      +adaptiv-value("min-width", 24, 24)
+      +adaptiv-value("min-height", 24, 24)
       fill: $fontcolor
    .social-menu
       margin-top: 10px
+      flex-wrap: wrap
 
 
 
@@ -165,3 +171,8 @@ $p_modal: 20px
       font-size: 12px
    a.link-terms
       color: $accentColor
+
+.modal-dialog
+   margin: 0
+   +tablet
+      margin: 1.75rem auto
