@@ -36,6 +36,7 @@ export const path = {
     scssRegister: `${srcFolder}/scss/styleRegister.scss`,
     scssDappsAll: `${srcFolder}/scss/styleDappsAll.scss`,
     scssDapp: `${srcFolder}/scss/styleDapp.scss`,
+    scssRank: `${srcFolder}/scss/styleRank.scss`,
     scssCrypto: `${srcFolder}/scss/styleCrypto.scss`,
     html: `${srcFolder}/*.html`,
     files: `${srcFolder}/files/**/*.*`
@@ -61,6 +62,7 @@ export const path = {
     scssRegister: `${srcFolder}/scss/**/*.scss`,
     scssDappsAll: `${srcFolder}/scss/**/*.scss`,
     scssDapp: `${srcFolder}/scss/**/*.scss`,
+    scssRank: `${srcFolder}/scss/**/*.scss`,
     scssCrypto: `${srcFolder}/scss/**/*.scss`,
     html: `${srcFolder}/**/*.html`,
     images: `${srcFolder}/img/**/*.{jpg,jpeg,png,svg,gif,ico,webp}`,
