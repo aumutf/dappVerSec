@@ -1,10 +1,10 @@
 .pagination li a, .paginate_button
-    min-width: 30px
+    +adaptiv-value("min-width", 30, 30)
+    +adaptiv-value("height", 31, 31)
     margin: 0
     margin-right: 6px
     border: none
     color: $fontcolor
-    height: 31px
     transition: all .2s ease-in-out 0s
     width: auto
     +adaptiv-value("font-size", $fs_body, $fs_body)

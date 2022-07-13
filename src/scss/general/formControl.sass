@@ -54,3 +54,63 @@ input:-webkit-autofill:active
 input:-webkit-autofill
    -webkit-text-fill-color: $fontcolor !important
 
+
+.search-label.inBl
+   flex-grow: 1
+   background-color: $grey1
+   border-radius: $field_br
+   padding-left: 10px
+   padding-right: 7px
+   display: flex
+   align-items: center
+   justify-content: space-between
+   margin: 0
+   max-height: 30px
+   .search-field
+      background: transparent
+      +adaptiv-value("padding-top", 5, 5)
+      +adaptiv-value("padding-bottom", 4, 4)
+
+   &+.btn--filled
+      max-height: 30px
+
+
+
+.btn-search-filter
+   background-color: #777575
+   border-color: transparent
+   +adaptiv-value("padding-top", 2, 2)
+   +adaptiv-value("padding-right", 13, 13)
+   +adaptiv-value("padding-bottom", 2, 2)
+   +adaptiv-value("padding-left", 13, 13)
+   display: flex
+   column-gap: 0px
+   align-items: center
+   justify-content: center
+   text-transform: unset
+   border-radius: $field_br
+   align-self: flex-start
+   font-weight: $semiBold
+   .svg-icon
+      margin-right: 4px
+      +adaptiv-value("width", 24, 24)
+      +adaptiv-value("height", 24, 24)
+      +adaptiv-value("min-width", 24, 24)
+      +adaptiv-value("min-height", 24, 24)
+      fill: #FFF
+   &:hover
+      background-color: #777575
+      border-color: transparent
+      color: $violetta1
+      .svg-icon
+         fill: $violetta1
+   &:active, &:focus
+      background-color: transparent
+      border-color: $accentColor 
+      .svg-icon
+         fill: #FFF   
+   &:active:hover, &:focus:hover
+      .svg-icon
+         fill: $violetta1          
+
+

@@ -334,12 +334,14 @@ ul
   align-items: center
   
 
-.btn--transp:not(.btn--cross).active, .btn--transp:not(.btn--cross):hover, .btn--transp:not(.btn--cross):active, .btn--transp:not(.btn--cross):focus 
+.btn--transp:not(.btn--cross):not(.btn-search-filter).active, .btn--transp:not(.btn--cross):not(.btn-search-filter):hover, 
+.btn--transp:not(.btn--cross):not(.btn-search-filter):active, .btn--transp:not(.btn--cross):not(.btn-search-filter):focus 
   border-color: #B039AE
   color: #B039AE
   fill: #B039AE
 
-.btn--transp:not(.btn--cross).active .svg-icon, .btn--transp:not(.btn--cross):hover .svg-icon, .btn--transp:not(.btn--cross):active .svg-icon, .btn--transp:not(.btn--cross):focus .svg-icon 
+.btn--transp:not(.btn--cross):not(.btn-search-filter).active .svg-icon, .btn--transp:not(.btn--cross):not(.btn-search-filter):hover .svg-icon, 
+.btn--transp:not(.btn--cross):not(.btn-search-filter):active .svg-icon, .btn--transp:not(.btn--cross):not(.btn-search-filter):focus .svg-icon 
   fill: #B039AE
 
 .btn--transp 
@@ -347,6 +349,7 @@ ul
     margin-right: 0 
     +laptop
       margin-right: 10px
+  
 
 .btn--cross:hover 
   background-color: #363636
