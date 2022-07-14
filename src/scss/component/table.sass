@@ -1,4 +1,4 @@
-$wImgWrap: 45
+$wImgWrap: 46
 $wImgWrapM: 35
 
 .ranktable-wrap
@@ -38,12 +38,18 @@ table.ranktable
       border-top: 1px solid $grey5
       &:last-child
          border-bottom: 1px solid $grey5
-         
+   th
+      line-height: 1.67!important  
+   td
+      line-height: 1.5!important   
+      padding-top: 27px
+      padding-bottom: 7px      
    td, th
       border: none
       white-space: nowrap
-      line-height: 1.5!important
-      padding: 7px 12px 8px
+      //border: 1px solid red
+
+      //padding: 7px 12px 8px
       &:nth-child(2)
          //padding: 10px 0px 10px 15px!important
          text-align: left
@@ -56,9 +62,9 @@ table.ranktable
          +tablet
             position: static
             background: transparent
-
       &:last-child
          padding-right: 16px!important
+
    a
       display: inline-flex
       align-items: center
@@ -74,10 +80,11 @@ table.ranktable
          +adaptiv-value("font-size", 12, 12)
          line-height: 1.21
          font-weight: $bold
-         padding: 4px 10px 4px!important //14px 10px 13px!important
+         //padding: 4px 10px 4px!important //14px 10px 13px!important
          border: none
+         //border: 1px solid red
          text-align: center
-         height: 45px
+         height: 40px
          &:first-child
             +tablet
                background-color: transparent
@@ -145,7 +152,8 @@ table.ranktable
       +adaptiv-value("height", $wImgWrap, $wImgWrap)
       +adaptiv-value("min-height", $wImgWrap, $wImgWrap)
       +adaptiv-value("max-height", $wImgWrap, $wImgWrap)   
-      +adaptiv-value("margin-right", 15, 15)
+      //+adaptiv-value("margin-right", 15, 15)
+      margin-right: 15px
       picture, img
          width: 100%
          height: 100%
@@ -196,10 +204,13 @@ table.ranktable
    .shortname 
       color: $grey6
       text-transform: uppercase
-      margin-left: 25px
-      +adaptiv-value("margin-left", 15, 15)
+      margin-right: 25px
       &--light
          color: $fontcolor
+
+   .fullname
+      margin-right: 15px
+      white-space: pre-wrap
 
    th
       .star
@@ -263,14 +274,29 @@ div.dataTables_wrapper>div.row>div, div.dataTables_length, div.dataTables_filter
    justify-content: center 
    
 .t-graph
-   text-align: center
-   justify-content: center    
+   text-align: right
+   justify-content: flex-end    
 
 .cell-star
-   +adaptiv-value("width", 20, 20)
-.cell-star, .cell-count
-   padding-left: 7.5px!important
-   padding-right: 7.5px!important
+   width: 30px
+   max-width: 30px
+   padding-left: 7.5px
+   padding-right: 7.5px
+
+.cell-count
+   width: 30px
+   max-width: 30px
+   padding-left: 7.5px
+   padding-right: 7.5px
+   .t-text
+      justify-content: center
+
+
+.cell-name
+   width: 186px
+   max-width: 186px
+   padding-right: 25px
+   
 .cell-star, .cell-count, .cell-name
    background-color: $bgcolor !important
    position: sticky
@@ -279,14 +305,63 @@ div.dataTables_wrapper>div.row>div, div.dataTables_length, div.dataTables_filter
    +tablet
       position: static
       background-color: transparent !important
-      
+
+.cell-price
+   width: 97px
+   max-width: 97px
+   padding-left: 10px
+   padding-right: 10px
+
+.cell-index
+   width: 97px
+   max-width: 97px
+   padding-left: 10px
+   padding-right: 10px  
+
+.cell-marketCap 
+   width: 145px
+   max-width: 145px
+   padding-left: 10px
+   padding-right: 10px  
+
+.cell-volumeUp
+   width: 136px
+   max-width: 136px
+   padding-left: 10px
+   padding-right: 10px  
+
+.cell-circulatingSupply
+   width: 170px
+   max-width: 170px
+   padding-left: 10px
+   padding-right: 10px  
+
+.cell-chart
+   width: 133px
+   max-width: 133px
+   padding-left: 10px
+   padding-right: 10px    
+
+.cell-users
+   width: 86px
+   max-width: 86px
+   padding-left: 10px
+   padding-right: 10px
+
+.cell-blockchain  
+   width: 144px
+   max-width: 144px
+   padding-left: 10px
+   padding-right: 10px
+
+.cell-lotsOfBlockchain  
+   width: 144px
+   max-width: 144px
+   padding-left: 10px
+   padding-right: 10px
+
 .exchScore
    padding: 0 13px
 
 table.dataTable td.dataTables_empty, table.dataTable td.dt-center, table.dataTable th.dt-center
    text-align: center
-
-
-
-      
-
