@@ -7,6 +7,7 @@
 @import "general/modal.sass";
 @import "general/formControl.sass";
 @import "general/breadcrumb.sass";
+@import "general/dropdown.sass"; 
 
 @import "content/header.sass";     
 
@@ -15,11 +16,12 @@
 @import "component/artcItem.sass";   
 @import "component/table.sass";    
 @import "component/page.sass";
- 
+
+  
 @import "content/article.sass";  
 @import "content/socialSignal.sass";  
 @import "content/hotNews.sass";  
-@import "content/whatsNew.sass";   
+@import "content/whatsNew.sass";     
 @import "content/latestDapp.sass";  
 @import "content/cryptocurrency_table.sass";   
 

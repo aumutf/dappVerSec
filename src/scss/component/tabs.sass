@@ -42,11 +42,12 @@
    +laptop
       display: flex
       align-items: center
-      +adaptiv-value("row-gap", 20, 20)
       row-gap: unset
       column-gap: unset  
 
-
+   &--col
+      flex-direction: column
+      
    h2.title
       margin-top: 0
       +laptop
@@ -85,3 +86,12 @@
       padding-top: 15px
       +tablet
          padding-top: 20px
+
+.section-tab-head-wrap
+   display: flex
+   flex-direction: column
+   margin-bottom: 20px
+   .filter-wrap
+      align-self: flex-end
+   .section-tab__head
+      margin-bottom: 10px

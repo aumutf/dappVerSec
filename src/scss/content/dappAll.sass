@@ -45,18 +45,6 @@
       .dropdown-select--lg:not(:last-child)
          margin-right: 16px
 
-      .search-label 
-         flex-grow: 1
-         background-color: $grey1
-         border-radius: $field_br
-         padding-left: 10px
-         padding-right: 7px
-         display: flex
-         align-items: center
-         justify-content: space-between
-         margin: 0
-      .search-field
-         background: transparent
 
    .btn-search-filter
       position: absolute
@@ -72,10 +60,6 @@
 
    .search-wrap
       flex-grow: 1
-
-   .search-field
-      +adaptiv-value("padding-top", 11, 11)
-      +adaptiv-value("padding-bottom", 12, 12)
 
 
    .pagination-wrap
@@ -101,22 +85,11 @@
       +phone
          margin-right: 16px
 
-   .menu-item
-      &.active
-         &>a
-            color: $accentColor  
    .btn-secondary.dropdown-toggle
       width: 100%
    .dropdown-menu
       width: 100%
       min-width: 100%
-      +adaptiv-value("max-height", 382, 382) 
-      overflow-y: auto
 
 
-.selectDropdown
-   select
-      background-color: $bgcolor
-      border-bottom: none
-   option
-      background-color: $bgcolor
+
