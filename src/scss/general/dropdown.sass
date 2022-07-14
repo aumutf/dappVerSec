@@ -14,6 +14,8 @@
    +adaptiv-value("padding-right", 20, 20)
    +adaptiv-value("padding-bottom", 10, 10)
    +adaptiv-value("padding-left", 20, 20)
+   +adaptiv-value("max-height", 400, 400) 
+   overflow-y: auto
    .menu-item>a 
       display: flex
       align-items: center
@@ -24,6 +26,9 @@
       &:hover
          &>a
             color: $accentColor
+      &.active
+         &>a
+            color: $accentColor 
    .menu-item
       +adaptiv-value("padding-top", 10, 10)  
       +adaptiv-value("padding-bottom", 10, 10)  
@@ -92,3 +97,31 @@
          transform: scale(1.3, -1.2) rotate(50deg)
       &:after
          transform: scale(1.3, -1.2) rotate(-50deg)  
+
+.selectDropdown
+   select
+      background-color: $bgcolor
+      border-bottom: none
+   option
+      background-color: $bgcolor
+
+.filter-wrap
+   .dropdown-wrap:not(.dropdown-wrap-period)
+      +adaptiv-value("width", 100, 100)
+      .dropdown-menu
+         min-width: 100
+
+   .btn-secondary.dropdown-toggle
+      width: 100%
+      max-height: 30px
+      overflow: hidden
+      &>span
+         display: inline-block
+         overflow: hidden
+         width: 100%
+
+   .dropdown-wrap-period
+      +adaptiv-value("width", 86, 86)
+      
+      .dropdown-menu
+         min-width: 86px
