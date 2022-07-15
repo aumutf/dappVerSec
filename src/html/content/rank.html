@@ -90,14 +90,10 @@
 
                         <form action="#" method="GET" accept-charset="utf-8">
                            <div class="filter-wrap">
-                              <div class="filter-wrap-left">
+                              <div class="filter-wrap-left active">
                                  <div class="dropdown-wrap">
                                     <div class="dropdown">
-                                       <a class="btn btn-secondary dropdown-toggle arrow" href="#" role="button"
-                                          id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
-                                          aria-expanded="false">
-                                          All
-                                       </a>
+
                                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
                                           <li class="menu-item">
                                              <a class="" href="#">Item-01</a>
@@ -109,6 +105,11 @@
                                              <a class="" href="#">Item-03</a>
                                           </li>
                                        </ul>
+                                       <a class="btn btn-secondary dropdown-toggle arrow" href="#" role="button"
+                                          id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
+                                          aria-expanded="false">
+                                          All
+                                       </a>
                                     </div>
                                  </div>
                                  <div class="dropdown-wrap">
@@ -171,16 +172,18 @@
                                        </ul>
                                     </div>
                                  </div>
-                                 <label for="search" class="search-label inBl">
-                                    <div class="search-wrap">
-                                       <svg class="search-icon">
-                                          <use xlink:href="#search-icon"></use>
-                                       </svg>
-                                       <input class="search-field" type="text" name="search1" id="search1" value=""
-                                          placeholder="Search">
-                                    </div>
-                                 </label>
-                                 <button class="btn btn--filled">GO</button>
+                                 <div class="search-label-wrap">
+                                    <label for="search" class="search-label inBl">
+                                       <div class="search-wrap">
+                                          <svg class="search-icon">
+                                             <use xlink:href="#search-icon"></use>
+                                          </svg>
+                                          <input class="search-field" type="text" name="search1" id="search1" value=""
+                                             placeholder="Search">
+                                       </div>
+                                    </label>
+                                    <button class="btn btn--filled">GO</button>
+                                 </div>
                               </div>
                               <button type="button" class="btn btn--transp btn-search-filter" id="dapp_search_btn"
                                  name="dapp_search_btn">

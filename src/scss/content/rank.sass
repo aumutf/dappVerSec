@@ -1,19 +1,56 @@
 .filter-wrap
    display: flex
    margin-bottom: 20px
+   flex-direction: column
+   +tablet
+      flex-direction: row
 
 .filter-wrap-left 
-   display: flex
+   display: grid
+   grid-template-columns: repeat(2, 1fr)
+   row-gap: 12px
+   column-gap: 12px
    opacity: 0
    transition: opacity 0.5s ease 0s
+
+   +tablet
+      grid-template-columns: repeat(4, 1fr)
+      flex-grow: 1
+   +laptop
+      display: flex
+      row-gap: unset
+      column-gap: unset
+      
    &.active
       opacity: 1
 
 .btn-search-filter
    margin-left: auto
+   order: -1
+   margin-bottom: 20px
 
-.search-label
-   max-width: 260px
+   +tablet
+      order: unset
+      margin-bottom: unset
+      margin-left: 104px
+   +laptop
+      margin-left: auto
+
+.search-label.inBl
+   margin-right: 12px
+   max-width: unset 
+   +laptop
+      max-width: 260px
+   
 
 .dropdown-wrap
    margin-right: 12px
+
+.search-label-wrap
+   grid-column: span 2
+   display: flex
+   +tablet
+      grid-column: span 4
+   +laptop
+      grid-column: unset
+      
