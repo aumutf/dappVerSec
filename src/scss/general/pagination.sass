@@ -34,6 +34,9 @@
 
 .dataTables_length
   color: $fontcolor!important
+  label
+    display: flex
+    align-items: center
 
 .pagination>li>a, .pagination>li>span
   background-color: transparent
@@ -67,8 +70,9 @@
 .pagination-wrap
   display: flex
   justify-content: space-between
-  +adaptiv-value("margin-top", 40, 20)
-  +adaptiv-value("margin-bottom", 40, 40)
+  align-items: center
+  padding-top: 10px
+  padding-bottom: 10px
   .dataTables_paginate
     flex-grow: 1
     justify-content: center
@@ -77,6 +81,10 @@
     float: unset
     display: flex
     justify-content: center
+  &>div:first-child
+    display: none
+    +tablet
+      display: block
 
 .pagination>li>a
   display: flex
@@ -85,5 +93,10 @@
 
 .paginate_button 
   +adaptiv-value("font-size", $fs_body, $fs_body)
+
+.dataTables_info
+  display: none
+  +tablet
+    display: block
 
 

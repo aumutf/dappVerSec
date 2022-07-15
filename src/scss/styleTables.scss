@@ -5,9 +5,10 @@
 @import "general/generalSetting.sass";
 //@import "general/sliderScroll.sass";
 //@import "general/modal.sass";
-//@import "general/formControl.sass";
+@import "general/formControl.sass";
 //@import "general/breadcrumb.sass";
-//@import "general/pagination.sass";
+@import "general/pagination.sass";
+@import "general/dropdown.sass";
 
 //@import "content/header.sass";     
 
@@ -16,7 +17,7 @@
 //@import "component/artcItem.sass";   
 @import "component/table.sass";    
 @import "component/page.sass";
-
+ 
 //@import "content/article.sass";  
 //@import "content/socialSignal.sass";  
 //@import "content/hotNews.sass";  
@@ -28,4 +29,4 @@
 
 //@import "component/social_.sass";                          
 //@import "content/footer.sass";                            
-                                       
+                              

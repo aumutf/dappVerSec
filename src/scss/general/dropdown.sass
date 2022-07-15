@@ -100,10 +100,17 @@
 
 .selectDropdown
    select
-      background-color: $bgcolor
+      background-color: #000000
       border-bottom: none
+      margin-left: 10px
+      border-radius: 5px
+      height: 30px !important
+      &:focus
+         background-color: #000000
+
    option
-      background-color: $bgcolor
+      background-color: #000000
+      +adaptiv-value("font-size", 14, 14)
 
 .filter-wrap
    .dropdown-wrap:not(.dropdown-wrap-period)
