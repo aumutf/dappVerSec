@@ -276,11 +276,17 @@ div.sliderSection
 .tag-list.dg
    display: grid
    grid-template-columns: repeat(2, 1fr)
+   +phone
+      display: flex
+      grid-template-columns: unset
 
 .tag-list.dg>li:nth-child(even)
    .dropdown-menu  
       right: 0
       left: unset!important 
+      +phone
+         right: unset
+         left: 0!important
 
 
 
