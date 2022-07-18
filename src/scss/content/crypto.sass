@@ -273,6 +273,16 @@ div.sliderSection
    min-height: calc(150px + 150 * ((100vw - 320px) / 1120))
 
 
+.tag-list.dg
+   display: grid
+   grid-template-columns: repeat(2, 1fr)
+
+.tag-list.dg>li:nth-child(even)
+   .dropdown-menu  
+      right: 0
+      left: unset!important 
+
+
 
 
 
