@@ -28,6 +28,8 @@
           display: none
       .burger
         display: none
+      .btn-close
+        display: none
     .search.active
       width: 100%
       margin-right: 0
@@ -380,8 +382,8 @@
 .search-field
   background: $bg_header
   color: $fontcolor
-  +adaptiv-value("padding-top", 10, 10)
-  +adaptiv-value("padding-bottom", 10, 10)
+  padding-top: 12px
+  padding-bottom: 11px
   +adaptiv-value("padding-left", 5, 30)
   +adaptiv-value("padding-right", 5, 5)
   border: none
@@ -389,7 +391,9 @@
   width: 100%
   border-radius: 8px
   font-size: inherit
-
+  +tablet
+    +adaptiv-value("padding-top", 10, 10)
+    +adaptiv-value("padding-bottom", 10, 10)
   +placeholder
     color: $fontcolor
 
