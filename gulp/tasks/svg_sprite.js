@@ -16,10 +16,10 @@ export const svgSpriteTask = () => {
         svgSprite({
             mode: {
                 symbol: {
-                    sprite: "../sprite.svg"
+                    sprite: "sprite.svg"
                 }
             }
         })
      )
-    .pipe(app.gulp.dest(app.path.build.images));
+    .pipe(app.gulp.dest(app.path.build.sprites));
 }
