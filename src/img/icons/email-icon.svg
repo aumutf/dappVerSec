@@ -1,5 +1,41 @@
-<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path fill-rule="evenodd" clip-rule="evenodd"
-            d="M2.37868 3.87868C1.5 4.75736 1.5 6.17157 1.5 9C1.5 11.8284 1.5 13.2426 2.37868 14.1213C3.25736 15 4.67157 15 7.5 15H10.5C13.3284 15 14.7426 15 15.6213 14.1213C16.5 13.2426 16.5 11.8284 16.5 9C16.5 6.17157 16.5 4.75736 15.6213 3.87868C14.7426 3 13.3284 3 10.5 3H7.5C4.67157 3 3.25736 3 2.37868 3.87868ZM4.81202 5.53197C4.55353 5.35965 4.20429 5.4295 4.03197 5.68798C3.85965 5.94647 3.9295 6.2957 4.18798 6.46803L8.68798 9.46803C8.87692 9.59399 9.12307 9.59399 9.31202 9.46803L13.812 6.46803C14.0705 6.2957 14.1404 5.94647 13.968 5.68798C13.7957 5.4295 13.4465 5.35965 13.188 5.53197L9 8.32396L4.81202 5.53197Z" />
-      
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="15"
+   height="12"
+   viewBox="0 0 15 12"
+   fill="none"
+   version="1.1"
+   id="svg3754"
+   sodipodi:docname="email-icon.svg"
+   inkscape:version="1.2.1 (9c6d41e410, 2022-07-14)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs3758" />
+  <sodipodi:namedview
+     id="namedview3756"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     showgrid="false"
+     inkscape:zoom="43.055556"
+     inkscape:cx="7.4787097"
+     inkscape:cy="6.003871"
+     inkscape:window-width="1920"
+     inkscape:window-height="991"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg3754" />
+  <path
+     fill-rule="evenodd"
+     clip-rule="evenodd"
+     d="M 0.87868,0.87868 C 0,1.75736 0,3.17157 0,6 0,8.8284 0,10.2426 0.87868,11.1213 1.75736,12 3.17157,12 6,12 h 3 c 2.8284,0 4.2426,0 5.1213,-0.8787 C 15,10.2426 15,8.8284 15,6 15,3.17157 15,1.75736 14.1213,0.87868 13.2426,0 11.8284,0 9,0 H 6 C 3.17157,0 1.75736,0 0.87868,0.87868 Z M 3.31202,2.53197 C 3.05353,2.35965 2.70429,2.4295 2.53197,2.68798 2.35965,2.94647 2.4295,3.2957 2.68798,3.46803 l 4.5,3 c 0.18894,0.12596 0.43509,0.12596 0.62404,0 l 4.49998,-3 C 12.5705,3.2957 12.6404,2.94647 12.468,2.68798 12.2957,2.4295 11.9465,2.35965 11.688,2.53197 L 7.5,5.32396 Z"
+     id="path3752" />
 </svg>
