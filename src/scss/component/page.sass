@@ -11,3 +11,14 @@
          display: none
       .page__title
          display: none
+
+.page-in
+   display: flex
+   align-items: flex-start
+
+.page-col
+   flex-grow: 1
+   &:last-child
+      +adaptiv-value("margin-left", 40, 40) 
+      background-color: $grey1
+

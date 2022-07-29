@@ -1,0 +1,47 @@
+$gap: 15px
+
+.bl-img
+   position: relative
+   border-radius: 10px
+      
+   &-info
+      position: absolute
+      top: 0
+      bottom: 0
+      left: 0
+      right: 0
+      width: 100%
+      line-height: 1.21
+      padding: 25px
+      +adaptiv-value("font-size", 18, 18) 
+
+   .top
+      display: grid
+      grid-template-columns: repeat(2, 1fr)
+      gap: $gap
+
+      .social-menu
+         grid-column: 1
+
+      .top-right
+         grid-row: 1
+         grid-column: 2
+         justify-self: right
+         display: grid
+         grid-template-columns: 1fr
+         row-gap: $gap
+   &-date
+      margin-top: auto
+
+.img-wrap
+   img
+      width: 100%
+      height: 100%
+      
+      
+
+.filled
+   padding: 0 5px
+   background-color: #6113B6
+   border-radius: 5px
+      
