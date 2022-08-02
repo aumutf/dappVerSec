@@ -2,12 +2,11 @@
    img
       width: 100%
       height: auto
-   .w-sm
-      .post-text p
-         margin-bottom: 20px
+   .post-text p
+      margin-bottom: 20px
 
 
-   .post-meta span:not(last-child)
+   .post-meta span:not(last-child):not(.userphoto)
       margin-right: 10px
    .post-meta .post-comment-pageviews
       &:before
@@ -86,12 +85,14 @@
       align-items: center
    .post-meta span 
       font-size: 12px
-      color: #b0b0b0
+      color: $grey
    
    .post-details-wrap 
       display: inline-flex
       flex-direction: column
       margin-left: 15px
+      align-items: flex-start
+      bacground: red
 
    .post-text ul li, .section-related-posts ul li 
       display: flex
@@ -101,14 +102,22 @@
       margin-left: 5px
       margin-bottom: 15px
       color: #b039ae
+
    .section-related-posts 
       margin-bottom: 60px
-   .section-comment .form-textarea.form-control 
-      border: 1px solid #585858
-      border-radius: 4px
-      background-color: transparent
-      min-height: 100px
-      padding: 14px 15px
+
+   .section-comment 
+      .form-textarea.form-control
+         min-height: 100px
+         padding: 14px 15px
+
+      .form-control
+         padding: 9px 15px
+
+      .form-textarea.form-control, .form-control
+         border: 1px solid #585858
+         border-radius: 4px
+         background-color: transparent
    
    .show-on-page-load div#amplitude-player 
       background-color: transparent

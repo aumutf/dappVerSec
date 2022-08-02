@@ -169,6 +169,12 @@ ul
     +tablet
       order: unset
 
+  .artc-item--vert.r3:not(.artc-item-only-title)
+    grid-row: span 3
+    order: -1
+    +tablet
+      order: unset
+
 
   .artc-item--vert1:nth-child(-n+5)
     display: grid
@@ -279,8 +285,8 @@ ul
       repeat-x: no-repeat
         
 
-.form-group
-  margin-bottom: 50px
+//.form-group
+  //margin-bottom: 50px
 
 .star
   width: 20px
@@ -467,5 +473,8 @@ ul
   width: 100%
   margin: 0 auto
 
+
+.unlike-ic
+  transform: scale(1, -1)
 
 

@@ -3,7 +3,7 @@ $gap: 15px
 .bl-img
    position: relative
    border-radius: 10px
-      
+   +adaptiv-value("margin-bottom", 60, 60) 
    &-info
       position: absolute
       top: 0
@@ -12,14 +12,24 @@ $gap: 15px
       right: 0
       width: 100%
       line-height: 1.21
-      padding: 25px
+      +adaptiv-value("padding", 25, 25) 
       +adaptiv-value("font-size", 18, 18) 
+
 
    .top
       display: grid
       grid-template-columns: repeat(2, 1fr)
       gap: $gap
       +adaptiv-value("margin-bottom", 40, 40) 
+
+      position: absolute
+      top: 0
+      left: 0
+      right: 0
+      width: 100%
+      line-height: 1.21
+      +adaptiv-value("padding", 25, 25) 
+      +adaptiv-value("font-size", 18, 18)  
 
       .social-menu
          grid-column: 1
@@ -31,10 +41,20 @@ $gap: 15px
          display: grid
          grid-template-columns: 1fr
          row-gap: $gap
+   .bottom
+      +tablet
+         position: absolute
+         bottom: 0
+         +adaptiv-value("padding", 25, 25) 
+         +adaptiv-value("font-size", 18, 18)  
+
    &-date
       margin-top: auto
 
 .img-wrap
+   margin-bottom: 20px
+   +tablet
+      margin-bottom: 0
    img
       width: 100%
       height: 100%
@@ -47,3 +67,26 @@ $gap: 15px
    border-radius: 5px
    margin-bottom: $gap
       
+.reaction-wrap
+   display: flex
+   flex-direction: column
+   justify-content: center
+   align-items: center
+
+   .unlike-ic
+      +adaptiv-value("margin-left", 20, 20)  
+      +adaptiv-value("margin-top", 10, 10)  
+
+
+.post .reaction-wrap
+   span
+      +adaptiv-value("font-size", 17, 17)  
+      font-weight: $semiBold
+
+.comments
+   .row
+      margin-left: 0
+      margin-right: 0
+      display: grid
+      grid-template-columns: repeat(2, 1fr)
+      column-gap: 20px

@@ -19,6 +19,9 @@
 .page-col
    flex-grow: 1
    &:last-child
-      +adaptiv-value("margin-left", 40, 40) 
       background-color: $grey1
+      display: none
+      +tablet
+         display: block
+         +adaptiv-value("margin-left", 40, 40)
 

@@ -67,6 +67,15 @@
    margin-top: 10px
 
 
+.comments h2.title
+   margin-bottom: 30px
+
+.comments>.comment-list
+   height: 490px
+   max-height: 490px
+   overflow-y: auto
+   margin-bottom: 36px
+   padding-right: 6px
 
 .comment-list
    &>li
@@ -78,33 +87,37 @@
       //border-bottom: 1px solid $grey1
 
    .username
-      +adaptiv-value("font-size", 17, 16)
-      line-height: 1.2
+      +adaptiv-value("font-size", 18, 18)
+      color: $grey
 
    .comment-date
-      font-size: $fs_body
-      color: $grey3
+      +adaptiv-value("font-size", 12, 12)
+      color: $grey
 
    .comment
-      margin-bottom: 10px
-      font-size: $fs_body
+      margin-bottom: 15px
+      font-size: $fs_body+px
+      line-height: 1.4
    .left
-      margin-right: 15px
+      margin-right: 20px
       &>a
          display: inline-block
          overflow: hidden
          border-radius: 50%
-         +adaptiv-value("width", 40, 32)
-         +adaptiv-value("height", 40, 32)
-         +adaptiv-value("min-width", 40, 32)
-         +adaptiv-value("min-height", 40, 32)
+         +adaptiv-value("width", 60, 32)
+         +adaptiv-value("height", 60, 32)
+         +adaptiv-value("min-width", 60, 32)
+         +adaptiv-value("min-height", 60, 32)
+         border-radius: 15px
+         overflow: hidden
          img
-            +adaptiv-value("width", 40, 32)
-            +adaptiv-value("height", 40, 32)
-            +adaptiv-value("min-width", 40, 32)
-            +adaptiv-value("min-height", 40, 32)
+            +adaptiv-value("width", 60, 32)
+            +adaptiv-value("height", 60, 32)
+            +adaptiv-value("min-width", 60, 32)
+            +adaptiv-value("min-height", 60, 32)
             display: inline-block
-            border-radius: 50%
+            border-radius: 15px
+            object-fit: cover
    .right
       flex-grow: 1
       &__top
@@ -128,8 +141,8 @@
          display: flex
          align-items: center
          //column-gap: 10px
-         font-size: $fs_body
-         color: $grey3
+         font-size: $fs_body+px
+         color: $grey
          margin-right: 30px
          &:last-child
             margin-right: 0
@@ -165,8 +178,6 @@
          color: $accentColor
 
 
-.btn-delete-comment
-   color: $grey3!important
 
 .userphoto
    display: inline-block
@@ -202,8 +213,17 @@ img.userphoto
    +adaptiv-value("height", 350, 508)  
    max-width: unset
 
-.post-details-meta-date
-   font-size: 14px
+.post-author-meta
+   display: flex
+   justify-content: space-between
+   width: 100%
+
+.post .post-meta .post-details-meta-author span
+   +adaptiv-value("font-size", 17, 17)
+   color: $fontcolor
+
+.post .post-meta .post-details-meta-date
+   +adaptiv-value("font-size", 14, 14)
 
 .post-meta 
    margin-bottom: 20px

@@ -1,4 +1,4 @@
-<div class="page">
+<div class="page post">
    <div class="container">
       <div class="page-breadcrumb">
          <ol class="breadcrumb">
@@ -21,90 +21,305 @@
                   <div class="img-wrap">
                      <img src="@img/newsPost.png" alt="newsPost">
                   </div>
-                  <div class="bl-img-info">
-                     <div class="d-flex flex-column h-100">
+                  <!--<div class="bl-img-info">-->
+                  <!--<div class="d-flex flex-column h-100">-->
+                  <div class="top">
+                     <div class="d-flex flex-column align-items-start">
+                        <span class="filled">Поделиться</span> в социальных сетях
+                     </div>
+                     <ul class="social-menu">
 
-                        <div class="top">
-                           <div class="d-flex flex-column align-items-start">
-                              <span class="filled">Поделиться</span> в социальных сетях
-                           </div>
-                           <ul class="social-menu">
+                        <!--if facebook url exists-->
+                        <li>
+                           <a class="social-menu-link facebook" href="https://www.facebook.com/dappexpert"
+                              target="_blank">
+                              <svg class="social-menu__icon">
+                                 <use xlink:href="@img/sprite/symbol/sprite.svg#facebook-icon"></use>
+                              </svg>
+                           </a>
+                        </li>
 
-                              <!--if facebook url exists-->
-                              <li>
-                                 <a class="social-menu-link facebook" href="https://www.facebook.com/dappexpert"
-                                    target="_blank">
-                                    <svg class="social-menu__icon">
-                                       <use xlink:href="@img/sprite/symbol/sprite.svg#facebook-icon"></use>
-                                    </svg>
-                                 </a>
-                              </li>
+                        <!--if instagram url exists-->
+                        <li>
+                           <a class="social-menu-link instagram" href="https://www.instagram.com/dapp.expert/"
+                              target="_blank">
+                              <svg class="social-menu__icon">
+                                 <use xlink:href="@img/sprite/symbol/sprite.svg#instagram-icon"></use>
+                              </svg>
+                           </a>
+                        </li>
 
-                              <!--if instagram url exists-->
-                              <li>
-                                 <a class="social-menu-link instagram" href="https://www.instagram.com/dapp.expert/"
-                                    target="_blank">
-                                    <svg class="social-menu__icon">
-                                       <use xlink:href="@img/sprite/symbol/sprite.svg#instagram-icon"></use>
-                                    </svg>
-                                 </a>
-                              </li>
-
-                              <!--if telegram url exists-->
-                              <li>
-                                 <a class="social-menu-link telegram" href="https://t.me/dappexpert" target="_blank">
-                                    <svg class="social-menu__icon">
-                                       <use xlink:href="@img/sprite/symbol/sprite.svg#telegram-icon"></use>
-                                    </svg>
-                                 </a>
-                              </li>
-                              <!--if twitter url exists-->
-                              <li>
-                                 <a class="social-menu-link twitter" href="https://twitter.com/Dappexpert"
-                                    target="_blank">
-                                    <svg class="social-menu__icon">
-                                       <use xlink:href="@img/sprite/symbol/sprite.svg#twitter-icon"></use>
-                                    </svg>
-                                 </a>
-                              </li>
-                              <!--if youtube url exists-->
-                              <li>
-                                 <a class="social-menu-link youtube"
-                                    href="https://www.youtube.com/channel/UCCxojOWRiZVG0jQZNfEfJTQ" target="_blank">
-                                    <svg class="social-menu__icon">
-                                       <use xlink:href="@img/sprite/symbol/sprite.svg#youtube-icon"></use>
-                                    </svg>
-                                 </a>
-                              </li>
-                              <!--if vk url exists-->
-                              <li>
-                                 <a class="social-menu-link vcontacte vk" href="https://vk.com/dappexpert"
-                                    target="_blank">
-                                    <svg class="social-menu__icon">
-                                       <use xlink:href="@img/sprite/symbol/sprite.svg#vcontacte-icon"></use>
-                                    </svg>
-                                 </a>
-                              </li>
-                           </ul>
-                           <div class="top-right">
-                              <span class="flame-ic">403</span>
-                              <span class="percentVal percentVal--up">106,15%</span>
-                           </div>
-                        </div>
-
-
-                        <h1 class="title">
-                           “Настоящее казино” 
-                           <div>Как не потярять деньги по IDO</div>
-                        </h1>
-                        <div class="bl-img-date">22 июля, 2022</div>
+                        <!--if telegram url exists-->
+                        <li>
+                           <a class="social-menu-link telegram" href="https://t.me/dappexpert" target="_blank">
+                              <svg class="social-menu__icon">
+                                 <use xlink:href="@img/sprite/symbol/sprite.svg#telegram-icon"></use>
+                              </svg>
+                           </a>
+                        </li>
+                        <!--if twitter url exists-->
+                        <li>
+                           <a class="social-menu-link twitter" href="https://twitter.com/Dappexpert" target="_blank">
+                              <svg class="social-menu__icon">
+                                 <use xlink:href="@img/sprite/symbol/sprite.svg#twitter-icon"></use>
+                              </svg>
+                           </a>
+                        </li>
+                        <!--if youtube url exists-->
+                        <li>
+                           <a class="social-menu-link youtube"
+                              href="https://www.youtube.com/channel/UCCxojOWRiZVG0jQZNfEfJTQ" target="_blank">
+                              <svg class="social-menu__icon">
+                                 <use xlink:href="@img/sprite/symbol/sprite.svg#youtube-icon"></use>
+                              </svg>
+                           </a>
+                        </li>
+                        <!--if vk url exists-->
+                        <li>
+                           <a class="social-menu-link vcontacte vk" href="https://vk.com/dappexpert" target="_blank">
+                              <svg class="social-menu__icon">
+                                 <use xlink:href="@img/sprite/symbol/sprite.svg#vcontacte-icon"></use>
+                              </svg>
+                           </a>
+                        </li>
+                     </ul>
+                     <div class="top-right">
+                        <span class="flame-ic">403</span>
+                        <span class="percentVal percentVal--up">106,15%</span>
                      </div>
                   </div>
+
+                  <div class="bottom">
+                     <h1 class="title">
+                        “Настоящее казино”
+                        <div>Как не потярять деньги по IDO</div>
+                     </h1>
+                     <div class="bl-img-date">22 июля, 2022</div>
+                  </div>
+                  <!-- </div>-->
+                  <!--</div>-->
                </div>
+
+               <div class="post-text">
+                  <p>Инвестиционный аналитик BLOCK4BLOCK Виктор Федякин рассказал про доходность молодых криптопроектов
+                     и сравнил популярные площадки для сбора ликвидности.</p>
+                  <p>Привлечение капитала в компании от широкого круга инвесторов — важнейший механизм для создания
+                     новых бизнесов в современной экономике. Рынок криптоактивов не является исключением и имеет
+                     собственные форматы, схожие с моделью IPO.</p>
+                  <p>Практически всем, кто сталкивался с криптовалютами, известно, что такое ICO и что произошло с этим
+                     рынком в 2018-м году. По факту рынок ICO мертв после пузыря 2018-го года, впоследствии SEC жестко
+                     их ограничил. Статистика гласит, что порядка 90% ICO по итогу провалились.</p>
+                  <p>Но, пройдя через криптозиму, рынок не избавился от природной необходимости в притоке ликвидности в
+                     зарождающиеся проекты, с этого и началась новая эпоха IDO и лаунчпадов.</p>
+               </div>
+
+               <ul class="post-hashtag tag-list">
+                  <li>
+                     <a href="#">World news</a>
+                  </li>
+                  <li>
+                     <a href="#">Decentralized Dapp’s</a>
+                  </li>
+                  <li>
+                     <a href="#">IDO</a>
+                  </li>
+                  <li>
+                     <a href="#">DEX</a>
+                  </li>
+               </ul>
+
+
+               <div class="post-meta">
+                  <div class="post-author-meta">
+                     <a href="#">
+                        <span class="userphoto">
+                           <img src="@img/author.png" alt="dapp_writer">
+                        </span>
+                        <span class="post-details-wrap">
+                           <span class="post-details-meta-author">
+                              <span>Mark Richards</span>
+                           </span>
+                           <span class="post-details-meta-date">
+                              <span>Aug. 12, 2020</span>
+                           </span>
+                        </span>
+                     </a>
+                     <div class="reaction-wrap">
+                        <span>Reaction to the news</span>
+                        <div>
+                           <svg class="svg-icon">
+                              <use xlink:href="@img/sprite/symbol/sprite.svg#like"></use>
+                           </svg>
+                           <svg class="svg-icon unlike-ic">
+                              <use xlink:href="@img/sprite/symbol/sprite.svg#like"></use>
+                           </svg>
+                        </div>
+                     </div>
+
+                  </div>
+               </div>
+
+
+               <section class="section section-comment">
+                  <div class="comments">
+                     <h2 class="title">Comments</h2>
+                     <ul class="comment-list scroll">
+                        <li>
+                           <div class="left">
+                              <a href="#" class="userphoto">
+                                 <img src="@img/ava1.png" alt="user_nickname">
+                              </a>
+                           </div>
+                           <div class="right">
+                              <div class="right__top">
+                                 <div class="right__top--left">
+                                    <a href="#" class="username">
+                                       user_nickname</a>
+                                 </div>
+                                 <span class="comment-date">Jul 31, 2022</span>
+                              </div>
+                              <p class="comment">
+                                 Comment text: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc nec turpis
+                                 ac ante condimentum lacinia. Maecenas imperdiet convallis ante at gravida. Sed mattis
+                                 mi eget tortor congue, vel sodales dolor sodales. Nullam vel massa at diam bibendum
+                                 gravida sit amet ac sapien. Nam dapibus ligula lorem, id sollicitudin ipsum posuere
+                                 laoreet. Fusce mi neque, eleifend vel ultricies condimentum, tincidunt ac purus. Sed
+                                 euismod efficitur massa in pellentesque. </p>
+
+                              <div class="comment-meta">
+                                 <a href="javascript:void(0)" class="btn-dapp-comment-like btn-comment-like comment-own"
+                                    data-comment-id="184">
+                                    <svg class="svg-icon">
+                                       <use xlink:href="@img/sprite/symbol/sprite.svg#heart-icon"></use>
+                                    </svg>
+                                    <span id="lbl_comment_like_count_184">0</span>
+                                 </a>
+                                 <a href="javascript:void(0)" class="btn-reply" onclick="show_comment_box('184');">
+                                    <svg class="svg-icon backward-icon">
+                                       <use xlink:href="@img/sprite/symbol/sprite.svg#forward-icon"></use>
+                                    </svg>
+                                    Reply </a>
+                                 <a href="javascript:void(0)" class="btn-delete-comment"
+                                    onclick="delete_comment('184','3273','Are you sure you want to delete this comment?');"><svg
+                                       class="svg-icon">
+                                       <use xlink:href="@img/sprite/symbol/sprite.svg#trash-icon"></use>
+                                    </svg>Delete</a>
+                              </div>
+
+                              <div id="sub_comment_form_184" class="row-custom row-sub-comment visible-sub-comment">
+                              </div>
+                              <div class="row-custom row-sub-comment">
+                                 <ul class="comment-list">
+                                    <li>
+                                       <div class="left">
+                                          <a href="#" class="userphoto">
+                                             <img src="@img/ava2.png" alt="varient_admin">
+                                          </a>
+                                       </div>
+                                       <div class="right">
+                                          <div class="right__top">
+                                             <div class="right__top--left">
+                                                <a href="#" class="username">
+                                                   varient_admin </a>
+
+                                             </div>
+                                             <span class="comment-date">Jul 31, 2022</span>
+                                          </div>
+                                          <p class="comment">Subcomment text: Lorem ipsum dolor sit amet, consectetur
+                                             adipiscing elit. Nunc nec turpis ac ante condimentum lacinia. Maecenas
+                                             imperdiet convallis ante at gravida. Sed mattis mi eget tortor congue, vel
+                                             sodales dolor sodales. Nullam vel massa at diam bibendum gravida sit amet
+                                             ac sapien. </p>
+                                          <div class="comment-meta">
+
+                                             <a href="javascript:void(0)"
+                                                class="btn-dapp-comment-like btn-comment-like comment-own"
+                                                data-comment-id="185">
+                                                <svg class="svg-icon">
+                                                   <use xlink:href="@img/sprite/symbol/sprite.svg#heart-icon"></use>
+                                                </svg>
+                                                <span id="lbl_comment_like_count_185">0</span>
+                                             </a>
+                                             <a href="javascript:void(0)" class="btn-delete-comment"
+                                                onclick="delete_comment('185','3273','Are you sure you want to delete this comment?');"><svg
+                                                   class="svg-icon">
+                                                   <use xlink:href="@img/sprite/symbol/sprite.svg#trash-icon"></use>
+                                                </svg>Delete</a>
+                                          </div>
+                                       </div>
+                                    </li>
+                                 </ul>
+                              </div>
+
+                           </div>
+                        </li>
+                        <li>
+                           <div class="left">
+                              <a href="#" class="userphoto">
+                                 <img src="@img/ava3.png" alt="varient_admin">
+                              </a>
+                           </div>
+                           <div class="right">
+                              <div class="right__top">
+                                 <div class="right__top--left">
+                                    <a href="#" class="username">
+                                       varient_admin </a>
+                                 </div>
+                                 <span class="comment-date">Jul 31, 2022</span>
+                              </div>
+                              <p class="comment">
+                                 Comment text: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc nec turpis
+                                 ac ante condimentum lacinia.
+                              </p>
+
+                              <div class="comment-meta">
+                                 <a href="javascript:void(0)" class="btn-dapp-comment-like btn-comment-like comment-own"
+                                    data-comment-id="183">
+                                    <svg class="svg-icon">
+                                       <use xlink:href="@img/sprite/symbol/sprite.svg#heart-icon"></use>
+                                    </svg>
+                                    <span id="lbl_comment_like_count_183">0</span>
+                                 </a>
+                                 <a href="javascript:void(0)" class="btn-reply" onclick="show_comment_box('183');">
+                                    <svg class="svg-icon backward-icon">
+                                       <use xlink:href="@img/sprite/symbol/sprite.svg#forward-icon"></use>
+                                    </svg>
+                                    Reply </a>
+                                 <a href="javascript:void(0)" class="btn-delete-comment"
+                                    onclick="delete_comment('183','3273','Are you sure you want to delete this comment?');"><svg
+                                       class="svg-icon">
+                                       <use xlink:href="@img/sprite/symbol/sprite.svg#trash-icon"></use>
+                                    </svg>Delete</a>
+                              </div>
+
+                              <div id="sub_comment_form_183" class="row-custom row-sub-comment visible-sub-comment">
+                              </div>
+                              <div class="row-custom row-sub-comment">
+                                 <!-- include subcomments -->
+                              </div>
+
+                           </div>
+                        </li>
+                     </ul>
+
+                     <form action="#">
+                        <div class="form-group row">
+                           <input type="text" placeholder="Name" class="form-control">
+                           <input type="email" placeholder="Email" class="form-control">
+                        </div>
+                        <div class="form-group form-group-row">
+                           <textarea name="comment" class="form-control form-input form-textarea"
+                              placeholder="Join the discussion"></textarea>
+                        </div>
+                        <div class="btn-wrap d-flex">
+                           <button type="submit" class="btn btn--filled btn-send">SEND</button>
+                        </div>
+                     </form>
+                  </div>
+               </section>
             </div>
             <div class="page-col">
                right
-
             </div>
          </div>
          @@include('similarNews.html',{})
