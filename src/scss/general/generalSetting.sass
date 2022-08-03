@@ -59,6 +59,35 @@ body
       border: 0!important  
       color: $fontcolor
 
+  &--dark
+    padding-top: 7px
+    padding-bottom: 7px
+    +adaptiv-value("padding-left", 22, 22)
+    +adaptiv-value("padding-right", 22, 22)  
+    background: $black2  
+    color: $fontcolor
+    font-weight: $semiBold
+    border-radius: 0
+
+  &--lined
+    position: relative
+    &::before, &::after
+      content: ""
+      width: 83px
+      display: inline-block
+      border-top: 1px solid $grey17
+      position: absolute
+      top: 50%
+
+    &::before
+      left: -83px
+    &::after
+      right: -83px
+
+.btn-wrap-lined
+  display: flex
+  justify-content: center
+  
 //TITLES
 h1
   &.title

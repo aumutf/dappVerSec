@@ -3,7 +3,7 @@ $gap: 15px
 .bl-img
    position: relative
    border-radius: 10px
-   +adaptiv-value("margin-bottom", 60, 60) 
+   +adaptiv-value("margin-bottom", 60, 20) 
    &-info
       position: absolute
       top: 0
@@ -28,8 +28,17 @@ $gap: 15px
       right: 0
       width: 100%
       line-height: 1.21
-      +adaptiv-value("padding", 25, 25) 
-      +adaptiv-value("font-size", 18, 18)  
+      +adaptiv-value("padding-top", 25, 10) 
+      +adaptiv-value("padding-bottom", 25, 10) 
+      +adaptiv-value("padding-right", 25, 20) 
+      +adaptiv-value("padding-left", 25, 20) 
+      +adaptiv-value("font-size", 18, 14)  
+
+      margin-left: -20px
+      width: calc(100% + 40px)    
+      +tablet
+         margin-left: 0
+         width: 100%
 
       .social-menu
          grid-column: 1
@@ -41,6 +50,7 @@ $gap: 15px
          display: grid
          grid-template-columns: 1fr
          row-gap: $gap
+         
    .bottom
       +tablet
          position: absolute
@@ -48,13 +58,24 @@ $gap: 15px
          +adaptiv-value("padding", 25, 25) 
          +adaptiv-value("font-size", 18, 18)  
 
+      h1.title
+         +adaptiv-value("font-size", 40, 34)  
+
    &-date
-      margin-top: auto
+      margin-top: 20px
+
+   .social-menu li:not(:last-child)
+      margin-right: 20px
 
 .img-wrap
    margin-bottom: 20px
+   +adaptiv-value("height", 330, 150) 
+   margin-left: -20px
+   width: calc(100% + 40px)   
    +tablet
       margin-bottom: 0
+      margin-left: 0
+      width: 100%
    img
       width: 100%
       height: 100%
@@ -65,7 +86,7 @@ $gap: 15px
    padding: 0 5px
    background-color: #6113B6
    border-radius: 5px
-   margin-bottom: $gap
+   +adaptiv-value("margin-bottom", 15, 10) 
       
 .reaction-wrap
    display: flex
@@ -80,7 +101,7 @@ $gap: 15px
 
 .post .reaction-wrap
    span
-      +adaptiv-value("font-size", 17, 17)  
+      +adaptiv-value("font-size", 17, 14)  
       font-weight: $semiBold
 
 .comments
@@ -88,5 +109,36 @@ $gap: 15px
       margin-left: 0
       margin-right: 0
       display: grid
-      grid-template-columns: repeat(2, 1fr)
-      column-gap: 20px
+      grid-template-columns: 1fr
+      row-gap: 20px
+      +tablet
+         grid-template-columns: repeat(2, 1fr)
+         column-gap: 20px
+
+
+.left-col
+   +adaptiv-value("width", 850, 320)
+
+.right-col
+   +adaptiv-value("width", 310, 0)
+
+.artc-item-wrap
+   .artc-item
+      padding-top: 30px
+      padding-bottom: 10px
+
+   .artc-item:not(:first-child)   
+      border-top: 1px solid $grey17
+
+.btn-wrap-lined
+   margin-bottom: 30px
+
+.usefull-wrap
+   margin-bottom: 20px
+   .artc-item
+      margin-top: 20px
+
+.popular-wrap
+   margin-bottom: 20px
+   .artc-item
+      margin-top: 20px   
