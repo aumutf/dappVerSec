@@ -120,7 +120,8 @@ $gap: 15px
    +adaptiv-value("width", 850, 320)
 
 .right-col
-   +adaptiv-value("width", 310, 0)
+   width: 310px
+   min-width: 310px
 
 .artc-item-wrap
    .artc-item
@@ -142,3 +143,17 @@ $gap: 15px
    margin-bottom: 20px
    .artc-item
       margin-top: 20px   
+
+.slider-img
+   display: flex
+   .artc-item
+      max-width: 300px
+
+.news-slider
+   .slider-scroll
+      width: 300px
+   .artc-item
+      grid-template-columns: 1fr
+
+.bgDark
+   background-color: $grey18

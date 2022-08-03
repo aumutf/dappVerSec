@@ -32,9 +32,6 @@
       +tablet
          max-width: 100%
       .artc-item-image
-         min-height: 64px
-         height: 64px
-         margin-bottom: 5px
          +tablet
             height: 140px
             margin-bottom: 10px
@@ -43,8 +40,14 @@
          margin-top: auto
          +tablet
             margin-top: unset
+
+   &--vert:not(.artc-item-col)
+      .artc-item-image
+         min-height: 64px
+         height: 64px
+         margin-bottom: 5px
             
-   &--vert:not(.artc-item-only-title)
+   &--vert:not(.artc-item-only-title):not(.artc-item-col)
       display: grid
       grid-template-columns: $artcVertGrid
       +adaptiv-value-imp("grid-column-gap", 40, 7)
