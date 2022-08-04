@@ -26,6 +26,9 @@
    &.active
       opacity: 1
       height: auto
+      margin-bottom: 20px
+      +tablet
+         margin-bottom: 0
 
 .btn-search-filter
    margin-left: auto
@@ -40,10 +43,12 @@
       margin-left: auto
 
 .search-label.inBl
-   margin-right: 12px
    max-width: unset 
+   +tablet
+      margin-right: 12px
    +laptop
       max-width: 260px
+      
    
 
 .dropdown-wrap
