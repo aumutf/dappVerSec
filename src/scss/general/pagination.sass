@@ -74,6 +74,14 @@
   align-items: center
   padding-top: 10px
   padding-bottom: 10px
+  flex-direction: column
+  +tablet
+    flex-direction: row
+
+  &:last-child
+    align-self: flex-end
+
+
   .dataTables_paginate
     flex-grow: 1
     justify-content: center
