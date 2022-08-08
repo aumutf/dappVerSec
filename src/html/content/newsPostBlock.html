@@ -14,8 +14,7 @@
 
                <!--if facebook url exists-->
                <li>
-                  <a class="social-menu-link facebook" href="https://www.facebook.com/dappexpert"
-                     target="_blank">
+                  <a class="social-menu-link facebook" href="https://www.facebook.com/dappexpert" target="_blank">
                      <svg class="social-menu__icon">
                         <use xlink:href="@img/sprite/symbol/sprite.svg#facebook-icon"></use>
                      </svg>
@@ -24,8 +23,7 @@
 
                <!--if instagram url exists-->
                <li>
-                  <a class="social-menu-link instagram" href="https://www.instagram.com/dapp.expert/"
-                     target="_blank">
+                  <a class="social-menu-link instagram" href="https://www.instagram.com/dapp.expert/" target="_blank">
                      <svg class="social-menu__icon">
                         <use xlink:href="@img/sprite/symbol/sprite.svg#instagram-icon"></use>
                      </svg>
@@ -50,8 +48,8 @@
                </li>
                <!--if youtube url exists-->
                <li>
-                  <a class="social-menu-link youtube"
-                     href="https://www.youtube.com/channel/UCCxojOWRiZVG0jQZNfEfJTQ" target="_blank">
+                  <a class="social-menu-link youtube" href="https://www.youtube.com/channel/UCCxojOWRiZVG0jQZNfEfJTQ"
+                     target="_blank">
                      <svg class="social-menu__icon">
                         <use xlink:href="@img/sprite/symbol/sprite.svg#youtube-icon"></use>
                      </svg>
@@ -128,14 +126,24 @@
             </a>
             <div class="reaction-wrap">
                <span>Reaction to the news</span>
-               <div>
-                  <svg class="svg-icon">
-                     <use xlink:href="@img/sprite/symbol/sprite.svg#like"></use>
-                  </svg>
-                  <svg class="svg-icon unlike-ic">
-                     <use xlink:href="@img/sprite/symbol/sprite.svg#like"></use>
-                  </svg>
+
+               <div class="d-flex">
+                  <a href="javascript:void(0)" class="svg-icon-wrap" onclick="add_reaction('3304', 'like');">
+                     <svg class="svg-icon">
+                        <use xlink:href="https://test.dapp.expert/assets/img/sprite/symbol/sprite.svg#like"></use>
+                     </svg>
+                  </a>
+
+                  <div id="reactions_result"></div>
+
+
+                  <a href="javascript:void(0)" class="svg-icon-wrap" onclick="add_reaction('3304', 'dislike');">
+                     <svg class="svg-icon unlike-ic">
+                        <use xlink:href="https://test.dapp.expert/assets/img/sprite/symbol/sprite.svg#like"></use>
+                     </svg>
+                  </a>
                </div>
+
             </div>
 
          </div>
@@ -214,8 +222,7 @@
                                  <div class="comment-meta">
 
                                     <a href="javascript:void(0)"
-                                       class="btn-dapp-comment-like btn-comment-like comment-own"
-                                       data-comment-id="185">
+                                       class="btn-dapp-comment-like btn-comment-like comment-own" data-comment-id="185">
                                        <svg class="svg-icon">
                                           <use xlink:href="@img/sprite/symbol/sprite.svg#heart-icon"></use>
                                        </svg>
