@@ -534,3 +534,12 @@ ul
 .gr4
   grid-row: span 4 !important
 
+
+.blPd
+  display: grid
+  grid-template-columns: repeat(1, 1fr)
+  grid-row-gap: 25px
+  +tablet
+    grid-template-columns: repeat(2, 1fr)
+    grid-column-gap: 20px
+    grid-row-gap: 20px
