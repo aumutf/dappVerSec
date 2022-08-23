@@ -41,6 +41,11 @@
          +tablet
             margin-top: unset
 
+      h3.title
+         font-size: 16px
+         +tablet
+            font-size: 17px
+
    &--vert:not(.artc-item-col)
       .artc-item-image
          min-height: 64px
@@ -55,7 +60,8 @@
       grid-template-columns: $artcVertGrid
       +adaptiv-value-imp("grid-column-gap", 40, 7)
       grid-template-rows: $artVertGridRow
-      grid-row-gap: 20px
+      //grid-row-gap: 20px
+
       +tablet
          display: flex   
          align-items: flex-start
@@ -65,9 +71,26 @@
          grid-column: 2    
          align-self: flex-start
          margin-bottom: 6px
+         
+         text-overflow: ellipsis
+         height: 40px
+         overflow: hidden
+         display: -webkit-box
+         -webkit-line-clamp: 2
+         -webkit-box-orient: vertical
+         position: relative
          +tablet
             grid-column: unset
             margin-bottom: unset
+
+            text-overflow: unset
+            height: unset
+            overflow: unset
+            display: unset
+            -webkit-line-clamp: unset
+            -webkit-box-orient: unset
+            position: unset
+
       .artc-item-image
          grid-row: span 2  
 
