@@ -1,0 +1,15 @@
+.blAn7
+   display: grid
+   grid-template-columns: repeat(1, 1fr)
+   grid-row-gap: 20px
+   +laptop
+      grid-template-columns: calc(417px + 300 * ((100vw - 320px)/ 1440)) auto 
+   +tablet
+      grid-template-columns: 1fr 1fr
+      grid-column-gap: 20px
+      grid-row-gap: 20px
+
+   .section-head
+      order: -1
+      +tablet
+         order: unset
