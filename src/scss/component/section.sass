@@ -34,3 +34,9 @@
    border-bottom: 1px solid $accentColor
    +tablet
       border-bottom-width: 2px
+
+.section:not(:last-child):not(.bbn)
+   border-bottom: 1px solid transparent
+   border-image: linear-gradient(0.25turn, rgba(0,0,0,0), #C483C3, #8E128C, #D6A8D5, rgba(0,0,0,0))
+   border-image: linear-gradient(0.25turn, rgba(0,0,0,0), rgba(196,131,195,.52), rgba(142,18,140, 1), rgba(214,168,213,.36), rgba(0,0,0,0))
+   border-image-slice: 1
