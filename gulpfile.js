@@ -34,6 +34,7 @@ import { scssDappsAll } from "./gulp/tasks/scssDappsAll.js";
 import { scssDapp } from "./gulp/tasks/scssDapp.js";
 import { scssCrypto } from "./gulp/tasks/scssCrypto.js";
 import { scssNewsAll } from "./gulp/tasks/scssNewsAll.js";
+import { scssAnalyticaAll } from "./gulp/tasks/scssAnalyticaAll.js";
 import { scssRank } from "./gulp/tasks/scssRank.js";
 import { js } from "./gulp/tasks/js.js";
 import { svgSpriteTask } from "./gulp/tasks/svg_sprite.js";
@@ -65,6 +66,7 @@ function watcher() {
   gulp.watch(path.watch.scssDapp, scssDapp)
   gulp.watch(path.watch.scssCrypto, scssCrypto)
   gulp.watch(path.watch.scssNewsAll, scssNewsAll)
+  gulp.watch(path.watch.scssAnalyticaAll, scssAnalyticaAll)
   gulp.watch(path.watch.scssRank, scssRank)
   gulp.watch(path.watch.js, js)
   gulp.watch(path.watch.images, images)
@@ -82,7 +84,7 @@ const mainTasks = gulp.series(fonts, gulp.parallel(
   scssPostItem, scssNewsPost,scssTables, scssSearch, scssGallery, scssProfile,
   scssTags, scssBlockchain, scssBlockchainCat, scssBlockchainList,
   scssPrivacyPolicy, scssTermsConditions, scssRegister, scssSettings,
-  scssDappsAll, scssDapp, scssCrypto, scssNewsAll, scssRank, js, images, svgSpriteTask,
+  scssDappsAll, scssDapp, scssCrypto, scssNewsAll, scssAnalyticaAll, scssRank, js, images, svgSpriteTask,
   assets));
 
 
