@@ -1,12 +1,14 @@
 .blAn7
+   background: blue
    display: grid
    grid-template-columns: repeat(1, 1fr)
    grid-row-gap: 20px
+   grid-column-gap: unset
    +laptop
-      grid-template-columns: calc(417px + 300 * ((100vw - 320px)/ 1440)) auto 
+      grid-template-columns: repeat(2, 1fr)
    +tablet
       grid-template-columns: 1fr 1fr
-      grid-column-gap: 20px
+      +adaptiv-value("grid-column-gap", 20, 10) 
       grid-row-gap: 20px
 
    .section-head

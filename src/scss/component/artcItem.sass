@@ -161,32 +161,48 @@
 
    &--pd
       display: grid
-      grid-template-columns: 1fr 1fr
+      grid-template-columns: calc(155px + 95 * ((100vw - 320px)/ 1440)) 1fr
       background-color: rgba(43, 43, 43, 0.3)
-      min-height: 180px
-      max-height: 180px
       border-radius: 10px
       overflow: hidden     
       padding: 15px 
       column-gap: 20px
       width: 100%
+      +adaptiv-value("min-height", 280, 180)
+
       +laptop
-         +adaptiv-value("width", 530, 530) 
-         grid-template-columns: minmax(250px, 250px) 1fr
-         min-height: 280px
-         max-height: 280px         
+         +adaptiv-value("width", 530, 335) 
+         grid-template-columns: calc(250px/1.4 + calc(250 - 250/1.4) * ((100vw - 768px)/ 672)) 1fr       
 
       .artc-item-image
          height: 100%
+         +adaptiv-value("width", 250, 155) 
+         +adaptiv-value("max-height", 250, 155) 
          img
             width: 100%
             height: 100%
             object-fit: cover
             object-position: left
+            
       .artc-item__right
          padding: 0
          p
             color: $fontcolor
+            text-overflow: ellipsis
+            height: 50px
+            overflow: hidden
+            display: -webkit-box
+            -webkit-line-clamp: 3
+            -webkit-box-orient: vertical
+            position: relative
+            +laptop
+               text-overflow: unset
+               height: unset
+               overflow: unset
+               display: unset
+               -webkit-line-clamp: unset
+               -webkit-box-orient: unset
+               position: unset
       .post-meta
          margin-top: auto
 
@@ -408,10 +424,16 @@
    .text-wrap
       display: grid
       grid-template-columns: auto minmax(76px, 76px)   
-      padding: 20px 
+      padding: 20px 10px 
       position: absolute
       bottom: 0
       align-items: end
+      
+      +tablet
+         padding: 20px 
+         +adaptiv-value("column-gap", 130, 130)
+         grid-template-columns: auto minmax(76px, 115px) 
+
    .text-wrap--col
       display: flex
       flex-direction: column
@@ -419,9 +441,14 @@
    .post-meta
       margin: 0
       padding: 0
+      
    .artc-item-image
       height: 100%
+
    h2.title
+      +adaptiv-value("font-size", 24, 16) 
+
+   h2.title--lg
       +adaptiv-value("font-size", 30, 16) 
       +adaptiv-value("padding-bottom", 20, 10) 
 

@@ -37,3 +37,64 @@
    
 .bl5
    background-color: red
+
+.bl10.df-2
+   +tablet-lg
+      grid-template-columns: repeat(2,1fr)
+   +tablet
+      grid-template-columns: 1fr
+
+.artc-item-image.big-img
+   +adaptiv-value("width", 830, 280)  
+   +adaptiv-value("height", 830, 280) 
+   +adaptiv-value("max-height", 830, 280) 
+   
+   +tablet
+      justify-self: unset
+
+.big-img-wrap 
+   +adaptiv-value("width", 830, 280)  
+   +adaptiv-value("height", 830, 280)    
+   +adaptiv-value("max-height", 830, 280)  
+   justify-self: center 
+
+   .post-meta
+      +adaptiv-value("font-size", 17, 12)  
+      justify-content: flex-end
+
+
+
+
+.artc-item-image.big-img-an
+   width: 335px
+   height: 335px
+
+   +laptop
+      +adaptiv-value("width", 650, 335)  
+      +adaptiv-value("height", 650, 335) 
+      +adaptiv-value("max-height", 650, 335) 
+
+   +tablet
+      justify-self: unset
+
+      +adaptiv-value("width", 460, 460)  
+      +adaptiv-value("height", 460, 460) 
+      +adaptiv-value("max-height", 460, 460) 
+
+.big-img-an-wrap 
+   width: 335px
+   height: 335px
+   justify-self: center 
+
+   +laptop
+      +adaptiv-value("width", 650, 335)  
+      +adaptiv-value("height", 650, 335) 
+      +adaptiv-value("max-height", 650, 335) 
+
+   +tablet
+      +adaptiv-value("width", 460, 460)  
+      +adaptiv-value("height", 460, 460) 
+      +adaptiv-value("max-height", 460, 460) 
+
+   .post-meta
+      +adaptiv-value("font-size", 17, 12)  
