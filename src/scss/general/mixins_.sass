@@ -5,6 +5,10 @@ $tablet-width: 768px
 $phone-width: 576px
 $maxWidth: 1440
 
+
+$cont-width: 1240px
+
+
 =laptop
   @media screen and (min-width: $laptop-width)
     @content
@@ -24,6 +28,11 @@ $maxWidth: 1440
 =laptop_down
   @media screen and (min-width: $maxWidth+px)
     @content
+
+=cont
+  @media screen and (min-width: $cont-width)
+    @content
+
 
 
 

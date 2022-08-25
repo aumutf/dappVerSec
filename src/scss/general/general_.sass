@@ -562,3 +562,17 @@ ul
   -webkit-line-clamp: 3
   -webkit-box-orient: vertical
   position: relative
+
+.fullWidth
+  width: 100vw
+  background: $black3
+  padding-top: 20px
+  padding-top: 20px
+
+  +cont
+    margin-left: calc((100vw - 1200px)/(-2))
+  +tablet
+    margin-left: -$contPlTablet+px
+    padding-bottom: 40px
+  +laptop
+    margin-left: -$contPl+px
