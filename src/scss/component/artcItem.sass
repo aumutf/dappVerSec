@@ -428,11 +428,15 @@
       position: absolute
       bottom: 0
       align-items: end
+      width: 100%
       
       +tablet
          padding: 20px 
-         +adaptiv-value("column-gap", 130, 130)
-         grid-template-columns: auto minmax(76px, 115px) 
+         grid-template-columns: auto auto
+         //+adaptiv-value("column-gap", 130, 130)
+         //grid-template-columns: auto minmax(76px, 115px) 
+      +laptop
+         grid-template-columns: auto minmax(76px, 76px) 
 
    .text-wrap--col
       display: flex
@@ -441,6 +445,7 @@
    .post-meta
       margin: 0
       padding: 0
+      justify-self: end
       
    .artc-item-image
       height: 100%

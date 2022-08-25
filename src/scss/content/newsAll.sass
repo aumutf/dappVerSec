@@ -52,6 +52,8 @@
    +tablet
       justify-self: unset
 
+
+
 .big-img-wrap 
    +adaptiv-value("width", 830, 280)  
    +adaptiv-value("height", 830, 280)    
@@ -62,7 +64,11 @@
       +adaptiv-value("font-size", 17, 12)  
       justify-content: flex-end
 
-
+   .text-wrap
+      grid-template-columns: auto minmax(76px, 76px)  
+      +laptop
+         +adaptiv-value("column-gap", 130, 130)
+         grid-template-columns: auto minmax(76px, 115px) 
 
 
 .artc-item-image.big-img-an
