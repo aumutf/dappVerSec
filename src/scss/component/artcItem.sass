@@ -112,6 +112,22 @@
             object-fit: cover
             object-position: left
 
+      .artc-item__right 
+         .title, p
+            text-overflow: ellipsis
+            overflow: hidden
+            display: -webkit-box
+            -webkit-box-orient: vertical
+            position: relative
+         
+         .title
+            +adaptiv-value("height", 42, 42) 
+            -webkit-line-clamp: 2
+         p
+            height: 53px
+            -webkit-line-clamp: 3
+            
+
    &--rowrev
       grid-template-columns: 1fr minmax(175px, 175px)    
 
@@ -224,7 +240,7 @@
       +laptop
          padding: 19px
       +tablet
-         +adaptiv-value("padding", 24, 24)
+         +adaptiv-value("padding", 20, 20)
       .title
          margin-bottom: 10px
          word-break: break-word
