@@ -19,6 +19,17 @@
       &:nth-child(even)
          justify-self: end
 
+   .bl-head
+      order: -1
+      margin-bottom: 0
+      width: 100%
+      justify-self: unset
+      +tablet
+         order: unset
+         justify-self: end
+      +laptop
+         +adaptiv-value("width", 530, 335) 
+
 
 .blAn5
    .artc-item
