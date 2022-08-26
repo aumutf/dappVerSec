@@ -48,4 +48,15 @@
          +tablet
             justify-self: end
 
+.blAn1
+   display: flex
+   flex-direction: column
+   +tablet
+      flex-direction: row
+   .news-wrap-col
+      &:nth-child(2)
+         order: -1
+         +tablet
+            order: unset
+
 //Analytica
