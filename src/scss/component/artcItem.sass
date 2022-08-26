@@ -113,21 +113,6 @@
             object-position: left
       .artc-item-image>a
          height: 175px
-
-      .artc-item__right 
-         .title, p
-            text-overflow: ellipsis
-            overflow: hidden
-            display: -webkit-box
-            -webkit-box-orient: vertical
-            position: relative
-         
-         .title
-            +adaptiv-value("height", 42, 42) 
-            -webkit-line-clamp: 2
-         p
-            height: 53px
-            -webkit-line-clamp: 3
             
 
    &--rowrev
@@ -143,7 +128,23 @@
    &--rowrevsm
       grid-template-columns: 1fr minmax(140px, 140px) 
       min-height: 140px
-      max-height: 140px     
+      max-height: 140px  
+
+   &--pd, &--row
+      .artc-item__right 
+         .title, p
+            text-overflow: ellipsis
+            overflow: hidden
+            display: -webkit-box
+            -webkit-box-orient: vertical
+            position: relative
+         
+         .title
+            +adaptiv-value("height", 42, 42) 
+            -webkit-line-clamp: 2
+         p
+            height: 53px
+            -webkit-line-clamp: 3         
 
    &--gr
       width: 140px
