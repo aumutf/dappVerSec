@@ -43,13 +43,13 @@ $gap: 15px
       .social-menu
          grid-column: 1
 
-      .top-right
-         grid-row: 1
-         grid-column: 2
-         justify-self: right
-         display: grid
-         grid-template-columns: 1fr
-         row-gap: $gap
+   .top-right
+      grid-row: 1
+      grid-column: 2
+      justify-self: right
+      display: grid
+      grid-template-columns: 1fr
+      row-gap: $gap
          
    .bottom
       +tablet
@@ -66,6 +66,60 @@ $gap: 15px
 
    .social-menu li:not(:last-child)
       margin-right: 20px
+
+
+.bl-img-row
+   height: unset
+   margin-left: -20px
+   width: calc(100% + 40px)  
+   +tablet
+      padding: 10px
+      +adaptiv-value("height", 350, 350)
+      width: unset
+   .top
+      +adaptiv-value("padding-top", 0, 10) 
+      +adaptiv-value("padding-bottom", 0, 10) 
+      +adaptiv-value("padding-right", 10, 20) 
+      +adaptiv-value("padding-left", 10, 20) 
+      +adaptiv-value("margin-bottom", 0, 40)
+      left: 10px
+      +tablet
+         bottom: 0
+         top: unset
+         left: 0
+         
+
+   .bottom
+      padding: 10px
+      +tablet
+         top: 0
+         bottom: unset
+         +adaptiv-value("padding", 0, 0)
+         +adaptiv-value("padding-left", 10, 0)
+         +adaptiv-value("padding-top", 10, 25)
+         +adaptiv-value("width", 490, 390)
+         
+         left: 0
+
+   .img-wrap
+      +tablet
+         margin-left: auto
+
+         +adaptiv-value("width", 330, 280)  
+         +adaptiv-value("height", 330, 280) 
+         +adaptiv-value("max-height", 330, 280) 
+      img
+         +tablet
+            object-fit: cover
+            object-position: top left
+   
+   .top-right
+      position: absolute
+      top: 25px
+      right: 25px
+      //background: radial-gradient(100% 107.64% at 100% 0%, #000000 0%, rgba(0, 0, 0, 0) 88.68%)
+      
+
 
 .img-wrap
    margin-bottom: 20px
@@ -163,5 +217,3 @@ $gap: 15px
    .artc-item
       grid-template-columns: 1fr
 
-.bgDark
-   background-color: $grey18
