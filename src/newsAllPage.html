@@ -16,5 +16,25 @@
 
    </div>
 </body>
+<script>
+   $(function () {
+      bImgW = $('.big-img-wrap').width();
+      $('.big-img-wrap').height(bImgW);
+
+      $(window).resize(function () {
+         bImgW = $('.big-img-wrap').width();
+         $('.big-img-wrap').height(bImgW);
+      });
+
+
+      bImgSmW = $('.big-img-sm-wrap').width();
+      $('.big-img-sm-wrap').height(bImgSmW);
+
+      $(window).resize(function () {
+         bImgSmW = $('.big-img-sm-wrap').width();
+         $('.big-img-sm-wrap').height(bImgSmW);
+      });
+   });
+</script>
 
 </html>
