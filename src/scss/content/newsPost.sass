@@ -337,5 +337,49 @@ $blImgP: 10px
          flex-direction: row
 
          
+.bl-img-col
+   .top
+      position: absolute
+      margin-bottom: 0
+      width: 100%
+      margin-left: 0
+      +tablet
+         position: relative
+         padding: 0!important 
+         display: flex
+         
 
+   .top-right
+      position: absolute
+      top: 0
+      right: 0
+      padding: 20px
       
+   .filled
+      +tablet
+         background: transparent
+         margin-bottom: 0
+         padding: 0
+   .social-menu
+      +tablet
+         margin-left: 20px
+   .title-wrap
+      +tablet
+         display: grid
+         grid-template-columns: auto minmax(93px, 83px)
+         margin-bottom: 30px
+   .bl-img-date
+      +tablet
+         text-align: right
+         margin-top: 0
+   .img-wrap
+      margin-bottom: 20px
+      +tablet
+         margin-bottom: 30px
+
+   .social-text
+      display: flex
+      flex-direction: column
+      align-items: flex-start
+      +tablet
+         flex-direction: row
