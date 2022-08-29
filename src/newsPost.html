@@ -15,6 +15,27 @@
       @@include('html/general/foot.html',{})
    </div>
 </body>
+<script>
+   $(function () {
 
+
+      if ($(window).width() < 769) {
+
+         bImgW = $('.img-wrap-rz').width();
+
+         console.log(bImgW);
+
+
+         $('.img-wrap-rz').height(bImgW);
+
+         $(window).resize(function () {
+            bImgW = $('.img-wrap-rz').width();
+            $('.img-wrap-rz').height(bImgW);
+         });
+
+      }
+   });
+
+</script>
 
 </html>

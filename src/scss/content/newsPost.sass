@@ -43,13 +43,7 @@ $gap: 15px
       .social-menu
          grid-column: 1
 
-   .top-right
-      grid-row: 1
-      grid-column: 2
-      justify-self: right
-      display: grid
-      grid-template-columns: 1fr
-      row-gap: $gap
+
          
    .bottom
       +tablet
@@ -67,6 +61,13 @@ $gap: 15px
    .social-menu li:not(:last-child)
       margin-right: 20px
 
+.top-right
+   grid-row: 1
+   grid-column: 2
+   justify-self: right
+   display: grid
+   grid-template-columns: 1fr
+   row-gap: $gap
 
 .bl-img-row
    height: unset
@@ -134,18 +135,18 @@ $gap: 15px
       +tablet
          margin-top: auto
 
-.img-wrap
-   margin-bottom: 20px
-   +adaptiv-value("height", 330, 150) 
-   margin-left: -20px
-   width: calc(100% + 40px)   
-   +tablet
-      margin-bottom: 0
-      margin-left: 0
-      width: 100%
-   img
-      width: 100%
-      height: 100%
+   .img-wrap
+      margin-bottom: 20px
+      +adaptiv-value("height", 330, 150) 
+      margin-left: -20px
+      width: calc(100% + 40px)   
+      +tablet
+         margin-bottom: 0
+         margin-left: 0
+         width: 100%
+      img
+         width: 100%
+         height: 100%
 
       
 
@@ -230,3 +231,111 @@ $gap: 15px
    .artc-item
       grid-template-columns: 1fr
 
+$blImgP: 10px
+.bl-img-title
+   display: flex
+   flex-direction: column
+   position: relative
+   background: transparent
+   margin-bottom: 30px
+   +tablet
+      background: $grey18
+   
+   
+   +tablet
+      flex-direction: row
+      border-radius: 10px
+      padding: $blImgP
+      position: unset
+
+   &__left
+      display: flex
+      flex-direction: column
+      +tablet
+         flex-grow: 1
+
+   &__right
+      position: relative
+      order: -1
+      margin-bottom: 10px
+      +tablet
+         order: unset
+         margin-bottom: unset
+      
+   &-top
+      display: flex
+      flex-direction: column
+      flex-grow: 1
+      
+      +tablet
+         margin-bottom: 10px
+         margin-right: 10px
+   &-btm
+      position: absolute
+      top: $blImgP
+      left: 20px
+      z-index: 1
+      width: calc(100% - 105px)
+      +tablet
+         margin-top: auto
+         position: unset
+         top: unset
+         left: unset
+         width: unset
+
+   .img-wrap
+      border-radius: 10px
+      overflow: hidden
+      width: 100%
+      height: auto
+      +tablet
+         margin-left: auto
+
+         +adaptiv-value("width", 330, 280)  
+         +adaptiv-value("height", 330, 280) 
+         +adaptiv-value("max-height", 330, 280) 
+      img
+         +tablet
+            object-fit: cover
+            object-position: top left
+
+   .filled
+      +tablet
+         background: transparent
+         margin-bottom: 0
+         padding: 0
+
+   .top-right
+      position: absolute
+      top: $blImgP
+      right: $blImgP
+
+      +tablet
+         background: radial-gradient(100% 110% at 95% 0%, #080707 10%, rgba(0, 0, 0, 0) 95%)
+         border-radius: 0px 10px 0px 0px
+         top: 0
+         right: 0
+         padding: 10px
+
+   .bl-img-date
+      margin-top: 10px
+      +tablet
+         margin-top: auto
+
+   .social-menu
+      margin-top: 10px
+      flex-wrap: wrap
+      justify-content: flex-start
+      li:not(:last-child)
+         margin-right: 20px
+
+   .social-text
+      display: flex
+      flex-direction: column
+      align-items: flex-start
+      +tablet
+         flex-direction: row
+
+         
+
+      
