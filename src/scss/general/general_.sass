@@ -369,9 +369,7 @@ ul
 
 .btn--transp 
   .btn-icon
-    margin-right: 0 
-    +laptop
-      margin-right: 10px
+    +adaptiv-value("margin-right", 10, 3)
   
 
 .btn--cross:hover 
@@ -595,6 +593,6 @@ ul
     z-index: unset
     background: transparent
 
-.svg-icon
+.svg-icon, .btn-icon
   fill-rule: evenodd
   clip-rule: evenodd

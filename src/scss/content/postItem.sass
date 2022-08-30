@@ -15,7 +15,6 @@
       margin-bottom: 50px
    .tag-list 
       display: inline-flex
-      gap: 15px
       flex-wrap: wrap
    .tag-list>li
       background: rgba(255,255,255,.25)
@@ -25,6 +24,9 @@
       font-size: 12px
       margin: 0
       float: unset
+      &:not(:last-child)
+         +adaptiv-value("margin-right", 15, 5)
+         +adaptiv-value("margin-bottom", 7, 5)
    
    .post-text ul li
       display: flex
@@ -58,9 +60,6 @@
    .dropdown-toggle
       &::after
          display: none
-   .post-share+.dropdown-menu 
-      width: 230px
-      background-color: #000
    .dropdown-menu .menu-item 
       margin-bottom: 20px
       margin-right: 0

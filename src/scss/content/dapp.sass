@@ -65,6 +65,7 @@ $w_dappeImg: 111px
    .tag-list
       grid-column: 2
       grid-row: 2
+      align-items: start
       +tablet
          grid-column: 2/4
          grid-row: 4
@@ -73,10 +74,11 @@ $w_dappeImg: 111px
       grid-column: 2/3
       grid-row: 3
       margin-left: 0
+      justify-content: flex-start
       +tablet
          grid-column: 3
          grid-row: 1
-         +adaptiv-value("margin-left", -50, -55)
+         //+adaptiv-value("margin-left", -50, -55)
       
    .social-menu li
       margin-right: 34px

@@ -68,8 +68,9 @@
     +adaptiv-value("height", 24, 24)
 
 
-  .social-menu li
-    +adaptiv-value("margin-right", 40, 34)
+  .social-menu 
+    li:not(:last-child)
+      +adaptiv-value("margin-right", 30, 30)
 
   .copyright
     display: flex
