@@ -2,6 +2,16 @@
 
 .header
   background-color: $bg_header
+  position: fixed
+  top: 0
+  left: 0
+  width: 100%
+  height: $headerH_mob
+  z-index: 1000
+  +tablet
+    position: relative
+    height: auto
+    z-index: unset
 
   .container
     max-width: 100%!important
