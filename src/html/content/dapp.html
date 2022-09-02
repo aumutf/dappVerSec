@@ -15,8 +15,11 @@
       </div>
       <div class="page__content">
          <div class="w-sm">
-            <a href="https://test.dapp.expert/admin/update-dapp/5944" class="btn btn--filled btn-edit-dapp"> Edit DAPP
-            </a>
+            <div class="btn-wrap-edit">
+               <a href="https://test.dapp.expert/admin/update-dapp/5944" class="btn btn--filled btn-edit-dapp"> Edit
+                  DAPP
+               </a>
+            </div>
             <div class="dappe-info info-wrap">
                <!-- dapp logo -->
                <div class="dappe-info__img">
@@ -120,6 +123,9 @@
                </div>
                <!-- tags -->
                <ul class="tag-list">
+                  <li><a href="https://dapp.expert/ru/tag/NFT">NFT</a></li>
+                  <li><a href="https://dapp.expert/ru/tag/Staking">Staking</a></li>
+                  <li><a href="https://dapp.expert/ru/tag/Yield">Yield</a></li>
                </ul>
                <ul class="social-menu">
                   <li>
@@ -131,8 +137,7 @@
                      </a>
                   </li>
                   <li>
-                     <a rel="nofollow" href="#" class="social-menu-link discord"
-                        target="_blank">
+                     <a rel="nofollow" href="#" class="social-menu-link discord" target="_blank">
                         <svg class="social-menu__icon">
                            <use xlink:href="@img/sprite/symbol/sprite.svg#discord-icon"></use>
                         </svg>
@@ -140,14 +145,37 @@
                   </li>
                </ul>
                <div class="btn-wrap social-btns">
-                  <a rel="nofollow" href="https://app.uniswap.org/" class="btn btn--transp btn-shspan" type="button"
-                     target="_blank">
+                  <a rel="nofollow" href="https://app.uniswap.org/" class="btn btn--transp btn-shspan social-item"
+                     type="button" target="_blank">
                      <svg class="btn-icon">
                         <use xlink:href="@img/sprite/symbol/sprite.svg#globe-icon"></use>
                      </svg>
                      <span>Website</span>
                   </a>
-                  <div class="dropdown">
+                  <div class="dropdown social-item">
+                     <!--<a class="dappe-btn-lg btn dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                      View Contracts
+                                  </a>-->
+                     <button class="btn btn--transp btn-shspan dropdown-toggle" type="button" id="dropdownMenuContracts"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <svg class="btn-icon">
+                           <use xlink:href="@img/sprite/symbol/sprite.svg#notetext-icon"></use>
+                        </svg>
+                        <span>Contracts</span>
+                     </button>
+                     <ul class=" dropdown-menu menu" aria-labelledby="dropdownMenuContracts">
+                        <li class="menu-item">0xE592427A0AEce92De3Edee1F18E0157C05861564</li>
+                        <li class="menu-item">0x1F98431c8aD98523631AE4a59f267346ea31F984</li>
+                     </ul>
+                  </div>
+                  <a rel="nofollow" href="https://app.uniswap.org/" class="btn btn--transp btn-shspan social-item"
+                     type="button" target="_blank">
+                     <svg class="btn-icon">
+                        <use xlink:href="@img/sprite/symbol/sprite.svg#globe-icon"></use>
+                     </svg>
+                     <span>Whitespaces</span>
+                  </a>
+                  <div class="dropdown social-item">
                      <!--<a class="dappe-btn-lg btn dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
                                       View Contracts
                                   </a>-->
