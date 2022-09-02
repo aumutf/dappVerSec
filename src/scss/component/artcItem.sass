@@ -46,7 +46,7 @@
          +tablet
             font-size: 17px
 
-   &--vert:not(.artc-item-col)
+   &--vert:not(.artc-item-col):not(.artc-item--blur)
       .artc-item-image
          min-height: 64px
          height: 64px
@@ -55,7 +55,7 @@
             min-height: 140px
             max-height: 140px    
             
-   &--vert:not(.artc-item-only-title):not(.artc-item-col)
+   &--vert:not(.artc-item-only-title):not(.artc-item-col):not(.artc-item--blur)
       display: grid
       grid-template-columns: $artcVertGrid
       +adaptiv-value-imp("grid-column-gap", 40, 7)
@@ -276,6 +276,7 @@
 
    &--blur
       .artc-item-image
+         margin-bottom: 5px
          picture:first-child
             width: 100%!important
             height: 100%!important
