@@ -262,6 +262,7 @@ div.dataTables_wrapper>div.row>div, div.dataTables_length, div.dataTables_filter
    flex-direction: row
    align-items: center
    word-break: break-all
+   white-space: normal
    &--col
       flex-direction: column
       align-items: flex-end
@@ -367,6 +368,13 @@ table.ranktable
    +tablet
       position: static
       background-color: transparent !important
+
+@media screen and (orientation: landscape) and (max-width: 768px)
+   .cell-star, .cell-count, .cell-name 
+      background-color: $bgcolor !important
+      position: sticky
+      left: 0
+      z-index: 100
 
 .cell-price
    min-width: 77px
