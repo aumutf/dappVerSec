@@ -6,3 +6,27 @@
    &.page h1.page__title
       padding-bottom: 0
    
+   .artc-item
+      &--vert:not(.artc-item-only-title):not(.artc-item-col)
+         display: flex   
+         align-items: flex-start
+         row-gap: unset
+         column-gap: unset     
+
+         .title
+            grid-column: unset
+            margin-bottom: unset
+
+            text-overflow: unset
+            height: unset
+            overflow: unset
+            display: unset
+            -webkit-line-clamp: unset
+            -webkit-box-orient: unset
+            position: unset
+
+         .artc-item-image
+            min-height: 140px
+            max-height: 140px 
+            margin-bottom: 5px
+            
