@@ -258,3 +258,20 @@ $blImgP: 10px
       width: 300px
    .artc-item
       grid-template-columns: 1fr
+
+
+
+.newsBl-wrap
+   display: flex
+   align-items: flex-start
+
+.newsBl
+   flex-grow: 1
+   &:last-child
+      display: none
+      +laptop
+         display: block
+         margin-left: 20px
+      +laptop
+         +adaptiv-value("margin-left", 40, 0)
+
