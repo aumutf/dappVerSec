@@ -18,21 +18,18 @@
 </body>
 <script>
    $(function () {
-      console.log($(window).width());
       if ($(window).width() < 769) {
-         menu_top = $('.fixedBl').offset().top;
+         menu_top = $('.page-banner').height();
          $(window).scroll(function () {
             if ($(window).scrollTop() > menu_top) {
                if ($('.fixedBl').css('position') != 'fixed') {
                   $('.fixedBl').css('position', 'fixed');
-                  $('.fixedBl').css('top', '0');
-                  $('.content').css('margin-top', '80px');
+                  $('.fixedBl').css('top', '71px');
                }
             } else {
                if ($('.fixedBl').css('position') == 'fixed') {
                   $('.fixedBl').css('position', '');
                   $('.fixedBl').css('top', '');
-                  $('.content').css('margin-top', '');
                }
             }
          });
