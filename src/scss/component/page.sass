@@ -17,9 +17,17 @@
       overflow: hidden
       position: relative
 
+      width: 100vw
+      margin-left: -20px
+      padding-left: 20px
+
       +tablet
          margin-bottom: 30px
          min-height: 195px
+
+         width: 100%
+         margin-left: unset
+         padding-left: unset
 
       .page-breadcrumb, h1.page__title
          position: relative
@@ -31,11 +39,14 @@
       
 
    .banner-img
-      +adaptiv-value("width", 262, 262) 
+      
       height: 100%
       position: absolute
       top: 0
       right: 0
+      width: auto
+      +tablet
+         +adaptiv-value("width", 262, 262) 
 
       &::after
          position: absolute
