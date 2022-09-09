@@ -2,27 +2,33 @@
    .artc-item-drop
       position: relative
       margin-bottom: 20px
-   .artc-item-drop__top
-      &.dropdown-toggle::after
-         display: none
-   .artc-item-drop__btm
-      background: $grey19
-      box-shadow: 15px 15px 15px rgba(0, 0, 0, 0.25)
-      padding: 10px
-      .artc-item--vert
-         h3.title
-            margin-bottom: 10px
-         .artc-item-image
-            margin-bottom: 10px
-         .post-meta
-            margin-bottom: 10px
-         .artc-item-text
-            font-size: 17px
-            margin-bottom: 10px
-         .artc-item-link
-            font-size: 12px
-            font-weight: $bold
-            align-self: flex-end
-      &.dropdown-menu.show
-            display: flex
+      height: 65px
 
+   .artc-item-external
+      background: $grey19
+      padding: 10px
+      padding-left: 0
+      position: absolute
+      z-index: 100
+
+      h3.title
+         margin-bottom: 10px
+      .artc-item-image
+         margin-bottom: 10px
+      .post-meta
+         margin-bottom: 10px!important
+      .artc-item-text
+         font-size: 17px
+         margin-bottom: 10px
+      .artc-item-link
+         font-size: 12px
+         font-weight: $bold
+         align-self: flex-end
+
+      .artc-item-image, .artc-item-text, .artc-item-link
+         display: none
+
+      &.opened
+         box-shadow: 15px 15px 15px rgba(0, 0, 0, 0.25)
+         .artc-item-image, .artc-item-text, .artc-item-link
+            display: block
