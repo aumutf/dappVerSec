@@ -20,6 +20,7 @@ import { scssPostItem } from "./gulp/tasks/scssPostItem.js";
 import { scssNewsPost } from "./gulp/tasks/scssNewsPost.js";
 import { scssSearch } from "./gulp/tasks/scssSearch.js";
 import { scssProfile } from "./gulp/tasks/scssProfile.js";
+import { scssExternalNewsAll } from "./gulp/tasks/scssExternalNewsAll.js";
 import { scssGallery } from "./gulp/tasks/scssGallery.js";
 import { scssTags } from "./gulp/tasks/scssTags.js";
 import { scssSettings } from "./gulp/tasks/scssSettings.js";
@@ -52,6 +53,7 @@ function watcher() {
   gulp.watch(path.watch.scssNewsPost, scssNewsPost)
   gulp.watch(path.watch.scssSearch, scssSearch)
   gulp.watch(path.watch.scssProfile, scssProfile)
+  gulp.watch(path.watch.scssExternalNewsAll, scssExternalNewsAll)
   gulp.watch(path.watch.scssGallery, scssGallery)
   gulp.watch(path.watch.scssTags, scssTags)
   gulp.watch(path.watch.scssSettings, scssSettings)
@@ -81,7 +83,7 @@ const assets = gulp.series(copyJs, copyCss);
 
 const mainTasks = gulp.series(fonts, gulp.parallel(
   copy, html, scss, scssPosts,
-  scssPostItem, scssNewsPost,scssTables, scssSearch, scssGallery, scssProfile,
+  scssPostItem, scssNewsPost,scssTables, scssSearch, scssGallery, scssProfile, scssExternalNewsAll,
   scssTags, scssBlockchain, scssBlockchainCat, scssBlockchainList,
   scssPrivacyPolicy, scssTermsConditions, scssRegister, scssSettings,
   scssDappsAll, scssDapp, scssCrypto, scssNewsAll, scssAnalyticaAll, scssRank, js, images, svgSpriteTask,
