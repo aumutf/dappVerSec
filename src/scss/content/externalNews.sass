@@ -5,11 +5,14 @@
       height: 65px
 
    .artc-item-external
-      background: $grey19
+      background: transparent
       padding: 10px
-      padding-left: 0
       position: absolute
+      left: -10px
+      top: -10px
       z-index: 100
+      width: calc(100% + 20px)
+      max-width: calc(100% + 20px)
 
       h3.title
          margin-bottom: 10px
@@ -29,6 +32,7 @@
          display: none
 
       &.opened
-         box-shadow: 15px 15px 15px rgba(0, 0, 0, 0.25)
+         background: $grey19
+         box-shadow: 0px 15px 15px rgba(0, 0, 0, 0.25)
          .artc-item-image, .artc-item-text, .artc-item-link
             display: block
