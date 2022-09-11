@@ -343,7 +343,7 @@
 
       .bg-image_title 
          position: relative
-         display: inline-block
+         //display: inline-block
          flex-grow: 1
          +adaptiv-value("margin-left", 20, 20)
          text-transform: uppercase
@@ -352,6 +352,13 @@
          font-weight: 700
          z-index: 3
          word-break: break-word
+
+         text-overflow: ellipsis
+         height: 50px
+         overflow: hidden
+         display: -webkit-box
+         -webkit-line-clamp: 3
+         -webkit-box-orient: vertical
 
       .artc-item-image picture img:not(.bg-image)
          width: 110px!important
