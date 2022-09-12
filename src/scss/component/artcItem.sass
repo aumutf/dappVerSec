@@ -46,14 +46,19 @@
          +tablet
             font-size: 17px
 
-   &--vert:not(.artc-item-col):not(.artc-item--blur):not(.artc-item-external)
+   &--vert:not(.artc-item-col):not(.artc-item-external):not(.artc-item--blur)
       .artc-item-image
          min-height: 64px
          height: 64px
          margin-bottom: 5px
+ 
+
+   &--vert:not(.artc-item-col):not(.artc-item-external)
+      .artc-item-image
          +tablet
             min-height: 140px
-            max-height: 140px    
+            max-height: 140px   
+            height: 140px!important
             
    &--vert:not(.artc-item-only-title):not(.artc-item-col):not(.artc-item--blur):not(.artc-item-external)
       display: grid
@@ -282,6 +287,9 @@
    &--blur
       .artc-item-image
          margin-bottom: 5px
+         min-height: 167px
+         height: 167px
+
          picture:first-child
             width: 100%!important
             height: 100%!important
@@ -299,10 +307,6 @@
          align-items: center
          width: auto
          padding: 15px 15px 15px 20px
-         +adaptiv-value("padding-top", 15, 15)
-         +adaptiv-value("padding-right", 15, 15)
-         +adaptiv-value("padding-bottom", 15, 15)
-         +adaptiv-value("padding-left", 20, 20)
 
          z-index: 3
 
@@ -347,7 +351,7 @@
          flex-grow: 1
          +adaptiv-value("margin-left", 20, 20)
          text-transform: uppercase
-         +adaptiv-value("font-size", 17, 17)
+         font-size: 17px
          line-height: 1
          font-weight: 700
          z-index: 3
@@ -359,15 +363,18 @@
          display: -webkit-box
          -webkit-line-clamp: 3
          -webkit-box-orient: vertical
+      
+      .artc-item-image picture
+         display: flex
+         align-items: center
 
       .artc-item-image picture img:not(.bg-image)
          width: 110px!important
+         height: 110px!important
          border-radius: 10px
          position: relative
          object-fit: cover
          z-index: 2
-         +tablet
-            +adaptiv-value-imp("width", 110, 110)
 
       
 .artc-item-image
