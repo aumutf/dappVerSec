@@ -237,12 +237,23 @@ img.userphoto
    line-height: 1.5
    +adaptiv-value("font-size", 18, 16)
       
+
 .post-text table 
    border-color: $grey6!important
    width: 100%!important
+   tr
+      border-top: 1px solid $grey5!important
+      &:last-child
+         border-bottom: 1px solid $grey5!important
+   td, th
+      border: none!important
+      box-sizing: content-box
+      background-color: transparent!important
+      word-break: break-word!important
+      padding-top: 6px!important
+      padding-bottom: 7px!important   
+      white-space: break-spaces
 
-.post-text table tr
-   border-bottom: 1px solid #464646!important
 
 .post .post-text ul
    list-style-type: disc
