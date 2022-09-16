@@ -42,13 +42,14 @@
 .bl10.df-2
    display: flex
    flex-direction: column
-   grid-row-gap: 20px
+   
    +tablet-lg
-      grid-template-columns: repeat(2,1fr)
+      grid-template-columns: 2.4fr 1fr
       grid-row-gap: unset
    +tablet
       display: grid
       grid-template-columns: 1fr
+      grid-row-gap: 20px
 
 .bl10
    //width: 100vw
@@ -98,16 +99,16 @@
    width: 100%
    height: 100%
 
-   +laptop
-      +adaptiv-value("width", 650, 335)  
-      +adaptiv-value("height", 650, 335) 
-      +adaptiv-value("max-height", 650, 335) 
+   //+laptop
+      //+adaptiv-value("width", 650, 335)  
+      //+adaptiv-value("height", 650, 335) 
+      //+adaptiv-value("max-height", 650, 335) 
 
    +tablet
       justify-self: unset
-      +adaptiv-value("width", 460, 460)  
-      +adaptiv-value("height", 460, 460) 
-      +adaptiv-value("max-height", 460, 460) 
+      //+adaptiv-value("width", 460, 460)  
+      //+adaptiv-value("height", 460, 460) 
+      //+adaptiv-value("max-height", 460, 460) 
 
 .big-img-an-wrap 
    width: 100%
@@ -116,15 +117,17 @@
    align-self: center 
    
 
-   +laptop
-      +adaptiv-value("width", 650, 335)  
-      +adaptiv-value("height", 650, 335) 
-      +adaptiv-value("max-height", 650, 335) 
+   //+laptop
+      //+adaptiv-value("width", 650, 335)  
+      //+adaptiv-value("height", 650, 335) 
+      //+adaptiv-value("max-height", 650, 335) 
 
    +tablet
-      +adaptiv-value("width", 460, 460)  
-      +adaptiv-value("height", 460, 460) 
-      +adaptiv-value("max-height", 460, 460) 
+      //+adaptiv-value("width", 460, 460)  
+      //+adaptiv-value("height", 460, 460) 
+      //+adaptiv-value("max-height", 460, 460) 
+      width: 100%
+      height: 100%
       align-self: unset
       justify-self: unset
 
@@ -139,9 +142,9 @@
    
    +tablet
       justify-self: unset
-      +adaptiv-value("width", 385, 280)  
-      +adaptiv-value("height", 385, 280) 
-      +adaptiv-value("max-height", 385, 280) 
+      //+adaptiv-value("width", 385, 280)  
+      //+adaptiv-value("height", 385, 280) 
+      //+adaptiv-value("max-height", 385, 280) 
 
 .big-img-sm-wrap 
    width: 100%
