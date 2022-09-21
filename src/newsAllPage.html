@@ -51,6 +51,24 @@
             div.removeClass("opened");
          }
       });
+
+      if ($(window).width() < 769) {
+         menu_top = $('.page-banner').height();
+         $(window).scroll(function () {
+            if ($(window).scrollTop() > menu_top) {
+               if ($('.fixedBl').css('position') != 'fixed') {
+                  $('.fixedBl').css('position', 'fixed');
+                  $('.fixedBl').css('top', '71px');
+               }
+            } else {
+               if ($('.fixedBl').css('position') == 'fixed') {
+                  $('.fixedBl').css('position', '');
+                  $('.fixedBl').css('top', '');
+               }
+            }
+         });
+      }
+
    });
 
 
