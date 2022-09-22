@@ -34,6 +34,22 @@
          });
 
       }
+      $(".artc-item-external").click(function () {
+         $(this).toggleClass("opened");
+      });
+      $(document).mouseup(function (e) { // событие клика по веб-документу
+         var div = $(".artc-item-external"); // тут указываем ID элемента
+         if (!div.is(e.target) // если клик был не по нашему блоку
+            && div.has(e.target).length === 0) { // и не по его дочерним элементам
+            div.removeClass("opened"); // скрываем его
+         }
+      });
+      $(document).on('keyup', function (e) {
+         var div = $(".artc-item-external");
+         if (e.key == "Escape") {
+            div.removeClass("opened");
+         }
+      });
    });
 
 </script>
