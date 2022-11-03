@@ -68,21 +68,22 @@
       box-shadow: none
       border-radius: 0
       width: 100%
-      padding-top: 20px
+      padding-top: 10px
       flex-direction: column
       align-items: flex-start
       border-top: 1px solid $grey
       padding-left: 0
       display: flex
-      margin-top: -5px
-      width: auto
+      margin-top: 0px
       max-width: initial
       +tablet
+        padding-top: 20px
         border-top: none
         display: none
         padding-left: 20px
         margin-top: unset
         box-shadow: 0 4px 15px rgb(0 0 0 / 25%)
+        width: auto
         
         
       &.show
@@ -125,7 +126,7 @@
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.25)
     border-radius: 0px 4px 4px 4px
     filter: drop-shadow(-100px 0px 25px rgba(0, 0, 0, 0.8))
-    z-index: 102
+    z-index: 1002F
     padding: 20px 0 20px 20px
     +adaptiv-value("margin-left", 105, 12)
     
@@ -215,11 +216,12 @@
       flex-wrap: unset
 
   .menu--right
-    .menu-item:not(.lang-dropdown)
-      margin-bottom: 20px
-      +tablet
-        margin-left: 20px  
-        margin-bottom: 0
+    .dropdown-menu
+      .menu-item:not(.lang-dropdown)
+        //margin-bottom: 20px
+        +tablet
+          margin-left: 20px  
+          margin-bottom: 0
 
   .btn-left, .btn-close
     display: none
@@ -245,9 +247,10 @@
 
   .menu:not(.menu--right)
     .menu-item:not(:first-child)
-      +adaptiv-value("margin-left", 40, 0)
+      +tablet
+        +adaptiv-value("margin-left", 40, 0)
     .menu-item
-      +adaptiv-value("margin-bottom", 0, 20) 
+      margin-bottom: 20px 
       +tablet
         +adaptiv-value("margin-bottom", 0, 45) 
 
@@ -293,7 +296,7 @@
       margin-right: 0
       margin-left: 0!important
     .menu-item:not(:last-child)
-      margin-bottom: 20px
+      //margin-bottom: 20px
       +tablet
         +adaptiv-value("margin-bottom", 20, 10)
       
@@ -316,7 +319,7 @@
   +adaptiv-value("margin-left", 13, 13)
   display: block
   position: relative
-  z-index: 103
+  z-index: 1003
   +adaptiv-value("width", 18, 18)
   +adaptiv-value("height", 18, 12)
   +tablet
