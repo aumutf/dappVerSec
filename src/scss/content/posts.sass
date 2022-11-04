@@ -164,13 +164,27 @@
             border-top: 1px solid $grey1
             top: 0
             //&::after
-            border-bottom: 1px solid $grey1
-            bottom: 0
+            //border-bottom: 1px solid $grey1
+            //bottom: 0
 
    ol:not(.breadcrumb)
       +adaptiv-value("margin-left", 30, 25)
       li::marker
          color: $accentColor
+
+.sub-comment-form, .sub-comment-form-registered
+   & > .row
+      margin-left: 0
+      margin-right: 0
+   .form-row
+      margin-left: 0
+      margin-right: 0      
+
+.section-comment   
+   .btn-load-more
+      margin-bottom: 20px
+
+
 .post
    ol:not(.breadcrumb)
       +adaptiv-value("margin-left", 30, 25)

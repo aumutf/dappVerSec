@@ -175,8 +175,8 @@
       font-size: inherit
       line-height: inherit
       min-width: 4rem
-      padding-top: 20px
-      padding-bottom: 20px
+      padding-top: 10px
+      padding-bottom: 10px
       
       .menu-item
         padding: 0
@@ -297,6 +297,9 @@
       margin-left: 0!important  
       padding-top: 10px
       padding-bottom: 10px
+    .menu-item:not(:first-child)
+      +tablet
+        padding-top: 0
     .menu-item:not(:last-child)
       margin-bottom: 0
       
