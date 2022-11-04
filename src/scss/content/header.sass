@@ -181,6 +181,8 @@
       .menu-item
         padding: 0
         margin-left: 0
+        &:last-child
+          padding-bottom: 0
 
   .nav__menu
     border-bottom: 1px solid $grey
@@ -297,7 +299,7 @@
       margin-left: 0!important  
       padding-top: 10px
       padding-bottom: 10px
-    .menu-item:not(:first-child)
+    .menu-item:first-child
       +tablet
         padding-top: 0
     .menu-item:not(:last-child)
@@ -384,7 +386,7 @@
   +adaptiv-value("margin-right", -25, 0)
   +tablet
     margin-left: auto
-    margin-right: auto
+    margin-right: auto!important
     order: 0
     
   &.active
