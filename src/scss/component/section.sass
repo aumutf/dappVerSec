@@ -1,8 +1,8 @@
 //SECTION
 .section
-   margin-top: 15px
+   margin-bottom: 30px
    +tablet
-      +adaptiv-value("margin-top", 30, 15)
+      +adaptiv-value("margin-bottom", 60, 30)
 
    .title
       font-weight: $semiBold
@@ -17,12 +17,12 @@
       margin-bottom: 20px
 
 
-   &:last-child
-      padding-bottom: 30px
-      +tablet
-         padding-bottom: 40px
-      +laptop
-         +adaptiv-value("padding-bottom", 60, 30)
+   //&:last-child
+      //padding-bottom: 30px
+      //+tablet
+         //padding-bottom: 40px
+      //+laptop
+         //+adaptiv-value("padding-bottom", 60, 30)
 
 .section:not(:last-child):not(.bbn)
    .section__content

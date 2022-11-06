@@ -41,7 +41,7 @@ table.ranktable
    th
       line-height: 1.67!important  
       .th-in
-         word-break: break-word
+         //word-break: break-word
          white-space: break-spaces
       .star
          display: none
@@ -71,7 +71,7 @@ table.ranktable
             position: static
             background: transparent
       &:nth-child(2)
-         left: 26px
+         left: 24px
          +tablet
             left: unset
 
@@ -264,7 +264,7 @@ div.dataTables_wrapper>div.row>div, div.dataTables_length, div.dataTables_filter
    display: flex
    flex-direction: row
    align-items: center
-   word-break: break-word
+   //word-break: break-word
    white-space: normal
    &--col
       flex-direction: column
@@ -301,49 +301,124 @@ div.dataTables_wrapper>div.row>div, div.dataTables_length, div.dataTables_filter
    text-align: center
    justify-content: center     
 
-.cell-star
-   min-width: 20px
-   max-width: 20px
-   width: 20px
-   +tablet
-      min-width: 52px //45
-      max-width: 52px
-      width: 52px
-      padding-right: 7.5px
-   .td-in
-      flex-direction: column
-      +tablet
-         flex-direction: row
-   .star
-      margin-bottom: 5px
-      +tablet
-         margin-right: 15px
-         margin-bottom: 0
-   .t-text
-      justify-content: center
-      +tablet
-         justify-content: flex-start
+//table.dataTable thead>tr>th
 
-.cell-count
-   min-width: 30px
-   max-width: 30px
-   width: 30px
-   padding-left: 7.5px
-   padding-right: 7.5px
-   .t-text
-      justify-content: center
+table.dataTable thead>tr>th,
+td
+   &.cell-star
+      min-width: 20px
+      max-width: 20px
+      width: 20px!important
+      padding-right: 0
+      +tablet
+         min-width: 52px //45
+         max-width: 52px
+         width: 52px
+         padding-right: 7.5px
+      .td-in
+         flex-direction: column
+         +tablet
+            flex-direction: row
+      .star
+         margin-bottom: 5px
+         +tablet
+            margin-right: 15px
+            margin-bottom: 0
+      .t-text
+         justify-content: center
+         +tablet
+            justify-content: flex-start
 
-
-.cell-name
-   min-width: 130px
-   max-width: 130px
-   width: 130px
-   +tablet
-      min-width: 217px //220
-      max-width: 217px
-      width: 217px!important
-      padding-right: 25px
+   &.cell-count
+      min-width: 30px
+      max-width: 30px
+      width: 30px
       padding-left: 7.5px
+      padding-right: 7.5px
+      .t-text
+         justify-content: center
+
+
+   &.cell-name
+      min-width: 130px
+      max-width: 130px
+      width: 130px
+      padding-left: 10px
+      +tablet
+         min-width: 217px //220
+         max-width: 217px
+         width: 217px!important
+         padding-right: 25px
+         padding-left: 7.5px
+
+   &.cell-price
+      min-width: 77px
+      max-width: 77px
+      width: 77px!important
+      padding-left: 10px
+      padding-right: 10px
+
+   &.cell-index
+      min-width: 73px //77
+      max-width: 73px
+      width: 73px!important
+      padding-left: 10px
+      padding-right: 10px  
+
+   &.cell-marketCap 
+      min-width: 120px //125
+      max-width: 120px
+      width: 120px!important
+      padding-left: 10px
+      padding-right: 10px  
+
+   &.cell-volumeUp
+      min-width: 118px //116
+      max-width: 118px
+      width: 118px!important
+      padding-left: 10px
+      padding-right: 10px  
+
+   &.cell-circulatingSupply
+      min-width: 150px
+      max-width: 150px
+      width: 150px!important
+      padding-left: 10px
+      padding-right: 10px  
+
+   &.cell-chart
+      min-width: 113px
+      max-width: 113px
+      width: 113px!important
+      padding-left: 10px
+      padding-right: 10px    
+
+   &.cell-users
+      min-width: 62px //66
+      max-width: 62px
+      width: 62px!important
+      padding-left: 10px
+      padding-right: 10px
+
+   &.cell-blockchain  
+      min-width: 119px //124
+      max-width: 119px
+      width: 119px!important
+      padding-left: 10px
+      padding-right: 10px
+      text-align: left
+
+   &.cell-lotsOfBlockchain  
+      min-width: 95px //71
+      max-width: 95px
+      width: 95px!important
+      padding-left: 10px
+      padding-right: 10px
+      text-align: right
+      .td-in--col
+         align-items: center
+      .link
+         align-self: flex-end
 
 .td-in
    .pill-br
@@ -383,74 +458,6 @@ table.ranktable
       left: 0
       z-index: 100
 
-.cell-price
-   min-width: 77px
-   max-width: 77px
-   width: 77px!important
-   padding-left: 10px
-   padding-right: 10px
-
-.cell-index
-   min-width: 73px //77
-   max-width: 73px
-   width: 73px!important
-   padding-left: 10px
-   padding-right: 10px  
-
-.cell-marketCap 
-   min-width: 120px //125
-   max-width: 120px
-   width: 120px!important
-   padding-left: 10px
-   padding-right: 10px  
-
-.cell-volumeUp
-   min-width: 118px //116
-   max-width: 118px
-   width: 118px!important
-   padding-left: 10px
-   padding-right: 10px  
-
-.cell-circulatingSupply
-   min-width: 150px
-   max-width: 150px
-   width: 150px!important
-   padding-left: 10px
-   padding-right: 10px  
-
-.cell-chart
-   min-width: 113px
-   max-width: 113px
-   width: 113px!important
-   padding-left: 10px
-   padding-right: 10px    
-
-.cell-users
-   min-width: 62px //66
-   max-width: 62px
-   width: 62px!important
-   padding-left: 10px
-   padding-right: 10px
-
-.cell-blockchain  
-   min-width: 119px //124
-   max-width: 119px
-   width: 119px!important
-   padding-left: 10px
-   padding-right: 10px
-   text-align: left
-
-.cell-lotsOfBlockchain  
-   min-width: 95px //71
-   max-width: 95px
-   width: 95px!important
-   padding-left: 10px
-   padding-right: 10px
-   text-align: right
-   .td-in--col
-      align-items: center
-   .link
-      align-self: flex-end
 
 .lotsOfBlockchain-wrap
    a
@@ -476,5 +483,3 @@ table.dataTable td.dataTables_empty, table.dataTable td.dt-center, table.dataTab
    //padding-right: 0
    //&:last-child
       //padding-right: 10px
-
-

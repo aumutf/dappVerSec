@@ -95,6 +95,11 @@ $br_menu: 4px
     min-height: calc(56px + 24 * ((100vw - 320px) / 1120)) !important
     background-color: transparent!important
 
+.li-slider-wrap
+  margin-bottom: 30px
+  +tablet
+    margin-bottom: 60px
+
 .str-slider-wrap
   //position: absolute
   //left: 0
@@ -119,6 +124,7 @@ $br_menu: 4px
   &.str-slider-wrap
     +adaptiv-value("height", $h_scroll, $h_scroll_mob)
     position: relative
+
 
   .str_wrap
     +adaptiv-value-imp("min-height", $h_scroll, $h_scroll_mob)
