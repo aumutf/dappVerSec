@@ -168,10 +168,33 @@ div.sliderSection
    color: #959393
 
 .category-wrap .dappe-info__name 
-   display: grid
-   grid-column-gap: 45px
-   grid-template-columns: repeat(2, 1fr)
    align-self: center
+   display: flex
+   flex-direction: column
+   +tablet
+      display: grid
+      grid-column-gap: 45px
+      grid-template-columns: repeat(2, 1fr)
+   .short-name
+      margin-bottom: 5px
+      +tablet
+         margin-bottom: 0
+
+   span:not(.short-name)
+      text-overflow: ellipsis
+      height: 30px
+      overflow: hidden
+      display: -webkit-box
+      -webkit-line-clamp: 1
+      -webkit-box-orient: vertical
+      position: relative
+      width: 120px
+      +tablet
+         height: auto
+         text-overflow: unset
+         overflow: unset
+         display: inline-block
+         width: auto
 
 .dappe-info__name 
    grid-column: 2

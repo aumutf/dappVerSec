@@ -41,6 +41,8 @@ $wSetIc: 32px
       grid-template-columns: 1fr auto
       +tablet
          +adaptiv-value("margin-bottom", 50, 35)
+      .form-inline
+         align-self: self-start
 
 
    &__img 
@@ -69,13 +71,15 @@ $wSetIc: 32px
       display: flex
       align-items: center
       justify-content: center
-      margin-top: -15px
+      margin-top: 0
       background-color: transparent
       padding: 0
+      align-self: self-start
       &:hover
          border-color: $accentColor
          .profile__settings-ic
             fill: $accentColor
+
       &-ic
          width: 20px
          height: 20px
