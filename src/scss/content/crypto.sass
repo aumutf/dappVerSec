@@ -27,9 +27,11 @@
       padding: 5px
 
    .dropdown-menu
-      overflow-x: scroll
-      width: 200px
-      max-width: 200px
+      overflow-x: auto
+      //width: 200px
+      //max-width: 200px
+      width: 100%
+      max-width: 100%
 
 .category-tags
    margin-top: 20px
@@ -103,6 +105,10 @@
    
 .tag-list a
    display: flex
+   &:hover
+      .svg-icon 
+         fill: $accentColor
+      
 
 .stats-block 
    display: flex
@@ -212,8 +218,10 @@ div.sliderSection
 
 .price-val
    font-size: 60px
-   +adaptiv-value("font-size", 60, 45)  
    +adaptiv-value("margin-right", 30, 5)  
+   +tablet
+      +adaptiv-value("font-size", 60, 45)  
+   
 
 .category-price .stats-perc 
    margin-left: auto
@@ -242,15 +250,9 @@ div.sliderSection
       grid-row: span 2
 
 .category-add-info
-   .dropdown:hover .dropdown-menu
-      display: block
-
-   .dropdown-menu>li>a:focus, .dropdown-menu>li>a:hover
-      color: #262626
-      text-decoration: none
-      background-color: #f5f5f5
-
-   .dropdown-menu>li>a 
+   .dropdown-menu>li
+      padding: 0
+   .dropdown-menu>li>a
       display: block
       padding: 3px 10px
       clear: both
@@ -258,6 +260,16 @@ div.sliderSection
       line-height: 1.42857143
       color: $fontcolor
       white-space: nowrap
+      &:focus, &:hover
+         color: #262626
+         text-decoration: none
+         background-color: #f5f5f5
+         .svg-icon
+            fill: #262626
+
+.category-add-info:not(.cat-exch)
+   .dropdown:hover .dropdown-menu
+      display: block
 
 .contracts li 
    list-style: none
@@ -289,8 +301,9 @@ div.sliderSection
 .contr-info
    flex-direction: column
 
-.tag-list .dropdown-toggle::after
-   display: none
+.category-add-info:not(.cat-exch)   
+   .tag-list .dropdown-toggle::after
+      display: none
 
 .tab-content
    min-height: 300px
@@ -317,6 +330,16 @@ div.sliderSection
       min-width: 16px
       min-height: 16px
 
+
+.extLink-icon.svg-icon  
+   display: flex
+   width: 10px
+   min-width: 10px
+   height: 10px
+   min-height: 10px
+   fill: $fontcolor
+   &:hover
+      fill: $accentColor
 
 
 

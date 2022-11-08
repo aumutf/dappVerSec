@@ -43,6 +43,7 @@ export const path = {
     scssCrypto: `${srcFolder}/scss/styleCrypto.scss`,
     scssNewsAll: `${srcFolder}/scss/styleNewsAll.scss`,
     scssAnalyticaAll: `${srcFolder}/scss/styleAnalyticaAll.scss`,
+    scssExchange: `${srcFolder}/scss/styleExchange.scss`,
     html: `${srcFolder}/*.html`,
     files: `${srcFolder}/files/**/*.*`
   },
@@ -71,6 +72,7 @@ export const path = {
     scssDapp: `${srcFolder}/scss/**/*.scss`,
     scssRank: `${srcFolder}/scss/**/*.scss`,
     scssCrypto: `${srcFolder}/scss/**/*.scss`,
+    scssExchange: `${srcFolder}/scss/**/*.scss`,
     scssNewsAll: `${srcFolder}/scss/**/*.scss`,
     scssAnalyticaAll: `${srcFolder}/scss/**/*.scss`,
     html: `${srcFolder}/**/*.html`,

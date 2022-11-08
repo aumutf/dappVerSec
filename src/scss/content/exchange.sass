@@ -1,0 +1,53 @@
+$logoW: 44px
+$logoH: 44px
+
+.exchange-content 
+   .price-top
+      flex-direction: column
+      align-items: flex-start
+      &>*:not(:last-child)
+         margin-bottom: 15px
+      margin-bottom: 20px
+
+   .category-name
+      grid-template-columns: minmax($logoW, $logoW) 1fr
+      grid-template-rows: 1fr
+      //margin-bottom: 50px
+      column-gap: 20px
+
+   .dappe-info__img
+      width: $logoW
+      height: $logoH
+      min-width: $logoW
+      min-height: $logoH
+      margin-right: 0
+
+   .category-price
+      margin-bottom: 15px
+      +tablet
+         margin-bottom: 0
+
+   .dappe-info__name
+      align-self: flex-start
+      justify-self: flex-start
+      display: flex!important
+
+
+
+   .stats-block
+      padding: 5px 0px
+
+   .tag-list
+      flex-direction: column
+      row-gap: unset
+      &>li:not(:last-child)
+         margin-bottom: 15px
+
+   .price-val
+      font-size: 40px
+      +tablet
+         +adaptiv-value("font-size", 40, 45)  
+
+   .btn-secondary.dropdown-toggle
+      background: transparent
+      padding: 0

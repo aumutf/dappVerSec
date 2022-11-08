@@ -1,0 +1,34 @@
+@import "fonts.scss";
+@import "general/mixins_.sass";
+@import "general/variables.sass";
+@import "general/general_.sass";
+@import "general/generalSetting.sass";
+@import "general/modal.sass";
+@import "general/formControl.sass";
+@import "general/breadcrumb.sass";
+
+ 
+@import "general/pagination.sass";   
+@import "general/sliderScroll.sass";
+@import "general/slick.sass";
+@import "general/dropdown.sass";
+ 
+@import "content/header.sass";        
+ 
+@import "component/section.sass";     
+@import "component/tabs.sass";   
+@import "component/table.sass";  
+//@import "component/artcItem.sass";   
+//@import "component/page.sass";  
+
+//@import "content/article.sass";   
+//@import "content/postItem.sass";    
+@import "content/dapp.sass";
+@import "content/posts.sass";   
+@import "content/crypto.sass";  
+@import "content/exchange.sass";  
+   
+//@import "general/reaction.sass";     
+               
+@import "component/social_.sass";                           
+@import "content/footer.sass";                
