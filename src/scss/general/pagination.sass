@@ -21,6 +21,11 @@
       color: #fff!important
       cursor: pointer
 
+.pagination li.page-first,
+.pagination li.page-last
+  a
+    +adaptiv-value("min-width", 20, 20)
+
 .paginate_button
   &.first, &.last
     display: none

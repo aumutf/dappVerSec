@@ -89,6 +89,9 @@ $p_modal: 20px
       flex-direction: column
       +tablet
          background-color: $grey6
+      +phone-min
+         padding-left: 7px
+         padding-right: 7px
    &__right
       background-color: $bgcolor
       padding: 12px 35px 55px 32px
@@ -99,12 +102,21 @@ $p_modal: 20px
          grid-row: 1/3
          grid-column: 2
          background-color: $bgcolor
+      +phone-min
+         padding-left: 7px
+         padding-right: 7px         
    &__link
       display: inline-flex
       align-items: flex-start
       +adaptiv-value("column-gap", 16, 16)
       +adaptiv-value("margin-bottom", 26, 26)
       line-height: 1.7
+      
+      &:hover
+         .svg-icon
+            fill: $accentColor
+         a
+            color: $accentColor
 
 
    .svg-icon
