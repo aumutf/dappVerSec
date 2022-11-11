@@ -1,5 +1,7 @@
 .pagination li a, .paginate_button
-    +adaptiv-value("min-width", 30, 30)
+    min-width: 20px
+    +tablet
+      +adaptiv-value("min-width", 30, 30)
     +adaptiv-value("height", 31, 31)
     margin: 0
     margin-right: 6px
@@ -21,10 +23,6 @@
       color: #fff!important
       cursor: pointer
 
-.pagination li.page-first,
-.pagination li.page-last
-  a
-    +adaptiv-value("min-width", 20, 20)
 
 .paginate_button
   &.first, &.last
@@ -43,6 +41,7 @@
   label
     display: flex
     align-items: center
+    
 
 .pagination>li>a, .pagination>li>span
   background-color: transparent
