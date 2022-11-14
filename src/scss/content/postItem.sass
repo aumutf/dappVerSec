@@ -103,5 +103,26 @@
    
    .show-on-page-load div#amplitude-player 
       background-color: transparent
+      
+.comments
+   .row-wrap
+      display: flex
+      justify-content: space-between
+      flex-direction: column
+      width: 100%
+      +tablet
+         flex-direction: row
 
-   
+   .input-wrap
+      margin-bottom: 16px
+      flex-grow: 1
+      display: flex
+      flex-direction: column
+      
+      label
+         margin-bottom: 5px
+
+   .row-wrap
+      .input-wrap:not(:last-child)
+         +tablet
+            margin-right: 20px

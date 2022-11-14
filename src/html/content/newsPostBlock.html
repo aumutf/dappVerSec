@@ -307,6 +307,29 @@
                               <use xlink:href="@img/sprite/symbol/sprite.svg#trash-icon"></use>
                            </svg>Delete</a>
                      </div>
+                     <div class="sub-comment-form">
+                        <form action="#">
+                           <div class="row-wrap">
+                              <div class="input-wrap">
+                                 <input type="text" name="name" class="form-control form-input form-comment-name" maxlength="40"
+                                    placeholder="Имя">
+                              </div>
+                              <div class="input-wrap">
+                                 <input type="email" name="email" class="form-control form-input form-comment-email" maxlength="100"
+                                    placeholder="Эл. адрес">
+                              </div>
+                           </div>
+                           <div class="row-wrap">
+                              <div class="input-wrap">
+                                 <textarea name="comment" class="form-control form-input form-textarea form-comment-text"
+                                    maxlength="4999" placeholder="Присоединись к обсуждению"></textarea>
+                              </div>
+                           </div>
+                           <div class="btn-wrap d-flex">
+                              <button type="submit" class="btn btn--filled btn-send">Отправить</button>
+                           </div>
+                        </form>
+                     </div>
 
                      <div id="sub_comment_form_184" class="row-custom row-sub-comment visible-sub-comment">
                      </div>
@@ -404,20 +427,32 @@
             </ul>
 
             <form action="#">
-               <div class="form-group row">
-                  <input type="text" placeholder="Name" class="form-control">
-                  <input type="email" placeholder="Email" class="form-control">
+               <div class="row-wrap">
+                  <div class="input-wrap">
+                     <label>Имя</label>
+                     <input type="text" name="name" class="form-control form-input form-comment-name" maxlength="40"
+                        placeholder="Имя">
+                  </div>
+                  <div class="input-wrap">
+                     <label>Эл. адрес</label>
+                     <input type="email" name="email" class="form-control form-input form-comment-email" maxlength="100"
+                        placeholder="Эл. адрес">
+                  </div>
                </div>
-               <div class="form-group form-group-row">
-                  <textarea name="comment" class="form-control form-input form-textarea"
-                     placeholder="Join the discussion"></textarea>
+               <div class="row-wrap">
+                  <div class="input-wrap">
+                     <label>Присоединись к обсуждению</label>
+                     <textarea name="comment" class="form-control form-input form-textarea form-comment-text"
+                        maxlength="4999" placeholder="Присоединись к обсуждению"></textarea>
+                  </div>
                </div>
                <div class="btn-wrap d-flex">
-                  <button type="submit" class="btn btn--filled btn-send">SEND</button>
+                  <button type="submit" class="btn btn--filled btn-send">Отправить</button>
                </div>
             </form>
          </div>
       </section>
+
    </div>
    <div class="newsBl right-col externalNews">
       <h4 class="title">Important news</h4>
