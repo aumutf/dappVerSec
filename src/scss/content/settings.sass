@@ -57,11 +57,20 @@
    +adaptiv-value("min-width", 180, 120)
    +adaptiv-value("min-height", 180, 120)
    margin-bottom: 10px
-   object-fit: cover
+   overflow: hidden
+   img
+      object-fit: cover
+      object-position: center
+      +adaptiv-value("width", 180, 120)
+      +adaptiv-value("min-width", 180, 120)
+      +adaptiv-value("min-height", 180, 120)
+      +adaptiv-value("height", 180, 120)
+
 
 .btn-file-upload 
    position: relative
    overflow: hidden!important
+   white-space: normal
 
 .btn-file-upload input 
    position: absolute
@@ -188,12 +197,11 @@ input[type=checkbox], input[type=radio]
       cursor: pointer!important
 
 //settings
-
-
-
-
-
-
-
-
-
+.profile-update-img
+   display: flex
+   .form-group
+      display: flex
+      flex-direction: column
+      align-items: center
+   .form-group:not(:last-child)
+      margin-right: 5px
