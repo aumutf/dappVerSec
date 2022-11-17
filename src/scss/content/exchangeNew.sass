@@ -511,7 +511,195 @@ body
    display: flex
    justify-content: space-between
    margin-bottom: 20px
+   position: relative
+   &::after
+      content: ""
+      display: inline-block
+      position: absolute
+      left: 0
+      top: 19px
+      width: 100%
+      background-image: url(../img/icons/blExc-divide.svg)
+      background-repeat: no-repeat
+      background-size: contain
+      height: 50px
    h3.title
       text-transform: uppercase
+      line-height: 1.5
 
 
+.bl2col__r
+   .bl-pst-smp
+      padding-top: 25px
+      padding-bottom: 25px
+   .bl-pst-wimg, .bl-pst-bimg, .bl-pst-video
+      padding-top: 0
+
+
+.half-line
+   position: relative
+   &::after
+      content: ""
+      position: absolute
+      bottom: 0
+      left: 0
+      width: 50%
+      background: #E61243
+      height: 1px
+
+.wide-line
+   position: relative
+   margin-bottom: 25px
+   &::after
+      content: ""
+      position: absolute
+      bottom: 0
+      left: 0
+      width: 100%
+      background: rgb(47,47,48)
+      height: 1px
+
+.bl-pst-bimg
+   h3.title
+      margin-right: 0
+      width: 100%
+   &-wrap
+      width: 100%
+      height: 218px
+      max-height: 218px
+      margin-bottom: 17px
+      img
+         width: 100%
+         height: 100%
+         object-fit: cover
+
+.bl-pst-video
+   display: flex
+   padding-top: 0
+   padding-bottom: 0
+
+   &-l
+      width: 202px
+      max-width: 202px
+      height: 110px
+      max-height: 110px
+      img
+         width: 100%
+         height: 100%
+         object-fit: cover
+   &-r
+      display: flex
+      flex-direction: column
+      align-items: flex-end
+      margin-left: auto
+
+   .tags-itms
+      flex-direction: column
+
+   .tag-itm
+      margin-right: 0
+
+      &:not(:last-child)
+         margin-bottom: 10px
+
+   .pp-itms
+      margin-top: auto
+      flex-direction: column
+
+   .pp-itm
+      margin-right: 0
+      &:not(:last-child)
+         margin-bottom: 5px
+
+
+.btn-grad
+   font-size: 8px
+   font-weight: 700
+   line-height: 1.7
+   text-shadow: 0px 0.75px 0px rgba(0, 0, 0, 0.25)
+   color: #FFFFFF
+   text-transform: uppercase
+   text-align: center
+   
+   padding: 3px 27px
+   border-radius: 0
+   background: linear-gradient(90deg, #A90E35 2.81%, #EF1244 50.09%, #A90E35 93.05%), #D9D9D9
+   position: relative
+
+   &::before, &::after
+      content: ""
+      position: absolute
+      left: 0
+      width: 5px
+      height: 1px
+      background: #B00F38
+   &::before
+      transform: rotate(45deg) translate(-4px, 2px)
+      top: 0
+   &::after
+      transform: rotate(-45deg) translate(-4px,-2px)
+      top: 100%
+
+.btn-grad-wrap
+   background: linear-gradient(90deg, rgba(169, 14, 53, 0.3) 2.81%, rgba(239, 18, 68, 0.3) 50.09%, rgba(169, 14, 53, 0.3) 93.05%)
+   border: 0.1px solid #B00F38
+   padding: 3px
+   position: relative
+
+   &::before, &::after
+      content: ""
+      position: absolute
+      right: 0
+      width: 5px
+      height: 1px
+      background: #B00F38
+   &::before
+      transform: rotate(-45deg) translate(0px,1px)
+      top: 0
+   &::after
+      transform: rotate(45deg) translate(-1px,-2px)
+      top: 100%
+
+
+table.tbl
+   font-family: Eurostile Italic
+   font-size: 10px
+   letter-spacing: 0.2em
+   line-height: 1
+   text-transform: uppercase
+   border-collapse: collapse !important
+   border: none
+   color: $fontcolor
+   background-color: transparent
+   width: 100%
+
+   tr:not(:last-child)
+      border-bottom: 1px solid $grey5
+   th, td
+      border: none
+      box-sizing: content-box
+      white-space: break-spaces
+      word-break: break-word
+      line-height: 1.5!important   
+      padding: 15px 3px
+
+
+table.tblExc
+   .num-col
+      color: $redDf
+   .percentVal, .cyItm, .price-col
+      font-size: 12px
+   .percentVal
+      padding-left: 10px
+      color: $fontcolorN
+   .cyItm
+      margin-right: 5px
+   .name-col
+      text-overflow: ellipsis
+      overflow: hidden
+      display: -webkit-box
+      -webkit-line-clamp: 1
+      -webkit-box-orient: vertical
+      width: 110px
+   .price-col
+      text-align: right
