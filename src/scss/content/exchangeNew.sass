@@ -1,0 +1,497 @@
+body
+   font-family: Eurostile Reg, serif
+
+*
+   box-sizing: border-box
+
+.page-exchangeNew
+   color: $fontcolorN
+   letter-spacing: 0.02em
+
+   h2.title
+      font-size: 24px
+      line-height: 1.8
+
+   h3.title
+      font-size: 12px
+      font-weight: 500
+      line-height: 1
+      letter-spacing: 0.08em
+      text-transform: uppercase
+
+   .title-ln
+      position: relative
+      display: flex
+      align-items: center
+      &::after
+         content: "" 
+         display: flex
+         margin-left: 10px
+         
+         border-bottom: 1px solid transparent
+         border-image: linear-gradient(0.25turn, rgba(169, 14, 53, 0.5), rgba(239, 18, 68, 0.5),rgba(169, 14, 53, 0.5))
+         border-image: linear-gradient(0.25turn, rgba(169, 14, 53, 0.5), rgba(239, 18, 68, 0.5),rgba(169, 14, 53, 0.5))
+         border-image-slice: 1
+         border-top-width: 0px
+
+
+
+//---------------------------------------- page style
+.bl2col
+   &-wrap
+      display: flex
+      align-items: flex-start
+      justify-content: space-between
+      margin-top: 30px
+      padding-top: 33px
+
+   &__l
+      +adaptiv-value("width", 790, 280)
+      padding-left: 32px
+      z-index: 10
+      
+   &__r
+      width: 310px
+      min-width: 310px
+      z-index: 10
+
+.bl2col-wrap-blur
+   position: relative
+   &::before
+      content: ""
+      position: absolute
+      top: 0
+      left: 0
+      display: inline-block
+      //background: linear-gradient(166.18deg, rgba(49, 17, 22, 0.63) -38.64%, rgba(15, 20, 26, 0) 133.18%)
+      background: linear-gradient(148.18deg,rgba(49,17,22,.63) -38.64%,rgba(15,20,26,0) 60.18%)
+      //backdrop-filter: blur(4px)
+      border-top-left-radius: 40px
+      width: 100%
+      height: 700px
+      z-index: 2
+
+   &::after
+      content: ""
+      position: absolute
+      top: 0
+      left: 0
+      display: inline-block
+      background-image: url(../img/icons/frameBl.svg)
+      background-repeat: no-repeat
+      background-size: cover
+      width: 80%
+      height: 600px
+      z-index: 3
+
+.bbgrad
+   position: relative
+   width: 100%
+   height: 520px
+   //background: linear-gradient(166.47deg, rgba(49, 17, 22, 0.63) -38.97%, rgba(15, 20, 26, 0) 132.78%)
+   //backdrop-filter: blur(4px)
+   &::before
+      content: ""
+      display: inline-block
+      width: 100%
+      height: 100%
+      //box-shadow: 0px -185px 65px -20px rgb(217 217 217 / 84%) inset
+      box-shadow: 0px -137px 65px 40px rgb(15 20 26 / 93%) inset
+      filter: blur(14px)
+
+
+//---------------------------------------- blExc-head
+
+.blExc-head
+   display: flex
+   justify-content: space-between
+   margin-bottom: 45px
+
+   background: green
+   position: relative
+
+.blExc-logo
+   display: flex
+   align-items: center
+   margin-right: 40px
+
+   &-img
+      display: flex
+      align-items: center
+
+      overflow: hidden
+      width: 40px
+      min-width: 40px
+      height: 40px
+      min-height: 40px
+
+      margin-right: 14px
+      img
+         object-fit: contain
+         width: 100%
+         height: 100%
+
+   &-name
+      font-size: 40px
+      font-weight: 700
+      line-height: 1
+
+.blExc-tags-wrap
+   background: rgba(22, 30, 39, 0.7)
+   //backdrop-filter: blur(4px)
+   border-radius: 11px
+   padding: 12px 13px 12px 20px
+   //background: blue
+   height: 120px
+   position: absolute
+   right: 0
+   top: 0   
+   z-index: 10
+   width: 70%
+
+.blExc-tags
+   display: flex
+   flex-direction: column
+   position: relative
+
+
+
+.blExc-tag-row
+   display: flex
+   flex-wrap: wrap
+   justify-content: flex-start
+
+
+.blExc-tag-btm
+   height: 60px
+   overflow-y: auto
+   display: flex
+   flex-direction: column
+
+   position: absolute
+   top: 100%
+   left: 0
+   //background: red
+
+
+   &::-webkit-scrollbar 
+      width: 8px              /* ширина всей полосы прокрутки */
+
+   &::-webkit-scrollbar-track 
+      background: #0F141A        /* цвет зоны отслеживания */
+      border-radius: 3px
+
+   &::-webkit-scrollbar-thumb 
+      background-color: #17202A    /* цвет бегунка */
+      border-radius: 3px       /* округлось бегунка */
+      border: 0px solid #0F141A  /* отступ вокруг бегунка */
+
+   &
+      scrollbar-width: thin          /* "auto" или "thin" */
+      scrollbar-color: #17202A #0F141A   /* цвет бегунка и зоны отслеживания */
+
+
+.blExc-tag-btn
+   position: absolute
+   top: 0
+   right: -20px
+   width: 20px
+   height: 20px
+   display: flex
+   align-items: center
+   justify-content: center
+   margin: 0
+   &::before
+      content: ""
+      display: inline-block
+      width: 0
+      height: 0
+      border-style: solid
+      border-width: 0 4px 4px 4px
+      border-color: transparent transparent #FFF transparent
+
+
+
+
+.blExc-tag
+   font-size: 12px
+   font-weight: 400
+   line-height: 1
+   height: 20px
+   overflow: hidden
+   background-color: $grey17
+   padding: 3px 7px
+   border-radius: 3px
+   margin-bottom: 20px
+   margin-right: 20px
+      
+//---------------------------------------- blExc-fgrs
+
+.blExc-fgrs
+   display: flex
+   justify-content: space-between
+   align-items: center
+
+.blExc-fgr
+   display: flex
+   flex-direction: column
+   align-items: center
+
+   margin-bottom: 60px
+
+   &-lbl
+      margin-bottom: 5px
+      font-size: 24px
+      line-height: 1
+
+   &-val
+      font-size: 16px
+      line-height: 1
+      letter-spacing: 0.3em
+      background: linear-gradient(90deg, rgba(15, 20, 28, 0) 0%, rgba(59, 75, 95, 0.2) 25.31%, rgba(59, 75, 95, 0.14) 50.31%, rgba(59, 75, 95, 0.2) 74.89%, rgba(15, 20, 28, 0) 100%)
+      border-radius: 3px
+      padding: 9px 10px 8px
+      border-bottom: 1px solid transparent
+      border-image: linear-gradient(0.25turn, rgba(58, 75, 94, 0), rgba(58, 75, 94, 0.73),rgba(58, 75, 94, 0))
+      border-image: linear-gradient(0.25turn, rgba(58, 75, 94, 0), rgba(58, 75, 94, 0.73), rgba(58, 75, 94, 0))
+      border-image-slice: 1
+      border-top-width: 0px
+
+//---------------------------------------- blExc-inf
+
+.blExc-inf
+   display: flex
+   flex-direction: column
+   padding-bottom: 27px
+   padding-top: 27px
+   &-title
+      font-size: 16px
+      line-height: 1
+
+      margin-bottom: 17px
+   &-val
+      font-size: 14px
+      line-height: 1
+      color: $grey9e
+
+
+.blExc-inf-row
+   display: grid
+   grid-template-columns: 220px 130px auto 90px
+   column-gap: 32px
+
+   border-bottom: 1px solid $grey2f
+
+.blExc-inf-wrap
+   display: flex
+   flex-direction: column
+   
+   margin-bottom: 40px
+
+//---------------------------------------- blExc-abt
+.blExc-abt
+   font-size: 20px
+   line-height: 2
+   color: $greydb
+
+   p
+      margin-bottom: 20px
+
+   h2.title
+      margin-bottom: 16px
+
+//---------------------------------------- component bl-pst -- блок поста новый дизайн
+.bl-pst
+   width: 420px
+   min-width: 420px
+   max-width: 420px
+   &__top
+      display: flex
+      justify-content: space-between
+      margin-bottom: 13px
+   &__cntr
+      margin-bottom: 13px
+   &__btm
+      display: flex
+      justify-content: space-between
+
+
+   h3.title
+      font-size: 17px
+      line-height: 1.45
+      font-weight: 700
+      color: $fontcolor
+
+      text-overflow: ellipsis
+      height: 43px
+      overflow: hidden
+      display: -webkit-box
+      -webkit-line-clamp: 2
+      -webkit-box-orient: vertical
+      position: relative
+      margin-right: 30px
+      width: 68%
+
+   &-date
+      font-size: 8px
+      line-height: 0.75
+      color: $grey93
+      font-weight: 700
+   &-text
+      color: $grey93
+      font-size: 12px
+      line-height: 1.45
+      font-weight: 700
+
+      text-overflow: ellipsis
+      height: 34px
+      overflow: hidden
+      display: -webkit-box
+      -webkit-line-clamp: 2
+      -webkit-box-orient: vertical
+      position: relative
+   
+.pp-itms
+   display: flex
+   .pp-itm:not(:last-child)
+      margin-right: 20px
+
+.pp-itm
+   font-size: 12px
+   line-height: 1.45
+   color: $grey93
+   display: flex
+   align-items: center
+   .svg-icon
+      width: 13px
+      height: 13px
+      min-width: 13px
+      min-height: 13px
+      display: flex
+      margin-right: 6px
+      fill: $redAb
+      
+      
+.tags-itms
+   display: flex
+   .tag-itm:not(:last-child)
+      margin-right: 10px
+
+.tag-itm
+   font-size: 12px
+   line-height: 1.45
+   color: #FFFFFF
+   background-color: #17202B
+   padding: 1px 6px
+   border-radius: 3px
+   height: 18px
+   display: flex
+   align-items: center
+
+
+//bl-rect вид прямоугольный
+.bl-rect
+   padding: 13px 26px 17px 32px
+   position: relative
+   max-height: 147px
+   background-size: contain
+   background-position: center
+   background-repeat: no-repeat
+
+.bl-rect--red
+   background-image: url(../img/icons/borderFrame-red.svg)
+
+.bl-rect--vlt
+   background-image: url(../img/icons/borderFrame-violett.svg)
+
+.bl-rect--blue
+   background-image: url(../img/icons/borderFrame-blue.svg)
+
+.brd
+   position: absolute
+   &-t
+      display: flex
+      width: 100%
+      height: 1px
+      background: red
+
+.bl-lr
+   display: flex
+   width: 304px
+   min-width: 304px
+   height: 134px
+   min-height: 134px
+   border: 1px solid blue
+   //padding: 5px 33px
+   &__l
+      display: flex
+      flex-direction: column
+      margin-right: 4px
+   &__r
+      min-width: 134px
+      max-width: 134px
+   .bl-pst__top
+      margin-bottom: 8px
+   .bl-pst__btm
+      flex-direction: column
+      margin-top: auto
+      .pp-itms:not(:last-child)
+         margin-bottom: 4px
+
+.bl-lr-img
+   height: 100%
+   width: 100%
+   overflow: hidden
+   img
+      object-fit: cover
+      object-position: center
+      width: 100%
+      height: 100%
+
+
+   
+.cyItm
+   color: $green64
+
+.percentVal--up
+   color: $green64
+   &::after
+      border-color: transparent transparent $green64 transparent
+
+.bl-g3
+   display: grid
+   grid-template-columns: repeat(3, 1fr)
+   column-gap: 10px
+   row-gap: 10px
+
+
+// trapezoid
+.blExc-fgr-val
+   position: relative
+   &::after, &::before
+      content: ""
+      display: inline-block
+      position: absolute
+      top: 14px
+
+      border-bottom: 2px solid #3E5064
+      border-left: 4px solid transparent
+      border-right: 4px solid transparent
+      height: 0px
+      width: 26px
+      
+
+   &::after
+      left: -10px
+      transform: rotate(90deg)
+   &::before
+      right: -10px  
+      transform: rotate(-90deg)    
+
+
+//---------------------------------------- right side
+.bl-title
+   display: flex
+   justify-content: space-between
+
+
