@@ -12,6 +12,12 @@ body
       font-size: 24px
       line-height: 1.8
 
+   h2.title-sct
+      font-size: 20px
+      line-height: 1
+      text-transform: uppercase
+      margin-bottom: 30px
+
    h3.title
       font-size: 12px
       font-weight: 500
@@ -33,6 +39,7 @@ body
          border-image: linear-gradient(0.25turn, rgba(169, 14, 53, 0.5), rgba(239, 18, 68, 0.5),rgba(169, 14, 53, 0.5))
          border-image-slice: 1
          border-top-width: 0px
+         flex-grow: 1
 
 
 
@@ -54,6 +61,7 @@ body
       width: 310px
       min-width: 310px
       z-index: 10
+
 
 .bl2col-wrap-blur
    position: relative
@@ -106,8 +114,6 @@ body
    display: flex
    justify-content: space-between
    margin-bottom: 45px
-
-   background: green
    position: relative
 
 .blExc-logo
@@ -432,13 +438,40 @@ body
       height: 1px
       background: red
 
+.bl-rect-sml
+   padding: 0
+   width: 304px
+   min-width: 304px
+   max-width: 304px
+
+.blExc-col-scn
+   align-items: center
+   &>div:not(:last-child)
+      margin-bottom: 30px
+
+.blExc-col-thd
+   align-items: center
+
+.cornerr
+   background: transparent
+   background: linear-gradient(135deg, transparent 15px, $bgcolor 0) top left, linear-gradient(-135deg, transparent 15px, $bgcolor 0) top right, linear-gradient(-45deg, transparent 15px, $bgcolor 0) bottom right, linear-gradient(45deg, transparent 15px, $bgcolor 0) bottom left
+   background-size: 50% 50%
+   background-repeat: no-repeat
+   padding: 30px
+
+.cornerr-wr
+   background: #353535
+   background: linear-gradient(135deg, transparent 15px, #353535 0) top left, linear-gradient(-135deg, transparent 15px, #353535 0) top right, linear-gradient(-45deg, transparent 15px, #353535 0) bottom right, linear-gradient(45deg, transparent 15px, #353535 0) bottom left
+   background-size: 50% 50%
+   background-repeat: no-repeat
+   padding: 2px   
+
 .bl-lr
    display: flex
    width: 304px
    min-width: 304px
    height: 134px
    min-height: 134px
-   border: 1px solid blue
    //padding: 5px 33px
    &__l
       display: flex
@@ -678,7 +711,6 @@ table.tbl
    th, td
       border: none
       box-sizing: content-box
-      white-space: break-spaces
       word-break: break-word
       line-height: 1.5!important   
       padding: 15px 3px
@@ -703,3 +735,33 @@ table.tblExc
       width: 110px
    .price-col
       text-align: right
+
+//------------------------------------------- blExc-cols
+.blExc-cols
+   display: flex
+
+.blExc-col
+   display: flex
+   flex-direction: column
+   &-frst
+      margin-right: 40px
+      .bl-pst:not(:last-child)
+         margin-bottom: 33px
+
+.line-up
+   position: relative
+   &::before, &::after
+      content: ""
+      position: absolute
+      right: 0
+      background-image: url(../img/icons/line_up.svg)
+      background-size: contain
+      background-repeat: no-repeat
+      width: 310px
+      height: 36px
+      display: inline-block
+   &::before
+      top: 6px
+   &::after
+      top: 100%
+      
