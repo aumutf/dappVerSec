@@ -1,5 +1,6 @@
 body
    font-family: Eurostile Reg, serif
+   background: $bgcolorN
 
 *
    box-sizing: border-box
@@ -153,7 +154,7 @@ body
    right: 0
    top: 0   
    z-index: 10
-   width: 70%
+   width: 77%
 
 .blExc-tags
    display: flex
@@ -167,6 +168,40 @@ body
    flex-wrap: wrap
    justify-content: flex-start
 
+.blExc-tags-wrap.x
+   height: 33px
+   overflow: hidden
+   background: transparent
+   &.active
+      height: 126px
+      background: rgba(22, 30, 39, 0.7)
+
+.blExc-tagScroll
+   height: 33px
+   //background: red
+
+.active
+   .blExc-tag-btn
+      //display: none
+   .blExc-tagScroll
+      overflow-y: auto
+      height: calc(126px - 2*12px)
+
+      &::-webkit-scrollbar 
+         width: 8px              /* ширина всей полосы прокрутки */
+
+      &::-webkit-scrollbar-track 
+         background: #0F141A        /* цвет зоны отслеживания */
+         border-radius: 3px
+
+      &::-webkit-scrollbar-thumb 
+         background-color: #17202A    /* цвет бегунка */
+         border-radius: 3px       /* округлось бегунка */
+         border: 0px solid #0F141A  /* отступ вокруг бегунка */
+
+      &
+         scrollbar-width: thin          /* "auto" или "thin" */
+         scrollbar-color: #17202A #0F141A   /* цвет бегунка и зоны отслеживания */
 
 .blExc-tag-btm
    height: 60px
@@ -198,15 +233,18 @@ body
 
 
 .blExc-tag-btn
+   
    position: absolute
-   top: 0
-   right: -20px
+   top: 13px
+   right: 7px
    width: 20px
    height: 20px
    display: flex
    align-items: center
    justify-content: center
-   margin: 0
+   margin: 0!important
+   z-index: 5
+
    &::before
       content: ""
       display: inline-block
@@ -230,6 +268,8 @@ body
    border-radius: 3px
    margin-bottom: 20px
    margin-right: 20px
+   display: flex
+   align-items: center
       
 //---------------------------------------- blExc-fgrs
 
@@ -286,7 +326,9 @@ body
    grid-template-columns: 220px 130px auto 90px
    column-gap: 32px
 
-   border-bottom: 1px solid $grey2f
+   
+   &:not(:last-child)
+      border-bottom: 1px solid $grey2f
 
 .blExc-inf-wrap
    display: flex
@@ -446,25 +488,56 @@ body
 
 .blExc-col-scn
    align-items: center
-   &>div:not(:last-child)
-      margin-bottom: 30px
+   //&>div:not(:last-child)
+      //margin-bottom: 30px
+   &>div
+      padding: 20px
 
 .blExc-col-thd
    align-items: center
+   position: relative
+   .bl-pst
+      margin: 20px
 
-.cornerr
-   background: transparent
-   background: linear-gradient(135deg, transparent 15px, $bgcolor 0) top left, linear-gradient(-135deg, transparent 15px, $bgcolor 0) top right, linear-gradient(-45deg, transparent 15px, $bgcolor 0) bottom right, linear-gradient(45deg, transparent 15px, $bgcolor 0) bottom left
-   background-size: 50% 50%
-   background-repeat: no-repeat
-   padding: 30px
+   &::after
+      content: ""
+      position: absolute
+      top: 20px
+      left: 0
+      width: 100%
+      height: 100%
+      display: inline-block
+      background-image: url(../img/icons/borderFrameSm.svg)
+      background-repeat: no-repeat
+      background-size: contain
 
-.cornerr-wr
-   background: #353535
-   background: linear-gradient(135deg, transparent 15px, #353535 0) top left, linear-gradient(-135deg, transparent 15px, #353535 0) top right, linear-gradient(-45deg, transparent 15px, #353535 0) bottom right, linear-gradient(45deg, transparent 15px, #353535 0) bottom left
-   background-size: 50% 50%
-   background-repeat: no-repeat
-   padding: 2px   
+.bl-rect-bg
+   position: relative
+   &::after
+      content: ""
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+      display: inline-block
+      background-image: url(../img/icons/borderFrameRect.svg)
+      background-repeat: no-repeat
+      background-size: contain
+
+//.cornerr
+   //background: transparent
+   //background: linear-gradient(135deg, transparent 15px, $bgcolor 0) top left, linear-gradient(-135deg, transparent 15px, $bgcolor 0) top right, linear-gradient(-45deg, transparent 15px, $bgcolor 0) bottom right, linear-gradient(45deg, transparent 15px, $bgcolor 0) bottom left
+   //background-size: 50% 50%
+   //background-repeat: no-repeat
+   //padding: 30px
+
+//.cornerr-wr
+   //background: #353535
+   //background: linear-gradient(135deg, transparent 15px, #353535 0) top left, linear-gradient(-135deg, transparent 15px, #353535 0) top right, linear-gradient(-45deg, transparent 15px, #353535 0) bottom right, linear-gradient(45deg, transparent 15px, #353535 0) bottom left
+   //background-size: 50% 50%
+   //background-repeat: no-repeat
+   //padding: 2px   
 
 .bl-lr
    display: flex
@@ -749,7 +822,11 @@ table.tblExc
          margin-bottom: 33px
 
 .line-up
-   position: relative
+   position: absolute
+   width: 100%
+   height: 100%
+   top: 0
+
    &::before, &::after
       content: ""
       position: absolute
@@ -763,5 +840,83 @@ table.tblExc
    &::before
       top: 6px
    &::after
-      top: 100%
+      bottom: 0
+      display: none
       
+.hide-text.excerptN
+   &+.line-up::after
+      display: block
+
+
+.excerptN 
+   height: 1600px
+   position: relative
+   transition-property: height
+   transition-timing-function: ease
+   transition-duration: 1s
+   overflow: hidden
+   //backdrop-filter: blur(4px)
+   //background: linear-gradient(0deg, rgba(49, 17, 22, 0.63) -38.97%, rgba(15, 20, 26, 0) 132.78%)
+
+.hide-text-wrapN
+   position: relative
+   margin-bottom: 35px
+   margin-top: 25px
+
+.hide-text-wrapN .hide-text:after
+   content: ""
+   display: inline-block
+   width: 100%
+   height: 15%
+   background: linear-gradient(180deg,rgba(32,32,32,0) 0,#202020 87.83%)
+   background: linear-gradient(0deg, rgba(49, 17, 22, 0.63) -38.97%, rgba(15, 20, 26, 0) 132.78%)
+   position: absolute
+   left: 0
+   bottom: 0
+   //box-shadow: 4px 2px 5px #000000
+
+.blGrad
+   position: relative
+   &::after
+      content: ""
+      display: flex
+      border-bottom: 1px solid transparent
+      border-image: linear-gradient(0.25turn, rgba(169, 14, 53, 0.5), rgba(239, 18, 68, 0.5),rgba(169, 14, 53, 0.5))
+      border-image: linear-gradient(0.25turn, rgba(169, 14, 53, 0.5), rgba(239, 18, 68, 0.5),rgba(169, 14, 53, 0.5))
+      border-image-slice: 1
+      border-top-width: 0px
+      flex-grow: 1
+
+.btn--more
+   position: absolute
+   bottom: 0
+   z-index: 100
+
+
+.btnExc-more
+   font-size: 20px
+   font-weight: 700
+   line-height: 2
+   color: $redDf
+   display: flex
+   align-items: center
+   border: none
+   background: transparent
+   cursor: pointer
+   position: absolute
+   bottom: 0
+
+   &::after
+      content: ""
+      width: 0
+      height: 0
+      display: inline-block
+      border-style: solid
+      border-width: 0 4px 4px 4px
+      border-color: transparent transparent $redDf transparent
+      margin-left: 5px
+      margin-top: 5px
+
+.blExcAn
+   margin-top: 60px
+   margin-bottom: 206px
