@@ -8,12 +8,59 @@
 <body>
    <div class="body-wrap">
       @@include('html/general/header.html',{})
-      <div class="bgDapp">
-         @@include('html/content/exchangeNew.html',{})
-      </div>
+      @@include('html/content/exchangeNew.html',{})
       @@include('html/general/footer.html',{})
       @@include('html/general/foot.html',{})
    </div>
+   <script>
+      $(function () {
+         //show more for text blocks
+         function hideTextHeight() {
+            let h = 500;
+            let hideText = $('.hide-text');
+            hideText.each(function (index, element) {
+               let heightOfHideText = $(this).outerHeight();
+
+               if (heightOfHideText > h) {
+                  $(this).toggleClass('excerptN');
+               } else {
+                  let btnMore = $('.btn--more');
+                  btnMore.css('display', 'none');
+               }
+            })
+         }
+
+         let btnMore = $('.btn--more.btn--show');
+         let btnLess = $('.btn--more.btn--hide');
+
+         if (!btnMore) return;
+         hideTextHeight();
+         $('.btn--more.btn--show').on("click", function () {
+            $(this).closest('.hide-text-wrapN').find('.hide-text').toggleClass('excerptN');
+            $(this).html($('#showMore').val());
+            $(this).css("display", "none");
+            btnLess.css("display", "block");
+         });
+
+         $('.btn--more.btn--hide').on("click", function () {
+            $(this).closest('.hide-text-wrapN').find('.hide-text').toggleClass('excerptN');
+            $(this).html($('#showMore').val());
+            $(this).css("display", "none");
+            btnMore.css("display", "block");
+         });
+
+
+         let btnTag = $('.blExc-tag-btn');
+         if (!btnTag) return;
+
+         btnTag.on("click", function () {
+            $(this).closest('.blExc-tags-wrap').toggleClass('active');
+            
+         });
+
+      });
+   </script>
 </body>
+
 
 </html>
