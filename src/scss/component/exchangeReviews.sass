@@ -37,6 +37,31 @@
             width: 18px
             height: 18px
 
+        .reviews-empty
+            display: none
+            flex-direction: column
+            align-items: center
+            justify-content: center
+            min-height: 425px
+            h2
+                font-weight: 400
+                font-size: 48px
+                line-height: 1.42
+                text-transform: uppercase
+            h4
+                font-weight: 400
+                font-size: 24px
+                line-height: 1.42
+                letter-spacing: 0.08em
+                text-transform: uppercase
+                color: #696969
+
+        &.empty .reviews-empty
+            display: flex
+
+        &.empty .reviews-wrapper
+            display: none
+
     .reviews-list 
         .review-wrapper
             display: flex   
