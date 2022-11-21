@@ -14,7 +14,8 @@
    </div>
    <script>
       $(function () {
-         //show more for text blocks
+         
+         /*-------------------- show more text for text blocks --------------------*/
          function hideTextHeight() {
             let h = 500;
             let hideText = $('.hide-text');
@@ -49,14 +50,30 @@
             btnMore.css("display", "block");
          });
 
-
+         /*-------------------- show all tags on click btn --------------------*/
          let btnTag = $('.blExc-tag-btn');
          if (!btnTag) return;
 
          btnTag.on("click", function () {
             $(this).closest('.blExc-tags-wrap').toggleClass('active');
-            
+
          });
+
+         /*-------------------- hide tags block on click outside of block --------------------*/
+         const tags = document.querySelector('.blExc-tags-wrap');
+         document.addEventListener('click', (e) => {
+            const withinBoundaries = e.composedPath().includes(tags);
+
+            if (!withinBoundaries) {
+               tags.classList.toggle("active");
+            }
+         });
+         document.addEventListener('keydown', function (e) {
+            if (e.keyCode == 27) { 
+               tags.classList.toggle("active");
+            }
+         });
+
 
       });
 
