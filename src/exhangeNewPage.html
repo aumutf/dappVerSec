@@ -59,6 +59,18 @@
          });
 
       });
+
+      document.addEventListener('DOMContentLoaded', e => {
+         const reviewList = document.querySelector(".reviews-list");
+         reviewList.addEventListener('click', evt => {
+            const target = evt.target;
+            if (target.classList.contains('meta-reply-show')) {
+               target.classList.toggle("open");
+               const li = target.closest("li");
+               li.classList.toggle("show");
+            }
+         });
+      });
    </script>
 </body>
 
