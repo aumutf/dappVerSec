@@ -923,11 +923,14 @@ table.tblExc
    &::after
       bottom: 0
       display: none
+      transform: scaleY(-1)
       
 .hide-text.excerptN
    &+.line-up::after
       display: block
 
+.excerptN+.bg-grad
+   box-shadow: 0 -175px 52px -52px rgb(15 20 26 / 97%) inset
 
 .excerptN 
    height: 1600px
@@ -949,12 +952,18 @@ table.tblExc
    display: inline-block
    width: 100%
    height: 15%
-   background: linear-gradient(180deg,rgba(32,32,32,0) 0,#202020 87.83%)
-   background: linear-gradient(0deg, rgba(49, 17, 22, 0.63) -38.97%, rgba(15, 20, 26, 0) 132.78%)
+   //background: linear-gradient(180deg,rgba(32,32,32,0) 0,#202020 87.83%)
+   //background: linear-gradient(0deg, rgba(49, 17, 22, 0.63) -38.97%, rgba(15, 20, 26, 0) 132.78%)
+   background: linear-gradient(0deg,rgba(49,17,22,.63) -70%,rgba(15,20,26,0) 100%)
    position: absolute
    left: 0
    bottom: 0
+   z-index: 12
    //box-shadow: 4px 2px 5px #000000
+
+.hide-text-wrapN .hide-text.excerptN:after
+   width: 95%
+
 
 .blGrad
    position: relative
@@ -967,6 +976,8 @@ table.tblExc
       border-image-slice: 1
       border-top-width: 0px
       flex-grow: 1
+      z-index: 11
+      position: relative
 
 .btn--more
    position: absolute
@@ -985,7 +996,8 @@ table.tblExc
    background: transparent
    cursor: pointer
    position: absolute
-   bottom: 0
+   bottom: 10px
+   left: 30px
 
    &::after
       content: ""
@@ -1025,4 +1037,14 @@ table.tblExc
          fill: $accentColor
 
 
-//---------------------------------------- YOUTUBE
+//---------------------------------------- 
+.bg-grad
+   position: absolute
+   bottom: 0
+   left: 0
+   height: 100%
+   //box-shadow: 0 -175px 52px -52px rgb(15 20 26 / 97%) inset
+   +adaptiv-value("width", 790, 280)
+   z-index: 11
+   &.notactive
+      box-shadow: none
