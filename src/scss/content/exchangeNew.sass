@@ -654,6 +654,7 @@ body
 .bl-title
    display: flex
    justify-content: space-between
+   align-items: flex-end
    margin-bottom: 20px
    position: relative
    &::after
@@ -671,6 +672,26 @@ body
       text-transform: uppercase
       line-height: 1.5
 
+      text-overflow: ellipsis
+      height: 20px
+      overflow: hidden
+      display: -webkit-box
+      -webkit-line-clamp: 1
+      -webkit-box-orient: vertical
+      position: relative
+      width: 30%
+   .btn-grad
+      text-overflow: ellipsis
+      height: 18px
+      overflow: hidden
+      display: -webkit-box
+      -webkit-line-clamp: 1
+      -webkit-box-orient: vertical
+      position: relative
+      width: 100%
+      padding: 3px
+   .btn-grad-wrap
+      width: 20%
 
 .bl2col__r
    .bl-pst-smp
