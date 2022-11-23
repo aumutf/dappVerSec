@@ -493,6 +493,16 @@ table.dataTable td.dataTables_empty, table.dataTable td.dt-center, table.dataTab
 
 table.dataTable thead 
    .cell-star, .cell-name
-      &.sorting:after, &.sorting_asc:after, &.sorting_desc:after
-         display: none
-   
+      &.sorting, &.sorting_asc, &.sorting_desc
+         &::after
+            display: none
+         
+   .sorting, .sorting_asc, .sorting_desc
+      &::after
+         top: 13px
+         right: 4px
+
+#cryptotable thead 
+   .sorting, .sorting_asc, .sorting_desc
+      &::after
+         right: -4px
