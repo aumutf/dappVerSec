@@ -335,6 +335,14 @@ td
          justify-content: center
          +tablet
             justify-content: flex-start
+      .th-in
+         white-space: unset
+         height: unset
+         text-overflow: unset
+         overflow: unset
+         word-break: unset
+         -webkit-line-clamp: unset
+         -webkit-box-orient: unset
 
    &.cell-count
       min-width: 30px
@@ -499,10 +507,10 @@ table.dataTable thead
          
    .sorting, .sorting_asc, .sorting_desc
       &::after
-         top: 13px
+         top: 3px
          right: 4px
 
 #cryptotable thead 
    .sorting, .sorting_asc, .sorting_desc
       &::after
-         right: -4px
+         right: -7px

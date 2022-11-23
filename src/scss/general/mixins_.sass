@@ -91,3 +91,16 @@ $cont-width: 1240px
   background: linear-gradient(135deg, transparent #{$tl}, #{$bg} 0) top left, linear-gradient(225deg, transparent #{$tr}, #{$bg} 0) top right, linear-gradient(-45deg, transparent #{$br}, #{$bg} 0) bottom right, linear-gradient(45deg, transparent #{$bl}, #{$bg} 0) bottom left
   background-size: 50% 50%
   background-repeat: no-repeat
+
+
+@mixin adaptiv-valueN($property, $pcSize, $mobSize)
+  $maxWidth: 1440
+
+  $addSize: $pcSize - $mobSize
+  $addSize1: calc(#{$pcSize} - #{$pcSize}/1.4)
+  $addMobSize: calc(#{$addSize} + #{$addSize}*0.7)
+  
+  #{$property}: $pcSize+px
+  
+  @media screen and (min-width: 768px) and (max-width: 1439px)
+    #{$property}: calc(#{$pcSize}px/1.5 + #{$addSize1} * ((100vw - 768px) / #{$maxWidth - 768}))
