@@ -4,8 +4,12 @@
       display: flex
       margin-bottom: 40px
       flex-direction: column
+      margin-top: 15px
       +tablet
          flex-direction: row
+         margin-top: 30px
+      +laptop
+         margin-top: 60px
 
    &-search
       display: flex
@@ -20,7 +24,6 @@
 
       &-wrap
          flex-grow: 1
-         margin-top: 16px
          margin-left: 0
          +tablet
             +adaptiv-value("margin-left", 65, 10)
@@ -37,14 +40,26 @@
       &__btm
          display: flex
          flex-direction: column
-         +phone
-            flex-direction: row
+         min-width: 350px
+         margin-bottom: 10px
+         +tablet
+            display: grid
+            grid-template-columns: repeat(3, 1fr)
+            column-gap: 16px
+
          &>div
             flex-grow: 1
 
+         .btn-secondary.dropdown-toggle
+            width: 100%
+
+         .dropdown-menu
+            width: 100%
+            min-width: 100%
+
+
       .dropdown-select--lg:not(:last-child)
          margin-right: 16px
-
 
    .btn-search-filter
       position: absolute
@@ -85,11 +100,10 @@
          max-width: 400px
 
 .dapp-search__btm
-   
-   .dropdown-wrap:not(:last-child)
-      margin-bottom: 10px
-      +phone
-         margin-right: 16px
+   //.dropdown-wrap:not(:last-child)
+      //margin-bottom: 10px
+      //+phone
+         //margin-right: 16px
 
    .btn-secondary.dropdown-toggle
       width: 100%
