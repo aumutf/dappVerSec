@@ -24,7 +24,6 @@ body
       font-weight: 500
       line-height: 1
       letter-spacing: 0.08em
-     
 
    .title-ln
       position: relative
@@ -33,7 +32,7 @@ body
       &::after
          content: "" 
          display: flex
-         margin-left: 10px
+         margin-left: 20px
          
          border-bottom: 1px solid transparent
          border-image: linear-gradient(0.25turn, rgba(169, 14, 53, 0.5), rgba(239, 18, 68, 0.5),rgba(169, 14, 53, 0.5))
@@ -93,6 +92,18 @@ body
       height: 600px
       z-index: 3
 
+.blHotN
+   .bl-pst:not(:last-child)
+      position: relative
+      &::after
+         content: ""
+         position: absolute
+         bottom: 0
+         left: 0
+         width: 50%
+         background: $redE6
+         height: 1px
+
 .bbgrad
    position: relative
    width: 100%
@@ -120,7 +131,7 @@ body
 
 .blExc-logo
    display: flex
-   align-items: center
+   align-items: flex-start
    margin-right: 40px
 
    &-img
@@ -143,6 +154,7 @@ body
       font-size: 40px
       font-weight: 700
       line-height: 1
+      max-width: 150px
 
 .blExc-tags-wrap
    background: rgba(22, 30, 39, 0.7)
