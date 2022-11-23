@@ -74,7 +74,8 @@ body
       +adaptiv-valueN("width", 310, 310)
       +adaptiv-valueN("min-width", 310, 310)
       min-width: 310px
-      z-index: 10
+      z-index: 12
+      position: relative
 
 
 .bl2col-wrap-blur
@@ -312,6 +313,8 @@ body
    
    position: absolute
    top: 13px
+   +adaptiv-valueN("top", 13, 13)
+   +adaptiv-valueN("right", 7, 7)
    right: 7px
    width: 20px
    height: 20px
@@ -832,6 +835,7 @@ body
 
       text-overflow: ellipsis
       height: 20px
+      +adaptiv-valueN("height", 20, 20)
       overflow: hidden
       display: -webkit-box
       -webkit-line-clamp: 1
@@ -842,6 +846,7 @@ body
    .btn-grad
       text-overflow: ellipsis
       height: 18px
+      +adaptiv-valueN("height", 18, 18)
       overflow: hidden
       display: -webkit-box
       -webkit-line-clamp: 1
@@ -961,13 +966,18 @@ body
    min-width: 80px
    +adaptiv-valueN("width", 80, 80)
    +adaptiv-valueN("min-width", 80, 80)
+   +adaptiv-valueN("height", 80, 80)
+   +adaptiv-valueN("min-height", 80, 80)
    height: 80px
    min-height: 80px
    border: 12px solid $bgcolorN
+   +adaptiv-valueN("border-width", 12, 12)
    background-color: $redAb
    border-radius: 50%
    position: absolute
    top: 15px
+   +adaptiv-valueN("top", 15, 15)
+   +adaptiv-valueN("right", -40, -40)
    right: -40px
    cursor: pointer
 
@@ -975,6 +985,7 @@ body
       width: 20px
       +adaptiv-valueN("width", 20, 20)
       height: 40px
+      +adaptiv-valueN("height", 40, 40)
       margin-left: 10px
       +adaptiv-valueN("margin-left", 10, 10)
       fill: $greycf
@@ -1134,6 +1145,7 @@ table.tblExc
       background-repeat: no-repeat
       width: 310px
       +adaptiv-valueN("width", 310, 310)
+      +adaptiv-valueN("height", 36, 36)
       height: 36px
       display: inline-block
    &::before
@@ -1253,6 +1265,8 @@ table.tblExc
    +adaptiv-valueN("min-width", 12, 12)
    height: 12px
    min-height: 12px
+   +adaptiv-valueN("height", 12, 12)
+   +adaptiv-valueN("min-height", 12, 12)
    margin-right: 10px
    +adaptiv-valueN("margin-right", 10, 10)
    +adaptiv-valueN("margin-bottom", 5, 5)
