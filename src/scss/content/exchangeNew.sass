@@ -24,7 +24,8 @@ body
       line-height: 1
       text-transform: uppercase
       margin-bottom: 30px
-      +adaptiv-valueN("margin-bottom", 30, 30)
+      +adaptiv-valueN("margin-bottom", 18, 18)
+      +adaptiv-valueN("margin-left", 30, 30)
 
    h3.title
       font-size: 12px
@@ -477,10 +478,10 @@ body
       display: flex
       justify-content: space-between
       //margin-bottom: 13px
-      +adaptiv-valueN("margin-bottom", 13, 13)
+      +adaptiv-valueN("margin-bottom", 10, 10)
    &__cntr
       //margin-bottom: 13px
-      +adaptiv-valueN("margin-bottom", 13, 13)
+      +adaptiv-valueN("margin-bottom", 11, 11)
    &__btm
       display: flex
       justify-content: space-between
@@ -502,7 +503,7 @@ body
       -webkit-box-orient: vertical
       position: relative
       //margin-right: 30px
-      +adaptiv-valueN("margin-right", 30, 30)
+      +adaptiv-valueN("margin-right", 7, 7)
       //width: 68%
       +adaptiv-valueN("width", 240, 240)
 
@@ -512,6 +513,7 @@ body
       line-height: 0.75
       color: $grey93
       font-weight: 700
+      +adaptiv-valueN("margin-top", 10, 10)
    &-text
       color: $grey93
       font-size: 12px
@@ -593,9 +595,10 @@ body
       
 .tags-itms
    display: flex
+   +adaptiv-valueN("margin-right", 17, 17)
    .tag-itm:not(:last-child)
       margin-right: 10px
-      +adaptiv-valueN("margin-right", 10, 10)
+      +adaptiv-valueN("margin-right", 11, 11)
 
 .tag-itm
    font-size: 12px
@@ -625,10 +628,10 @@ body
 //bl-rect вид прямоугольный
 .bl-rect
    //padding: 13px 26px 17px 32px
-   +adaptiv-valueN("padding-top", 13, 10)
-   +adaptiv-valueN("padding-right", 26, 10)
-   +adaptiv-valueN("padding-bottom", 17, 10)
-   +adaptiv-valueN("padding-left", 32, 10)
+   +adaptiv-valueN("padding-top", 15, 15)
+   +adaptiv-valueN("padding-right", 26, 26)
+   +adaptiv-valueN("padding-bottom", 17, 17)
+   +adaptiv-valueN("padding-left", 32, 32)
    position: relative
    //max-height: 147px
    +adaptiv-valueN("max-height", 147, 147)
@@ -667,8 +670,11 @@ body
    //&>div:not(:last-child)
       //margin-bottom: 30px
    &>div
-      //padding: 20px
       +adaptiv-valueN("padding", 20, 20)
+      width: 100%
+   &>div:not(:last-child)
+      //margin-bottom: 26px
+      +adaptiv-valueN("margin-bottom", 26, 26)
 
 .blExc-col-thd
    align-items: center
@@ -676,36 +682,60 @@ body
    .bl-pst
       //margin: 20px
       +adaptiv-valueN("margin", 20, 20)
+      padding: 0!important
 
-   &::after
-      content: ""
+   .brdFrameSm
       position: absolute
-      //top: 20px
-      +adaptiv-valueN("top", 20, 20)
-      left: 0
+      top: 0
+      right: 0
       width: 100%
       height: 100%
-      display: inline-block
-      background-image: url(../img/icons/borderFrameSm.svg)
-      background-repeat: no-repeat
-      background-size: contain
+      fill: transparent
+      stroke: $grey35
+      stroke-width: 1
 
-.bl-rect-bg
+   .blExc-col-thd1
+      //padding: 16px 0 16px 0px
+      //margin: 0!important
+      +adaptiv-valueN("padding-top", 16, 16)
+      +adaptiv-valueN("padding-right", 0, 0)
+      +adaptiv-valueN("padding-bottom", 16, 16)
+      +adaptiv-valueN("padding-left", 0, 0)
+      padding-left: 0
+   .blExc-col-thd2
+      //padding: 14px 8px 20px
+      +adaptiv-valueN("margin-top", 14, 14)
+      +adaptiv-valueN("margin-right", 8, 8)
+      +adaptiv-valueN("margin-bottom", 20, 20)
+      +adaptiv-valueN("margin-left", 14, 14)
+
+.blExc-col-scn>div.bl-rect-bg
    position: relative
-   &::after
-      
-      content: ""
+   //padding: 36px 42px 30px 33px!important
+
+   +adaptiv-valueN("padding-top", 36, 36)
+   +adaptiv-valueN("padding-right", 42, 42)
+   +adaptiv-valueN("padding-bottom", 30, 30)
+   +adaptiv-valueN("padding-left", 33, 33)
+   //margin-bottom: 20px!important
+   +adaptiv-valueN("margin-bottom", 20, 20)
+   .svg-icon.brdFrame
       position: absolute
       top: 0
       left: 0
       width: 100%
       height: 100%
-      +adaptiv-valueN("width", 344, 344)
-      +adaptiv-valueN("height", 161, 161)
-      display: inline-block
-      background-image: url(../img/icons/borderFrameRect.svg)
-      background-repeat: no-repeat
-      background-size: contain
+      fill: transparent
+      stroke-width: 1
+      stroke: $grey35
+   .bl-pst-text
+      //margin-right: 45px
+      +adaptiv-valueN("margin-right", 45, 45)
+   .tags-itms
+      margin-right: 0
+   .bl-rect
+      padding: 0
+
       
 
 //.cornerr
@@ -740,6 +770,27 @@ body
       +adaptiv-valueN("margin-right", 4, 4)
       h3.title
          width: unset!important
+         line-height: 0.8
+         margin-left: 0
+
+         //height: 18px
+         +adaptiv-valueN("height", 18, 18)
+         -webkit-line-clamp: 1
+         margin-right: 0px
+
+      .bl-pst-text
+         //height: 53px
+         +adaptiv-valueN("height", 53, 53)
+         -webkit-line-clamp: 3
+      .bl-pst__cntr
+         //margin-bottom: 24px
+         +adaptiv-valueN("margin-bottom", 24, 24)
+      .bl-pst__btm .pp-itms:not(:last-child)
+         //margin-bottom: 10px!important
+         +adaptiv-valueN("margin-bottom", 10, 10)
+      .pp-itm
+         line-height: 1
+
    &__r
       //min-width: 134px
       +adaptiv-valueN("min-width", 134, 134)
@@ -769,6 +820,14 @@ body
    
 .cyItm
    color: $green64
+   //margin-right: 3px
+   +adaptiv-valueN("margin-right", 3, 3)
+
+.percentVal
+   //padding-left: 10px
+   +adaptiv-valueN("padding-left", 10, 10)
+   +adaptiv-valueN("margin-left", -2, -2)
+   //margin-left: -2px
 
 .percentVal--up
    color: $green64
@@ -778,8 +837,8 @@ body
 .bl-g3
    display: grid
    grid-template-columns: repeat(3, 1fr)
-   column-gap: 10px
-   row-gap: 10px
+   //column-gap: 10px
+   //row-gap: 10px
 
 
 // trapezoid
@@ -1124,10 +1183,9 @@ table.tblExc
    display: flex
    flex-direction: column
    &-frst
-      margin-right: 40px
-      +adaptiv-valueN("margin-right", 40, 40)
+      +adaptiv-valueN("margin-right", 34, 34)
       .bl-pst:not(:last-child)
-         margin-bottom: 33px
+         //margin-bottom: 33px
          +adaptiv-valueN("margin-bottom", 33, 33)
 
 .line-up
@@ -1296,3 +1354,10 @@ table.tblExc
    z-index: 11
    &.notactive
       box-shadow: none
+
+.blExc-col-scn>div.bl-lr-wrap
+   //padding: 0 32px 0 33px!important
+   +adaptiv-valueN("padding-top", 0, 0)
+   +adaptiv-valueN("padding-right", 32, 32)
+   +adaptiv-valueN("padding-bottom", 0, 0)
+   +adaptiv-valueN("padding-left", 33, 33)

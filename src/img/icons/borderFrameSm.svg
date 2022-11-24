@@ -2,7 +2,7 @@
 <svg
    width="366.754"
    height="506"
-   viewBox="0 0 366.754 506"
+   viewBox="0 0 366.754 505"
    fill="none"
    version="1.1"
    id="svg4"
@@ -12,27 +12,7 @@
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
    xmlns:svg="http://www.w3.org/2000/svg">
-  <defs
-     id="defs8" />
-  <sodipodi:namedview
-     id="namedview6"
-     pagecolor="#ffffff"
-     bordercolor="#000000"
-     borderopacity="0.25"
-     inkscape:showpageshadow="2"
-     inkscape:pageopacity="0.0"
-     inkscape:pagecheckerboard="0"
-     inkscape:deskcolor="#d1d1d1"
-     showgrid="false"
-     inkscape:zoom="1.5889328"
-     inkscape:cx="-20.768657"
-     inkscape:cy="266.53109"
-     inkscape:window-width="1920"
-     inkscape:window-height="991"
-     inkscape:window-x="-9"
-     inkscape:window-y="-9"
-     inkscape:window-maximized="1"
-     inkscape:current-layer="svg4" />
+
   <path
      d="m 0.5,0 v 149.352 l 12.492,12.488 h 340.77 l 12.492,12.488 V 323.68 l -12.492,12.488 H 12.992 L 0.5,348.655 V 506"
      stroke="#353535"
