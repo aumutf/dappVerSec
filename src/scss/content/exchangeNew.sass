@@ -412,18 +412,25 @@ body
 .blExc-inf
    display: flex
    flex-direction: column
-   padding-bottom: 27px
+   //padding-bottom: 27px
    +adaptiv-valueN("padding-bottom", 27, 27)
    +adaptiv-valueN("padding-top", 27, 27)
-   padding-top: 27px
+   //padding-top: 27px
    &-title
-      font-size: 16px
+      +adaptiv-valueN("font-size", 16, 16)
       line-height: 1
-
-      margin-bottom: 17px
       +adaptiv-valueN("margin-bottom", 17, 17)
+
+      text-overflow: ellipsis
+      +adaptiv-valueN("height", 16, 16)
+      overflow: hidden
+      display: -webkit-box
+      -webkit-line-clamp: 1
+      -webkit-box-orient: vertical
+      position: relative
+
    &-val
-      font-size: 14px
+      //font-size: 14px
       +adaptiv-valueN("font-size", 14, 14)
       line-height: 1
       color: $grey9e
@@ -431,18 +438,26 @@ body
 
 .blExc-inf-row
    display: grid
-   grid-template-columns: 220px 130px auto 90px
+   grid-template-columns: 220px 132px 200px 115px
+   //grid-template-columns: minmax(220px, 220px) minmax(130px, 130px) auto minmax(90px, 90px)
    
-   //+adaptiv-valueN("xx", 220, 220)
+   +adaptiv-valueN("xx", 132, 132)
    //+adaptiv-valueN("xx1", 130, 130)
    //+adaptiv-valueN("xx2", 900, 90)
-   column-gap: 32px
-   @media screen and (min-width: 768px) and (max-width: 1440px)
-      grid-template-columns: calc(220px/1.5 + calc(220 - 220/1.4) * ((100vw - 768px) / 672)) calc(130px/1.5 + calc(130 - 130/1.4) * ((100vw - 768px) / 672)) auto calc(900px/1.5 + calc(900 - 900/1.4) * ((100vw - 768px) / 672))
+   //column-gap: 32px
+   +adaptiv-valueN("column-gap", 32, 32)
+   @media screen and (min-width: 768px) and (max-width: 1439px)
+      grid-template-columns: minmax(calc(220px/1.5 + calc(220 - 220/1.5) * ((100vw - 768px) / 672)), calc(220px/1.5 + calc(220 - 220/1.5) * ((100vw - 768px) / 672))) minmax(calc(132px/1.5 + calc(132 - 132/1.5) * ((100vw - 768px) / 672)), calc(132px/1.5 + calc(132 - 132/1.5) * ((100vw - 768px) / 672))) minmax(calc(200px/1.5 + calc(200 - 200/1.5) * ((100vw - 768px) / 672)), calc(200px/1.5 + calc(200 - 200/1.5) * ((100vw - 768px) / 672))) minmax(calc(900px/1.5 + calc(900 - 900/1.5) * ((100vw - 768px) / 672)), calc(900px/1.5 + calc(900 - 900/1.5) * ((100vw - 768px) / 672)))
 
    
    &:not(:last-child)
       border-bottom: 1px solid $grey2f
+
+   //&:first-child
+      width: 220px
+   //&:nth-child(2)
+      width: 130px
+   
 
 .blExc-inf-wrap
    display: flex
