@@ -97,10 +97,10 @@ $cont-width: 1240px
   $maxWidth: 1440
 
   $addSize: $pcSize - $mobSize
-  $addSize1: calc(#{$pcSize} - #{$pcSize}/1.5)
+  $addSize1: calc(#{$pcSize} - #{$pcSize}/1.6)
   $addMobSize: calc(#{$addSize} + #{$addSize}*0.7)
   
   #{$property}: $pcSize+px
   
   @media screen and (min-width: 768px) and (max-width: 1439px)
-    #{$property}: calc(#{$pcSize}px/1.5 + #{$addSize1} * ((100vw - 768px) / #{$maxWidth - 768}))
+    #{$property}: calc(#{$pcSize}px/1.6 + #{$addSize1} * ((100vw - 768px) / #{$maxWidth - 768}))
