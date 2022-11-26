@@ -12,6 +12,12 @@ body
    .container
       padding: 0
       max-width: 1200px!important
+      +tablet
+         padding-left: 20px
+         padding-right: 20px
+      @media screen and (min-width: 1200px)
+         padding-left: 0
+         padding-right: 0
 
    h2.title
       font-size: 24px
@@ -71,10 +77,8 @@ body
       z-index: 10
       
    &__r
-      //width: 310px
       +adaptiv-valueN("width", 305, 305)
       +adaptiv-valueN("min-width", 305, 305)
-      //min-width: 310px
       z-index: 12
       position: relative
 
@@ -87,9 +91,7 @@ body
       top: 0
       left: 0
       display: inline-block
-      //background: linear-gradient(166.18deg, rgba(49, 17, 22, 0.63) -38.64%, rgba(15, 20, 26, 0) 133.18%)
       background: linear-gradient(148.18deg,rgba(49,17,22,.63) -38.64%,rgba(15,20,26,0) 60.18%)
-      //backdrop-filter: blur(4px)
       border-top-left-radius: 40px
       width: 100%
       height: 700px
@@ -127,14 +129,11 @@ body
    width: 100%
    height: 520px
    +adaptiv-valueN("height", 520, 520)
-   //background: linear-gradient(166.47deg, rgba(49, 17, 22, 0.63) -38.97%, rgba(15, 20, 26, 0) 132.78%)
-   //backdrop-filter: blur(4px)
    &::before
       content: ""
       display: inline-block
       width: 100%
       height: 100%
-      //box-shadow: 0px -185px 65px -20px rgb(217 217 217 / 84%) inset
       box-shadow: 0px -137px 65px 40px rgb(15 20 26 / 93%) inset
       filter: blur(14px)
 
@@ -194,8 +193,6 @@ body
    +adaptiv-valueN("padding-right", 13, 13)
    +adaptiv-valueN("padding-bottom", 12, 12)
    +adaptiv-valueN("padding-left", 20, 20)
-   //background: blue
-   //height: 120px
    position: absolute
    right: 0
    top: 0   
@@ -288,7 +285,6 @@ body
    position: absolute
    top: 100%
    left: 0
-   //background: red
 
 
    &::-webkit-scrollbar 
@@ -412,10 +408,8 @@ body
 .blExc-inf
    display: flex
    flex-direction: column
-   //padding-bottom: 27px
    +adaptiv-valueN("padding-bottom", 27, 27)
    +adaptiv-valueN("padding-top", 27, 27)
-   //padding-top: 27px
    &-title
       +adaptiv-valueN("font-size", 16, 16)
       line-height: 1
@@ -430,7 +424,6 @@ body
       position: relative
 
    &-val
-      //font-size: 14px
       +adaptiv-valueN("font-size", 14, 14)
       line-height: 1
       color: $grey9e
@@ -444,7 +437,6 @@ body
    //+adaptiv-valueN("xx", 132, 132)
    //+adaptiv-valueN("xx1", 130, 130)
    //+adaptiv-valueN("xx2", 900, 90)
-   //column-gap: 32px
    +adaptiv-valueN("column-gap", 32, 32)
    @media screen and (min-width: 768px) and (max-width: 1439px)
       grid-template-columns: minmax(calc(220px/1.5 + calc(220 - 220/1.5) * ((100vw - 768px) / 672)), calc(220px/1.5 + calc(220 - 220/1.5) * ((100vw - 768px) / 672))) minmax(calc(132px/1.5 + calc(132 - 132/1.5) * ((100vw - 768px) / 672)), calc(132px/1.5 + calc(132 - 132/1.5) * ((100vw - 768px) / 672))) minmax(calc(200px/1.5 + calc(200 - 200/1.5) * ((100vw - 768px) / 672)), calc(200px/1.5 + calc(200 - 200/1.5) * ((100vw - 768px) / 672))) minmax(calc(900px/1.5 + calc(900 - 900/1.5) * ((100vw - 768px) / 672)), calc(900px/1.5 + calc(900 - 900/1.5) * ((100vw - 768px) / 672)))
@@ -458,7 +450,6 @@ body
    display: flex
    flex-direction: column
    
-   //margin-bottom: 40px
    +adaptiv-valueN("margin-bottom", 40, 40)
 
 //---------------------------------------- blExc-abt
@@ -469,36 +460,29 @@ body
    color: $greydb
 
    p
-      //margin-bottom: 20px
       +adaptiv-valueN("margin-bottom", 20, 20)
 
    h2.title
-      //margin-bottom: 16px
       +adaptiv-valueN("margin-bottom", 16, 16)
 
 //---------------------------------------- component bl-pst -- блок поста новый дизайн
 .bl-pst
-   //width: 420px
-   //min-width: 420px
-   //max-width: 420px
    +adaptiv-valueN("width", 420, 420)
    +adaptiv-valueN("min-width", 420, 420)
    +adaptiv-valueN("max-width", 420, 420)
    &__top
       display: flex
       justify-content: space-between
-      //margin-bottom: 13px
       +adaptiv-valueN("margin-bottom", 10, 10)
    &__cntr
-      //margin-bottom: 13px
       +adaptiv-valueN("margin-bottom", 11, 11)
    &__btm
       display: flex
       justify-content: space-between
+      align-items: flex-start
 
 
    h3.title
-      //font-size: 17px
       +adaptiv-valueN("font-size", 17, 17)
       line-height: 1.45
       font-weight: 700
@@ -512,13 +496,10 @@ body
       -webkit-line-clamp: 2
       -webkit-box-orient: vertical
       position: relative
-      //margin-right: 30px
       +adaptiv-valueN("margin-right", 7, 7)
-      //width: 68%
       +adaptiv-valueN("width", 240, 240)
 
    &-date
-      //font-size: 8px
       +adaptiv-valueN("font-size", 8, 8)
       line-height: 0.75
       color: $grey93
@@ -526,13 +507,11 @@ body
       +adaptiv-valueN("margin-top", 10, 10)
    &-text
       color: $grey93
-      //font-size: 12px
       +adaptiv-valueN("font-size", 12, 12)
       line-height: 1.45
       font-weight: 700
 
       text-overflow: ellipsis
-      //height: 34px
       +adaptiv-valueN("height", 34, 34)
       overflow: hidden
       display: -webkit-box
@@ -541,22 +520,16 @@ body
       position: relative
    
 .bl-pst-smp
-   //width: 305px
-   //min-width: 305px
-   //max-width: 305px
    +adaptiv-valueN("width", 305, 305)
    +adaptiv-valueN("min-width", 305, 305)
    +adaptiv-valueN("max-width", 305, 305)
 
 .bl-pst-wimg
    .bl-pst-img
-      //border-radius: 7px
       +adaptiv-valueN("max-width", 305, 305)
       +adaptiv-valueN("border-radius", 7, 7)
-      //height: 105px
       +adaptiv-valueN("height", 105, 105)
       +adaptiv-valueN("max-height", 105, 105)
-      //max-height: 105px
       overflow: hidden
       img
          width: 100%
@@ -567,27 +540,20 @@ body
 .pp-itms
    display: flex
    .pp-itm:not(:last-child)
-      //margin-right: 20px
       +adaptiv-valueN("margin-right", 20, 20)
 
 .pp-itm
-   //font-size: 12px
    +adaptiv-valueN("font-size", 12, 12)
    line-height: 1.45
    color: $grey93
    display: flex
    align-items: center
    .svg-icon
-      //width: 13px
-      //height: 13px
-      //min-width: 13px
-      //min-height: 13px
       +adaptiv-valueN("width", 13, 13)
       +adaptiv-valueN("height", 13, 13)
       +adaptiv-valueN("min-width", 13, 13)
       +adaptiv-valueN("min-height", 13, 13)
       display: flex
-      //margin-right: 6px
       +adaptiv-valueN("margin-right", 6, 6)
       fill: $redAb
    .svg-cmt
@@ -597,7 +563,6 @@ body
    +adaptiv-valueN("font-size", 12, 12)
 
 .pp-itm-val
-   //max-width: 38px
    +adaptiv-valueN("max-width", 38, 38)
    -webkit-line-clamp: 1
    display: -webkit-box
@@ -611,7 +576,6 @@ body
    flex-wrap: wrap
    justify-content: flex-end
    .tag-itm:not(:last-child)
-      //margin-right: 10px
       +adaptiv-valueN("margin-right", 11, 11)
 
 .tag-itm
@@ -620,17 +584,13 @@ body
    line-height: 1.45
    color: #FFFFFF
    background-color: #17202B
-   //padding: 1px 6px
    +adaptiv-valueN("padding-left", 6, 6)
    +adaptiv-valueN("padding-right", 6, 6)
-   //border-radius: 3px
    +adaptiv-valueN("border-radius", 3, 3)
-   //height: 18px
    +adaptiv-valueN("height", 18, 18)
    display: flex
    align-items: center
 
-   //max-width: 70px
    +adaptiv-valueN("max-width", 70, 70)
    -webkit-line-clamp: 1
    display: -webkit-box
@@ -639,15 +599,13 @@ body
    text-overflow: ellipsis
 
 
-//bl-rect вид прямоугольный
+//----------------------------------------------------bl-rect вид прямоугольный
 .bl-rect
-   //padding: 13px 26px 17px 32px
    +adaptiv-valueN("padding-top", 15, 15)
    +adaptiv-valueN("padding-right", 26, 26)
    +adaptiv-valueN("padding-bottom", 17, 17)
    +adaptiv-valueN("padding-left", 32, 32)
    position: relative
-   //max-height: 147px
    +adaptiv-valueN("max-height", 147, 147)
    background-size: contain
    background-position: center
@@ -672,9 +630,6 @@ body
 
 .bl-rect-sml
    padding: 0
-   //width: 304px
-   //min-width: 304px
-   //max-width: 304px
    +adaptiv-valueN("width", 304, 304)
    +adaptiv-valueN("min-width", 304, 304)
    +adaptiv-valueN("max-width", 304, 304)
@@ -687,14 +642,12 @@ body
       +adaptiv-valueN("padding", 20, 20)
       width: 100%
    &>div:not(:last-child)
-      //margin-bottom: 26px
       +adaptiv-valueN("margin-bottom", 26, 26)
 
 .blExc-col-thd
    align-items: center
    position: relative
    .bl-pst
-      //margin: 20px
       +adaptiv-valueN("margin", 20, 20)
       padding: 0!important
 
@@ -709,8 +662,6 @@ body
       stroke-width: 1
 
    .blExc-col-thd1
-      //padding: 16px 0 16px 0px
-      //margin: 0!important
       +adaptiv-valueN("padding-top", 0, 0)
       +adaptiv-valueN("padding-right", 0, 0)
       +adaptiv-valueN("padding-bottom", 16, 16)
@@ -723,7 +674,6 @@ body
       +adaptiv-valueN("margin-left", 14, 14)
 
    .blExc-col-thd2
-      //padding: 14px 8px 20px
       +adaptiv-valueN("margin-top", 14, 14)
       +adaptiv-valueN("margin-right", 8, 8)
       +adaptiv-valueN("margin-bottom", 20, 20)
@@ -731,13 +681,11 @@ body
 
 .blExc-col-scn>div.bl-rect-bg
    position: relative
-   //padding: 36px 42px 30px 33px!important
 
    +adaptiv-valueN("padding-top", 36, 36)
    +adaptiv-valueN("padding-right", 42, 42)
    +adaptiv-valueN("padding-bottom", 30, 30)
    +adaptiv-valueN("padding-left", 33, 33)
-   //margin-bottom: 20px!important
    +adaptiv-valueN("margin-bottom", 20, 20)
    .svg-icon.brdFrame
       position: absolute
@@ -749,7 +697,6 @@ body
       stroke-width: 1
       stroke: $grey35
    .bl-pst-text
-      //margin-right: 45px
       +adaptiv-valueN("margin-right", 45, 45)
    .tags-itms
       margin-right: 0
@@ -774,57 +721,43 @@ body
 
 .bl-lr
    display: flex
-   //width: 304px
-   //min-width: 304px
-   //height: 134px
-   //min-height: 134px
    +adaptiv-valueN("width", 304, 304)
    +adaptiv-valueN("min-width", 304, 304)
    +adaptiv-valueN("max-width", 304, 304)
    +adaptiv-valueN("height", 134, 134)
    +adaptiv-valueN("min-height", 134, 134)
-   //padding: 5px 33px
    &__l
       display: flex
       flex-direction: column
-      //margin-right: 4px
       +adaptiv-valueN("margin-right", 4, 4)
       h3.title
          width: unset!important
          line-height: 0.8
          margin-left: 0
 
-         //height: 18px
          +adaptiv-valueN("height", 16, 16)
          -webkit-line-clamp: 1
          margin-right: 0px
 
       .bl-pst-text
-         //height: 53px
          +adaptiv-valueN("height", 53, 53)
          -webkit-line-clamp: 3
       .bl-pst__cntr
-         //margin-bottom: 24px
          +adaptiv-valueN("margin-bottom", 24, 24)
       .bl-pst__btm .pp-itms:not(:last-child)
-         //margin-bottom: 10px!important
          +adaptiv-valueN("margin-bottom", 10, 10)
       .pp-itm
          line-height: 1
 
    &__r
-      //min-width: 134px
       +adaptiv-valueN("min-width", 134, 134)
       +adaptiv-valueN("max-width", 134, 134)
-      //max-width: 134px
    .bl-pst__top
-      //margin-bottom: 8px
       +adaptiv-valueN("margin-bottom", 8, 8)
    .bl-pst__btm
       flex-direction: column
       margin-top: auto
       .pp-itms:not(:last-child)
-         //margin-bottom: 4px
          +adaptiv-valueN("margin-bottom", 4, 4)
 
 .bl-lr-img
@@ -841,14 +774,11 @@ body
    
 .cyItm
    color: $green64
-   //margin-right: 3px
    +adaptiv-valueN("margin-right", 3, 3)
 
 .percentVal
-   //padding-left: 10px
    +adaptiv-valueN("padding-left", 10, 10)
    +adaptiv-valueN("margin-left", -2, -2)
-   //margin-left: -2px
 
 .percentVal--up
    color: $green64
@@ -858,18 +788,15 @@ body
 .bl-g3
    display: grid
    grid-template-columns: repeat(3, 1fr)
-   //column-gap: 10px
-   //row-gap: 10px
 
 
-// trapezoid
+// ---------------------------------------------------------------trapezoid
 .blExc-fgr-val
    position: relative
    &::after, &::before
       content: ""
       display: inline-block
       position: absolute
-      //top: 14px
       +adaptiv-valueN("top", 14, 14)
 
       border-bottom: 2px solid #3E5064
@@ -879,16 +806,13 @@ body
       +adaptiv-valueN("border-left-width", 4, 4)
       +adaptiv-valueN("border-right-width", 4, 4)
       height: 0px
-      //width: 26px
       +adaptiv-valueN("width", 26, 26)
       
 
    &::after
-      //left: -10px
       +adaptiv-valueN("left", -10, -10)
       transform: rotate(90deg)
    &::before
-      //right: -10px  
       +adaptiv-valueN("right", -10, -10)
       transform: rotate(-90deg)    
 
@@ -898,7 +822,6 @@ body
    display: flex
    justify-content: space-between
    align-items: flex-end
-   //margin-bottom: 20px
    +adaptiv-valueN("margin-bottom", 20, 20)
    position: relative
    &::after
@@ -906,31 +829,26 @@ body
       display: inline-block
       position: absolute
       left: 0
-      //top: 19px
       +adaptiv-valueN("top", 19, 19)
       width: 100%
       background-image: url(../img/icons/blExc-divide.svg)
       background-repeat: no-repeat
       background-size: contain
-      //height: 50px
       +adaptiv-valueN("height", 50, 50)
    h3.title
       text-transform: uppercase
       line-height: 1.5
 
       text-overflow: ellipsis
-      //height: 20px
       +adaptiv-valueN("height", 20, 20)
       overflow: hidden
       display: -webkit-box
       -webkit-line-clamp: 1
       -webkit-box-orient: vertical
       position: relative
-      //width: 30%
       +adaptiv-valueN("width", 93, 93)
    .btn-grad
       text-overflow: ellipsis
-      //height: 18px
       +adaptiv-valueN("height", 18, 18)
       overflow: hidden
       display: -webkit-box
@@ -938,7 +856,6 @@ body
       -webkit-box-orient: vertical
       position: relative
       width: 100%
-      //padding: 3px
       +adaptiv-valueN("padding-top", 3, 3)
       +adaptiv-valueN("padding-right", 3, 3)
       +adaptiv-valueN("padding-bottom", 3, 3)
@@ -949,10 +866,8 @@ body
 
 .bl2col__r
    .bl-pst-smp
-      //padding-top: 25px
       +adaptiv-valueN("padding-top", 25, 25)
       +adaptiv-valueN("padding-bottom", 25, 25)
-      //padding-bottom: 25px
       .tags-itms
          margin-right: 0
          .tag-itm
@@ -977,7 +892,6 @@ body
 
 .wide-line
    position: relative
-   //margin-bottom: 25px
    +adaptiv-valueN("margin-bottom", 25, 25)
    &::after
       content: ""
@@ -994,11 +908,8 @@ body
       width: 100%
    &-wrap
       width: 100%
-      //height: 218px
       +adaptiv-valueN("height", 218, 218)
       +adaptiv-valueN("max-height", 218, 218)
-      //max-height: 218px
-      //margin-bottom: 17px
       +adaptiv-valueN("margin-bottom", 17, 17)
       img
          width: 100%
@@ -1010,22 +921,16 @@ body
    padding-top: 0
    padding-bottom: 0
    .img-wrap   
-      //width: 202px
       +adaptiv-valueN("width", 202, 202)
       +adaptiv-valueN("max-width", 202, 202)
-      //max-width: 202px
-      //height: 110px
       +adaptiv-valueN("height", 110, 110)
       +adaptiv-valueN("max-height", 110, 110)
-      //max-height: 110px
       img
          width: 100%
          height: 100%
          object-fit: cover
    &-l
-      //width: 202px
       +adaptiv-valueN("width", 202, 202)
-      //height: 110px
       +adaptiv-valueN("height", 110, 110)
       position: relative
 
@@ -1042,8 +947,9 @@ body
       margin-right: 0
 
       &:not(:last-child)
-         //margin-bottom: 10px
          +adaptiv-valueN("margin-bottom", 10, 10)
+      //&:not(:first-child,:nth-child(2))
+         //display: none
 
    .pp-itms
       margin-top: auto
@@ -1052,38 +958,28 @@ body
    .pp-itm
       margin-right: 0
       &:not(:last-child)
-         //margin-bottom: 5px
          +adaptiv-valueN("margin-bottom", 5, 5)
 
 .youtube-btn
    display: flex
    justify-content: center
    align-items: center
-   //width: 80px
-   //min-width: 80px
    +adaptiv-valueN("width", 80, 80)
    +adaptiv-valueN("min-width", 80, 80)
    +adaptiv-valueN("height", 80, 80)
    +adaptiv-valueN("min-height", 80, 80)
-   //height: 80px
-   //min-height: 80px
-   border: 12px solid $bgcolorN
-   +adaptiv-valueN("border-width", 12, 12)
+   border: 6px solid $bgcolorN
+   +adaptiv-valueN("border-width", 6, 6)
    background-color: $redAb
    border-radius: 50%
    position: absolute
-   //top: 15px
    +adaptiv-valueN("top", 15, 15)
    +adaptiv-valueN("right", -40, -40)
-   //right: -40px
    cursor: pointer
 
    .svg-icon
-      //width: 20px
-      +adaptiv-valueN("width", 20, 20)
-      //height: 40px
+      +adaptiv-valueN("width", 24, 24)
       +adaptiv-valueN("height", 40, 40)
-      //margin-left: 10px
       +adaptiv-valueN("margin-left", 10, 10)
       fill: $greycf
       
@@ -1092,7 +988,6 @@ body
          filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))
       
 .btn-grad
-   //font-size: 8px
    +adaptiv-valueN("font-size", 8, 8)
    font-weight: 700
    line-height: 1.7
@@ -1101,7 +996,6 @@ body
    text-transform: uppercase
    text-align: center
    
-   //padding: 3px 27px
    +adaptiv-valueN("padding-top", 3, 3)
    +adaptiv-valueN("padding-bottom", 3, 3)
    +adaptiv-valueN("padding-left", 27, 27)
@@ -1151,7 +1045,6 @@ body
       content: ""
       position: absolute
       right: 0
-      //width: 5px
       +adaptiv-valueN("width", 5, 5)
       height: 1px
       background: #B00F38
@@ -1164,7 +1057,6 @@ body
 
 table.tbl
    font-family: Eurostile Italic
-   //font-size: 10px
    +adaptiv-valueN("font-size", 10, 10)
    letter-spacing: 0.2em
    line-height: 1
@@ -1182,7 +1074,6 @@ table.tbl
       box-sizing: content-box
       word-break: break-word
       line-height: 1.5!important   
-      //padding: 15px 3px
       +adaptiv-valueN("padding-top", 15, 15)
       +adaptiv-valueN("padding-bottom", 15, 15)
       +adaptiv-valueN("padding-left", 3, 3)
@@ -1193,14 +1084,11 @@ table.tblExc
    .num-col
       color: $redDf
    .percentVal, .cyItm, .price-col
-      //font-size: 12px
       +adaptiv-valueN("font-size", 12, 12)
    .percentVal
-      //padding-left: 10px
       +adaptiv-valueN("padding-left", 10, 10)
       color: $fontcolorN
    .cyItm
-      //margin-right: 5px
       +adaptiv-valueN("margin-right", 5, 5)
    .name-col
       text-overflow: ellipsis
@@ -1208,7 +1096,6 @@ table.tblExc
       display: -webkit-box
       -webkit-line-clamp: 1
       -webkit-box-orient: vertical
-      //width: 110px
       +adaptiv-valueN("width", 110, 110)
    .price-col
       text-align: right
@@ -1223,7 +1110,6 @@ table.tblExc
    &-frst
       +adaptiv-valueN("margin-right", 34, 34)
       .bl-pst:not(:last-child)
-         //margin-bottom: 33px
          +adaptiv-valueN("margin-bottom", 33, 33)
 
 .line-up
@@ -1239,13 +1125,10 @@ table.tblExc
       background-image: url(../img/icons/line_up.svg)
       background-size: contain
       background-repeat: no-repeat
-      //width: 310px
       +adaptiv-valueN("width", 310, 310)
       +adaptiv-valueN("height", 36, 36)
-      //height: 36px
       display: inline-block
    &::before
-      //top: 6px
       +adaptiv-valueN("top", 6, 6)
    &::after
       bottom: 0
@@ -1260,7 +1143,6 @@ table.tblExc
    box-shadow: 0 -175px 52px -52px rgb(15 20 26 / 97%) inset
 
 .excerptN 
-   //height: 1600px
    +adaptiv-valueN("height", 1600, 1600)
    position: relative
    transition-property: height
@@ -1272,10 +1154,8 @@ table.tblExc
 
 .hide-text-wrapN
    position: relative
-   //margin-bottom: 35px
    +adaptiv-valueN("margin-bottom", 35, 35)
    +adaptiv-valueN("margin-top", 25, 25)
-   //margin-top: 25px
 
 .hide-text-wrapN .hide-text:after
    content: ""
@@ -1316,7 +1196,6 @@ table.tblExc
 
 
 .btnExc-more
-   //font-size: 20px
    +adaptiv-valueN("font-size", 20, 20)
    font-weight: 700
    line-height: 2
@@ -1327,9 +1206,7 @@ table.tblExc
    background: transparent
    cursor: pointer
    position: absolute
-   //bottom: 10px
    +adaptiv-valueN("bottom", 10, 10)
-   //left: 30px
    +adaptiv-valueN("left", 30, 30)
 
    &::after
@@ -1344,32 +1221,22 @@ table.tblExc
       +adaptiv-valueN("border-bottom-width", 4, 4)
       +adaptiv-valueN("border-left-width", 4, 4)
       border-color: transparent transparent $redDf transparent
-      //margin-left: 5px
-      //margin-top: 5px
       +adaptiv-valueN("margin-left", 5, 5)
       +adaptiv-valueN("margin-top", 5, 5)
 
 .blExcAn
-   //margin-top: 60px
    +adaptiv-valueN("margin-top", 60, 60)
    +adaptiv-valueN("margin-bottom", 206, 206)
-   //margin-bottom: 206px
 
 
 //---------------------------------------- SOCIALS
 .social
-   //width: 12px
-   //min-width: 12px
    +adaptiv-valueN("width", 12, 12)
    +adaptiv-valueN("min-width", 12, 12)
-   //height: 12px
-   //min-height: 12px
    +adaptiv-valueN("height", 12, 12)
    +adaptiv-valueN("min-height", 12, 12)
-   //margin-right: 10px
    +adaptiv-valueN("margin-right", 10, 10)
    +adaptiv-valueN("margin-bottom", 5, 5)
-   //margin-bottom: 5px
    &-wrap
       display: flex
       flex-wrap: wrap
@@ -1397,7 +1264,6 @@ table.tblExc
       box-shadow: none
 
 .blExc-col-scn>div.bl-lr-wrap
-   //padding: 0 32px 0 33px!important
    +adaptiv-valueN("padding-top", 0, 0)
    +adaptiv-valueN("padding-right", 32, 32)
    +adaptiv-valueN("padding-bottom", 0, 0)
