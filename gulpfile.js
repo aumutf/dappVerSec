@@ -36,6 +36,7 @@ import { scssDapp } from "./gulp/tasks/scssDapp.js";
 import { scssCrypto } from "./gulp/tasks/scssCrypto.js";
 import { scssExchange } from "./gulp/tasks/scssExchange.js";
 import { scssExchangeNew } from "./gulp/tasks/scssExchangeNew.js";
+import { scssFeed } from "./gulp/tasks/scssFeed.js";
 import { scssNewsAll } from "./gulp/tasks/scssNewsAll.js";
 import { scssAnalyticaAll } from "./gulp/tasks/scssAnalyticaAll.js";
 import { scssRank } from "./gulp/tasks/scssRank.js";
@@ -71,6 +72,7 @@ function watcher() {
   gulp.watch(path.watch.scssCrypto, scssCrypto)
   gulp.watch(path.watch.scssExchange, scssExchange)
   gulp.watch(path.watch.scssExchangeNew, scssExchangeNew)
+  gulp.watch(path.watch.scssFeed, scssFeed)
   gulp.watch(path.watch.scssNewsAll, scssNewsAll)
   gulp.watch(path.watch.scssAnalyticaAll, scssAnalyticaAll)
   gulp.watch(path.watch.scssRank, scssRank)
@@ -90,7 +92,7 @@ const mainTasks = gulp.series(fonts, gulp.parallel(
   scssPostItem, scssNewsPost,scssTables, scssSearch, scssGallery, scssProfile, scssExternalNewsAll,
   scssTags, scssBlockchain, scssBlockchainCat, scssBlockchainList,
   scssPrivacyPolicy, scssTermsConditions, scssRegister, scssSettings,
-  scssDappsAll, scssDapp, scssCrypto, scssNewsAll, scssAnalyticaAll, scssRank, scssExchange, scssExchangeNew, js, images, svgSpriteTask,
+  scssDappsAll, scssDapp, scssCrypto, scssNewsAll, scssAnalyticaAll, scssRank, scssExchange, scssExchangeNew, scssFeed, js, images, svgSpriteTask,
   assets));
 
 

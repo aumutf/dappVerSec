@@ -45,6 +45,7 @@ export const path = {
     scssAnalyticaAll: `${srcFolder}/scss/styleAnalyticaAll.scss`,
     scssExchange: `${srcFolder}/scss/styleExchange.scss`,
     scssExchangeNew: `${srcFolder}/scss/styleExchangeNew.scss`,
+    scssFeed: `${srcFolder}/scss/styleFeed.scss`,
     html: `${srcFolder}/*.html`,
     files: `${srcFolder}/files/**/*.*`
   },
@@ -75,6 +76,7 @@ export const path = {
     scssCrypto: `${srcFolder}/scss/**/*.scss`,
     scssExchange: `${srcFolder}/scss/**/*.scss`,
     scssExchangeNew: `${srcFolder}/scss/**/*.scss`,
+    scssFeed: `${srcFolder}/scss/**/*.scss`,
     scssNewsAll: `${srcFolder}/scss/**/*.scss`,
     scssAnalyticaAll: `${srcFolder}/scss/**/*.scss`,
     html: `${srcFolder}/**/*.html`,
