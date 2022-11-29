@@ -7,6 +7,7 @@ $wLogoMini: 20
 .ranktable-wrap
    overflow-x: auto
    scrollbar-width: none
+   position: relative
    &::-webkit-scrollbar
       display: none
 
@@ -515,3 +516,8 @@ table.dataTable thead
    .sorting, .sorting_asc, .sorting_desc
       &::after
          right: -7px
+
+div.dataTables_processing
+   background: transparent
+   top: 5px
+   left: 55px
