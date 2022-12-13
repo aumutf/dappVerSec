@@ -6,11 +6,26 @@ $wLogoMini: 20
 
 .ranktable-wrap
    overflow-x: auto
-   scrollbar-width: none
    position: relative
    padding-top: 25px
-   &::-webkit-scrollbar
-      display: none
+   //&::-webkit-scrollbar
+      //display: none
+   &::-webkit-scrollbar        
+      width: 3px  /* ширина всей полосы прокрутки */
+      height: 5px
+
+   &::-webkit-scrollbar-track 
+      background: #242424        /* цвет зоны отслеживания */
+      border-radius: 3px
+
+   &::-webkit-scrollbar-thumb 
+      background-color: #2D2D2D    /* цвет бегунка */
+      border-radius: 3px
+      border: 0px solid #242424  /* отступ вокруг бегунка */
+
+   &
+      scrollbar-width: thin          /* "auto" или "thin" */
+      scrollbar-color: #2D2D2D #242424   /* цвет бегунка и зоны отслеживания */
 
    div.dataTables_processing
       background: rgba(0,0,0, .3)
@@ -351,6 +366,7 @@ table.dataTable thead>tr>th, td
          +tablet
             justify-content: flex-start
       .th-in
+         display: flex
          white-space: unset
          height: unset
          text-overflow: unset
