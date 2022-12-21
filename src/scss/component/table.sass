@@ -399,65 +399,65 @@ table.dataTable thead>tr>th, td
 
    &.cell-price
       min-width: 77px
-      max-width: 77px
-      width: 77px!important
+      //max-width: 77px
+      //width: 77px!important
       padding-left: 10px
       padding-right: 10px
 
    &.cell-index
       min-width: 73px //77
-      max-width: 73px
-      width: 73px!important
+      //max-width: 73px
+      //width: 73px!important
       padding-left: 10px
       padding-right: 10px  
 
    &.cell-marketCap 
       min-width: 120px //125
-      max-width: 120px
-      width: 120px!important
+      //max-width: 120px
+      //width: 120px!important
       padding-left: 10px
       padding-right: 10px  
 
    &.cell-volumeUp
       min-width: 118px //116
-      max-width: 118px
-      width: 118px!important
+      //max-width: 118px
+      //width: 118px!important
       padding-left: 10px
       padding-right: 10px  
 
    &.cell-circulatingSupply
       min-width: 150px
-      max-width: 150px
-      width: 150px!important
+      //max-width: 150px
+      //width: 150px!important
       padding-left: 10px
       padding-right: 10px  
 
    &.cell-chart
       min-width: 113px
-      max-width: 113px
-      width: 113px!important
+      //max-width: 113px
+      //width: 113px!important
       padding-left: 10px
       padding-right: 10px    
 
    &.cell-users
       min-width: 62px //66
-      max-width: 62px
-      width: 62px!important
+      //max-width: 62px
+      //width: 62px!important
       padding-left: 10px
       padding-right: 10px
 
    &.cell-blockchain  
       min-width: 119px //124
-      max-width: 119px
-      width: 119px!important
+      //max-width: 119px
+      //width: 119px!important
       padding-left: 10px
       padding-right: 10px
       text-align: left
 
    &.cell-lotsOfBlockchain  
       min-width: 95px //71
-      max-width: 95px
-      width: 95px!important
+      //max-width: 95px
+      //width: 95px!important
       padding-left: 10px
       padding-right: 10px
       text-align: right
@@ -553,3 +553,48 @@ table.dataTable thead
 //.dataTables_scrollHeadInner
    //table.ranktable tr:last-child
       //border-bottom: 0
+
+
+$pointW: 9px
+.post-table
+   border: none
+   width: 800px
+   td
+      border: 1px solid #2F2F30
+      padding: 36px 18px
+      font-size: 20px
+      line-height: 2
+      font-family: Eurostile-Reg
+      font-weight: 400
+
+   td:first-child
+      border-left-color: transparent
+      
+   td:last-child
+      border-right-color: transparent
+   tr:last-child
+      td
+         border-bottom-color: transparent
+   td
+      position: relative  
+      &::before
+         content: ""
+         width: $pointW
+         height: $pointW
+         background: #2F2F30
+         display: inline-block
+         border-radius: 50%
+         position: absolute
+         right: 0
+         top: 0
+         margin-top: calc(-#{$pointW} / 2)
+         margin-right: calc(-#{$pointW} / 2)
+   td:last-child
+      &::before
+         display: none
+
+   li
+      margin-left: calc(5px + 18px)
+      padding-left: 40px
+      &::marker
+         color: #B00F38

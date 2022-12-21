@@ -671,3 +671,79 @@ ul
 
 .svg-icon
   fill: #FFF
+
+$redB0: #B00F38
+$pointW: 8px
+$fontcolorN: #FFFFFF
+$bgcolorN: #0F141A
+
+ul.ulN, .post .post-text ul.ulN
+  display: flex
+  flex-direction: column
+  li
+    margin-bottom: 13px
+    position: relative
+    display: flex
+    align-items: center
+    color: $fontcolorN
+    &::before
+      content: ""
+      display: flex
+      margin-right: 23px
+      width: $pointW
+      height: $pointW
+      min-width: $pointW
+      min-height: $pointW      
+      border-radius: 50%
+      background-color: $redB0
+
+.post .post-text ul.ulN
+  list-style: none
+  margin-left: 0
+
+.lineVert
+  position: relative
+  &::after
+    content: ""
+    position: absolute
+    top: -23px
+    left: 3px
+    //width: 3px
+    height: 100%
+    border-width: 2px
+    border-style: solid
+    -webkit-border-image: -webkit-gradient(linear, 0 100%, 0 0, from(rgba(47, 47, 48, 1)), to(rgba(47, 47, 48, 0))) 1 100%
+    -webkit-border-image: -webkit-linear-gradient(bottom, rgba(47, 47, 48, 1), rgba(47, 47, 48, 0)) 1 100%
+    -moz-border-image: -moz-linear-gradient(bottom, rgba(47, 47, 48, 1), rgba(47, 47, 48, 0)) 1 100%  
+    -o-border-image: -o-linear-gradient(bottom, rgba(47, 47, 48, 1), rgba(47, 47, 48, 0)) 1 100%
+    border-image: linear-gradient(to top, rgba(47, 47, 48, 1), rgba(47, 47, 48, 0)) 1 100%
+    border-right: 0
+
+
+.btn-grad-brd
+  //background: linear-gradient(#0F141A, #0F141A) 50% 50%/calc(100% - 10px) calc(100% - 10px) no-repeat, linear-gradient(90deg, #df1447 0%, #5815b7 100%)
+  //background: radial-gradient(circle at 100% 100%, $bgcolorN 0, $bgcolorN 6px, transparent 6px) 0% 0%/8px 8px no-repeat, radial-gradient(circle at 0 100%, $bgcolorN 0, $bgcolorN 6px, transparent 6px) 100% 0%/8px 8px no-repeat,radial-gradient(circle at 100% 0, $bgcolorN 0, $bgcolorN 6px, transparent 6px) 0% 100%/8px 8px no-repeat,radial-gradient(circle at 0 0, $bgcolorN 0, $bgcolorN 6px, transparent 6px) 100% 100%/8px 8px no-repeat, linear-gradient($bgcolorN, $bgcolorN) 50% 50%/calc(100% - 4px) calc(100% - 16px) no-repeat, linear-gradient($bgcolorN, $bgcolorN) 50% 50%/calc(100% - 16px) calc(100% - 4px) no-repeat,linear-gradient(90deg, #df1447 0%, #5815b7 100%)
+  background: radial-gradient(circle at 100% 100%, #0f141a 0, #0f141a 3px, transparent 3px) 0% 0%/5px 5px no-repeat, radial-gradient(circle at 0 100%, #0f141a 0, #0f141a 3px, transparent 3px) 100% 0%/5px 5px no-repeat, radial-gradient(circle at 100% 0, #0f141a 0, #0f141a 3px, transparent 3px) 0% 100%/5px 5px no-repeat, radial-gradient(circle at 0 0, #0f141a 0, #0f141a 3px, transparent 3px) 100% 100%/5px 5px no-repeat, linear-gradient(#0f141a, #0f141a) 50% 50%/calc(100% - 4px) calc(100% - 10px) no-repeat, linear-gradient(#0f141a, #0f141a) 50% 50%/calc(100% - 10px) calc(100% - 4px) no-repeat, linear-gradient(90deg, #df1447 0%, #5815b7 100%)
+  border-radius: 5px
+  padding: 2px
+  box-sizing: border-box
+  &-in
+    padding: 4px
+    border-radius: 4px
+    background-color: #0f141a
+  
+  span
+    display: flex
+    justify-content: center
+    padding: 5px 16px
+    background: #DF1447
+    background: linear-gradient(to right, #DF1447 0%, #3D14DF 100%)
+    -webkit-background-clip: text
+    -webkit-text-fill-color: transparent
+    text-transform: uppercase
+
+.btn-grad-bg
+  position: relative
+  .btn-grad-brd-in
+    background-color: linear-gradient(90deg, rgba(220, 21, 71, 0.2) 0%, rgba(69, 20, 215, 0.2) 100%), #202020
+    
